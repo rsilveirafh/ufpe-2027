@@ -149,6 +149,17 @@ a{color:var(--cyan)}
   .seg button{padding:8px 12px}
   .bar>div{font-size:10.5px}
 }
+/* visões */
+.kf{width:100%;border-collapse:collapse;font-size:14.5px}
+.kf th,.kf td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.kf thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.kf tbody th{font-weight:600;color:var(--ink3);white-space:nowrap;font-size:13.5px}
+.kf tr:last-child td,.kf tr:last-child th{border-bottom:0}
+a.pick{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
+a.pick:hover{border-color:var(--mag);transform:translateY(-2px)}
+a.pick{transition:border-color .15s ease, transform .15s ease}
+a.pick .go{margin-top:auto;padding-top:12px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.hello{font-size:clamp(15px,1.7vw,18px);color:var(--ink2);max-width:68ch;margin:18px 0 0}
 </style>
 </head>
 <body>
@@ -156,26 +167,132 @@ a{color:var(--cyan)}
 
   <div class="eyebrow">Universidade Federal de Pernambuco · Edital 12/2026 · Banca FADE/UFPE</div>
   <h1>Plano de estudos<br><em>UFPE 2027</em></h1>
-  <p class="dek">Rotina de 17 semanas para a prova de técnico-administrativo da UFPE, feita para quem trabalha 8 horas por dia: <strong>~11h por semana</strong>, seis sessões, <strong>sexta livre</strong>. Português, Legislação e Raciocínio Lógico têm o mesmo programa nos dois cargos, então essas sessões são feitas <strong>juntos</strong>.</p>
+  <p class="dek">Técnico-administrativos em educação da UFPE: <strong>Biólogo</strong> (Cado) e <strong>Desenhista de Artes Gráficas</strong> (Gabi). Escolha uma pessoa abaixo para ver o plano dela, semana a semana.</p>
 
   <div class="meta">
     <span class="hot" id="countdown">prova em 24/01/2027</span>
     <span>domingo 24/01/2027</span><span>Região Metropolitana do Recife</span><span>4 horas</span><span>corte: 60 de 100 pts</span>
   </div>
 
-  <div class="picker" role="group" aria-label="Mostrar o plano de">
+  <div class="picker" role="group" aria-label="Mostrar">
     <div class="seg">
       <button type="button" data-p="ambos" aria-pressed="true">Os dois</button>
       <button type="button" data-p="cado" aria-pressed="false">Cado · Biólogo</button>
       <button type="button" data-p="gabi" aria-pressed="false">Gabi · Desenhista</button>
     </div>
-    <span class="hint">As marcações ficam salvas neste navegador.</span>
+    <span class="hint" id="hint">O concurso em resumo.</span>
   </div>
 
-  <!-- A PROVA -->
-  <div class="sec">
-    <span class="lbl">A prova em pontos</span>
-    <div class="grid2">
+  <!-- ===================== VISÃO: OS DOIS ===================== -->
+  <div data-view="ambos">
+
+    <div class="sec">
+      <span class="lbl">O concurso</span>
+      <div class="scroll card" style="padding:0">
+        <table class="kf">
+          <thead><tr><th></th><th>Biólogo</th><th>Desenhista de Artes Gráficas</th></tr></thead>
+          <tbody>
+            <tr><th>Nível</th><td>E (superior)</td><td>D (médio)</td></tr>
+            <tr><th>Vencimento inicial</th><td>R$ 5.215,39</td><td>R$ 3.181,39</td></tr>
+            <tr><th>Auxílio-alimentação</th><td colspan="2">R$ 1.192,00</td></tr>
+            <tr><th>Vagas</th><td>4 (3 ampla + 1 pessoas negras)</td><td>1 (ampla)</td></tr>
+            <tr><th>Inscritos</th><td>1.235 na ampla · 224 na cota</td><td>481</td></tr>
+            <tr><th>Prova objetiva</th><td>80 questões · 1,25 pt cada</td><td>60 questões · 1,667 pt cada</td></tr>
+            <tr><th>Composição</th><td>Português 20 · RL 5 · Legislação 10 · Específicos 45</td><td>Português 20 · RL 5 · Legislação 10 · Específicos 25</td></tr>
+            <tr><th>Requisito na posse</th><td>Graduação em Biologia + registro no conselho</td><td>Ensino médio + editoração e desenho + registro no MTE (Radialista)</td></tr>
+            <tr><th>Lotação</th><td colspan="2">Recife, Vitória de Santo Antão ou Caruaru</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="nota">
+        <strong>Regras.</strong> Só prova objetiva, com 4h e 5 alternativas. Não há nota mínima por matéria: o corte é 60 de 100 pts no total. Desempate: 1º Específicos, 2º Português, 3º idade. Há limite de aprovados (Decreto 9.739/2019): quem fica fora dele é reprovado mesmo acima de 60. Validade de 2 anos, prorrogável por mais 2.
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="lbl">Datas</span>
+      <div class="scroll card" style="padding:0">
+        <table class="kf">
+          <tbody>
+            <tr><th>20 a 23/01/2027</th><td>Cartão de inscrição com local e horário</td></tr>
+            <tr><th><strong style="color:var(--mag)">24/01/2027 · dom</strong></th><td><strong>Prova objetiva</strong> dos dois cargos</td></tr>
+            <tr><th>25/01</th><td>Provas e gabaritos preliminares</td></tr>
+            <tr><th>26 e 27/01</th><td>Recursos contra o gabarito</td></tr>
+            <tr><th>17/02</th><td>Gabarito final</td></tr>
+            <tr><th>18 e 19/02</th><td>Resultado preliminar e espelho da folha de respostas</td></tr>
+            <tr><th>26 e 27/04</th><td>Resultado final e recursos</td></tr>
+            <tr><th>até 07/05/2027</th><td>Homologação</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="lbl">Dia da prova · edital, item 9.1</span>
+      <div class="grid2">
+        <div class="card">
+          <h3>Levar</h3>
+          <ul class="check">
+            <li><strong>Documento oficial com foto, original e válido</strong> (RG, CNH, carteira de conselho). Crachá e carteira de estudante não valem.</li>
+            <li><strong>Caneta esferográfica PRETA de tubo transparente</strong>, duas ou três. Lápis, lapiseira, marca-texto e borracha são proibidos.</li>
+            <li>Água e um lanche leve.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Na hora</h3>
+          <ul class="check">
+            <li>Chegar <strong>1h antes</strong> do horário do cartão.</li>
+            <li>Relógio e celular são entregues à fiscalização antes de entrar na sala. Sem boné ou touca.</li>
+            <li>Só é permitido sair <strong>depois de 3h</strong>.</li>
+            <li>Marcar a folha de respostas <strong>antes</strong> do fim das 4h: o caderno é devolvido e não vale na correção.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="lbl">O edital</span>
+      <div class="grid2">
+        <a class="card cta" href="conteudo.html">
+          <span class="tag t-esp" style="align-self:flex-start;margin-bottom:8px">Conteúdo</span>
+          <h2>O que cai, cargo a cargo</h2>
+          <p class="small muted" style="margin:0">Conteúdo programático conferido contra o edital e as duas retificações, com peso estimado e prioridade de cada bloco.</p>
+          <span class="go">Abrir →</span>
+        </a>
+        <div class="card">
+          <span class="tag t-leg" style="margin-bottom:8px">Atenção</span>
+          <h2>Duas retificações</h2>
+          <p class="small muted" style="margin:0">A de 10/08 <strong>trocou todo o Português</strong> dos níveis D e E. Material com o Português antigo está desatualizado. A de 14/09 passou a exigir, <strong>na posse</strong>, registro no conselho para Biólogo e registro profissional no MTE (Radialista) para Desenhista.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <span class="lbl">Os planos</span>
+      <div class="grid2">
+        <a class="card pick" data-go="cado" href="#cado">
+          <span class="ic" aria-hidden="true" style="font-size:26px">🔬</span>
+          <h2>Cado · Biólogo</h2>
+          <p class="small muted" style="margin:0">Pontos da prova, semana-padrão, fases e as 17 semanas com checkboxes.</p>
+          <span class="go">Abrir o plano →</span>
+        </a>
+        <a class="card pick" data-go="gabi" href="#gabi">
+          <span class="ic" aria-hidden="true" style="font-size:26px">✏️</span>
+          <h2>Gabi · Desenhista de Artes Gráficas</h2>
+          <p class="small muted" style="margin:0">Pontos da prova, semana-padrão, fases e as 17 semanas com checkboxes.</p>
+          <span class="go">Abrir o plano →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== VISÃO: UMA PESSOA ===================== -->
+  <div data-view="pessoa">
+
+    <p class="hello" id="hello"></p>
+
+    <div class="sec">
+      <span class="lbl">A prova em pontos</span>
       <div class="card" data-who="cado">
         <h2>Cado · Biólogo</h2>
         <p class="muted small">Nível E · 80 questões · 1,25 pt cada · 4 vagas (3 ampla + 1 pessoas negras)</p>
@@ -189,8 +306,9 @@ a{color:var(--cyan)}
         <div class="cutlbl" aria-hidden="true"><span>corte 60 pts = 48 acertos</span></div>
         <dl class="facts">
           <dt>Questões</dt><dd>45 específicas · 20 Português · 10 Legislação · 5 RL</dd>
-          <dt>Inscritos</dt><dd>1.235 na ampla (~412 por vaga de ampla) · 224 na cota</dd>
-          <dt>Leitura</dt><dd>Os Específicos valem mais que todo o resto somado e são o 1º desempate. O programa é de <strong>biólogo de laboratório e saúde</strong>.</dd>
+          <dt>Concorrência</dt><dd>1.235 inscritos na ampla, ~412 por vaga de ampla</dd>
+          <dt>Leitura</dt><dd>Os Específicos valem mais que todo o resto somado e são o 1º desempate. O programa é de <strong>biólogo de laboratório e saúde</strong>: vigilância, microbiologia, imunologia e biossegurança pedem mais tempo.</dd>
+          <dt>Meta</dt><dd>≥ 64/80 nos simulados de janeiro, com ≥ 36/45 nos Específicos.</dd>
         </dl>
       </div>
       <div class="card" data-who="gabi">
@@ -206,109 +324,80 @@ a{color:var(--cyan)}
         <div class="cutlbl" aria-hidden="true"><span>corte 60 pts = 36 acertos</span></div>
         <dl class="facts">
           <dt>Questões</dt><dd>25 específicas · 20 Português · 10 Legislação · 5 RL</dd>
-          <dt>Inscritos</dt><dd>481 para 1 vaga</dd>
-          <dt>Leitura</dt><dd>Com 1 vaga, a mira é o <strong>1º lugar</strong>. Português vale 1/3 da prova e é o 2º desempate.</dd>
+          <dt>Concorrência</dt><dd>481 inscritos para 1 vaga</dd>
+          <dt>Leitura</dt><dd>Com 1 vaga, a mira é o <strong>1º lugar</strong>. Português vale 1/3 da prova e é o 2º desempate. A revisão de Design Gráfico da ALECE já cobre metade dos Específicos.</dd>
+          <dt>Meta</dt><dd>≥ 51/60 nos simulados de janeiro, com ≥ 17/20 em Português.</dd>
         </dl>
       </div>
-    </div>
-    <div class="legend" aria-hidden="true">
-      <span><i class="b-esp"></i>Conhecimentos Específicos</span><span><i class="b-port"></i>Português</span>
-      <span><i class="b-leg"></i>Legislação Aplicada ao Servidor</span><span><i class="b-rl"></i>Raciocínio Lógico</span>
-    </div>
-    <div class="nota">
-      <strong>Regras que mudam a estratégia.</strong> Não há nota mínima por matéria: o corte é só 60 pts no total. Desempate: 1º Específicos, 2º Português, 3º idade. E há limite de aprovados (Decreto 9.739/2019): quem fica fora dele é reprovado mesmo acima de 60, então <strong>passar do corte não basta</strong>.
-    </div>
-  </div>
-
-  <!-- SEMANA-PADRÃO -->
-  <div class="sec">
-    <span class="lbl">A semana-padrão</span>
-    <p class="muted" style="max-width:70ch">Dias úteis às 20h00–21h30 (ou o horário que funcionar), sábado de manhã, domingo à tarde. Fora das sessões, <strong>15 min de flashcards por dia</strong> no almoço ou no deslocamento.</p>
-    <div class="scroll card" style="padding:6px 12px">
-      <table class="tbl">
-        <thead><tr><th>Dia</th><th>Tempo</th><th data-who="cado">Cado</th><th data-who="gabi">Gabi</th></tr></thead>
-        <tbody>
-          <tr><td>Seg</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span></td></tr>
-          <tr><td>Ter</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span> 1h + <span class="tag t-port">Português</span> 30 min de questões</td><td data-who="gabi"><span class="tag t-port">Português</span> questões FADE do tema</td></tr>
-          <tr><td>Qua</td><td>1h30</td><td data-who="cado"><span class="tag t-port">Português</span> <span class="dual">👫 juntos</span></td><td data-who="gabi"><span class="tag t-port">Português</span> <span class="dual">👫 juntos</span></td></tr>
-          <tr><td>Qui</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span></td></tr>
-          <tr><td>Sex</td><td>—</td><td data-who="cado"><span class="tag t-off">folga</span></td><td data-who="gabi"><span class="tag t-off">folga</span></td></tr>
-          <tr><td>Sáb</td><td>3h</td><td data-who="cado"><span class="tag t-esp">Específicos</span> 1h30 de questões + <span class="tag t-leg">Legislação</span> 1h30 <span class="dual">👫</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span> 1h30 de questões + <span class="tag t-leg">Legislação</span> 1h30 <span class="dual">👫</span></td></tr>
-          <tr><td>Dom</td><td>2h</td><td data-who="cado"><span class="tag t-rl">RL</span> 45 min <span class="dual">👫</span> + revisão da semana 1h15</td><td data-who="gabi"><span class="tag t-rl">RL</span> 45 min <span class="dual">👫</span> + revisão da semana 1h15</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="grid2" style="margin-top:18px">
-      <div class="card">
-        <h3>Uma sessão de 1h30</h3>
-        <p class="small muted" style="margin:0">10 min de flashcards e erros da véspera → 45 min de teoria com resumo nas próprias palavras → 30 min de questões do tópico (banca FADE primeiro) → 5 min passando os erros para o caderno. A partir de dezembro inverte: 30 min de teoria e 60 de questões.</p>
-      </div>
-      <div class="card">
-        <h3>Horas por semana</h3>
-        <p class="small muted" style="margin:0" data-who="cado"><strong>Cado:</strong> Específicos 6h · Português 2h · Legislação 1h30 · RL 45 min · revisão 1h15</p>
-        <p class="small muted" style="margin:6px 0 0" data-who="gabi"><strong>Gabi:</strong> Específicos 4h30 · Português 3h · Legislação 1h30 · RL 45 min · revisão 1h15</p>
+      <div class="legend" aria-hidden="true">
+        <span><i class="b-esp"></i>Conhecimentos Específicos</span><span><i class="b-port"></i>Português</span>
+        <span><i class="b-leg"></i>Legislação Aplicada ao Servidor</span><span><i class="b-rl"></i>Raciocínio Lógico</span>
       </div>
     </div>
-  </div>
 
-  <!-- FASES -->
-  <div class="sec">
-    <span class="lbl">As fases</span>
-    <div class="timeline" id="timeline" aria-label="Linha do tempo das fases"></div>
-    <div class="phases" id="phases"></div>
-  </div>
-
-  <!-- SEMANAS -->
-  <div class="sec">
-    <span class="lbl">Semana a semana</span>
-    <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><span id="ptext">0 de 0</span></div>
-    <div class="weeks" id="weeks"></div>
-  </div>
-
-  <!-- DIA DA PROVA -->
-  <div class="sec">
-    <span class="lbl">Dia da prova · edital, item 9.1</span>
-    <div class="grid2">
-      <div class="card">
-        <h3>Levar</h3>
-        <ul class="check">
-          <li><strong>Documento oficial com foto, original e válido</strong> (RG, CNH, carteira de conselho). Crachá e carteira de estudante não valem.</li>
-          <li><strong>Caneta esferográfica PRETA de tubo transparente</strong>, duas ou três. Lápis, lapiseira, marca-texto e borracha são proibidos.</li>
-          <li>Água e um lanche leve.</li>
-        </ul>
+    <div class="sec">
+      <span class="lbl">A semana-padrão</span>
+      <p class="muted" style="max-width:70ch">Dias úteis às 20h00–21h30 (ou o horário que funcionar), sábado de manhã, domingo à tarde. Fora das sessões, <strong>15 min de flashcards por dia</strong> no almoço ou no deslocamento. 👫 marca as sessões feitas juntos.</p>
+      <div class="scroll card" style="padding:6px 12px">
+        <table class="tbl">
+          <thead><tr><th>Dia</th><th>Tempo</th><th>O quê</th></tr></thead>
+          <tbody>
+            <tr><td>Seg</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span></td></tr>
+            <tr><td>Ter</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span> 1h + <span class="tag t-port">Português</span> 30 min de questões</td><td data-who="gabi"><span class="tag t-port">Português</span> questões FADE do tema da semana</td></tr>
+            <tr><td>Qua</td><td>1h30</td><td data-who="cado"><span class="tag t-port">Português</span> <span class="dual">👫 com a Gabi</span></td><td data-who="gabi"><span class="tag t-port">Português</span> <span class="dual">👫 com o Cado</span></td></tr>
+            <tr><td>Qui</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span></td></tr>
+            <tr><td>Sex</td><td>—</td><td data-who="cado"><span class="tag t-off">folga</span></td><td data-who="gabi"><span class="tag t-off">folga</span></td></tr>
+            <tr><td>Sáb</td><td>3h</td><td data-who="cado"><span class="tag t-esp">Específicos</span> 1h30 de questões + <span class="tag t-leg">Legislação</span> 1h30 <span class="dual">👫</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span> 1h30 de questões + <span class="tag t-leg">Legislação</span> 1h30 <span class="dual">👫</span></td></tr>
+            <tr><td>Dom</td><td>2h</td><td data-who="cado"><span class="tag t-rl">RL</span> 45 min <span class="dual">👫</span> + revisão da semana 1h15</td><td data-who="gabi"><span class="tag t-rl">RL</span> 45 min <span class="dual">👫</span> + revisão da semana 1h15</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="card">
-        <h3>Na hora</h3>
-        <ul class="check">
-          <li>Chegar <strong>1h antes</strong> do horário do cartão (sai entre 20 e 23/01).</li>
-          <li>Relógio e celular são entregues à fiscalização antes de entrar na sala. Sem boné ou touca.</li>
-          <li>Só é permitido sair <strong>depois de 3h</strong>. Marcar a folha de respostas <strong>antes</strong> do fim das 4h: o caderno é devolvido e não vale na correção.</li>
-          <li>Ritmo: Cado tem 3 min por questão (meta de 2,5). Gabi tem 4 min.</li>
-        </ul>
+      <div class="grid2" style="margin-top:18px">
+        <div class="card">
+          <h3>Uma sessão de 1h30</h3>
+          <p class="small muted" style="margin:0">10 min de flashcards e erros da véspera → 45 min de teoria com resumo nas próprias palavras → 30 min de questões do tópico (banca FADE primeiro) → 5 min passando os erros para o caderno. A partir de dezembro inverte: 30 min de teoria e 60 de questões.</p>
+        </div>
+        <div class="card">
+          <h3>Horas por semana</h3>
+          <p class="small muted" style="margin:0" data-who="cado">Específicos 6h · Português 2h · Legislação 1h30 · RL 45 min · revisão 1h15. Total de ~11h30.</p>
+          <p class="small muted" style="margin:0" data-who="gabi">Específicos 4h30 · Português 3h · Legislação 1h30 · RL 45 min · revisão 1h15. Total de ~11h.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- CONTEÚDO -->
-  <div class="sec">
-    <span class="lbl">O edital</span>
-    <div class="grid2">
-      <a class="card cta" href="conteudo.html">
-        <span class="tag t-esp" style="align-self:flex-start;margin-bottom:8px">Conteúdo</span>
-        <h2>O que cai, cargo a cargo</h2>
-        <p class="small muted" style="margin:0">Conteúdo programático conferido contra o edital e as duas retificações: o Português novo, Legislação, Raciocínio Lógico e os Específicos de Biólogo e de Desenhista, com peso estimado e prioridade de cada bloco.</p>
-        <span class="go">Abrir →</span>
-      </a>
-      <div class="card">
-        <span class="tag t-leg" style="margin-bottom:8px">Atenção</span>
-        <h2>Duas retificações</h2>
-        <p class="small muted" style="margin:0">A de 10/08 <strong>trocou todo o Português</strong> dos níveis D e E. Material com o Português antigo está desatualizado. A de 14/09 passou a exigir, <strong>na posse</strong>, registro no conselho para Biólogo e registro profissional no MTE (Radialista) para Desenhista.</p>
+    <div class="sec">
+      <span class="lbl">As fases</span>
+      <div class="timeline" id="timeline" aria-label="Linha do tempo das fases"></div>
+      <div class="phases" id="phases"></div>
+    </div>
+
+    <div class="sec">
+      <span class="lbl">Semana a semana</span>
+      <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><span id="ptext">0 de 0</span></div>
+      <div class="weeks" id="weeks"></div>
+    </div>
+
+    <div class="sec">
+      <span class="lbl">Mais</span>
+      <div class="grid2">
+        <a class="card cta" id="contlink" href="conteudo.html">
+          <span class="tag t-esp" style="align-self:flex-start;margin-bottom:8px">Conteúdo</span>
+          <h2>O que cai no meu cargo</h2>
+          <p class="small muted" style="margin:0">Os blocos dos Específicos, com peso estimado e prioridade, e o programa das matérias comuns.</p>
+          <span class="go">Abrir →</span>
+        </a>
+        <a class="card cta pick" data-go="ambos" href="#">
+          <span class="tag t-leg" style="align-self:flex-start;margin-bottom:8px">Concurso</span>
+          <h2>Datas, regras e dia da prova</h2>
+          <p class="small muted" style="margin:0">Voltar ao resumo do concurso.</p>
+          <span class="go">Abrir →</span>
+        </a>
       </div>
     </div>
   </div>
 
   <footer>
-    Fontes: <a href="https://www.fadeconcursos.org.br/concursoufpe2026">FADE · Concurso UFPE 2026</a> (edital 12/2026, retificações de 10/08 e 14/09/2026, cronograma do Anexo V e relação candidato/vaga), conferidos em 25/09/2026. Pesos por bloco são <strong>estimativa</strong>: o edital não distribui as questões por tópico. Datas e regras valem conforme publicadas; confira sempre o site da banca.
+    Fontes: <a href="https://www.fadeconcursos.org.br/concursoufpe2026">FADE · Concurso UFPE 2026</a> (edital 12/2026, retificações de 10/08 e 14/09/2026, cronograma do Anexo V e relação candidato/vaga), conferidos em 25/09/2026. Pesos por bloco são <strong>estimativa</strong>: o edital não distribui as questões por tópico. Confira sempre o site da banca.
   </footer>
 </div>
 
@@ -319,7 +408,6 @@ a{color:var(--cyan)}
   function d(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
   function fmt(dt){return String(dt.getDate()).padStart(2,'0')+'/'+String(dt.getMonth()+1).padStart(2,'0');}
 
-  /* contagem regressiva */
   var days = Math.round((EXAM - TODAY)/864e5);
   var cd = document.getElementById('countdown');
   if(days>1) cd.textContent = 'faltam '+days+' dias';
@@ -327,20 +415,19 @@ a{color:var(--cyan)}
   else if(days===0) cd.textContent = 'hoje é o dia';
   else cd.textContent = 'prova realizada em 24/01/2027';
 
-  /* armazenamento local, sempre protegido */
-  var KEY='ufpe2027:v1', state={checks:{},who:'ambos'};
+  /* armazenamento local: marcações separadas por pessoa */
+  var KEY='ufpe2027:v2', state={checks:{},who:'ambos'};
   try{var raw=localStorage.getItem(KEY); if(raw){var s=JSON.parse(raw); if(s&&typeof s==='object'){state.checks=s.checks||{}; state.who=s.who||'ambos';}}}catch(e){}
   function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
 
-  /* fases */
   var PHASES=[
     {n:'0',t:'Largada',a:'2026-09-28',b:'2026-10-04',x:'Diagnóstico, material e horário combinado.'},
     {n:'1',t:'Primeira passada',a:'2026-10-05',b:'2026-12-13',x:'Todo o edital com teoria e questões, em 10 semanas.'},
-    {n:'2',t:'Consolidação',a:'2026-12-14',b:'2027-01-03',x:'Os piores blocos de cada um. Festas em meia carga.'},
+    {n:'2',t:'Consolidação',a:'2026-12-14',b:'2027-01-03',x:'Os piores blocos. Festas em meia carga.'},
     {n:'3',t:'Simulados',a:'2027-01-04',b:'2027-01-17',x:'Duas provas completas de 4h e revisão pelos erros.'},
     {n:'4',t:'Aterrissagem',a:'2027-01-18',b:'2027-01-24',x:'Leve. Resumos, pontos quentes, viagem no sábado.'}
   ];
-  var t0=d(PHASES[0].a), t1=d('2027-01-24'), span=(t1-t0);
+  var t0=d(PHASES[0].a), t1=EXAM, span=(t1-t0);
   var tl=document.getElementById('timeline'), ph=document.getElementById('phases');
   PHASES.forEach(function(p){
     var a=d(p.a), b=d(p.b), on = TODAY>=a && TODAY<=b;
@@ -352,7 +439,7 @@ a{color:var(--cyan)}
   });
   if(TODAY>=t0 && TODAY<=t1){var m=document.createElement('span'); m.className='now'; m.style.left=((TODAY-t0)/span*100)+'%'; m.title='hoje'; tl.appendChild(m);}
 
-  /* semanas: e = Cado (específicos), g = Gabi (específicos), p/l/r = juntos */
+  /* semanas: w = 'cado' | 'gabi' | 'ambos' (feito juntos) */
   var W=[
     {k:'w0',n:'Sem. 0',a:'2026-09-28',t:'Largada',items:[
       {w:'ambos',c:'rl',x:'Combinar o horário fixo das sessões e montar o material (PDFs oficiais, leis, conta de questões, deck de flashcards).'},
@@ -461,24 +548,32 @@ a{color:var(--cyan)}
     ]}
   ];
   var TAG={esp:['t-esp','Específicos'],port:['t-port','Português'],leg:['t-leg','Legislação'],rl:['t-rl','RL']};
+  var NOTAG={w0:1,w11:1,w12:1,w14:1,w15:1,w16:1};
+  var NAME={cado:'Cado',gabi:'Gabi'}, OTHER={cado:'com a Gabi',gabi:'com o Cado'};
   var box=document.getElementById('weeks');
 
   function curIndex(){for(var i=W.length-1;i>=0;i--){if(TODAY>=d(W[i].a)) return i;} return 0;}
   var cur = curIndex();
 
-  W.forEach(function(w,i){
-    var a=d(w.a), end=(i<W.length-1)? new Date(d(W[i+1].a)-864e5) : EXAM;
-    var det=document.createElement('details'); det.className='week'+(i===cur?' current':''); det.dataset.i=i;
-    if(i===cur || i===cur+1) det.open=true;
-    var h='<summary><span class="num">'+w.n+'</span><span class="dates">'+fmt(a)+' → '+fmt(end)+'</span><span class="ttl">'+(w.t||'&nbsp;')+(i===cur?' <span class="badge-now">esta semana</span>':'')+'</span><span class="cnt"></span></summary><div class="body">';
-    w.items.forEach(function(it,j){
-      var id=w.k+'-'+j, tg=TAG[it.c];
-      var tagHtml = (w.k==='w0'||w.k==='w12'||w.k==='w14'||w.k==='w15'||w.k==='w16'||w.k==='w11') ? '' : '<span class="tag '+tg[0]+'">'+tg[1]+'</span>';
-      var who = it.w==='ambos' ? '👫 os dois' : (it.w==='cado'?'Cado':'Gabi');
-      h+='<div class="item" data-who="'+it.w+'"><input type="checkbox" id="'+id+'"'+(state.checks[id]?' checked':'')+'><span>'+tagHtml+'</span><label for="'+id+'"><span class="who">'+who+'</span>'+it.x+'</label></div>';
+  function renderWeeks(p){
+    box.innerHTML='';
+    W.forEach(function(w,i){
+      var items=w.items.filter(function(it){return it.w==='ambos'||it.w===p;});
+      if(!items.length) return;
+      var a=d(w.a), end=(i<W.length-1)? new Date(d(W[i+1].a)-864e5) : EXAM;
+      var det=document.createElement('details'); det.className='week'+(i===cur?' current':'');
+      if(i===cur || i===cur+1) det.open=true;
+      var h='<summary><span class="num">'+w.n+'</span><span class="dates">'+fmt(a)+' → '+fmt(end)+'</span><span class="ttl">'+(w.t||'&nbsp;')+(i===cur?' <span class="badge-now">esta semana</span>':'')+'</span><span class="cnt"></span></summary><div class="body">';
+      items.forEach(function(it){
+        var j=w.items.indexOf(it), id=p+':'+w.k+'-'+j, tg=TAG[it.c];
+        var tagHtml = NOTAG[w.k] ? '' : '<span class="tag '+tg[0]+'">'+tg[1]+'</span>';
+        var who = it.w==='ambos' ? '<span class="who">👫 '+OTHER[p]+'</span>' : '';
+        h+='<div class="item"><input type="checkbox" id="'+id+'"'+(state.checks[id]?' checked':'')+'><span>'+tagHtml+'</span><label for="'+id+'">'+who+it.x+'</label></div>';
+      });
+      h+='</div>'; det.innerHTML=h; box.appendChild(det);
     });
-    h+='</div>'; det.innerHTML=h; box.appendChild(det);
-  });
+    refresh();
+  }
 
   box.addEventListener('change',function(e){
     if(e.target.type!=='checkbox') return;
@@ -486,13 +581,11 @@ a{color:var(--cyan)}
     save(); refresh();
   });
 
-  function visible(el){ return !el.hidden; }
   function refresh(){
     var tot=0, done=0;
     Array.prototype.forEach.call(box.querySelectorAll('.week'),function(wk){
       var t=0,c=0;
       Array.prototype.forEach.call(wk.querySelectorAll('.item'),function(it){
-        if(!visible(it)) return;
         var cb=it.querySelector('input'); t++; if(cb.checked){c++; it.classList.add('checked');} else it.classList.remove('checked');
       });
       wk.querySelector('.cnt').textContent=c+'/'+t;
@@ -503,20 +596,34 @@ a{color:var(--cyan)}
     document.getElementById('ptext').textContent=done+' de '+tot+' itens feitos';
   }
 
-  /* seletor de pessoa */
+  /* seletor de visão */
   var btns=document.querySelectorAll('.seg button');
-  function applyWho(p){
+  var HINT={ambos:'O concurso em resumo.',cado:'Plano do Cado. As marcações ficam salvas neste navegador.',gabi:'Plano da Gabi. As marcações ficam salvas neste navegador.'};
+  var HELLO={
+    cado:'<strong>Cado, Biólogo.</strong> ~11h30 por semana. Os Específicos ficam com mais da metade do tempo porque valem mais da metade da prova. Português, Legislação e RL são feitos com a Gabi.',
+    gabi:'<strong>Gabi, Desenhista de Artes Gráficas.</strong> ~11h por semana. Português tem uma sessão extra porque vale 1/3 da prova. Português, Legislação e RL são feitos com o Cado.'
+  };
+  function applyWho(p, scroll){
+    if(!HINT[p]) p='ambos';
     state.who=p;
     Array.prototype.forEach.call(btns,function(b){b.setAttribute('aria-pressed', String(b.dataset.p===p));});
-    Array.prototype.forEach.call(document.querySelectorAll('[data-who]'),function(el){
-      var w=el.getAttribute('data-who'); el.hidden = !(p==='ambos' || w==='ambos' || w===p);
-    });
-    refresh();
+    document.querySelector('[data-view="ambos"]').hidden = p!=='ambos';
+    document.querySelector('[data-view="pessoa"]').hidden = p==='ambos';
+    Array.prototype.forEach.call(document.querySelectorAll('[data-who]'),function(el){ el.hidden = p!=='ambos' && el.getAttribute('data-who')!==p; });
+    document.getElementById('hint').textContent=HINT[p];
+    if(p!=='ambos'){
+      document.getElementById('hello').innerHTML=HELLO[p];
+      document.getElementById('contlink').href='conteudo.html#'+(p==='cado'?'bio':'des');
+      renderWeeks(p);
+    }
+    if(history.replaceState){ try{history.replaceState(null,'',p==='ambos'?location.pathname:'#'+p);}catch(e){} }
+    if(scroll){ document.querySelector('.picker').scrollIntoView({behavior:'smooth'}); }
   }
   Array.prototype.forEach.call(btns,function(b){b.addEventListener('click',function(){applyWho(b.dataset.p); save();});});
-  applyWho(state.who);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-go]'),function(a){a.addEventListener('click',function(e){e.preventDefault(); applyWho(a.dataset.go,true); save();});});
+  var fromHash=(location.hash||'').replace('#','');
+  applyWho(HINT[fromHash]?fromHash:state.who);
 
-  /* impressão: abre todas as semanas */
   window.addEventListener('beforeprint',function(){Array.prototype.forEach.call(box.querySelectorAll('details'),function(x){x.dataset.was=x.open?'1':''; x.open=true;});});
   window.addEventListener('afterprint',function(){Array.prototype.forEach.call(box.querySelectorAll('details'),function(x){x.open=!!x.dataset.was;});});
 })();
