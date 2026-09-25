@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Plano de estudos para o concurso de técnico-administrativos da UFPE, Edital 12/2026, banca FADE/UFPE: Biólogo e Desenhista de Artes Gráficas.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗓️</text></svg>">
+<title>Plano UFPE 2027</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size:16px;line-height:1.58;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:clamp(32px,6vw,72px) clamp(16px,4vw,48px) 100px}
+.hf{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+h1{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;letter-spacing:-.035em;line-height:.95;font-size:clamp(36px,7.5vw,86px);margin:.16em 0 .18em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;letter-spacing:-.02em;font-size:22px;margin:0 0 6px;line-height:1.15}
+h3{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:16px;margin:0 0 4px}
+p{margin:0 0 10px}
+.dek{color:var(--ink2);max-width:68ch;margin:0 0 10px;font-size:clamp(15px,1.7vw,18px)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,72px) 0 0}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:14px}
+.muted{color:var(--ink2)}
+.small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:20px 22px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.nota{border-left:4px solid var(--cyan);background:var(--card);padding:14px 18px;border-radius:0 4px 4px 0;margin:22px 0 0;font-size:14.5px;color:var(--ink2);max-width:92ch}
+.nota strong{color:var(--ink)}
+.nota.warn{border-left-color:var(--amber)}
+
+/* seletor de pessoa */
+.picker{position:sticky;top:0;z-index:5;background:var(--paper);padding:12px 0;margin-top:28px;border-bottom:1px solid var(--rule)}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:99px;overflow:hidden;background:var(--card)}
+.seg button{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;padding:8px 16px;color:var(--ink2)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.seg button:focus-visible{outline:2px solid var(--mag);outline-offset:-2px}
+.picker .hint{font-size:13px;color:var(--ink3);margin-left:12px}
+
+/* barras de pontos */
+.bar{display:flex;height:34px;border-radius:4px;overflow:hidden;position:relative;margin:12px 0 6px;gap:2px}
+.bar>div{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;min-width:0;white-space:nowrap;overflow:hidden}
+.b-esp{background:var(--mag)} .b-port{background:var(--cyan)} .b-leg{background:var(--amber)} .b-rl{background:var(--green)}
+.cut{position:absolute;top:-6px;bottom:-6px;left:60%;border-left:2px dashed var(--ink)}
+.cutlbl{position:relative;height:18px;font-size:11px;color:var(--ink2)}
+.cutlbl span{position:absolute;left:60%;transform:translateX(-50%);white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink2);margin-top:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:0}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14.5px;margin-top:10px}
+.facts dt{color:var(--ink3)} .facts dd{margin:0}
+
+/* tabelas */
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl th,.tbl td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800}
+.tbl td:first-child{font-weight:700;white-space:nowrap}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;margin-right:4px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;white-space:nowrap}
+.t-esp{background:var(--mag-soft);color:var(--mag)} .t-port{background:var(--cyan-soft);color:var(--cyan)}
+.t-leg{background:var(--amber-soft);color:var(--amber)} .t-rl{background:var(--green-soft);color:var(--green)}
+.t-off{background:var(--band);color:var(--ink3)}
+.dual{display:inline-block;font-size:12px;color:var(--ink3)}
+
+/* linha do tempo */
+.timeline{display:flex;height:44px;border-radius:4px;overflow:hidden;position:relative;margin-top:14px;gap:2px}
+.timeline>div{display:flex;align-items:center;padding:0 8px;font-size:12px;font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--band);white-space:nowrap;overflow:hidden;min-width:0}
+.timeline>div.on{background:var(--ink);color:var(--paper)}
+.now{position:absolute;top:-4px;bottom:-4px;border-left:3px solid var(--mag)}
+.phases{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));margin-top:16px}
+.phases .card{padding:14px 16px}
+.phases .when{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3)}
+
+/* semanas */
+.progress{display:flex;align-items:center;gap:12px;margin:6px 0 18px;font-size:14px;color:var(--ink2)}
+.progress .track{flex:1;max-width:360px;height:8px;background:var(--band);border-radius:99px;overflow:hidden}
+.progress .fill{height:100%;background:var(--mag);width:0;transition:width .3s}
+.weeks{display:grid;gap:14px}
+.week{background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);overflow:hidden}
+.week summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:12px;padding:14px 18px;flex-wrap:wrap}
+.week summary::-webkit-details-marker{display:none}
+.week summary:focus-visible{outline:2px solid var(--mag);outline-offset:-2px}
+.week .num{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:13px;letter-spacing:.08em;color:var(--ink3);min-width:62px}
+.week .dates{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.week .ttl{font-weight:700;flex:1;min-width:200px}
+.week .cnt{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3)}
+.week.current{border-color:var(--mag);box-shadow:0 0 0 2px var(--mag)}
+.week.current .num{color:var(--mag)}
+.week.done .cnt{color:var(--green);font-weight:700}
+.week .body{padding:0 18px 16px;border-top:1px solid var(--rule2)}
+.week .note{font-size:13.5px;color:var(--ink2);margin:12px 0 4px}
+.item{display:grid;grid-template-columns:22px auto 1fr;gap:10px;align-items:start;padding:10px 0;border-bottom:1px dashed var(--rule2)}
+.item:last-child{border-bottom:0}
+.item input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag);cursor:pointer}
+.item label{cursor:pointer}
+.item .who{font-size:11px;color:var(--ink3);display:block}
+.item.checked label{color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--rule)}
+.badge-now{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--mag);color:#fff;padding:2px 8px;border-radius:99px}
+
+.cta{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+a.cta:hover{border-color:var(--mag)}
+a.cta .go{margin-top:10px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+ul.check{list-style:none;padding:0;margin:0}
+ul.check li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--rule2);font-size:14.5px}
+ul.check li::before{content:"□";position:absolute;left:2px;top:5px;color:var(--mag);font-weight:700}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+footer a{color:var(--ink2)}
+a{color:var(--cyan)}
+[hidden]{display:none!important}
+@media print{
+  .picker{position:static} .week .body{display:block!important} details.week>*{display:block}
+  .week{break-inside:avoid;box-shadow:none}
+}
+@media (max-width:560px){
+  .picker .hint{display:block;margin:6px 0 0}
+  .seg button{padding:8px 12px}
+  .bar>div{font-size:10.5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Universidade Federal de Pernambuco · Edital 12/2026 · Banca FADE/UFPE</div>
+  <h1>Plano de estudos<br><em>UFPE 2027</em></h1>
+  <p class="dek">Rotina de 17 semanas para a prova de técnico-administrativo da UFPE, feita para quem trabalha 8 horas por dia: <strong>~11h por semana</strong>, seis sessões, <strong>sexta livre</strong>. Português, Legislação e Raciocínio Lógico têm o mesmo programa nos dois cargos, então essas sessões são feitas <strong>juntos</strong>.</p>
+
+  <div class="meta">
+    <span class="hot" id="countdown">prova em 24/01/2027</span>
+    <span>domingo 24/01/2027</span><span>Região Metropolitana do Recife</span><span>4 horas</span><span>corte: 60 de 100 pts</span>
+  </div>
+
+  <div class="picker" role="group" aria-label="Mostrar o plano de">
+    <div class="seg">
+      <button type="button" data-p="ambos" aria-pressed="true">Os dois</button>
+      <button type="button" data-p="cado" aria-pressed="false">Cado · Biólogo</button>
+      <button type="button" data-p="gabi" aria-pressed="false">Gabi · Desenhista</button>
+    </div>
+    <span class="hint">As marcações ficam salvas neste navegador.</span>
+  </div>
+
+  <!-- A PROVA -->
+  <div class="sec">
+    <span class="lbl">A prova em pontos</span>
+    <div class="grid2">
+      <div class="card" data-who="cado">
+        <h2>Cado · Biólogo</h2>
+        <p class="muted small">Nível E · 80 questões · 1,25 pt cada · 4 vagas (3 ampla + 1 pessoas negras)</p>
+        <div class="bar" role="img" aria-label="Específicos 56 pontos, Português 25, Legislação 12,5, Raciocínio Lógico 6,25">
+          <div class="b-esp" style="flex:56.25">Específicos 56</div>
+          <div class="b-port" style="flex:25">Port. 25</div>
+          <div class="b-leg" style="flex:12.5">Leg. 12,5</div>
+          <div class="b-rl" style="flex:6.25">6</div>
+          <span class="cut" aria-hidden="true"></span>
+        </div>
+        <div class="cutlbl" aria-hidden="true"><span>corte 60 pts = 48 acertos</span></div>
+        <dl class="facts">
+          <dt>Questões</dt><dd>45 específicas · 20 Português · 10 Legislação · 5 RL</dd>
+          <dt>Inscritos</dt><dd>1.235 na ampla (~412 por vaga de ampla) · 224 na cota</dd>
+          <dt>Leitura</dt><dd>Os Específicos valem mais que todo o resto somado e são o 1º desempate. O programa é de <strong>biólogo de laboratório e saúde</strong>.</dd>
+        </dl>
+      </div>
+      <div class="card" data-who="gabi">
+        <h2>Gabi · Desenhista de Artes Gráficas</h2>
+        <p class="muted small">Nível D · 60 questões · 1,667 pt cada · 1 vaga (ampla)</p>
+        <div class="bar" role="img" aria-label="Específicos 41,7 pontos, Português 33,3, Legislação 16,7, Raciocínio Lógico 8,3">
+          <div class="b-esp" style="flex:41.7">Específicos 42</div>
+          <div class="b-port" style="flex:33.3">Português 33</div>
+          <div class="b-leg" style="flex:16.7">Leg. 17</div>
+          <div class="b-rl" style="flex:8.3">8</div>
+          <span class="cut" aria-hidden="true"></span>
+        </div>
+        <div class="cutlbl" aria-hidden="true"><span>corte 60 pts = 36 acertos</span></div>
+        <dl class="facts">
+          <dt>Questões</dt><dd>25 específicas · 20 Português · 10 Legislação · 5 RL</dd>
+          <dt>Inscritos</dt><dd>481 para 1 vaga</dd>
+          <dt>Leitura</dt><dd>Com 1 vaga, a mira é o <strong>1º lugar</strong>. Português vale 1/3 da prova e é o 2º desempate.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="b-esp"></i>Conhecimentos Específicos</span><span><i class="b-port"></i>Português</span>
+      <span><i class="b-leg"></i>Legislação Aplicada ao Servidor</span><span><i class="b-rl"></i>Raciocínio Lógico</span>
+    </div>
+    <div class="nota">
+      <strong>Regras que mudam a estratégia.</strong> Não há nota mínima por matéria: o corte é só 60 pts no total. Desempate: 1º Específicos, 2º Português, 3º idade. E há limite de aprovados (Decreto 9.739/2019): quem fica fora dele é reprovado mesmo acima de 60, então <strong>passar do corte não basta</strong>.
+    </div>
+  </div>
+
+  <!-- SEMANA-PADRÃO -->
+  <div class="sec">
+    <span class="lbl">A semana-padrão</span>
+    <p class="muted" style="max-width:70ch">Dias úteis às 20h00–21h30 (ou o horário que funcionar), sábado de manhã, domingo à tarde. Fora das sessões, <strong>15 min de flashcards por dia</strong> no almoço ou no deslocamento.</p>
+    <div class="scroll card" style="padding:6px 12px">
+      <table class="tbl">
+        <thead><tr><th>Dia</th><th>Tempo</th><th data-who="cado">Cado</th><th data-who="gabi">Gabi</th></tr></thead>
+        <tbody>
+          <tr><td>Seg</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span></td></tr>
+          <tr><td>Ter</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span> 1h + <span class="tag t-port">Português</span> 30 min de questões</td><td data-who="gabi"><span class="tag t-port">Português</span> questões FADE do tema</td></tr>
+          <tr><td>Qua</td><td>1h30</td><td data-who="cado"><span class="tag t-port">Português</span> <span class="dual">👫 juntos</span></td><td data-who="gabi"><span class="tag t-port">Português</span> <span class="dual">👫 juntos</span></td></tr>
+          <tr><td>Qui</td><td>1h30</td><td data-who="cado"><span class="tag t-esp">Específicos</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span></td></tr>
+          <tr><td>Sex</td><td>—</td><td data-who="cado"><span class="tag t-off">folga</span></td><td data-who="gabi"><span class="tag t-off">folga</span></td></tr>
+          <tr><td>Sáb</td><td>3h</td><td data-who="cado"><span class="tag t-esp">Específicos</span> 1h30 de questões + <span class="tag t-leg">Legislação</span> 1h30 <span class="dual">👫</span></td><td data-who="gabi"><span class="tag t-esp">Específicos</span> 1h30 de questões + <span class="tag t-leg">Legislação</span> 1h30 <span class="dual">👫</span></td></tr>
+          <tr><td>Dom</td><td>2h</td><td data-who="cado"><span class="tag t-rl">RL</span> 45 min <span class="dual">👫</span> + revisão da semana 1h15</td><td data-who="gabi"><span class="tag t-rl">RL</span> 45 min <span class="dual">👫</span> + revisão da semana 1h15</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid2" style="margin-top:18px">
+      <div class="card">
+        <h3>Uma sessão de 1h30</h3>
+        <p class="small muted" style="margin:0">10 min de flashcards e erros da véspera → 45 min de teoria com resumo nas próprias palavras → 30 min de questões do tópico (banca FADE primeiro) → 5 min passando os erros para o caderno. A partir de dezembro inverte: 30 min de teoria e 60 de questões.</p>
+      </div>
+      <div class="card">
+        <h3>Horas por semana</h3>
+        <p class="small muted" style="margin:0" data-who="cado"><strong>Cado:</strong> Específicos 6h · Português 2h · Legislação 1h30 · RL 45 min · revisão 1h15</p>
+        <p class="small muted" style="margin:6px 0 0" data-who="gabi"><strong>Gabi:</strong> Específicos 4h30 · Português 3h · Legislação 1h30 · RL 45 min · revisão 1h15</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASES -->
+  <div class="sec">
+    <span class="lbl">As fases</span>
+    <div class="timeline" id="timeline" aria-label="Linha do tempo das fases"></div>
+    <div class="phases" id="phases"></div>
+  </div>
+
+  <!-- SEMANAS -->
+  <div class="sec">
+    <span class="lbl">Semana a semana</span>
+    <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><span id="ptext">0 de 0</span></div>
+    <div class="weeks" id="weeks"></div>
+  </div>
+
+  <!-- DIA DA PROVA -->
+  <div class="sec">
+    <span class="lbl">Dia da prova · edital, item 9.1</span>
+    <div class="grid2">
+      <div class="card">
+        <h3>Levar</h3>
+        <ul class="check">
+          <li><strong>Documento oficial com foto, original e válido</strong> (RG, CNH, carteira de conselho). Crachá e carteira de estudante não valem.</li>
+          <li><strong>Caneta esferográfica PRETA de tubo transparente</strong>, duas ou três. Lápis, lapiseira, marca-texto e borracha são proibidos.</li>
+          <li>Água e um lanche leve.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Na hora</h3>
+        <ul class="check">
+          <li>Chegar <strong>1h antes</strong> do horário do cartão (sai entre 20 e 23/01).</li>
+          <li>Relógio e celular são entregues à fiscalização antes de entrar na sala. Sem boné ou touca.</li>
+          <li>Só é permitido sair <strong>depois de 3h</strong>. Marcar a folha de respostas <strong>antes</strong> do fim das 4h: o caderno é devolvido e não vale na correção.</li>
+          <li>Ritmo: Cado tem 3 min por questão (meta de 2,5). Gabi tem 4 min.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="sec">
+    <span class="lbl">O edital</span>
+    <div class="grid2">
+      <a class="card cta" href="conteudo.html">
+        <span class="tag t-esp" style="align-self:flex-start;margin-bottom:8px">Conteúdo</span>
+        <h2>O que cai, cargo a cargo</h2>
+        <p class="small muted" style="margin:0">Conteúdo programático conferido contra o edital e as duas retificações: o Português novo, Legislação, Raciocínio Lógico e os Específicos de Biólogo e de Desenhista, com peso estimado e prioridade de cada bloco.</p>
+        <span class="go">Abrir →</span>
+      </a>
+      <div class="card">
+        <span class="tag t-leg" style="margin-bottom:8px">Atenção</span>
+        <h2>Duas retificações</h2>
+        <p class="small muted" style="margin:0">A de 10/08 <strong>trocou todo o Português</strong> dos níveis D e E. Material com o Português antigo está desatualizado. A de 14/09 passou a exigir, <strong>na posse</strong>, registro no conselho para Biólogo e registro profissional no MTE (Radialista) para Desenhista.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Fontes: <a href="https://www.fadeconcursos.org.br/concursoufpe2026">FADE · Concurso UFPE 2026</a> (edital 12/2026, retificações de 10/08 e 14/09/2026, cronograma do Anexo V e relação candidato/vaga), conferidos em 25/09/2026. Pesos por bloco são <strong>estimativa</strong>: o edital não distribui as questões por tópico. Datas e regras valem conforme publicadas; confira sempre o site da banca.
+  </footer>
+</div>
+
+<script>
+(function(){
+  var TODAY = new Date(); TODAY.setHours(0,0,0,0);
+  var EXAM = new Date(2027,0,24);
+  function d(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+  function fmt(dt){return String(dt.getDate()).padStart(2,'0')+'/'+String(dt.getMonth()+1).padStart(2,'0');}
+
+  /* contagem regressiva */
+  var days = Math.round((EXAM - TODAY)/864e5);
+  var cd = document.getElementById('countdown');
+  if(days>1) cd.textContent = 'faltam '+days+' dias';
+  else if(days===1) cd.textContent = 'a prova é amanhã';
+  else if(days===0) cd.textContent = 'hoje é o dia';
+  else cd.textContent = 'prova realizada em 24/01/2027';
+
+  /* armazenamento local, sempre protegido */
+  var KEY='ufpe2027:v1', state={checks:{},who:'ambos'};
+  try{var raw=localStorage.getItem(KEY); if(raw){var s=JSON.parse(raw); if(s&&typeof s==='object'){state.checks=s.checks||{}; state.who=s.who||'ambos';}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+
+  /* fases */
+  var PHASES=[
+    {n:'0',t:'Largada',a:'2026-09-28',b:'2026-10-04',x:'Diagnóstico, material e horário combinado.'},
+    {n:'1',t:'Primeira passada',a:'2026-10-05',b:'2026-12-13',x:'Todo o edital com teoria e questões, em 10 semanas.'},
+    {n:'2',t:'Consolidação',a:'2026-12-14',b:'2027-01-03',x:'Os piores blocos de cada um. Festas em meia carga.'},
+    {n:'3',t:'Simulados',a:'2027-01-04',b:'2027-01-17',x:'Duas provas completas de 4h e revisão pelos erros.'},
+    {n:'4',t:'Aterrissagem',a:'2027-01-18',b:'2027-01-24',x:'Leve. Resumos, pontos quentes, viagem no sábado.'}
+  ];
+  var t0=d(PHASES[0].a), t1=d('2027-01-24'), span=(t1-t0);
+  var tl=document.getElementById('timeline'), ph=document.getElementById('phases');
+  PHASES.forEach(function(p){
+    var a=d(p.a), b=d(p.b), on = TODAY>=a && TODAY<=b;
+    var el=document.createElement('div'); el.style.flex=String((b-a)/864e5+1); el.textContent=p.n+' · '+p.t; if(on) el.className='on'; el.title=p.t;
+    tl.appendChild(el);
+    var c=document.createElement('div'); c.className='card';
+    c.innerHTML='<div class="when">'+fmt(a)+' → '+fmt(b)+'</div><h3>'+p.n+' · '+p.t+(on?' <span class="badge-now">agora</span>':'')+'</h3><p class="small muted" style="margin:0">'+p.x+'</p>';
+    ph.appendChild(c);
+  });
+  if(TODAY>=t0 && TODAY<=t1){var m=document.createElement('span'); m.className='now'; m.style.left=((TODAY-t0)/span*100)+'%'; m.title='hoje'; tl.appendChild(m);}
+
+  /* semanas: e = Cado (específicos), g = Gabi (específicos), p/l/r = juntos */
+  var W=[
+    {k:'w0',n:'Sem. 0',a:'2026-09-28',t:'Largada',items:[
+      {w:'ambos',c:'rl',x:'Combinar o horário fixo das sessões e montar o material (PDFs oficiais, leis, conta de questões, deck de flashcards).'},
+      {w:'ambos',c:'port',x:'<strong>Diagnóstico · sáb 03/10</strong>: Português + Legislação + RL de uma prova FADE/UFPE 2023, cronometrado e sem consulta.'},
+      {w:'cado',c:'esp',x:'30 questões mistas de Biólogo para medir os blocos fracos (saúde e laboratório) contra os fortes.'},
+      {w:'gabi',c:'esp',x:'20 questões de desenho técnico e acessibilidade, os blocos novos em relação à ALECE.'},
+      {w:'ambos',c:'leg',x:'Descobrir o caminho do registro exigido na posse (conselho para Biólogo, MTE/Radialista para Desenhista).'}
+    ]},
+    {k:'w1',n:'Sem. 1',a:'2026-10-05',t:'Início da primeira passada',items:[
+      {w:'cado',c:'esp',x:'<strong>Microbiologia I</strong>: bactérias (morfologia, fisiologia, genética, taxonomia).'},
+      {w:'gabi',c:'esp',x:'<strong>Desenho técnico I</strong>: normas ABNT (formatos, linhas, escalas, legenda, dobramento), projeções ortogonais e vistas.'},
+      {w:'ambos',c:'port',x:'Esfera <strong>pública/oficial</strong>: estrutura normativa (caput, artigo, inciso), impessoalização, coesão referencial.'},
+      {w:'ambos',c:'leg',x:'<strong>CF/88, arts. 37 a 41</strong>.'},
+      {w:'ambos',c:'rl',x:'Frações, decimais, MMC, MDC e divisibilidade.'}
+    ]},
+    {k:'w2',n:'Sem. 2',a:'2026-10-12',t:'Seg 12/10 é feriado',items:[
+      {w:'cado',c:'esp',x:'<strong>Microbiologia II</strong>: vírus, fungos, parasitos e mecanismos de patogenicidade.'},
+      {w:'gabi',c:'esp',x:'<strong>Desenho técnico II</strong>: perspectiva isométrica e cotagem + <strong>normas técnicas gráficas</strong> (ISO 216, ISO 12647, PDF/X).'},
+      {w:'ambos',c:'port',x:'<strong>Pontuação</strong> e ortografia.'},
+      {w:'ambos',c:'leg',x:'Lei 8.112: provimento, posse, exercício, estágio probatório, vacância.'},
+      {w:'ambos',c:'rl',x:'Razão, proporção e regra de três.'}
+    ]},
+    {k:'w3',n:'Sem. 3',a:'2026-10-19',t:'',items:[
+      {w:'cado',c:'esp',x:'<strong>Imunologia</strong>: inata × adaptativa, antígenos, anticorpos, resposta imune.'},
+      {w:'gabi',c:'esp',x:'<strong>Acessibilidade em comunicação visual</strong>: WCAG, NBR 9050, Lei 13.146/2015, eMAG, daltonismo.'},
+      {w:'ambos',c:'port',x:'<strong>Crase</strong> e colocação pronominal.'},
+      {w:'ambos',c:'leg',x:'Lei 8.112: remoção, redistribuição, substituição, vencimento e vantagens.'},
+      {w:'ambos',c:'rl',x:'Porcentagem.'}
+    ]},
+    {k:'w4',n:'Sem. 4',a:'2026-10-26',t:'',items:[
+      {w:'cado',c:'esp',x:'<strong>Técnicas imunológicas</strong> (ELISA, IF, aglutinação, imunocromatografia, Western, citometria) + <strong>Biossegurança I</strong> (NB-1 a NB-4, classificação de risco).'},
+      {w:'gabi',c:'esp',x:'<strong>Design de interfaces</strong>: UI/UX, heurísticas de Nielsen, grid responsivo, protótipo.'},
+      {w:'ambos',c:'port',x:'Esfera <strong>jornalística/publicitária</strong>: fato × opinião, lide, polifonia, aspas, discurso reportado.'},
+      {w:'ambos',c:'leg',x:'Lei 8.112: férias, licenças, afastamentos, concessões.'},
+      {w:'ambos',c:'rl',x:'Unidades de medida.'}
+    ]},
+    {k:'w5',n:'Sem. 5',a:'2026-11-02',t:'Seg 02/11 é feriado',items:[
+      {w:'cado',c:'esp',x:'<strong>Biossegurança II</strong> (esterilização, desinfecção, RDC 222/2018) + <strong>Vigilância I</strong> (SNVS, vigilância epidemiológica, notificação compulsória, SINAN).'},
+      {w:'gabi',c:'esp',x:'<strong>Direitos autorais e PI</strong>: Lei 9.610/1998, Lei 9.279/1996 (marca, desenho industrial), Creative Commons.'},
+      {w:'ambos',c:'port',x:'<strong>Conectivos</strong> e relações lógico-discursivas + coesão sequencial.'},
+      {w:'ambos',c:'leg',x:'Lei 8.112: <strong>regime disciplinar</strong> (deveres, proibições, acumulação, penalidades).'},
+      {w:'ambos',c:'rl',x:'Sequências lógicas.'}
+    ]},
+    {k:'w6',n:'Sem. 6',a:'2026-11-09',t:'',items:[
+      {w:'cado',c:'esp',x:'<strong>Vigilância II</strong>: zoonoses e doenças infecciosas (arboviroses, raiva, leptospirose, leishmanioses, esquistossomose, Chagas).'},
+      {w:'gabi',c:'esp',x:'<strong>Cor e gerenciamento de cores</strong> (perfis ICC, intenções de renderização, calibração). Base ALECE.'},
+      {w:'ambos',c:'port',x:'<strong>Concordância</strong> verbal e nominal.'},
+      {w:'ambos',c:'leg',x:'Lei 8.112: PAD e sindicância + <strong>Decreto 1.171/1994</strong> (Código de Ética).'},
+      {w:'ambos',c:'rl',x:'Verdade e mentira.'}
+    ]},
+    {k:'w7',n:'Sem. 7',a:'2026-11-16',t:'Sex 20/11 é feriado',items:[
+      {w:'cado',c:'esp',x:'<strong>Fauna sinantrópica</strong> (manejo integrado, IN IBAMA 141/2006) + <strong>microbiologia ambiental e saneamento</strong> (coliformes, Portaria 888/2021).'},
+      {w:'gabi',c:'esp',x:'<strong>Impressão, pré-impressão e acabamentos</strong> + <strong>softwares e formatos de arquivo</strong>. Base ALECE.'},
+      {w:'ambos',c:'port',x:'<strong>Regência</strong> verbal e nominal.'},
+      {w:'ambos',c:'leg',x:'<strong>Lei 9.784/1999</strong> (processo administrativo).'},
+      {w:'ambos',c:'rl',x:'Correlacionamento.'}
+    ]},
+    {k:'w8',n:'Sem. 8',a:'2026-11-23',t:'',items:[
+      {w:'cado',c:'esp',x:'<strong>Biologia molecular</strong> (extração, PCR e variações, eletroforese, sequenciamento) + <strong>cultura de células</strong>.'},
+      {w:'gabi',c:'esp',x:'<strong>Tipografia</strong> e <strong>design editorial</strong>. Base ALECE.'},
+      {w:'ambos',c:'port',x:'Esfera <strong>científica</strong>: voz passiva, sujeito indeterminado, formação de palavras, nominalização.'},
+      {w:'ambos',c:'leg',x:'<strong>Lei 8.429/1992</strong> (com a redação da Lei 14.230/2021) + <strong>Lei 11.091/2005</strong> (carreira TAE).'},
+      {w:'ambos',c:'rl',x:'Diagramas lógicos e proposições categóricas.'}
+    ]},
+    {k:'w9',n:'Sem. 9',a:'2026-11-30',t:'',items:[
+      {w:'cado',c:'esp',x:'<strong>Ecotoxicologia</strong> (CL50/CE50, ensaios, genotoxicidade, mutagenicidade) + <strong>legislação do biólogo</strong> (Lei 6.684/1979, Decreto 88.438/1983, Código de Ética).'},
+      {w:'gabi',c:'esp',x:'<strong>Identidade visual e branding</strong> + <strong>ilustração</strong> tradicional e digital.'},
+      {w:'ambos',c:'port',x:'Esfera <strong>literária</strong>: narrador, figuras de linguagem, discurso indireto livre, versificação, intertextualidade.'},
+      {w:'ambos',c:'leg',x:'<strong>Estatuto e Regimento Geral da UFPE</strong>.'},
+      {w:'ambos',c:'rl',x:'Casa dos pombos e princípio da regressão.'}
+    ]},
+    {k:'w10',n:'Sem. 10',a:'2026-12-07',t:'Fim da primeira passada',items:[
+      {w:'cado',c:'esp',x:'<strong>Ecologia, Zoologia (foco em invertebrados) e Botânica</strong>: revisão só por questões.'},
+      {w:'gabi',c:'esp',x:'<strong>Planejamento e produção de projeto gráfico</strong> + revisão geral por questões.'},
+      {w:'ambos',c:'port',x:'Esfera <strong>cotidiana</strong>, variação linguística, modalização, charges e memes.'},
+      {w:'ambos',c:'leg',x:'<strong>Decreto 7.602/2011</strong> (PNSST) + <strong>SIPAC</strong>.'},
+      {w:'ambos',c:'rl',x:'Orientação espacial e planificação.'},
+      {w:'ambos',c:'esp',x:'<strong>Simulado intermediário · sáb 12/12</strong>: prova completa de 4h. Serve para medir, não é meta.'}
+    ]},
+    {k:'w11',n:'Sem. 11',a:'2026-12-14',t:'Consolidação',items:[
+      {w:'ambos',c:'esp',x:'Os <strong>3 piores blocos</strong> de cada um no simulado, com 30 min de teoria e 60 de questões.'},
+      {w:'ambos',c:'leg',x:'Revisão corrida da <strong>Lei 8.112 inteira</strong>.'},
+      {w:'ambos',c:'port',x:'Questões de Português misturadas, por esfera.'}
+    ]},
+    {k:'w12',n:'Sem. 12–13',a:'2026-12-21',t:'Festas · meia carga',items:[
+      {w:'ambos',c:'esp',x:'Sessões de 1h em seg, ter, qua e sáb: questões misturadas + flashcards.'},
+      {w:'ambos',c:'rl',x:'<strong>Folga total em 24, 25 e 31/12 e 01/01.</strong>'},
+      {w:'ambos',c:'leg',x:'Reservar a hospedagem em Recife para 23/01.'}
+    ]},
+    {k:'w14',n:'Sem. 14',a:'2027-01-04',t:'Simulados',items:[
+      {w:'ambos',c:'esp',x:'<strong>Simulado completo · sáb 09/01</strong>: 4h, caneta preta, folha de respostas de verdade.'},
+      {w:'ambos',c:'port',x:'Dom 10/01: corrigir juntos e passar tudo para o caderno de erros.'},
+      {w:'ambos',c:'leg',x:'Dias úteis: um bloco fraco por sessão, escolhido pelo caderno de erros.'}
+    ]},
+    {k:'w15',n:'Sem. 15',a:'2027-01-11',t:'Simulados',items:[
+      {w:'ambos',c:'esp',x:'<strong>Simulado completo · sáb 16/01</strong>. Metas: Cado ≥ 64/80 (≥ 36/45 nos Específicos), Gabi ≥ 51/60 (≥ 17/20 em Português).'},
+      {w:'ambos',c:'port',x:'Dom 17/01: correção e caderno de erros.'},
+      {w:'ambos',c:'leg',x:'Dias úteis: blocos fracos pelo caderno de erros.'}
+    ]},
+    {k:'w16',n:'Sem. 16',a:'2027-01-18',t:'Aterrissagem · prova no domingo',items:[
+      {w:'cado',c:'esp',x:'1h por dia, leve: notificação compulsória, NB-1 a NB-4, técnicas imunológicas, variações de PCR.'},
+      {w:'gabi',c:'esp',x:'1h por dia, leve: números das normas de desenho técnico, contrastes da WCAG, Lei 9.610.'},
+      {w:'ambos',c:'leg',x:'Prazos e penalidades da 8.112.'},
+      {w:'ambos',c:'port',x:'<strong>20 a 23/01: conferir o cartão</strong> com local e horário.'},
+      {w:'ambos',c:'rl',x:'Sex 22/01 descanso · sáb 23/01 viagem para Recife, reconhecer o local, dormir cedo.'}
+    ]}
+  ];
+  var TAG={esp:['t-esp','Específicos'],port:['t-port','Português'],leg:['t-leg','Legislação'],rl:['t-rl','RL']};
+  var box=document.getElementById('weeks');
+
+  function curIndex(){for(var i=W.length-1;i>=0;i--){if(TODAY>=d(W[i].a)) return i;} return 0;}
+  var cur = curIndex();
+
+  W.forEach(function(w,i){
+    var a=d(w.a), end=(i<W.length-1)? new Date(d(W[i+1].a)-864e5) : EXAM;
+    var det=document.createElement('details'); det.className='week'+(i===cur?' current':''); det.dataset.i=i;
+    if(i===cur || i===cur+1) det.open=true;
+    var h='<summary><span class="num">'+w.n+'</span><span class="dates">'+fmt(a)+' → '+fmt(end)+'</span><span class="ttl">'+(w.t||'&nbsp;')+(i===cur?' <span class="badge-now">esta semana</span>':'')+'</span><span class="cnt"></span></summary><div class="body">';
+    w.items.forEach(function(it,j){
+      var id=w.k+'-'+j, tg=TAG[it.c];
+      var tagHtml = (w.k==='w0'||w.k==='w12'||w.k==='w14'||w.k==='w15'||w.k==='w16'||w.k==='w11') ? '' : '<span class="tag '+tg[0]+'">'+tg[1]+'</span>';
+      var who = it.w==='ambos' ? '👫 os dois' : (it.w==='cado'?'Cado':'Gabi');
+      h+='<div class="item" data-who="'+it.w+'"><input type="checkbox" id="'+id+'"'+(state.checks[id]?' checked':'')+'><span>'+tagHtml+'</span><label for="'+id+'"><span class="who">'+who+'</span>'+it.x+'</label></div>';
+    });
+    h+='</div>'; det.innerHTML=h; box.appendChild(det);
+  });
+
+  box.addEventListener('change',function(e){
+    if(e.target.type!=='checkbox') return;
+    if(e.target.checked) state.checks[e.target.id]=1; else delete state.checks[e.target.id];
+    save(); refresh();
+  });
+
+  function visible(el){ return !el.hidden; }
+  function refresh(){
+    var tot=0, done=0;
+    Array.prototype.forEach.call(box.querySelectorAll('.week'),function(wk){
+      var t=0,c=0;
+      Array.prototype.forEach.call(wk.querySelectorAll('.item'),function(it){
+        if(!visible(it)) return;
+        var cb=it.querySelector('input'); t++; if(cb.checked){c++; it.classList.add('checked');} else it.classList.remove('checked');
+      });
+      wk.querySelector('.cnt').textContent=c+'/'+t;
+      wk.classList.toggle('done', t>0 && c===t);
+      tot+=t; done+=c;
+    });
+    document.getElementById('fill').style.width=(tot?done/tot*100:0)+'%';
+    document.getElementById('ptext').textContent=done+' de '+tot+' itens feitos';
+  }
+
+  /* seletor de pessoa */
+  var btns=document.querySelectorAll('.seg button');
+  function applyWho(p){
+    state.who=p;
+    Array.prototype.forEach.call(btns,function(b){b.setAttribute('aria-pressed', String(b.dataset.p===p));});
+    Array.prototype.forEach.call(document.querySelectorAll('[data-who]'),function(el){
+      var w=el.getAttribute('data-who'); el.hidden = !(p==='ambos' || w==='ambos' || w===p);
+    });
+    refresh();
+  }
+  Array.prototype.forEach.call(btns,function(b){b.addEventListener('click',function(){applyWho(b.dataset.p); save();});});
+  applyWho(state.who);
+
+  /* impressão: abre todas as semanas */
+  window.addEventListener('beforeprint',function(){Array.prototype.forEach.call(box.querySelectorAll('details'),function(x){x.dataset.was=x.open?'1':''; x.open=true;});});
+  window.addEventListener('afterprint',function(){Array.prototype.forEach.call(box.querySelectorAll('details'),function(x){x.open=!!x.dataset.was;});});
+})();
+</script>
+</body>
+</html>
