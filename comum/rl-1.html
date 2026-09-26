@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Raciocínio Lógico, semana 1, para o concurso UFPE 2027: frações, decimais, divisibilidade, MMC e MDC, com questões reais da UFPE e da FADE, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>➗</text></svg>">
+<title>RL 1 · Frações, MMC e MDC</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+
+/* exemplos resolvidos */
+.ex{background:var(--card);border:1px solid var(--rule2);border-top:3px solid var(--green);border-radius:6px;padding:14px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.ex>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.ex ol{margin:6px 0 0} .ex li{margin:4px 0}
+.ex .res{font-weight:800;color:var(--green)}
+.mono{font-family:"Cascadia Mono",Consolas,monospace;font-size:14px}
+.back2{margin-left:14px}
+.divt{border-collapse:collapse;font-family:"Cascadia Mono",Consolas,monospace;font-size:15px;margin:6px 0}
+.divt td{padding:3px 12px;text-align:right}
+.divt td.p{border-left:2px solid var(--ink);color:var(--mag);font-weight:700;text-align:left}
+.divt td.m{color:var(--green);font-weight:700}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro · 45 min</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#fracoes">1 · Frações</a>
+  <a href="#decimais">2 · Decimais e dízimas</a>
+  <a href="#divis">3 · Divisibilidade e primos</a>
+  <a href="#mmcmdc">4 · MMC e MDC</a>
+  <a href="#tipos">5 · Problemas-tipo</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <a class="back" href="../index.html#cado">← Plano do Cado</a><a class="back back2" href="../index.html#gabi">Plano da Gabi</a>
+  <div class="eyebrow">Raciocínio Lógico · comum aos dois · Frações, MMC e MDC · Semana 1</div>
+  <h1>Frações,<br><em>MMC e MDC</em></h1>
+  <p class="dek">Números racionais nas formas decimal e fracionária, divisibilidade, MMC e MDC. Parece matéria de escola, e é, mas é também a base de porcentagem, proporção e quase toda situação-problema da prova. São 5 questões de RL: valem 6,25 pts para o Cado e 8,3 pts para a Gabi.</p>
+  <div class="meta"><span class="hot">dom 11/10 · 45 min juntos</span><span>6 questões reais resolvidas</span><span>12 no simulado</span><span>20 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#comocai">Como cai</a><a href="#fracoes">Frações</a><a href="#decimais">Decimais</a><a href="#divis">Divisibilidade</a><a href="#mmcmdc">MMC e MDC</a><a href="#tipos">Problemas-tipo</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro · domingo 11/10</span>
+    <h2>45 minutos, juntos</h2>
+    <p class="muted">O edital pede: <em>"Raciocínio lógico-numérico, através de problemas que envolvam números racionais, suas propriedades, operações nas formas decimal e fracionária; múltiplos e divisores, mínimo múltiplo comum, máximo divisor comum, divisibilidade"</em>.</p>
+    <div class="plan">
+      <div class="row"><div class="d"><b>0–10 min</b>teoria</div><div>Um lê em voz alta as seções <a href="#fracoes">1</a> e <a href="#decimais">2</a>, o outro refaz os exemplos no papel. Depois troquem para as seções <a href="#divis">3</a> e <a href="#mmcmdc">4</a>.</div></div>
+      <div class="row"><div class="d"><b>10–20 min</b>métodos</div><div>Seção <a href="#tipos">5</a>: os quatro problemas-tipo. Cada um resolve um exemplo e explica para o outro.</div></div>
+      <div class="row"><div class="d"><b>20–40 min</b>simulado</div><div>As 12 questões do <a href="#simulado">simulado</a>, cerca de 1,5 min cada, cada um no seu papel. Corrijam juntos e comparem os caminhos.</div></div>
+      <div class="row"><div class="d"><b>40–45 min</b>fecho</div><div>As <a href="#reais">questões reais</a> ficam para a revisão da semana. Marquem os <a href="#cartoes">flashcards</a> e o <a href="#dominio">checklist</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>35 questões de matemática e RL das provas anteriores</h2>
+    <p>Foram lidas as questões de RL e matemática das provas disponíveis: <strong>FADE/UFPE 2023</strong> (Administrador e Assistente em Administração, 5 de RL cada, <strong>a banca atual</strong>), <strong>UFPE Desenhista de Artes Gráficas 2015 e 2019</strong> (10 de matemática cada) e <strong>HC-UFPE 2014</strong> (5 de RL, banca IDECAN). As provas de Biólogo UFPE 2008 e 2016 não tinham RL.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tipo</th><th>Qtd.</th><th>Onde caiu</th><th>Semana no plano</th></tr></thead>
+      <tbody>
+        <tr><td>Porcentagem</td><td>7</td><td>FADE 2023 (2), Desenhista 2015 (5)</td><td>Semana 3</td></tr>
+        <tr><td>Frações e operações com racionais</td><td>5</td><td>FADE 2023 (2), Desenhista 2019 (3)</td><td><strong>Esta semana</strong></td></tr>
+        <tr><td>Razão, proporção e regra de três</td><td>3</td><td>Desenhista 2015 (1), 2019 (2)</td><td>Semana 2</td></tr>
+        <tr><td>Ordenação e correlacionamento</td><td>3</td><td>FADE 2023, HC 2014, Desenhista 2019</td><td>Semana 7</td></tr>
+        <tr><td>Problemas com inteiros e equações</td><td>2</td><td>FADE 2023 (2)</td><td>Transversal</td></tr>
+        <tr><td>Lógica com algarismos</td><td>2</td><td>FADE 2023, Desenhista 2019</td><td>Transversal</td></tr>
+        <tr><td>Unidades de medida</td><td>2</td><td>HC 2014, Desenhista 2015</td><td>Semana 4</td></tr>
+        <tr><td>Casa dos pombos</td><td>1</td><td>FADE 2023</td><td>Semana 9</td></tr>
+        <tr><td>Equivalência de afirmações</td><td>1</td><td>FADE 2023</td><td>Semana 8</td></tr>
+        <tr><td>Verdade e mentira</td><td>1</td><td>HC 2014</td><td>Semana 6</td></tr>
+        <tr><td>Sequência de figuras</td><td>1</td><td>HC 2014</td><td>Semana 5</td></tr>
+        <tr><td class="muted">Matemática financeira</td><td>4</td><td>Desenhista 2015 (2), 2019 (2)</td><td class="muted">fora do edital 2026</td></tr>
+        <tr><td class="muted">Média e estatística</td><td>2</td><td>Desenhista 2015, 2019</td><td class="muted">fora do edital 2026</td></tr>
+        <tr><td class="muted">Geometria (área)</td><td>1</td><td>HC 2014</td><td class="muted">fora do edital 2026</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">A FADE em 2023: problema, não conta</h4>
+        <p class="small muted" style="margin:0">As 10 questões de RL da banca atual são <strong>situações-problema curtas</strong>: tinta misturada, pontuação de jogo, bolas num saco, lucro de um café, senha, cavalos numa corrida. Nenhuma pede conta pesada. Todas pedem <strong>montar</strong> o problema: uma equação, o pior caso, a fração do resto. O programa de RL de 2026 (casa dos pombos, regressão, verdade e mentira, correlacionamento) tem exatamente esse perfil.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">A UFPE antiga cobrava mais conta</h4>
+        <p class="small muted" style="margin:0">As provas de Desenhista (2015 e 2019, banca Covest) tinham "Matemática" com juros, descontos e média, que <strong>não estão</strong> no edital de 2026. Delas, só as questões de frações, porcentagem e proporção servem. Frações aparecem <strong>dentro</strong> de problemas: mistura de vinagrete, parcelas de venda, pratos de festa.</p>
+      </div>
+    </div>
+    <div class="cx cai"><span class="k">O que isso quer dizer para esta semana</span><p>Na prova, frações e MMC/MDC quase nunca aparecem sozinhos. Aparecem como a <strong>ferramenta</strong> dentro de um problema. Por isso a seção 5, dos problemas-tipo, é a mais importante da página.</p></div>
+  </section>
+
+  <!-- 1 FRAÇÕES -->
+  <section class="sec" id="fracoes">
+    <span class="lbl">Seção 1</span>
+    <h2>Frações</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Operação</th><th>Método</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td>Equivalência</td><td>Multiplicar ou dividir numerador e denominador pelo mesmo número</td><td class="mono">2/3 = 4/6 = 10/15</td></tr>
+        <tr><td>Simplificação</td><td>Dividir os dois pelo <strong>MDC</strong> (fração irredutível)</td><td class="mono">36/48 → ÷12 → 3/4</td></tr>
+        <tr><td>Soma e subtração</td><td>Reduzir ao mesmo denominador, que é o <strong>MMC</strong> dos denominadores</td><td class="mono">1/4 + 1/6 = 3/12 + 2/12 = 5/12</td></tr>
+        <tr><td>Multiplicação</td><td>Numerador × numerador e denominador × denominador. Simplifique cruzado antes</td><td class="mono">3/4 × 8/9 = (1×2)/(1×3) = 2/3</td></tr>
+        <tr><td>Divisão</td><td>Multiplicar pelo <strong>inverso</strong> da segunda</td><td class="mono">2/3 ÷ 4/5 = 2/3 × 5/4 = 5/6</td></tr>
+        <tr><td>Fração de fração</td><td>"de" significa <strong>vezes</strong></td><td class="mono">2/5 de 3/4 = 6/20 = 3/10</td></tr>
+        <tr><td>Fração de um número</td><td>Divida pelo denominador e multiplique pelo numerador</td><td class="mono">3/8 de 240 = 240÷8×3 = 90</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Comparar frações</h3>
+    <ul>
+      <li><strong>Mesmo denominador:</strong> a maior é a de maior numerador.</li>
+      <li><strong>Mesmo numerador:</strong> a maior é a de <strong>menor</strong> denominador (1/3 &gt; 1/5).</li>
+      <li><strong>Caso geral:</strong> multiplique cruzado. Para a/b × c/d, compare a·d com b·c. Exemplo: 5/7 × 7/10 dá 50 contra 49, então 5/7 é maior. Ou passe tudo para decimal.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"Gastou 1/3 e depois 2/5" <strong>do total</strong> é diferente de "2/5 <strong>do resto</strong>". No primeiro caso, as frações se somam: 1/3 + 2/5 = 11/15. No segundo, a segunda fração é aplicada sobre 2/3: 2/5 × 2/3 = 4/15, e o gasto total fica em 1/3 + 4/15 = 9/15. Leia com atenção se é "do total" ou "do restante".</p></div>
+  </section>
+
+  <!-- 2 DECIMAIS -->
+  <section class="sec" id="decimais">
+    <span class="lbl">Seção 2</span>
+    <h2>Decimais e dízimas</h2>
+    <ul>
+      <li><strong>Fração → decimal:</strong> divida o numerador pelo denominador. 3/8 = 0,375.</li>
+      <li><strong>Decimal exato → fração:</strong> tantos zeros no denominador quantas casas decimais, depois simplifique. 0,375 = 375/1000 = 3/8.</li>
+      <li><strong>Quando a fração dá decimal exato?</strong> Quando, na forma irredutível, o denominador só tem os fatores primos <strong>2 e 5</strong>. 7/20 = 0,35 é exato. 1/6 = 0,1666… é dízima, porque o 6 tem fator 3.</li>
+    </ul>
+    <h3>Fração geratriz das dízimas</h3>
+    <div class="grid2">
+      <div class="ex"><span class="k">Dízima simples · só o período</span>
+        <p class="mono">0,272727… = 27/99 = 3/11</p>
+        <p class="small muted" style="margin:0">O período vai no numerador. No denominador, <strong>um 9 para cada algarismo do período</strong>. Outros casos: 0,333… = 3/9 = 1/3 e 0,999… = 9/9 = 1.</p>
+      </div>
+      <div class="ex"><span class="k">Dízima composta · anteperíodo + período</span>
+        <p class="mono">1,2333… = (123 − 12)/90 = 111/90 = 37/30</p>
+        <p class="small muted" style="margin:0">Numerador: o número todo até o fim do primeiro período (123) menos a parte que não se repete (12). Denominador: <strong>um 9 para cada algarismo do período e um 0 para cada algarismo do anteperíodo</strong> (90).</p>
+      </div>
+    </div>
+    <div class="cx dec"><span class="k">Decoreba</span><p>Na hora da prova vale mais saber as frações "famosas" de cabeça: 1/2 = 0,5 · 1/3 = 0,333… · 1/4 = 0,25 · 1/5 = 0,2 · 1/6 = 0,1666… · 1/8 = 0,125 · 1/9 = 0,111… · 1/10 = 0,1 · 3/4 = 0,75 · 2/3 = 0,666…</p></div>
+  </section>
+
+  <!-- 3 DIVISIBILIDADE -->
+  <section class="sec" id="divis">
+    <span class="lbl">Seção 3</span>
+    <h2>Divisibilidade e números primos</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Divisível por</th><th>Critério</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td>2</td><td>Termina em algarismo par</td><td class="mono">1.358</td></tr>
+        <tr><td>3</td><td><strong>Soma dos algarismos</strong> divisível por 3</td><td class="mono">5.214 → 5+2+1+4 = 12</td></tr>
+        <tr><td>4</td><td>Os <strong>dois últimos</strong> algarismos formam múltiplo de 4 (ou 00)</td><td class="mono">7.452 → 52</td></tr>
+        <tr><td>5</td><td>Termina em 0 ou 5</td><td class="mono">985</td></tr>
+        <tr><td>6</td><td>Divisível por 2 <strong>e</strong> por 3</td><td class="mono">5.214</td></tr>
+        <tr><td>8</td><td>Os <strong>três últimos</strong> algarismos formam múltiplo de 8 (ou 000)</td><td class="mono">13.120 → 120</td></tr>
+        <tr><td>9</td><td>Soma dos algarismos divisível por 9</td><td class="mono">7.452 → 18</td></tr>
+        <tr><td>10</td><td>Termina em 0</td><td class="mono">3.470</td></tr>
+        <tr><td>11</td><td>Soma dos algarismos de posição ímpar menos a soma dos de posição par dá múltiplo de 11 (inclusive 0)</td><td class="mono">2.849 → (9+8) − (4+2) = 11</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Número primo</strong> tem exatamente dois divisores positivos, 1 e ele mesmo. Os primeiros são 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47. O <strong>2 é o único primo par</strong>, e o <strong>1 não é primo</strong>. Todo número maior que 1 se decompõe de forma única em fatores primos.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 250" role="img" aria-label="Árvore de fatoração de 360 e contagem de divisores">
+        <g font-size="16" text-anchor="middle" font-weight="700">
+          <text x="140" y="34">360</text>
+          <text x="90" y="84" class="fm">2</text><text x="190" y="84">180</text>
+          <text x="140" y="134" class="fm">2</text><text x="240" y="134">90</text>
+          <text x="190" y="184" class="fm">2</text><text x="290" y="184">45</text>
+          <text x="240" y="234" class="fm">3</text><text x="340" y="234">15</text>
+        </g>
+        <g class="ln" stroke-width="1.6">
+          <path d="M130 40 L96 68 M150 40 L184 68 M180 90 L146 118 M200 90 L234 118 M230 140 L196 168 M250 140 L284 168 M280 190 L246 218 M300 190 L334 218"/>
+        </g>
+        <text x="352" y="238" font-size="13" class="t2">= 3 × </text><text x="392" y="238" font-size="16" font-weight="700" class="fm">5</text>
+        <g font-size="14">
+          <text x="440" y="60" class="tb" font-size="15">360 = 2³ × 3² × 5¹</text>
+          <text x="440" y="96" class="t2">Número de divisores positivos:</text>
+          <text x="440" y="120" class="t2">some 1 a cada expoente e multiplique</text>
+          <text x="440" y="152" class="tb">(3+1) × (2+1) × (1+1) = 4 × 3 × 2 = 24</text>
+          <text x="440" y="190" class="t3" font-size="12.5">Os primos (rosa) são as "folhas" da árvore.</text>
+          <text x="440" y="210" class="t3" font-size="12.5">Qualquer caminho de divisão leva aos mesmos fatores.</text>
+        </g>
+      </svg>
+      <figcaption>Árvore de fatoração. O mesmo resultado sai dividindo sucessivamente pelo menor primo possível.</figcaption>
+    </figure>
+  </section>
+
+  <!-- 4 MMC MDC -->
+  <section class="sec" id="mmcmdc">
+    <span class="lbl">Seção 4</span>
+    <h2>MMC e MDC</h2>
+    <p><strong>MMC</strong> (mínimo múltiplo comum) é o menor número que é múltiplo de todos os dados, ou seja, "quando <strong>coincidem</strong>". <strong>MDC</strong> (máximo divisor comum) é o maior número que divide todos, ou seja, "o maior <strong>pedaço</strong> igual".</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 260" role="img" aria-label="MMC e MDC de 12, 18 e 30 pela fatoração com expoentes">
+        <g font-size="14">
+          <text x="30" y="36" class="tb" font-size="13">NÚMERO</text>
+          <text x="210" y="36" text-anchor="middle" class="tb" font-size="13">fator 2</text>
+          <text x="330" y="36" text-anchor="middle" class="tb" font-size="13">fator 3</text>
+          <text x="450" y="36" text-anchor="middle" class="tb" font-size="13">fator 5</text>
+          <line x1="20" y1="48" x2="520" y2="48" class="ln2"/>
+          <text x="30" y="80" font-weight="700" font-size="16">12 = 2² × 3</text>
+          <text x="30" y="118" font-weight="700" font-size="16">18 = 2 × 3²</text>
+          <text x="30" y="156" font-weight="700" font-size="16">30 = 2 × 3 × 5</text>
+          <rect x="182" y="60" width="56" height="28" rx="5" class="fms" stroke="var(--mag)"/>
+          <text x="210" y="80" text-anchor="middle" font-size="16">2²</text>
+          <rect x="182" y="98" width="56" height="28" rx="5" class="fgs" stroke="var(--green)"/>
+          <text x="210" y="118" text-anchor="middle" font-size="16">2¹</text>
+          <text x="210" y="156" text-anchor="middle" font-size="16">2¹</text>
+          <rect x="302" y="60" width="56" height="28" rx="5" class="fgs" stroke="var(--green)"/>
+          <text x="330" y="80" text-anchor="middle" font-size="16">3¹</text>
+          <rect x="302" y="98" width="56" height="28" rx="5" class="fms" stroke="var(--mag)"/>
+          <text x="330" y="118" text-anchor="middle" font-size="16">3²</text>
+          <text x="330" y="156" text-anchor="middle" font-size="16">3¹</text>
+          <text x="450" y="80" text-anchor="middle" font-size="16" class="t3">—</text>
+          <text x="450" y="118" text-anchor="middle" font-size="16" class="t3">—</text>
+          <rect x="422" y="136" width="56" height="28" rx="5" class="fms" stroke="var(--mag)"/>
+          <text x="450" y="156" text-anchor="middle" font-size="16">5¹</text>
+          <line x1="20" y1="176" x2="520" y2="176" class="ln2"/>
+          <text x="30" y="208" font-size="15" class="tb" style="fill:var(--mag)">MMC = 2² × 3² × 5 = 180</text>
+          <text x="30" y="238" font-size="15" class="tb" style="fill:var(--green)">MDC = 2 × 3 = 6</text>
+          <text x="560" y="72" font-size="13" class="t2">MMC: todos os primos,</text>
+          <text x="560" y="90" font-size="13" class="t2">com o <tspan class="tb">MAIOR</tspan> expoente</text>
+          <text x="560" y="130" font-size="13" class="t2">MDC: só os primos</text>
+          <text x="560" y="148" font-size="13" class="t2"><tspan class="tb">COMUNS</tspan> a todos, com o</text>
+          <text x="560" y="166" font-size="13" class="t2"><tspan class="tb">MENOR</tspan> expoente</text>
+          <text x="560" y="208" font-size="12" class="t3">O 5 não entra no MDC:</text>
+          <text x="560" y="224" font-size="12" class="t3">não divide 12 nem 18</text>
+        </g>
+      </svg>
+      <figcaption>MMC e MDC de 12, 18 e 30 pela fatoração. Rosa: maior expoente (MMC). Verde: menor expoente entre os primos comuns (MDC).</figcaption>
+    </figure>
+    <div class="grid2">
+      <div class="ex"><span class="k">Método das divisões simultâneas (MMC)</span>
+        <table class="divt" aria-label="Divisões simultâneas de 12, 18 e 30">
+          <tr><td>12, 18, 30</td><td class="p">2 <span class="m">✓</span></td></tr>
+          <tr><td>6, 9, 15</td><td class="p">2</td></tr>
+          <tr><td>3, 9, 15</td><td class="p">3 <span class="m">✓</span></td></tr>
+          <tr><td>1, 3, 5</td><td class="p">3</td></tr>
+          <tr><td>1, 1, 5</td><td class="p">5</td></tr>
+          <tr><td>1, 1, 1</td><td></td></tr>
+        </table>
+        <p class="small" style="margin:6px 0 0">MMC = 2 × 2 × 3 × 3 × 5 = <span class="res">180</span>. As linhas marcadas com ✓ são as que dividiram <strong>todos ao mesmo tempo</strong>: o produto delas é o MDC = 2 × 3 = <span class="res">6</span>.</p>
+      </div>
+      <div class="ex"><span class="k">Divisões sucessivas de Euclides (MDC)</span>
+        <p class="mono" style="margin:0">120 = 1 × 84 + 36<br>84 = 2 × 36 + 12<br>36 = 3 × 12 + <strong>0</strong></p>
+        <p class="small" style="margin:8px 0 0">Divida o maior pelo menor, depois o divisor pelo resto, até o resto dar zero. O último divisor é o MDC: MDC(120, 84) = <span class="res">12</span>. É o mais rápido para números grandes.</p>
+      </div>
+    </div>
+    <div class="cx dec"><span class="k">Decoreba · a relação que resolve questões</span><p>Para <strong>dois</strong> números: <strong>MMC(a, b) × MDC(a, b) = a × b</strong>. Exemplo: MMC(12, 18) = 36 e MDC = 6, e 36 × 6 = 216 = 12 × 18. Se os números são <strong>primos entre si</strong> (MDC = 1), o MMC é o produto deles. Atenção: a relação <strong>não vale</strong> para três números.</p></div>
+  </section>
+
+  <!-- 5 PROBLEMAS-TIPO -->
+  <section class="sec" id="tipos">
+    <span class="lbl">Seção 5 · a mais importante</span>
+    <h2>Os quatro problemas-tipo</h2>
+
+    <h3>Tipo 1 · "Quando coincidem de novo?" é MMC</h3>
+    <p>Pistas: ônibus que saem juntos, remédios de x em x horas, luzes que piscam, revisões periódicas, "voltarão a se encontrar".</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 180" role="img" aria-label="Linha do tempo de dois ônibus com intervalos de 20 e 30 minutos coincidindo a cada 60 minutos">
+        <line x1="150" y1="120" x2="735" y2="120" class="ln" stroke-width="1.6"/>
+        <g font-size="12" text-anchor="middle" class="t3"><text x="150" y="140">0</text><text x="246.7" y="140">20</text><text x="343.3" y="140">40</text><text x="440" y="140">60</text><text x="536.7" y="140">80</text><text x="633.3" y="140">100</text><text x="730" y="140">120 min</text></g>
+        <text x="10" y="46" font-size="12.5" class="tb">Linha A</text><text x="10" y="62" font-size="11.5" class="t2">a cada 20 min</text>
+        <text x="10" y="96" font-size="12.5" class="tb">Linha B</text><text x="10" y="112" font-size="11.5" class="t2">a cada 30 min</text>
+        <g class="fc"><circle cx="150" cy="50" r="7"/><circle cx="246.7" cy="50" r="7"/><circle cx="343.3" cy="50" r="7"/><circle cx="440" cy="50" r="7"/><circle cx="536.7" cy="50" r="7"/><circle cx="633.3" cy="50" r="7"/><circle cx="730" cy="50" r="7"/></g>
+        <g class="fa"><circle cx="150" cy="100" r="7"/><circle cx="295" cy="100" r="7"/><circle cx="440" cy="100" r="7"/><circle cx="585" cy="100" r="7"/><circle cx="730" cy="100" r="7"/></g>
+        <g class="sm" stroke-width="2.5" fill="none"><rect x="136" y="36" width="28" height="78" rx="8"/><rect x="426" y="36" width="28" height="78" rx="8"/><rect x="716" y="36" width="28" height="78" rx="8"/></g>
+        <text x="440" y="170" text-anchor="middle" font-size="13" class="tb" style="fill:var(--mag)">coincidem a cada MMC(20, 30) = 60 min</text>
+      </svg>
+      <figcaption>As saídas juntas se repetem a cada MMC dos intervalos.</figcaption>
+    </figure>
+    <div class="ex"><span class="k">Exemplo resolvido</span>
+      <p>Três lâmpadas piscam a cada 8 s, 12 s e 20 s. Piscaram juntas às 10h00min00s. Quando piscarão juntas de novo?</p>
+      <ol><li>Fatore: 8 = 2³, 12 = 2² × 3, 20 = 2² × 5.</li><li>MMC = 2³ × 3 × 5 = 120 s = 2 min.</li><li>Resposta: <span class="res">10h02min00s</span>.</li></ol>
+      <p class="small muted" style="margin:6px 0 0">Variação comum: "quantas vezes coincidem num período?" Divida o período pelo MMC e <strong>some 1</strong> se o instante inicial conta.</p>
+    </div>
+
+    <h3>Tipo 2 · "Maior tamanho possível, sem sobra" é MDC</h3>
+    <p>Pistas: cortar fitas ou tábuas em pedaços iguais do maior tamanho, montar o maior número de kits idênticos, dividir grupos em equipes iguais.</p>
+    <div class="ex"><span class="k">Exemplo resolvido</span>
+      <p>Uma costureira tem fitas de 90 cm, 126 cm e 162 cm e quer cortá-las em pedaços iguais, do maior tamanho possível, sem sobras. Quantos pedaços obterá?</p>
+      <ol><li>90 = 2 × 3², 126 = 2 × 3² × 7, 162 = 2 × 3⁴.</li><li>MDC = 2 × 3² = 18 cm (o tamanho de cada pedaço).</li><li>Pedaços: 90/18 + 126/18 + 162/18 = 5 + 7 + 9 = <span class="res">21 pedaços</span>.</li></ol>
+      <p class="small muted" style="margin:6px 0 0">Leia o que a questão pergunta: o <strong>tamanho</strong> do pedaço (é o MDC) ou o <strong>número</strong> de pedaços (é a soma das divisões). É aí que a banca põe a pegadinha.</p>
+    </div>
+
+    <h3>Tipo 3 · Frações sucessivas "do resto"</h3>
+    <p>Pistas: "gastou 1/4 e depois 2/3 do que sobrou", "sobraram R$ 150". O método é trabalhar com a <strong>fração que sobra</strong> em cada etapa.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 200" role="img" aria-label="Barra de frações: um quarto gasto, depois dois terços do resto, sobra um quarto do total">
+        <text x="30" y="30" font-size="12.5" class="tb">Etapa 1 · gasta 1/4 do total</text>
+        <rect x="30" y="40" width="175" height="36" class="fms" stroke="var(--mag)"/>
+        <rect x="205" y="40" width="525" height="36" class="soft" stroke="var(--ink3)"/>
+        <text x="117" y="63" text-anchor="middle" font-size="13" class="tb">1/4 gasto</text>
+        <text x="467" y="63" text-anchor="middle" font-size="13">resto = 3/4</text>
+        <text x="30" y="108" font-size="12.5" class="tb">Etapa 2 · gasta 2/3 do resto (2/3 × 3/4 = 1/2 do total)</text>
+        <rect x="30" y="118" width="175" height="36" class="fms" stroke="var(--mag)"/>
+        <rect x="205" y="118" width="350" height="36" class="fas" stroke="var(--amber)"/>
+        <rect x="555" y="118" width="175" height="36" class="fgs" stroke="var(--green)"/>
+        <text x="117" y="141" text-anchor="middle" font-size="13">1/4</text>
+        <text x="380" y="141" text-anchor="middle" font-size="13" class="tb">2/3 do resto = 1/2 do total</text>
+        <text x="642" y="141" text-anchor="middle" font-size="13" class="tb">sobra 1/4</text>
+        <text x="642" y="182" text-anchor="middle" font-size="13" class="tb" style="fill:var(--green)">1/4 do total = R$ 150 → total = R$ 600</text>
+      </svg>
+      <figcaption>Desenhar a barra resolve quase todo problema de "fração do resto".</figcaption>
+    </figure>
+    <div class="ex"><span class="k">Exemplo resolvido</span>
+      <p>Ana gastou 1/4 do dinheiro que tinha e, depois, 2/3 do que restou. Ficou com R$ 150. Quanto tinha?</p>
+      <ol><li>Depois do 1º gasto sobra 3/4.</li><li>Do 2º gasto sobra 1/3 do resto: 1/3 × 3/4 = <strong>1/4</strong> do total.</li><li>1/4 do total = 150, então o total é <span class="res">R$ 600</span>.</li></ol>
+      <p class="small muted" style="margin:6px 0 0">Atalho: multiplique as frações que <strong>sobram</strong> em cada etapa: 3/4 × 1/3 = 1/4.</p>
+    </div>
+
+    <h3>Tipo 4 · Torneiras e trabalho conjunto</h3>
+    <p>Quem faz o serviço em <em>t</em> horas faz <strong>1/t do serviço por hora</strong>. Juntos, as frações por hora <strong>se somam</strong>, e um ralo que esvazia <strong>subtrai</strong>. O tempo conjunto é o inverso da soma.</p>
+    <div class="ex"><span class="k">Exemplo resolvido</span>
+      <p>Uma torneira enche um tanque em 3 h e outra em 6 h. Abertas juntas, em quanto tempo enchem o tanque?</p>
+      <ol><li>Por hora: 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2 do tanque.</li><li>Tempo = inverso = <span class="res">2 h</span>.</li></ol>
+      <p class="small muted" style="margin:6px 0 0">Atalho para <strong>dois</strong>: tempo = (a × b)/(a + b) = 18/9 = 2 h. Se as torneiras são <strong>iguais</strong>, é regra de três inversa: mais torneiras levam menos tempo. Caiu assim na UFPE 2019.</p>
+    </div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais</span>
+    <h2>O que já caiu, resolvido</h2>
+    <p class="muted">Transcritas das provas oficiais (formatação ajustada, conteúdo preservado). Todas foram resolvidas de novo e conferem com o gabarito oficial.</p>
+
+    <div class="q" id="q-d19-19">
+      <div class="src"><span class="tag">UFPE 2019</span><span>Desenhista de Artes Gráficas · questão 19 · frações + MMC</span></div>
+      <p>Em uma festa típica, cada prato de canjica foi servido para três pessoas, cada prato de pamonha para quatro pessoas, cada prato de milho cozido servia cinco pessoas e cada prato de pé-de-moleque dava para seis pessoas, sem sobras, em cada caso. Se foram consumidos 114 pratos e todas as pessoas se serviram de todos os diferentes tipos de pratos oferecidos, quantas pessoas havia na festa?</p>
+      <ol class="alt"><li data-l="A">240</li><li data-l="B">120</li><li data-l="C">100</li><li data-l="D">90</li><li data-l="E">60</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: B.</span> Com <em>n</em> pessoas, foram n/3 pratos de canjica, n/4 de pamonha, n/5 de milho e n/6 de pé-de-moleque. Somando com o MMC(3, 4, 5, 6) = 60: n/3 + n/4 + n/5 + n/6 = (20n + 15n + 12n + 10n)/60 = 57n/60 = 114, então n = 114 × 60/57 = <strong>120</strong>.</p>
+        <p class="small muted">Atalho: n tem que ser múltiplo de 3, 4, 5 e 6, ou seja, múltiplo de 60. Só 60, 120 e 240 servem. Teste 120: 40 + 30 + 24 + 20 = 114.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-d19-18">
+      <div class="src"><span class="tag">UFPE 2019</span><span>Desenhista de Artes Gráficas · questão 18 · frações em parcelas</span></div>
+      <p>Em uma loja de móveis, todas as vendas são pagas em três partes, sendo metade no momento da compra, um quarto no mês seguinte, e o restante um mês após o segundo pagamento. Na tabela abaixo, temos os valores recebidos pela loja nos seis primeiros meses do ano:</p>
+      <div class="scroll" style="margin:6px 0 10px"><table class="tbl"><thead><tr><th>Jan</th><th>Fev</th><th>Mar</th><th>Abr</th><th>Mai</th><th>Jun</th></tr></thead><tbody><tr><td style="font-weight:400">R$ 9.000</td><td>R$ 3.000</td><td>R$ 4.000</td><td>R$ 5.000</td><td>R$ 3.000</td><td>R$ 2.000</td></tr></tbody></table></div>
+      <p>Nos meses de maio e junho, não houve vendas, portanto, os R$ 5.000,00 recebidos correspondem a pagamentos de meses anteriores. Qual o valor total vendido pela loja nestes seis meses?</p>
+      <ol class="alt"><li data-l="A">R$ 10.000,00</li><li data-l="B">R$ 15.000,00</li><li data-l="C">R$ 20.000,00</li><li data-l="D">R$ 25.000,00</li><li data-l="E">R$ 30.000,00</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> O truque é resolver <strong>de trás para frente</strong>, que é o princípio da regressão (semana 9). Seja V₁ a V₄ o que se vendeu de janeiro a abril.</p>
+        <ul class="items">
+          <li><strong>Junho</strong> só recebe o último 1/4 das vendas de abril: V₄/4 = 2.000, então V₄ = 8.000.</li>
+          <li><strong>Maio</strong> recebe 1/4 de abril + 1/4 de março: 2.000 + V₃/4 = 3.000, então V₃ = 4.000.</li>
+          <li><strong>Abril</strong> recebe 1/2 de abril + 1/4 de março + 1/4 de fevereiro: 4.000 + 1.000 + V₂/4 = 5.000, então V₂ = 0.</li>
+          <li><strong>Março</strong> recebe 1/2 de março + 1/4 de fevereiro + 1/4 de janeiro: 2.000 + 0 + V₁/4 = 4.000, então V₁ = 8.000.</li>
+        </ul>
+        <p>Total = 8.000 + 0 + 4.000 + 8.000 = <strong>R$ 20.000</strong>. Janeiro e fevereiro incluem parcelas de vendas do ano anterior, e por isso não se usa a soma dos recebimentos.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-d19-15">
+      <div class="src"><span class="tag">UFPE 2019</span><span>Desenhista de Artes Gráficas · questão 15 · frações de mistura</span></div>
+      <p>Júnior fez dois vinagretes para seu restaurante. Um tem metade de óleo e metade de vinagre, enquanto o outro tem 2/3 de óleo e 1/3 de vinagre. Ele tem 180 ml de cada vinagrete. Júnior, então, remove 90 ml do vinagrete com proporções iguais e adiciona ao outro. Ele mistura bem e retira 90 ml da nova mistura maior e adiciona à menor. Admitindo essas informações, assinale a afirmação correta referente às novas proporções de óleo e vinagre nos vinagretes.</p>
+      <ol class="alt"><li data-l="A">Os vinagretes contêm 80 ml e 130 ml de óleo.</li><li data-l="B">Os vinagretes contêm 100 ml e 110 ml de óleo.</li><li data-l="C">Os vinagretes contêm 90 ml e 60 ml de vinagre.</li><li data-l="D">Os vinagretes contêm 75 ml de vinagre.</li><li data-l="E">Os vinagretes contêm 105 ml de óleo.</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: B.</span> Acompanhe óleo e vinagre em ml, sempre.</p>
+        <ul class="items">
+          <li>Início: V1 = 90 óleo + 90 vinagre; V2 = 120 óleo + 60 vinagre.</li>
+          <li>Tira 90 ml de V1 (metade de cada: 45 + 45) e põe em V2: V1 = 45 + 45; V2 = 165 óleo + 105 vinagre (270 ml).</li>
+          <li>Tira 90 ml de V2, que é 1/3 dele (55 óleo + 35 vinagre), e põe em V1: V1 = <strong>100 óleo</strong> + 80 vinagre; V2 = <strong>110 óleo</strong> + 70 vinagre.</li>
+        </ul>
+        <p class="small muted">Conferência: o óleo total nunca muda (90 + 120 = 210 = 100 + 110). Use invariantes assim para eliminar alternativas: A soma 210, mas já erra na distribuição.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-fade-adm25">
+      <div class="src"><span class="tag b">FADE/UFPE 2023</span><span>Administrador · questão 25 · operações com racionais · banca atual</span></div>
+      <p>O dono de um café fabrica 50 empadas e 50 pastéis de nata para venda durante o dia. As empadas são vendidas por R$ 12,00 cada uma, e os pastéis de nata por R$ 14,00 cada um. No entanto, ao final da tarde, como ainda restassem não vendidos 10 empadas e 15 pastéis de nata, o preço dos produtos é reduzido pela metade. No final do dia, ainda restam 2 empadas e 1 pastel de nata, que são dados gratuitamente ao último cliente. Se as 50 empadas e os 50 pastéis de nata tiveram um custo de produção combinado de R$ 516,00, qual o lucro obtido com a venda das empadas e pastéis de nata nesse dia?</p>
+      <ol class="alt"><li data-l="A">R$ 300,00</li><li data-l="B">R$ 400,00</li><li data-l="C">R$ 500,00</li><li data-l="D">R$ 600,00</li><li data-l="E">R$ 700,00</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> Empadas: 40 × 12 = 480, mais 8 × 6 = 48. Pastéis: 35 × 14 = 490, mais 14 × 7 = 98. Receita = 1.116. Lucro = 1.116 − 516 = <strong>R$ 600</strong>. É o perfil FADE: nada difícil, mas quatro contas encadeadas e duas armadilhas (os 2 + 1 dados de graça e a metade do preço só para o que sobrou).</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-fade-ass25">
+      <div class="src"><span class="tag b">FADE/UFPE 2023</span><span>Assistente em Administração · questão 25 · divisão · banca atual</span></div>
+      <p>Antônio e Bruno são jardineiros. Eles trabalham juntos e dividem os lucros igualmente. Recentemente, eles construíram uma cerca para um cliente. Antônio comprou todos os materiais para a construção a um custo total de R$ 1.240,00. O cliente pagou a Bruno R$ 2.780,00 pelo serviço dos dois jardineiros e pelo material de construção. Quanto Bruno deve a Antônio?</p>
+      <ol class="alt"><li data-l="A">R$ 2.040,00</li><li data-l="B">R$ 2.030,00</li><li data-l="C">R$ 2.000,00</li><li data-l="D">R$ 2.010,00</li><li data-l="E">R$ 2.020,00</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> Lucro = 2.780 − 1.240 = 1.540, que dá 770 para cada. Antônio tem de receber o que gastou mais a metade do lucro: 1.240 + 770 = <strong>R$ 2.010</strong>. A alternativa E (2.020) está ali para quem erra uma conta. Alternativas vizinhas são padrão da FADE, então confira o resultado.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-d19-20">
+      <div class="src"><span class="tag">UFPE 2019</span><span>Desenhista de Artes Gráficas · questão 20 · torneiras</span></div>
+      <p>Três torneiras enchem um tanque de água em 40 minutos. Se forem utilizadas 5 torneiras, quantos minutos serão necessários para encher o mesmo tanque? Considere que todas as torneiras têm a mesma vazão.</p>
+      <ol class="alt"><li data-l="A">20 minutos</li><li data-l="B">21 minutos</li><li data-l="C">22 minutos</li><li data-l="D">23 minutos</li><li data-l="E">24 minutos</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: E.</span> São grandezas inversamente proporcionais (mais torneiras, menos tempo): 3 × 40 = 5 × t, então t = <strong>24 min</strong>. Pela ideia de fração por minuto: 3 torneiras enchem 1/40 por minuto, então cada uma enche 1/120, e 5 enchem 5/120 = 1/24.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · 20 min</span>
+    <h2>12 questões no estilo da banca</h2>
+    <p class="muted">Questões autorais, com enunciados de situação-problema como os da FADE. Cada um resolve no seu papel. A última nota fica salva neste navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards</span>
+    <h2>20 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar e marque <strong>sei</strong> ou <strong>revisar</strong>. O botão de exportar gera um CSV (frente;verso) para o Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Questões reais:</strong> provas oficiais de Desenhista de Artes Gráficas UFPE 2015 e 2019, FADE/UFPE 2023 (Administrador e Assistente em Administração) e HC-UFPE 2014 (EBSERH/IDECAN), com os gabaritos oficiais. O mapa "Como cai" conta as 35 questões de matemática e RL dessas provas. O simulado e os cartões são autorais, com as contas verificadas.</p>
+    <p><a href="../index.html#cado">← Plano do Cado</a> · <a href="../index.html#gabi">Plano da Gabi</a> · Próxima página de RL: razão, proporção e regra de três (semana 2).</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:comum:rl1';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Marta gastou 1/3 do salário com aluguel e 2/5 do restante com alimentação. Se ainda lhe sobraram R$ 1.200,00, qual é o salário de Marta?',
+     o:['R$ 2.400,00','R$ 2.800,00','R$ 3.000,00','R$ 3.600,00','R$ 4.500,00'],a:2,
+     w:'Depois do aluguel sobra 2/3. Da alimentação sobra 3/5 disso: 3/5 × 2/3 = 2/5 do salário = 1.200, então o salário é 1.200 × 5/2 = 3.000.'},
+    {t:'Três linhas de ônibus saem juntas do terminal às 6h. A linha A parte a cada 12 minutos, a B a cada 18 minutos e a C a cada 30 minutos. Em que horário as três voltarão a sair juntas pela primeira vez?',
+     o:['7h30','8h00','8h30','9h00','9h30'],a:3,
+     w:'MMC(12, 18, 30) = 2² × 3² × 5 = 180 min = 3 h. Então 6h + 3h = 9h.'},
+    {t:'Três fitas medem 84 cm, 120 cm e 156 cm. Deseja-se cortá-las em pedaços de mesmo comprimento, o maior possível, sem sobras. Quantos pedaços serão obtidos?',
+     o:['24','28','30','32','36'],a:2,
+     w:'MDC(84, 120, 156) = 12 cm por pedaço. 84/12 + 120/12 + 156/12 = 7 + 10 + 13 = 30.'},
+    {t:'A fração geratriz da dízima periódica 0,272727… é:',
+     o:['27/100','3/11','27/90','1/4','9/37'],a:1,
+     w:'Período de 2 algarismos: 27/99. Simplificando por 9 dá 3/11.'},
+    {t:'Quantos divisores positivos tem o número 360?',
+     o:['12','18','20','24','36'],a:3,
+     w:'360 = 2³ × 3² × 5¹. Número de divisores = (3+1)(2+1)(1+1) = 24.'},
+    {t:'O número de quatro algarismos 7a52, em que a é um algarismo, é divisível por 36. O valor de a é:',
+     o:['1','3','4','6','8'],a:2,
+     w:'36 = 4 × 9. Por 4: o final 52 já é múltiplo de 4. Por 9: 7 + a + 5 + 2 = 14 + a precisa ser múltiplo de 9, logo a = 4 (7.452 = 36 × 207).'},
+    {t:'Dois números naturais têm produto igual a 1.728 e máximo divisor comum igual a 12. O mínimo múltiplo comum desses números é:',
+     o:['72','96','120','144','216'],a:3,
+     w:'Para dois números, MMC × MDC = produto: MMC = 1.728/12 = 144. Exemplo: 36 e 48.'},
+    {t:'Um paciente toma o remédio A a cada 6 horas, o B a cada 8 horas e o C a cada 12 horas. Às 7h de uma segunda-feira tomou os três juntos. Contando esse horário e o das 7h da quinta-feira seguinte, quantas vezes ele tomará os três remédios ao mesmo tempo?',
+     o:['2','3','4','5','6'],a:2,
+     w:'MMC(6, 8, 12) = 24 h. De segunda 7h a quinta 7h são 72 h: coincidem em 0, 24, 48 e 72 h, ou seja, 72/24 + 1 = 4 vezes.'},
+    {t:'Uma escola vai montar kits escolares idênticos, com o maior número possível de kits e sem sobras, usando 48 canetas, 72 lápis e 120 borrachas. Quantos itens terá cada kit?',
+     o:['6','8','10','12','24'],a:2,
+     w:'Número de kits = MDC(48, 72, 120) = 24. Cada kit: 48/24 + 72/24 + 120/24 = 2 + 3 + 5 = 10 itens. A alternativa E (24) é o número de kits, a pegadinha.'},
+    {t:'Assinale a alternativa que apresenta as frações 3/4, 5/7, 7/10 e 2/3 em ordem crescente.',
+     o:['2/3 &lt; 5/7 &lt; 7/10 &lt; 3/4','7/10 &lt; 2/3 &lt; 5/7 &lt; 3/4','2/3 &lt; 7/10 &lt; 5/7 &lt; 3/4','3/4 &lt; 5/7 &lt; 7/10 &lt; 2/3','2/3 &lt; 7/10 &lt; 3/4 &lt; 5/7'],a:2,
+     w:'Em decimal: 2/3 ≈ 0,667; 7/10 = 0,700; 5/7 ≈ 0,714; 3/4 = 0,750.'},
+    {t:'Uma torneira enche um tanque em 4 horas e outra, em 6 horas. Um ralo, sozinho, esvazia o tanque cheio em 12 horas. Com o tanque vazio, as duas torneiras e o ralo são abertos ao mesmo tempo. Em quanto tempo o tanque ficará cheio?',
+     o:['2 h','2 h 24 min','3 h','3 h 30 min','4 h'],a:2,
+     w:'Por hora: 1/4 + 1/6 − 1/12 = 3/12 + 2/12 − 1/12 = 4/12 = 1/3 do tanque. O tempo é o inverso: 3 h.'},
+    {t:'Em um concurso, 3/5 dos inscritos faltaram à prova. Dos que compareceram, 1/4 foi aprovado, totalizando 120 aprovados. Quantos eram os inscritos?',
+     o:['480','800','1.000','1.200','1.500'],a:3,
+     w:'Compareceram 2/5. Aprovados: 1/4 × 2/5 = 1/10 dos inscritos = 120, então há 1.200 inscritos.'}
+  ];
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var F=[
+    ['Dividir fração por fração','Multiplica a primeira pelo inverso da segunda: 2/3 ÷ 4/5 = 2/3 × 5/4 = 5/6.'],
+    ['"2/5 de 3/4" é…','Multiplicação: 2/5 × 3/4 = 6/20 = 3/10.'],
+    ['Comparar a/b e c/d rapidamente','Multiplica cruzado: compara a·d com b·c.'],
+    ['Com mesmo numerador, qual fração é maior?','A de MENOR denominador (1/3 > 1/5).'],
+    ['Quando uma fração irredutível dá decimal exato?','Quando o denominador só tem fatores primos 2 e 5.'],
+    ['Geratriz de 0,272727…','27/99 = 3/11 (um 9 por algarismo do período).'],
+    ['Geratriz de dízima composta (ex.: 1,2333…)','(número até o 1º período − parte não periódica)/(9 por algarismo do período e 0 por algarismo do anteperíodo) = (123 − 12)/90 = 37/30.'],
+    ['Critério de divisibilidade por 4','Os dois últimos algarismos formam múltiplo de 4.'],
+    ['Critério de divisibilidade por 8','Os três últimos algarismos formam múltiplo de 8.'],
+    ['Critério de divisibilidade por 3 e por 9','A soma dos algarismos é múltiplo de 3 (ou de 9).'],
+    ['Critério de divisibilidade por 11','Soma das posições ímpares menos soma das pares dá múltiplo de 11 (inclusive 0).'],
+    ['Divisível por 6 é…','Divisível por 2 e por 3 ao mesmo tempo.'],
+    ['1 é primo? Qual o único primo par?','1 não é primo. O 2 é o único primo par.'],
+    ['Número de divisores de 2ᵃ × 3ᵇ × 5ᶜ','(a+1)(b+1)(c+1).'],
+    ['MMC pela fatoração','Todos os primos, cada um com o MAIOR expoente.'],
+    ['MDC pela fatoração','Só os primos comuns, cada um com o MENOR expoente.'],
+    ['Relação MMC × MDC (dois números)','MMC(a, b) × MDC(a, b) = a × b. Não vale para três números.'],
+    ['"Quando coincidem de novo?" usa…','MMC. Para "quantas vezes num período": período ÷ MMC, + 1 se o início conta.'],
+    ['"Maior pedaço igual sem sobra" usa…','MDC. Confira se a pergunta é o tamanho (MDC) ou o número de pedaços (soma das divisões).'],
+    ['Duas torneiras, a h e b h: tempo juntas','1/a + 1/b por hora, e o tempo é o inverso. Atalho: ab/(a + b).']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 rl1'];}),'ufpe2027-rl-1.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 rl1'];});
+    dl(rows,'ufpe2027-rl-1-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var C=[
+    'Somar, subtrair, multiplicar e dividir frações sem errar o método.',
+    'Comparar e ordenar frações (cruzado ou em decimal).',
+    'Resolver "fração do resto" com a barra ou multiplicando as sobras.',
+    'Converter decimal em fração e achar a geratriz de dízima simples e composta.',
+    'Aplicar os critérios de divisibilidade por 2, 3, 4, 5, 6, 8, 9, 10 e 11.',
+    'Fatorar um número e contar seus divisores.',
+    'Calcular MMC e MDC pela fatoração e pelas divisões simultâneas.',
+    'Calcular MDC por Euclides (divisões sucessivas).',
+    'Usar MMC × MDC = a × b para dois números.',
+    'Reconhecer se o problema é de MMC (coincidência) ou de MDC (maior pedaço).',
+    'Resolver torneiras e trabalho conjunto por fração por hora.'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>

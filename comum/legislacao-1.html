@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Legislação para o concurso UFPE 2027: Constituição Federal, arts. 37 a 41 (administração pública e servidores), com o mapa das provas da FADE, questões reais, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+<title>Legislação I · CF 37 a 41</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+.backs{display:flex;flex-wrap:wrap;gap:16px}
+.lei{font-family:Georgia,"Times New Roman",serif;font-size:15.5px;background:var(--card);border:1px solid var(--rule2);border-left:4px solid var(--ink3);border-radius:0 5px 5px 0;padding:12px 16px;margin:12px 0;color:var(--ink)}
+.lei b{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.06em;color:var(--ink3);display:block;margin-bottom:2px}
+.new{display:inline-block;white-space:nowrap;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.08em;padding:1px 7px;border-radius:99px;background:var(--mag);color:#fff;vertical-align:2px}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro do sábado</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#principios">1 · Princípios</a>
+  <a href="#acesso">2 · Acesso e concurso</a>
+  <a href="#cargos">3 · Comissão, função, temporários</a>
+  <a href="#remuneracao">4 · Remuneração e teto</a>
+  <a href="#acumulacao">5 · Acumulação</a>
+  <a href="#paragrafos">6 · Publicidade, improbidade, responsabilidade</a>
+  <a href="#art38">7 · Art. 38 · mandato eletivo</a>
+  <a href="#art39">8 · Art. 39 · regime e direitos</a>
+  <a href="#art40">9 · Art. 40 · aposentadoria</a>
+  <a href="#art41">10 · Art. 41 · estabilidade</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <div class="backs"><a class="back" href="../index.html#cado">← Plano do Cado</a><a class="back" href="../index.html#gabi">Plano da Gabi</a></div>
+  <div class="eyebrow">Legislação Aplicada ao Servidor · comum aos dois · Constituição, arts. 37 a 41 · Semana 1</div>
+  <h1>Constituição<br><em>arts. 37 a 41</em></h1>
+  <p class="dek">Os princípios da administração pública e as regras-mãe do servidor: concurso, acumulação, teto, mandato eletivo, aposentadoria e estabilidade. Quase tudo o que a Lei 8.112 detalha nas próximas semanas começa aqui.</p>
+  <div class="meta"><span class="hot">sáb 10/10 · 1h30 juntos</span><span>texto vigente conferido no Planalto</span><span>4 questões reais</span><span>16 no simulado</span><span>36 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#comocai">Como cai</a><a href="#principios">Princípios</a><a href="#acesso">Concurso</a><a href="#cargos">Comissão</a><a href="#remuneracao">Teto</a><a href="#acumulacao">Acumulação</a><a href="#paragrafos">§§</a><a href="#art38">Art. 38</a><a href="#art39">Art. 39</a><a href="#art40">Art. 40</a><a href="#art41">Art. 41</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro · sábado 10/10</span>
+    <h2>1h30 juntos, mais 15 minutos antes</h2>
+    <div class="plan">
+      <div class="row"><div class="d"><b>Antes</b>15 min cada</div><div>Em qualquer dia da semana, cada um lê sozinho a <strong>lei seca</strong> dos arts. 37 a 41 no <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37">site do Planalto</a>, sem grifar nada. É só para o texto ficar familiar.</div></div>
+      <div class="row"><div class="d"><b>0–10 min</b>aquecimento</div><div>Um pergunta e o outro responde de memória: validade do concurso, prazo da estabilidade, as três hipóteses de acumulação, o teto federal. Anotem o que não souberam.</div></div>
+      <div class="row"><div class="d"><b>10–45 min</b>art. 37</div><div>Seções <a href="#principios">1</a> a <a href="#paragrafos">6</a>. Revezem: quem lê uma seção explica para o outro com as próprias palavras. Os esquemas de <a href="#acumulacao">acumulação</a> e de <a href="#remuneracao">teto</a> são os mais cobrados.</div></div>
+      <div class="row"><div class="d"><b>45–60 min</b>arts. 38 a 41</div><div>Seções <a href="#art38">7</a> a <a href="#art41">10</a>. Desenhem juntos a linha do tempo concurso → posse → estágio → estabilidade.</div></div>
+      <div class="row"><div class="d"><b>60–85 min</b>simulado</div><div>Cada um faz o <a href="#simulado">simulado</a> no próprio celular (as notas ficam separadas). Depois comparem só as questões em que discordaram.</div></div>
+      <div class="row"><div class="d"><b>85–90 min</b>fechamento</div><div>Os <a href="#cartoes">flashcards</a> marcados como "revisar" vão para o Anki. No domingo, os <a href="#reais">4 casos reais</a> entram na revisão da semana.</div></div>
+    </div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>O mapa da Legislação nas provas anteriores</h2>
+    <p>Foram lidas todas as questões de Legislação das provas disponíveis: as duas da <strong>FADE/UFPE 2023</strong> (Administrador, nível E, e Assistente em Administração, nível D; é a banca deste concurso) e a de <strong>Biólogo UFPE 2008</strong>. As provas de Biólogo 2016 e de Desenhista 2015 e 2019 não tinham Legislação (tinham Informática). A do HC-UFPE 2014 cobrou normas da EBSERH e do SUS, fora do nosso edital.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Norma</th><th>FADE 2023 · Adm</th><th>FADE 2023 · Assist.</th><th>UFPE 2008</th><th>Total</th><th>No edital 2026?</th></tr></thead>
+      <tbody>
+        <tr><td>Lei 8.112/1990</td><td>6</td><td>6</td><td>5</td><td><strong>17</strong></td><td>sim</td></tr>
+        <tr><td>LAI (Lei 12.527/2011)</td><td>2</td><td>2</td><td>—</td><td>4</td><td>não</td></tr>
+        <tr><td>Decreto 1.171/1994 (Código de Ética)</td><td>1</td><td>1</td><td>—</td><td>2</td><td>sim</td></tr>
+        <tr><td>Decreto 7.724/2012 (regulamenta a LAI)</td><td>1</td><td>1</td><td>—</td><td>2</td><td>não</td></tr>
+        <tr><td>CF, arts. 37 a 41 (questão direta)</td><td>—</td><td>—</td><td>—</td><td>0</td><td>sim</td></tr>
+        <tr><td>Leis 9.784, 11.091, 8.429; Estatuto e Regimento da UFPE; Dec. 7.602; SIPAC</td><td>—</td><td>—</td><td>—</td><td>0</td><td>sim, <strong>novos</strong></td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">O que isso diz</h4>
+        <p class="small muted" style="margin:0">Na FADE 2023, <strong>12 de 20 questões (60%) foram da 8.112</strong>. Nenhuma pediu a Constituição diretamente, mas <strong>três delas repetem regras constitucionais</strong> que a 8.112 copia: acumulação, reintegração e aposentadoria (estão comentadas <a href="#reais">abaixo</a>). O edital de 2026 trocou a LAI por outras cinco normas. A estimativa é que a 8.112 continue com 4 a 6 das 10 questões e a Constituição fique com 1 ou 2.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">O estilo da FADE</h4>
+        <p class="small muted" style="margin:0"><strong>Casos com nome</strong> ("Joaquim, servidor federal…", "Ângela foi demitida…"), <strong>"analise as assertivas · estão corretos, apenas"</strong>, <strong>lacunas</strong> para completar com penalidades e <strong>alternativa incorreta</strong>. Cobra o <strong>texto literal</strong>: a pegadinha costuma ser uma palavra trocada (quinze dias no lugar de dez, "chefias imediatas" no lugar de "autoridades máximas").</p>
+      </div>
+    </div>
+    <div class="cx peg"><span class="k">Atenção · texto literal × Constituição atual</span><p>Na questão de aposentadoria de 2023, o gabarito oficial seguiu o texto literal do art. 186 da 8.112, que está superado pela Constituição desde as reformas da previdência. Quando o enunciado disser "com base na Lei 8.112", responda pela lei; quando disser "segundo a Constituição", responda pela Constituição. <a href="#q-ass29">Veja o caso →</a></p></div>
+  </section>
+
+  <!-- 1 PRINCÍPIOS -->
+  <section class="sec" id="principios">
+    <span class="lbl">Seção 1 · art. 37, caput</span>
+    <h2>Princípios da administração pública</h2>
+    <div class="lei"><b>Art. 37, caput</b>A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte: […]</div>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Princípio</th><th>Ideia central</th><th>Exemplo que cai</th></tr></thead>
+      <tbody>
+        <tr><td><strong>L</strong>egalidade</td><td>O particular pode fazer tudo o que a lei não proíbe; a administração só pode fazer o que a lei <strong>autoriza</strong></td><td>Não há vantagem para servidor sem lei que a preveja</td></tr>
+        <tr><td><strong>I</strong>mpessoalidade</td><td>Finalidade pública, tratamento igual, e o ato é do órgão, não da pessoa</td><td>Proibição de promoção pessoal na publicidade (§ 1º); concurso; nepotismo (Súmula Vinculante 13)</td></tr>
+        <tr><td><strong>M</strong>oralidade</td><td>Ética, probidade, boa-fé. Não basta ser legal</td><td>Improbidade (§ 4º); nepotismo</td></tr>
+        <tr><td><strong>P</strong>ublicidade</td><td>Transparência e condição de eficácia dos atos</td><td>Publicação no Diário Oficial; acesso a informação</td></tr>
+        <tr><td><strong>E</strong>ficiência</td><td>Resultado com qualidade e economia. <strong>Incluído pela EC 19/1998</strong></td><td>Avaliação de desempenho; estabilidade condicionada a avaliação</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Implícitos</strong> (não estão no caput, mas caem): supremacia e indisponibilidade do interesse público, razoabilidade e proporcionalidade, motivação, autotutela (a administração anula os próprios atos ilegais e revoga os inconvenientes: Súmula 473 do STF), segurança jurídica, continuidade do serviço público. Vários deles estão escritos na Lei 9.784, assunto da semana 7.</p>
+    <div class="cx dec"><span class="k">Decoreba</span><p><strong>LIMPE</strong>, nessa ordem. O único princípio que entrou depois de 1988 foi a <strong>eficiência</strong> (EC 19/1998, a "reforma administrativa"). Vale para a administração <strong>direta e indireta</strong> de <strong>todos os Poderes</strong> e <strong>todos os entes</strong>: a UFPE, como autarquia federal, está dentro.</p></div>
+  </section>
+
+  <!-- 2 ACESSO -->
+  <section class="sec" id="acesso">
+    <span class="lbl">Seção 2 · art. 37, I a IV e VIII</span>
+    <h2>Acesso aos cargos e concurso público</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Inciso</th><th>Regra</th><th>Onde está a pegadinha</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td>Cargos, empregos e funções acessíveis aos <strong>brasileiros</strong> que preencham os requisitos da lei, e aos <strong>estrangeiros, na forma da lei</strong></td><td>Estrangeiro pode, mas depende de lei (nas universidades, a Lei 8.112 permite professores, técnicos e cientistas estrangeiros)</td></tr>
+        <tr><td>II</td><td>Investidura depende de <strong>concurso de provas ou de provas e títulos</strong>, conforme a natureza e a complexidade do cargo. Exceção: <strong>cargo em comissão</strong> declarado em lei de livre nomeação e exoneração</td><td>Não existe concurso "só de títulos". A inobservância gera <strong>nulidade do ato e punição da autoridade</strong> (§ 2º)</td></tr>
+        <tr><td>III</td><td>Validade do concurso: <strong>até 2 anos, prorrogável uma vez, por igual período</strong></td><td>"Até" 2 anos: pode ser menos. A prorrogação é pelo <strong>mesmo</strong> prazo que foi fixado. Este concurso da UFPE tem 2 + 2</td></tr>
+        <tr><td>IV</td><td>Durante o prazo improrrogável do edital, o aprovado tem <strong>prioridade</strong> sobre novos concursados</td><td>Pode haver concurso novo durante a validade do antigo; o que não pode é nomear os novos antes dos aprovados do anterior</td></tr>
+        <tr><td>VIII</td><td>A lei <strong>reservará percentual</strong> de cargos e empregos para pessoas com deficiência</td><td>A CF manda a lei reservar; o percentual está em lei (na União, até 20% pela 8.112; o edital deste concurso usa 5%)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx cai"><span class="k">Jurisprudência que cai</span><ul>
+      <li><strong>Aprovado dentro do número de vagas</strong> tem <strong>direito subjetivo à nomeação</strong> durante a validade (STF, RE 598.099). Aprovado em cadastro de reserva tem expectativa de direito.</li>
+      <li><strong>Súmula Vinculante 43:</strong> é inconstitucional o provimento que leve o servidor, sem concurso, a cargo de <strong>outra carreira</strong> (acabou a "ascensão" e a "transferência").</li>
+      <li><strong>Súmula Vinculante 44:</strong> exame psicotécnico só se houver <strong>lei</strong> que o preveja.</li>
+      <li><strong>Súmula 683 do STF:</strong> limite de idade só se justificado pela natureza das atribuições do cargo.</li>
+    </ul></div>
+  </section>
+
+  <!-- 3 CARGOS -->
+  <section class="sec" id="cargos">
+    <span class="lbl">Seção 3 · art. 37, V a IX</span>
+    <h2>Comissão, função de confiança, sindicato, greve e temporários</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th></th><th>Função de confiança</th><th>Cargo em comissão</th></tr></thead>
+      <tbody>
+        <tr><td>Quem ocupa</td><td><strong>Exclusivamente</strong> servidores ocupantes de cargo <strong>efetivo</strong></td><td>Qualquer pessoa, mas uma parte deve ser de <strong>servidores de carreira</strong>, nos casos, condições e percentuais mínimos previstos em lei</td></tr>
+        <tr><td>Para quê</td><td colspan="2">Apenas <strong>direção, chefia e assessoramento</strong> (nunca atividade técnica ou operacional)</td></tr>
+        <tr><td>Nomeação</td><td>Designação de quem já é servidor</td><td>Livre nomeação e exoneração ("ad nutum")</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>VI · Associação sindical:</strong> garantida ao servidor público <strong>civil</strong>. O militar não pode se sindicalizar nem fazer greve (art. 142).</li>
+      <li><strong>VII · Greve:</strong> exercida "nos termos e nos limites definidos em <strong>lei específica</strong>". Essa lei nunca foi editada. O STF mandou aplicar, no que couber, a lei de greve do setor privado (Lei 7.783/1989) até que ela venha (mandados de injunção 670, 708 e 712).</li>
+      <li><strong>IX · Contratação temporária:</strong> a lei estabelecerá os casos de contratação por tempo determinado para atender <strong>necessidade temporária de excepcional interesse público</strong>. Na União é a Lei 8.745/1993 (professor substituto e visitante nas universidades, por exemplo). O temporário não ocupa cargo efetivo e fica no regime geral de previdência.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>Troca de "exclusivamente" por "preferencialmente". Função de confiança é <strong>exclusiva</strong> de efetivo; o cargo em comissão é que admite pessoas de fora. E nenhum dos dois serve para atividade técnica: é só direção, chefia e assessoramento.</p></div>
+  </section>
+
+  <!-- 4 REMUNERAÇÃO E TETO -->
+  <section class="sec" id="remuneracao">
+    <span class="lbl">Seção 4 · art. 37, X a XV</span>
+    <h2>Remuneração e teto</h2>
+    <ul>
+      <li><strong>X · Lei específica e revisão geral anual:</strong> remuneração e subsídio só são fixados ou alterados por <strong>lei específica</strong>, com a iniciativa própria de cada caso, assegurada <strong>revisão geral anual, sempre na mesma data e sem distinção de índices</strong>.</li>
+      <li><strong>XII:</strong> os vencimentos do Legislativo e do Judiciário não podem ser superiores aos do Executivo.</li>
+      <li><strong>XIII:</strong> é <strong>vedada a vinculação ou equiparação</strong> de espécies remuneratórias (ex.: "o cargo X ganhará o mesmo que o cargo Y"). A Súmula Vinculante 37 completa: o Judiciário não pode aumentar vencimentos com fundamento em isonomia.</li>
+      <li><strong>XIV:</strong> acréscimos pecuniários não são computados nem acumulados para concessão de acréscimos ulteriores (acabou o "efeito cascata").</li>
+      <li><strong>XV · Irredutibilidade:</strong> subsídio e vencimentos são irredutíveis, ressalvados o teto, o inciso XIV, o subsídio (art. 39, § 4º) e os impostos. É irredutibilidade <strong>nominal</strong>: não garante reposição da inflação.</li>
+    </ul>
+    <figure class="fig">
+      <svg viewBox="0 0 760 336" role="img" aria-label="Teto remuneratório por esfera de governo">
+        <rect x="270" y="14" width="220" height="54" rx="6" class="fms" stroke="var(--mag)"/>
+        <text x="380" y="36" text-anchor="middle" class="tb" font-size="13.5">TETO GERAL</text>
+        <text x="380" y="55" text-anchor="middle" font-size="12">subsídio de Ministro do STF</text>
+        <path d="M380 68 V 92 M130 92 H 630 M130 92 V 112 M380 92 V 112 M630 92 V 112" class="ln" stroke-width="2"/>
+        <g text-anchor="middle">
+          <rect x="30" y="112" width="200" height="96" rx="6" class="fcs" stroke="var(--cyan)"/>
+          <text x="130" y="134" class="tb" font-size="13">UNIÃO</text>
+          <text x="130" y="156" font-size="12">todos os Poderes:</text>
+          <text x="130" y="174" font-size="12" class="tb">Ministro do STF</text>
+          <text x="130" y="196" font-size="11" class="t2">inclui a UFPE (autarquia)</text>
+
+          <rect x="260" y="112" width="240" height="176" rx="6" class="fgs" stroke="var(--green)"/>
+          <text x="380" y="134" class="tb" font-size="13">ESTADOS E DF</text>
+          <text x="380" y="158" font-size="12">Executivo: <tspan class="tb">Governador</tspan></text>
+          <text x="380" y="180" font-size="12">Legislativo: <tspan class="tb">Deputados estaduais</tspan></text>
+          <text x="380" y="202" font-size="12">Judiciário: <tspan class="tb">Desembargadores</tspan></text>
+          <text x="380" y="220" font-size="11" class="t2">limitado a 90,25% do Ministro do STF;</text>
+          <text x="380" y="236" font-size="11" class="t2">vale também para MP, Procuradores</text>
+          <text x="380" y="252" font-size="11" class="t2">e Defensores</text>
+          <text x="380" y="276" font-size="10.5" class="t3">§ 12: o Estado pode adotar teto único</text>
+
+          <rect x="530" y="112" width="200" height="96" rx="6" class="fas" stroke="var(--amber)"/>
+          <text x="630" y="134" class="tb" font-size="13">MUNICÍPIOS</text>
+          <text x="630" y="164" font-size="12" class="tb">Prefeito</text>
+        </g>
+        <text x="30" y="306" font-size="11.5" class="t2">Entra no teto: remuneração, subsídio, proventos, pensões e vantagens pessoais, somados.</text><text x="30" y="324" font-size="11.5" class="t2">Fica fora: parcelas indenizatórias previstas em lei (§ 11).</text>
+      </svg>
+      <figcaption>Art. 37, XI: tetos e subtetos. Na acumulação lícita de cargos, o teto é aplicado à soma (inciso XVI remete ao XI).</figcaption>
+    </figure>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>O teto do Executivo <strong>federal</strong> não é o subsídio do Presidente da República nem o de Ministro de Estado: é o de <strong>Ministro do STF</strong>, que vale para toda a União. Nos Estados, cada Poder tem o próprio subteto. O "90,25%" é o limite do subteto do Judiciário estadual, não do federal.</p></div>
+  </section>
+
+  <!-- 5 ACUMULAÇÃO -->
+  <section class="sec" id="acumulacao">
+    <span class="lbl">Seção 5 · art. 37, XVI e XVII, e § 10</span>
+    <h2>Acumulação de cargos</h2>
+    <div class="lei"><b>Art. 37, XVI (redação vigente)</b>é vedada a acumulação remunerada de cargos públicos, exceto, quando houver compatibilidade de horários, observado em qualquer caso o disposto no inciso XI: a) a de dois cargos de professor; b) a de um cargo de professor com outro de qualquer natureza; c) a de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas;</div>
+    <figure class="fig">
+      <svg viewBox="0 0 760 340" role="img" aria-label="Árvore de decisão da acumulação de cargos públicos">
+        <rect x="230" y="12" width="300" height="42" rx="6" class="cell"/>
+        <text x="380" y="38" text-anchor="middle" class="tb" font-size="13">Acumular dois cargos públicos remunerados?</text>
+        <path d="M380 54 V 76" class="ln" stroke-width="2"/>
+        <rect x="255" y="76" width="250" height="36" rx="6" class="fms" stroke="var(--mag)"/>
+        <text x="380" y="99" text-anchor="middle" class="tb" font-size="12.5">Regra: VEDADO</text>
+        <path d="M380 112 V 132 M130 132 H 630 M130 132 V 150 M380 132 V 150 M630 132 V 150" class="ln" stroke-width="2"/>
+        <g text-anchor="middle">
+          <rect x="40" y="150" width="180" height="70" rx="6" class="fgs" stroke="var(--green)"/>
+          <text x="130" y="174" class="tb" font-size="12.5">a) 2 de professor</text>
+          <text x="130" y="196" font-size="11" class="t2">ex.: professor na UFPE</text>
+          <text x="130" y="211" font-size="11" class="t2">e numa rede estadual</text>
+          <rect x="260" y="150" width="240" height="70" rx="6" class="fgs" stroke="var(--green)"/>
+          <text x="380" y="174" class="tb" font-size="12.5">b) professor + qualquer natureza</text>
+          <text x="380" y="196" font-size="11" class="t2">EC 138/2025. Antes era só</text>
+          <text x="380" y="211" font-size="11" class="t2">"técnico ou científico"</text>
+          <rect x="540" y="150" width="180" height="70" rx="6" class="fgs" stroke="var(--green)"/>
+          <text x="630" y="174" class="tb" font-size="12.5">c) 2 de saúde</text>
+          <text x="630" y="196" font-size="11" class="t2">privativos de profissão</text>
+          <text x="630" y="211" font-size="11" class="t2">de saúde regulamentada</text>
+        </g>
+        <path d="M130 220 V 240 M380 220 V 240 M630 220 V 240 M130 240 H 630 M380 240 V 258" class="ln" stroke-width="2"/>
+        <rect x="170" y="258" width="420" height="58" rx="6" class="fcs" stroke="var(--cyan)"/>
+        <text x="380" y="282" text-anchor="middle" class="tb" font-size="12.5">Sempre exige: compatibilidade de horários</text>
+        <text x="380" y="302" text-anchor="middle" font-size="12">e a soma respeita o teto (inciso XI)</text>
+      </svg>
+      <figcaption>Fora dessas três hipóteses, a acumulação é ilícita. A vedação se estende a empregos e funções em autarquias, fundações, empresas públicas, sociedades de economia mista e suas subsidiárias (XVII).</figcaption>
+    </figure>
+    <ul>
+      <li><strong>§ 10 · Aposentadoria + cargo:</strong> é vedado receber proventos de aposentadoria do regime próprio junto com remuneração de cargo, <strong>ressalvados</strong> os cargos acumuláveis, os <strong>cargos eletivos</strong> e os <strong>cargos em comissão</strong>.</li>
+      <li><strong>Mandato eletivo</strong> segue regra própria (art. 38, seção 7). Vereador pode acumular; os outros mandatos, não.</li>
+      <li>Na Lei 8.112, a acumulação ilegal é apurada por <strong>procedimento sumário</strong>, e o servidor é notificado para optar em <strong>10 dias improrrogáveis</strong> (art. 133). A FADE cobrou isso trocando por "quinze dias, prorrogável".</li>
+    </ul>
+    <div class="cx cai"><span class="k">Mudou há menos de um ano · EC 138/2025</span><p>Desde 22/12/2025 (publicação no DOU), o professor pode acumular com cargo de <strong>qualquer natureza</strong>, e não só "técnico ou científico". Apostilas e questões anteriores estão desatualizadas. Se cair, a banca deve cobrar a redação nova, que é a vigente na data do edital (29/07/2026).</p></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"Dois cargos técnicos podem ser acumulados se houver compatibilidade de horários": <strong>errado</strong>. Compatibilidade é condição necessária, mas não suficiente: o par precisa estar numa das três alíneas.</p></div>
+  </section>
+
+  <!-- 6 PARÁGRAFOS -->
+  <section class="sec" id="paragrafos">
+    <span class="lbl">Seção 6 · art. 37, §§ 1º a 16</span>
+    <h2>Publicidade, improbidade, responsabilidade e outros parágrafos</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>§</th><th>Regra</th></tr></thead>
+      <tbody>
+        <tr><td>§ 1º</td><td>A publicidade oficial deve ter caráter <strong>educativo, informativo ou de orientação social</strong>, sem nomes, símbolos ou imagens que caracterizem <strong>promoção pessoal</strong> de autoridades ou servidores (impessoalidade)</td></tr>
+        <tr><td>§ 2º</td><td>Desrespeitar o concurso (II) ou a validade (III) gera <strong>nulidade do ato e punição da autoridade</strong></td></tr>
+        <tr><td>§ 3º</td><td>A lei disciplinará a participação do usuário: reclamações, acesso a registros e informações, representação contra exercício negligente ou abusivo</td></tr>
+        <tr><td>§ 4º</td><td>Improbidade importa <strong>suspensão dos direitos políticos, perda da função pública, indisponibilidade dos bens e ressarcimento ao erário</strong>, na forma da lei, sem prejuízo da ação penal. A lei é a 8.429/1992 (semana 8)</td></tr>
+        <tr><td>§ 5º</td><td>A lei fixa os prazos de prescrição dos ilícitos que causem prejuízo ao erário, <strong>ressalvadas as ações de ressarcimento</strong> (o STF entende imprescritível só o ressarcimento por ato <strong>doloso</strong> de improbidade)</td></tr>
+        <tr><td>§ 6º</td><td>Pessoas jurídicas de direito público e as de direito privado <strong>prestadoras de serviço público</strong> respondem pelos danos que seus agentes, <strong>nessa qualidade</strong>, causarem a terceiros: <strong>responsabilidade objetiva</strong>, com <strong>direito de regresso</strong> contra o agente em caso de <strong>dolo ou culpa</strong></td></tr>
+        <tr><td>§ 10</td><td>Vedado somar proventos com remuneração, salvo cargos acumuláveis, eletivos e em comissão (seção 5)</td></tr>
+        <tr><td>§ 11</td><td>Parcelas <strong>indenizatórias</strong> previstas em lei <strong>não entram</strong> no teto (redação da EC 135/2024)</td></tr>
+        <tr><td>§ 13 <span class="new">EC 103</span></td><td><strong>Readaptação</strong>: o servidor efetivo com limitação física ou mental pode ir para cargo compatível, se tiver a habilitação e a escolaridade exigidas, <strong>mantida a remuneração do cargo de origem</strong></td></tr>
+        <tr><td>§ 14 <span class="new">EC 103</span></td><td>A aposentadoria com tempo de contribuição de cargo, emprego ou função pública <strong>rompe o vínculo</strong> que gerou esse tempo</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>Improbidade gera <strong>suspensão</strong> dos direitos políticos, nunca <strong>cassação</strong> (a Constituição proíbe cassação, art. 15). E a responsabilidade <strong>do Estado</strong> é objetiva; a do <strong>servidor</strong> perante o Estado, na ação de regresso, é subjetiva (depende de dolo ou culpa). A vítima aciona a pessoa jurídica, não o servidor diretamente (tese da "dupla garantia", STF Tema 940).</p></div>
+  </section>
+
+  <!-- 7 ART 38 -->
+  <section class="sec" id="art38">
+    <span class="lbl">Seção 7 · art. 38</span>
+    <h2>Servidor em mandato eletivo</h2>
+    <p>Vale para o servidor da administração <strong>direta, autárquica e fundacional</strong>, o que inclui a UFPE.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 300" role="img" aria-label="Regras do art. 38 para servidor eleito">
+        <g text-anchor="middle">
+          <rect x="20" y="14" width="220" height="54" rx="6" class="cell"/>
+          <text x="130" y="37" class="tb" font-size="13">Mandato federal,</text><text x="130" y="55" class="tb" font-size="13">estadual ou distrital</text>
+          <rect x="270" y="14" width="220" height="54" rx="6" class="cell"/>
+          <text x="380" y="46" class="tb" font-size="13">Prefeito</text>
+          <rect x="520" y="14" width="220" height="54" rx="6" class="cell"/>
+          <text x="630" y="46" class="tb" font-size="13">Vereador</text>
+          <path d="M130 68 V 96 M380 68 V 96 M630 68 V 84 M560 84 H 700 M560 84 V 96 M700 84 V 96" class="ln" stroke-width="2"/>
+          <rect x="20" y="96" width="220" height="80" rx="6" class="fms" stroke="var(--mag)"/>
+          <text x="130" y="124" class="tb" font-size="12.5">Afastado do cargo</text>
+          <text x="130" y="146" font-size="11.5" class="t2">recebe só a remuneração</text>
+          <text x="130" y="162" font-size="11.5" class="t2">do mandato</text>
+          <rect x="270" y="96" width="220" height="80" rx="6" class="fas" stroke="var(--amber)"/>
+          <text x="380" y="124" class="tb" font-size="12.5">Afastado do cargo</text>
+          <text x="380" y="146" font-size="11.5" class="t2">pode OPTAR pela remuneração</text>
+          <text x="380" y="162" font-size="11.5" class="t2">do cargo ou do mandato</text>
+          <rect x="520" y="96" width="100" height="80" rx="6" class="fgs" stroke="var(--green)"/>
+          <text x="570" y="118" class="tb" font-size="11.5">horários</text><text x="570" y="133" class="tb" font-size="11.5">compatíveis</text>
+          <text x="570" y="152" font-size="10.5" class="t2">ACUMULA</text><text x="570" y="166" font-size="10.5" class="t2">cargo + mandato</text>
+          <rect x="640" y="96" width="100" height="80" rx="6" class="fas" stroke="var(--amber)"/>
+          <text x="690" y="118" class="tb" font-size="11.5">horários</text><text x="690" y="133" class="tb" font-size="11.5">incompatíveis</text>
+          <text x="690" y="152" font-size="10.5" class="t2">regra do</text><text x="690" y="166" font-size="10.5" class="t2">Prefeito</text>
+        </g>
+        <rect x="20" y="200" width="720" height="84" rx="6" class="fcs" stroke="var(--cyan)"/>
+        <text x="40" y="226" font-size="12.5" class="tb">Em qualquer caso de afastamento:</text>
+        <text x="40" y="248" font-size="12">o tempo de serviço conta para todos os efeitos legais, EXCETO promoção por merecimento (IV);</text>
+        <text x="40" y="270" font-size="12">se é segurado de regime próprio, continua filiado a ele, no ente de origem (V, EC 103/2019).</text>
+      </svg>
+      <figcaption>Art. 38, incisos I a V. Só o vereador pode exercer cargo e mandato ao mesmo tempo, e só com compatibilidade de horários.</figcaption>
+    </figure>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>Troca entre <strong>Prefeito</strong> e <strong>Vereador</strong>. Prefeito <em>sempre</em> se afasta e escolhe a remuneração. Vereador acumula se os horários forem compatíveis; se não forem, vira "Prefeito" (afasta e escolhe). Deputado e senador se afastam sem opção. E o tempo de afastamento <strong>não conta para promoção por merecimento</strong>.</p></div>
+  </section>
+
+  <!-- 8 ART 39 -->
+  <section class="sec" id="art39">
+    <span class="lbl">Seção 8 · art. 39</span>
+    <h2>Regime, remuneração e direitos</h2>
+    <ul>
+      <li><strong>Caput:</strong> hoje prevê o <strong>conselho de política de administração e remuneração de pessoal</strong> (redação da EC 19/1998). A antiga exigência de <strong>regime jurídico único</strong> ficou anos restabelecida por liminar do STF. Em 2024, no julgamento da ADI 2.135, o Supremo validou a redação da EC 19, com efeitos só para o futuro. Na União, o regime dos servidores efetivos continua sendo o estatutário da Lei 8.112.</li>
+      <li><strong>§ 1º:</strong> padrões de vencimento consideram natureza, responsabilidade e complexidade, requisitos de investidura e peculiaridades do cargo.</li>
+      <li><strong>§ 2º:</strong> escolas de governo, e a participação em cursos é requisito para promoção. Na carreira TAE, isso vira a progressão por capacitação da Lei 11.091 (semana 8).</li>
+      <li><strong>§ 4º · Subsídio:</strong> <strong>parcela única</strong>, sem gratificação, adicional, abono, prêmio ou verba de representação. É obrigatório para membros de Poder, detentores de mandato, Ministros e Secretários. O § 8º permite adotá-lo para servidores de carreira.</li>
+      <li><strong>§ 9º</strong> <span class="new">EC 103</span>: vedada a <strong>incorporação</strong> de vantagens temporárias ou de função de confiança e cargo em comissão à remuneração do cargo efetivo.</li>
+    </ul>
+    <h3>§ 3º · Direitos trabalhistas do art. 7º que valem para o servidor</h3>
+    <div class="grid2">
+      <div class="card"><h4 style="margin-top:0;color:var(--green)">Valem (art. 39, § 3º)</h4><p class="small" style="margin:0">Salário mínimo (IV); garantia do mínimo para quem ganha remuneração variável (VII); <strong>13º salário</strong> (VIII); <strong>adicional noturno</strong> (IX); salário-família (XII); jornada de até 8h diárias e 44h semanais (XIII); repouso semanal remunerado (XV); <strong>hora extra com, no mínimo, 50%</strong> (XVI); <strong>férias com 1/3</strong> (XVII); <strong>licença à gestante</strong> de 120 dias (XVIII); licença-paternidade (XIX); proteção do trabalho da mulher (XX); redução dos riscos do trabalho (XXII); proibição de diferença salarial por sexo, idade, cor ou estado civil (XXX).</p></div>
+      <div class="card"><h4 style="margin-top:0;color:var(--mag)">Não estão na lista</h4><p class="small" style="margin:0"><strong>FGTS</strong>, seguro-desemprego, aviso prévio, <strong>adicional de insalubridade e periculosidade</strong> (inciso XXIII), piso salarial, participação nos lucros. Alguns o servidor federal recebe <strong>por força da 8.112</strong> (como os adicionais), e não da Constituição. A lei pode fixar requisitos diferenciados de admissão quando a natureza do cargo exigir.</p></div>
+    </div>
+    <div class="cx dec"><span class="k">Decoreba</span><p>Os 14 incisos do § 3º: <strong>IV, VII, VIII, IX, XII, XIII, XV, XVI, XVII, XVIII, XIX, XX, XXII e XXX</strong>. Para a prova, basta lembrar que FGTS e insalubridade <strong>não</strong> estão lá.</p></div>
+  </section>
+
+  <!-- 9 ART 40 -->
+  <section class="sec" id="art40">
+    <span class="lbl">Seção 9 · art. 40</span>
+    <h2>Regime próprio de previdência (aposentadoria)</h2>
+    <p>O <strong>RPPS</strong> dos servidores efetivos tem caráter <strong>contributivo e solidário</strong>, com contribuição do ente, dos ativos, dos aposentados e dos pensionistas, e deve preservar o equilíbrio financeiro e atuarial. A EC 103/2019 (reforma da previdência) reescreveu o artigo.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Aposentadoria</th><th>Regra atual</th></tr></thead>
+      <tbody>
+        <tr><td>Por incapacidade permanente</td><td>No cargo em que estiver, <strong>quando não couber readaptação</strong>, com <strong>avaliações periódicas obrigatórias</strong> (§ 1º, I). O nome antigo era "invalidez"</td></tr>
+        <tr><td>Compulsória</td><td>Proventos <strong>proporcionais</strong> ao tempo de contribuição, aos <strong>75 anos</strong> (a CF fala em 70 ou 75, na forma de lei complementar; a LC 152/2015 fixou 75)</td></tr>
+        <tr><td>Voluntária, na União</td><td><strong>62 anos (mulher) e 65 (homem)</strong> (§ 1º, III). Até vir a lei federal, o art. 10 da EC 103 exige também <strong>25 anos de contribuição, 10 de efetivo exercício no serviço público e 5 no cargo</strong></td></tr>
+        <tr><td>Professor</td><td>Idade mínima <strong>5 anos menor</strong>, só para quem comprovar magistério na <strong>educação infantil e nos ensinos fundamental e médio</strong> (§ 5º). Professor universitário não tem redução</td></tr>
+        <tr><td>Especiais</td><td>Lei complementar pode diferenciar: servidor com deficiência (§ 4º-A), policiais e agentes penitenciários e socioeducativos (§ 4º-B), exposição a agentes químicos, físicos e biológicos nocivos (§ 4º-C)</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>Teto do benefício:</strong> quem entrou depois da criação da previdência complementar (na União, a Funpresp, em funcionamento desde 2013) se aposenta pelo regime próprio limitado ao <strong>teto do regime geral</strong>, com complemento opcional pelo fundo (§§ 14 a 16). É o caso de quem tomar posse neste concurso.</li>
+      <li><strong>§ 6º:</strong> só se recebe mais de uma aposentadoria pelo regime próprio se vierem de <strong>cargos acumuláveis</strong>. <strong>§ 11:</strong> o teto do art. 37, XI, se aplica à soma.</li>
+      <li><strong>§ 9º:</strong> tempo de contribuição federal, estadual, distrital ou municipal conta para aposentadoria; o tempo de serviço, para disponibilidade. <strong>§ 10:</strong> proibido tempo de contribuição <strong>fictício</strong>.</li>
+      <li><strong>§ 13:</strong> quem ocupa <strong>só cargo em comissão</strong>, cargo temporário, mandato eletivo ou emprego público fica no <strong>regime geral</strong> (INSS).</li>
+      <li><strong>§ 19 · Abono de permanência:</strong> quem já cumpriu os requisitos da voluntária e continua trabalhando pode receber até o valor da própria contribuição previdenciária, até a compulsória.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Cuidado com questão antiga</span><p>Antes das reformas havia aposentadoria por <strong>tempo de serviço</strong>, proventos <strong>integrais</strong> e <strong>paridade</strong>. Hoje há idade mínima e cálculo pela média. Por isso, questões e apostilas anteriores a 2019 costumam estar erradas neste artigo, e a própria Lei 8.112 (arts. 186 e seguintes) tem trechos superados. As regras de transição do art. 4º da EC 103, para quem já era servidor, não são necessárias para quem está entrando agora.</p></div>
+  </section>
+
+  <!-- 10 ART 41 -->
+  <section class="sec" id="art41">
+    <span class="lbl">Seção 10 · art. 41</span>
+    <h2>Estabilidade</h2>
+    <figure class="fig">
+      <svg viewBox="0 60 760 180" role="img" aria-label="Linha do tempo do concurso até a estabilidade">
+        <line x1="30" y1="110" x2="740" y2="110" class="ln" stroke-width="3"/>
+        <g>
+          <circle cx="60" cy="110" r="9" class="fm"/><text x="60" y="84" text-anchor="middle" class="tb" font-size="12">homologação</text>
+          <text x="60" y="140" text-anchor="middle" font-size="11" class="t2">validade até 2 anos</text><text x="60" y="155" text-anchor="middle" font-size="11" class="t2">+ 1 prorrogação igual</text><text x="60" y="170" text-anchor="middle" font-size="10.5" class="t3">CF 37, III</text>
+          <circle cx="230" cy="110" r="9" class="fm"/><text x="230" y="84" text-anchor="middle" class="tb" font-size="12">nomeação</text>
+          <text x="230" y="140" text-anchor="middle" font-size="11" class="t2">posse em até 30 dias</text><text x="230" y="155" text-anchor="middle" font-size="11" class="t2">da publicação</text><text x="230" y="170" text-anchor="middle" font-size="10.5" class="t3">8.112, art. 13</text>
+          <circle cx="380" cy="110" r="9" class="fm"/><text x="380" y="84" text-anchor="middle" class="tb" font-size="12">posse</text>
+          <text x="380" y="140" text-anchor="middle" font-size="11" class="t2">exercício em até</text><text x="380" y="155" text-anchor="middle" font-size="11" class="t2">15 dias da posse</text><text x="380" y="170" text-anchor="middle" font-size="10.5" class="t3">8.112, art. 15</text>
+          <circle cx="500" cy="110" r="9" class="fm"/><text x="500" y="84" text-anchor="middle" class="tb" font-size="12">exercício</text>
+          <text x="500" y="140" text-anchor="middle" font-size="11" class="t2">começa o estágio</text><text x="500" y="155" text-anchor="middle" font-size="11" class="t2">probatório</text>
+          <rect x="500" y="100" width="210" height="20" rx="4" class="fgs" stroke="var(--green)"/>
+          <text x="605" y="115" text-anchor="middle" font-size="11" class="tb">3 anos de efetivo exercício</text>
+          <circle cx="720" cy="110" r="11" class="fg"/><text x="705" y="84" text-anchor="middle" class="tb" font-size="12">ESTÁVEL</text>
+          <text x="660" y="140" text-anchor="middle" font-size="11" class="t2">avaliação especial</text><text x="660" y="155" text-anchor="middle" font-size="11" class="t2">de desempenho por</text><text x="660" y="170" text-anchor="middle" font-size="11" class="t2">comissão (§ 4º)</text>
+        </g>
+        <text x="30" y="210" font-size="11.5" class="t2">Durante o estágio o servidor não é estável: se reprovado, é exonerado (não demitido). A 8.112 ainda diz "24 meses" de estágio (art. 20),</text>
+        <text x="30" y="228" font-size="11.5" class="t2">mas o STF e a AGU entendem que o estágio probatório acompanha os 3 anos da estabilidade. Em prova, siga o que o enunciado pedir.</text>
+      </svg>
+      <figcaption>Do concurso à estabilidade. Os prazos de posse e exercício são da Lei 8.112, que é assunto das semanas 2 a 6.</figcaption>
+    </figure>
+    <div class="lei"><b>Art. 41, § 1º</b>O servidor público estável só perderá o cargo: I - em virtude de sentença judicial transitada em julgado; II - mediante processo administrativo em que lhe seja assegurada ampla defesa; III - mediante procedimento de avaliação periódica de desempenho, na forma de lei complementar, assegurada ampla defesa.</div>
+    <ul>
+      <li>Há uma <strong>quarta hipótese fora do art. 41</strong>: o <strong>art. 169, § 4º</strong>, que permite exonerar servidor estável por <strong>excesso de despesa com pessoal</strong>, depois de cortar 20% dos cargos em comissão e funções de confiança e de exonerar os não estáveis, com indenização de uma remuneração por ano de serviço.</li>
+      <li>A lei complementar da avaliação periódica (inciso III) <strong>ainda não foi editada</strong>.</li>
+      <li><strong>§ 2º · Reintegração:</strong> invalidada por sentença judicial a demissão do estável, ele é <strong>reintegrado</strong>. O eventual ocupante da vaga, se estável, é <strong>reconduzido</strong> ao cargo de origem <strong>sem direito a indenização</strong>, <strong>aproveitado</strong> em outro cargo ou posto em <strong>disponibilidade</strong> com remuneração proporcional ao tempo de serviço.</li>
+      <li><strong>§ 3º · Disponibilidade:</strong> extinto o cargo ou declarada sua desnecessidade, o estável fica em <strong>disponibilidade com remuneração proporcional ao tempo de serviço</strong>, até ser aproveitado em outro cargo.</li>
+      <li>A estabilidade é <strong>no serviço público</strong>, não no cargo. Quem troca de cargo por novo concurso faz novo estágio no novo cargo.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha clássica</span><p><strong>2 anos</strong> é a validade do concurso; <strong>3 anos</strong> é a estabilidade (desde a EC 19/1998; antes eram 2). Disponibilidade é com remuneração <strong>proporcional</strong> ao tempo de serviço, não integral. E o reconduzido, ao perder a vaga para o reintegrado, <strong>não tem direito a indenização</strong>.</p></div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais</span>
+    <h2>A FADE em 2023, nos temas da Constituição</h2>
+    <p class="muted">Nenhuma questão das provas anteriores pediu os arts. 37 a 41 diretamente. Estas quatro, da própria FADE, cobram pela Lei 8.112 regras que a Constituição também tem. Transcrição fiel; formatação ajustada.</p>
+
+    <div class="q" id="q-adm30">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Administrador · nível E · questão 30 · acumulação</span></div>
+      <p>A Lei n.º 8.112/1990 traz alguns regramentos específicos sobre a possibilidade de acumulação de cargos públicos. Acerca desse tema, assinale a alternativa correta.</p>
+      <ol class="alt">
+        <li data-l="A">A autoridade que tiver ciência, a qualquer tempo, da acumulação ilegal de cargos, empregos ou funções públicas, notificará o servidor, por intermédio de sua chefia imediata, para apresentar opção no prazo de quinze dias, prorrogável por igual período.</li>
+        <li data-l="B">A proibição de acumular não se estende a cargos, empregos e funções em autarquias, fundações públicas, empresas públicas, sociedades de economia mista da União, do Distrito Federal, dos Estados, dos Territórios e dos Municípios.</li>
+        <li data-l="C">Considera-se acumulação proibida a percepção de vencimento de cargo ou emprego público efetivo com proventos da inatividade, mesmo quando os cargos de que decorram essas remunerações forem acumuláveis na atividade.</li>
+        <li data-l="D">O servidor que acumular licitamente dois cargos efetivos, quando investido em cargo de provimento em comissão, ficará afastado de ambos os cargos efetivos, salvo na hipótese em que houver compatibilidade de horário e local com o exercício de um deles, declarada pelas chefias imediatas do servidor nos órgãos ou entidades envolvidos.</li>
+        <li data-l="E">O servidor ocupante de cargo em comissão ou de natureza especial poderá ser nomeado para ter exercício, interinamente, em outro cargo de confiança, sem prejuízo das atribuições do que atualmente ocupa, hipótese em que deverá optar pela remuneração de um deles durante o período da interinidade.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: E</span> (art. 9º, parágrafo único, da 8.112). Cada alternativa errada tem <strong>uma palavra trocada</strong>, que é a marca da FADE:</p>
+        <ul class="items">
+          <li><strong>A</strong>: o prazo é de <strong>dez dias, improrrogável</strong> (art. 133).</li>
+          <li><strong>B</strong>: a proibição <strong>se estende</strong> a essas entidades (art. 118, § 1º, espelho do art. 37, XVII, da CF).</li>
+          <li><strong>C</strong>: a acumulação de vencimento com proventos é proibida, <strong>salvo</strong> quando os cargos forem acumuláveis na atividade (art. 118, § 3º, espelho do art. 37, § 10).</li>
+          <li><strong>D</strong>: a compatibilidade é declarada pelas <strong>autoridades máximas</strong> dos órgãos, e não pelas chefias imediatas (art. 120).</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="q" id="q-adm29">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Administrador · nível E · questão 29 · estágio probatório</span></div>
+      <p>Considerando o teor da Lei n.º 8.112/1990, ao servidor em estágio probatório, não poderá ser concedida licença</p>
+      <ol class="alt"><li data-l="A">por motivo de afastamento do cônjuge ou companheiro.</li><li data-l="B">por motivo de doença em pessoa da família.</li><li data-l="C">para capacitação.</li><li data-l="D">para o serviço militar.</li><li data-l="E">para atividade política.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> No estágio probatório só cabem as licenças por doença em pessoa da família, por afastamento do cônjuge, para o serviço militar e para atividade política (art. 20, § 4º). A licença para <strong>capacitação</strong> exige cinco anos de efetivo exercício, por isso não cabe. Tema que vai voltar na semana 2, junto com a linha do tempo desta página.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-ass31">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Assistente em Administração · nível D · questão 31 · reintegração</span></div>
+      <p>Ângela, servidora pública federal estável, foi demitida de seu cargo. Inconformada, ajuizou demanda judicial que determinou sua reinvestidura ao cargo anteriormente ocupado. Com base na Lei 8.112/1990, a situação relatada é caso de</p>
+      <ol class="alt">
+        <li data-l="A">reintegração e, se o cargo anteriormente ocupado por Ângela tiver sido provido, o seu atual ocupante será reconduzido ao cargo de origem, sem direito à indenização, ou aproveitado em outro cargo, ou, ainda, posto em disponibilidade.</li>
+        <li data-l="B">recondução, e Ângela será ressarcida de todas as vantagens.</li>
+        <li data-l="C">recondução e, se o cargo anteriormente ocupado por Ângela tiver sido extinto, ela será posta em disponibilidade.</li>
+        <li data-l="D">reintegração e, se o cargo anteriormente ocupado por Ângela tiver sido extinto, ela será readaptada.</li>
+        <li data-l="E">redistribuição e, se o cargo anteriormente ocupado por Ângela tiver sido provido, o seu atual ocupante será reconduzido ao cargo de origem, com direito à indenização, aproveitado em outro cargo, ou posto em disponibilidade.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: A.</span> É a transcrição quase literal do <strong>art. 41, § 2º, da CF</strong> (repetido no art. 28 da 8.112). Reintegração = volta do servidor cuja demissão foi invalidada. Recondução = retorno ao cargo anterior (do ocupante da vaga, ou por inabilitação em estágio). A alternativa D erra porque, com cargo extinto, o reintegrado fica em <strong>disponibilidade</strong>, e não é readaptado. A E erra no "com direito à indenização".</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-ass29">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Assistente em Administração · nível D · questão 29 · aposentadoria</span><span class="tag c">gabarito pela lei literal</span></div>
+      <p>Joelma tem 55 anos e é professora da Universidade Federal de Pernambuco há 26. Durante sua carreira, foi cedida a uma universidade mantida diretamente pelo estado de Pernambuco por dois anos e tirou duas licenças-maternidade para cuidar de seus filhos. Pretendendo programar sua aposentadoria, a professora resolveu consultar o Departamento Pessoal da UFPE. Considerando o caso apresentado e com base na Lei 8.112/1990, que resposta a professora recebeu?</p>
+      <ol class="alt">
+        <li data-l="A">Joelma ainda não pode se aposentar, pois não atingiu a idade mínima necessária de 60 anos.</li>
+        <li data-l="B">Joelma ainda não pode se aposentar, pois o tempo em que foi cedida não pode ser contabilizado para esse fim.</li>
+        <li data-l="C">Joelma já pode se aposentar, porém receberá apenas proventos proporcionais.</li>
+        <li data-l="D">Joelma já pode se aposentar com recebimento de proventos de forma integral.</li>
+        <li data-l="E">Joelma ainda não pode se aposentar, pois deve completar 30 anos de serviço.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> A banca aplicou o texto literal do <strong>art. 186, III, b, da 8.112</strong>: 25 anos de magistério, se professora, com proventos integrais. O tempo de cessão e as licenças-maternidade contam como efetivo exercício.</p>
+        <p><strong>Mas, pela Constituição atual, a resposta seria outra.</strong> A redução de idade para professor vale só para educação infantil e ensinos fundamental e médio (art. 40, § 5º). Professora universitária segue a regra geral ou as de transição da EC 103, que exigem idade e tempo que Joelma não tem, e o cálculo integral acabou para quem entrou depois de 2003. A questão não foi anulada.</p>
+        <p><strong>Lição:</strong> a FADE cobra o texto literal da lei citada no enunciado. Se aparecer "com base na Lei 8.112", responda pela 8.112, mesmo sabendo que ela está desatualizada. Se aparecer "segundo a Constituição", vale o art. 40 vigente.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · 25 min</span>
+    <h2>16 questões no estilo da FADE</h2>
+    <p class="muted">Questões autorais, nos formatos que a FADE usou em 2023: casos com nome, assertivas numeradas, lacunas e alternativa incorreta. Todas pela redação <strong>vigente</strong> da Constituição. Cada um faz no próprio celular; a última nota fica salva no navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · revisão do domingo</span>
+    <h2>36 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar e marque <strong>sei</strong> ou <strong>revisar</strong>. A exportação gera um CSV (frente;verso;tag) para o Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Fontes.</strong> Constituição Federal, arts. 37 a 41 e 169, texto compilado no <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37">site do Planalto</a>, conferido em 26/09/2026, com as Emendas Constitucionais 19/1998, 20/1998, 34/2001, 41/2003, 47/2005, 88/2015, 103/2019 (inclusive o art. 10), 135/2024 e 138/2025 · Lei 8.112/1990 · LC 152/2015 · Súmulas Vinculantes 13, 37, 43 e 44; Súmulas 473 e 683 do STF; RE 598.099; Temas 897 e 940 do STF; MI 670, 708 e 712; ADI 2.135.</p>
+    <p><strong>Questões reais:</strong> FADE/UFPE 2023 (Edital 10/2023), provas de Administrador e de Assistente em Administração, com os gabaritos oficiais. O mapa "como cai" inclui também a prova de Biólogo UFPE/UFRPE 2008. O simulado e os cartões são autorais. As estimativas de quantas questões cada norma terá são inferência a partir dessas provas.</p>
+    <p><a href="../index.html#cado">← Plano do Cado</a> · <a href="../index.html#gabi">Plano da Gabi</a> · Próxima página de Legislação: Lei 8.112, provimento, posse, exercício, estágio e vacância (semana 2).</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:comum:leg1';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Um concurso público federal teve seu resultado homologado com prazo de validade de dois anos fixado no edital. De acordo com a Constituição Federal, esse prazo:',
+     o:['poderá ser prorrogado quantas vezes forem necessárias, até o limite de quatro anos.','poderá ser prorrogado uma vez, por igual período, podendo o concurso valer até quatro anos.','não poderá ser prorrogado, pois já foi fixado no limite máximo constitucional.','poderá ser prorrogado uma vez, por até um ano.','poderá ser prorrogado apenas se houver candidatos aprovados dentro do número de vagas ainda não nomeados.'],a:1,
+     w:'Art. 37, III: validade de até dois anos, prorrogável <strong>uma vez, por igual período</strong>. Com 2 anos fixados, a prorrogação é de mais 2.'},
+    {t:'Considerando a redação atual do art. 37, XVI, da Constituição Federal, analise as assertivas a seguir, supondo em todas elas compatibilidade de horários.<br>1) Um professor da UFPE pode acumular esse cargo com o de biólogo em órgão estadual.<br>2) Um servidor pode acumular dois cargos de administrador, em entes diferentes.<br>3) A vedação de acumular alcança empregos em sociedades de economia mista.<br>4) A soma das remunerações dos cargos acumulados deve respeitar o teto constitucional.<br>Estão corretas, apenas:',
+     o:['1, 3 e 4.','1 e 2.','2, 3 e 4.','3 e 4.','1, 2, 3 e 4.'],a:0,
+     w:'Desde a EC 138/2025, professor acumula com cargo <strong>de qualquer natureza</strong> (1 certa). Dois cargos de administrador não estão em nenhuma alínea (2 errada). A vedação se estende às estatais (XVII) e a soma observa o teto (XI).'},
+    {t:'Maria, servidora da UFPE, foi eleita vereadora do Recife. Os horários da Câmara Municipal são compatíveis com os de seu cargo. Nos termos do art. 38 da Constituição, Maria:',
+     o:['ficará afastada do cargo, podendo optar pela remuneração.','ficará afastada do cargo e receberá apenas o subsídio de vereadora.','perceberá as vantagens de seu cargo, sem prejuízo da remuneração do cargo eletivo.','deverá pedir exoneração do cargo efetivo para tomar posse no mandato.','ficará afastada sem remuneração, contando o tempo apenas para aposentadoria.'],a:2,
+     w:'Art. 38, III: vereador com compatibilidade de horários <strong>acumula</strong> as vantagens do cargo e a remuneração do mandato.'},
+    {t:'João, servidor federal, foi eleito prefeito de um município do interior de Pernambuco. Segundo a Constituição, João:',
+     o:['exercerá cargo e mandato simultaneamente, se houver compatibilidade de horários.','perderá o cargo efetivo ao tomar posse no mandato.','ficará afastado do cargo e receberá obrigatoriamente o subsídio de prefeito.','ficará afastado do cargo, sendo-lhe facultado optar pela sua remuneração.','ficará afastado, e o tempo de mandato não será contado para nenhum efeito.'],a:3,
+     w:'Art. 38, II: prefeito sempre se afasta e pode <strong>optar</strong> pela remuneração. A compatibilidade de horários só beneficia o vereador. O tempo conta para todos os efeitos, exceto promoção por merecimento.'},
+    {t:'Complete as lacunas do art. 41 da Constituição: "São estáveis após ______ de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público. [...] Como condição para a aquisição da estabilidade, é obrigatória ______."',
+     o:['dois anos · a posse no cargo','três anos · a avaliação especial de desempenho por comissão instituída para essa finalidade','três anos · a aprovação em curso de formação','dois anos · a avaliação periódica de desempenho na forma de lei complementar','cinco anos · a declaração de bens'],a:1,
+     w:'Três anos (EC 19/1998) e avaliação <strong>especial</strong> de desempenho por comissão (§ 4º). A avaliação <strong>periódica</strong> é a que pode levar à perda do cargo do servidor já estável.'},
+    {t:'Segundo a Constituição Federal, o servidor público estável poderá perder o cargo nas hipóteses a seguir, EXCETO:',
+     o:['em virtude de sentença judicial transitada em julgado.','mediante processo administrativo em que lhe seja assegurada ampla defesa.','mediante procedimento de avaliação periódica de desempenho, na forma de lei complementar, assegurada ampla defesa.','para adequação da despesa com pessoal aos limites legais, observados os requisitos do art. 169.','por decisão motivada da chefia imediata, independentemente de processo, em caso de baixa produtividade.'],a:4,
+     w:'As três hipóteses do art. 41, § 1º, mais a do art. 169, § 4º (excesso de despesa). Não existe perda do cargo estável por simples decisão da chefia, sem processo e sem ampla defesa.'},
+    {t:'Invalidada por sentença judicial a demissão do servidor estável, ele será ______, e o eventual ocupante da vaga, se estável, será ______.',
+     o:['reconduzido · reintegrado ao cargo de origem, com direito a indenização','readaptado · exonerado de ofício','aproveitado · posto em disponibilidade com remuneração integral','reintegrado · reconduzido ao cargo de origem, sem direito a indenização, aproveitado em outro cargo ou posto em disponibilidade','revertido · redistribuído para outro órgão'],a:3,
+     w:'Art. 41, § 2º. É o mesmo conteúdo da questão real da FADE sobre Ângela. Atenção ao "<strong>sem</strong> direito a indenização" e à disponibilidade com remuneração <strong>proporcional</strong>.'},
+    {t:'No âmbito da União, a remuneração dos servidores de uma universidade federal não pode exceder:',
+     o:['o subsídio do Presidente da República.','o subsídio de Ministro de Estado.','o subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal.','90,25% do subsídio dos Ministros do Supremo Tribunal Federal.','o subsídio do Governador do Estado em que a universidade estiver sediada.'],a:2,
+     w:'Art. 37, XI: na União, o teto de todos os Poderes é o subsídio de Ministro do STF. O percentual de 90,25% é o limite do subteto do Judiciário estadual.'},
+    {t:'Quanto aos limites remuneratórios do art. 37, XI, da Constituição, analise as assertivas.<br>1) Nos Municípios, o limite é o subsídio do Prefeito.<br>2) Nos Estados, no âmbito do Poder Executivo, o limite é o subsídio do Governador.<br>3) Nos Estados, no âmbito do Poder Legislativo, o limite é o subsídio dos Deputados Estaduais.<br>4) Nos Estados, no âmbito do Judiciário, o limite é o subsídio dos Desembargadores, limitado a 90,25% do subsídio dos Ministros do STF, aplicando-se também aos membros do Ministério Público, aos Procuradores e aos Defensores Públicos.<br>5) As parcelas de caráter indenizatório previstas em lei são computadas para efeito do teto.<br>Estão corretas, apenas:',
+     o:['1, 2, 3 e 4.','1, 2, 3, 4 e 5.','2, 3 e 4.','1, 4 e 5.','1, 2 e 5.'],a:0,
+     w:'Os itens 1 a 4 reproduzem o inciso XI. O 5 está errado: pelo § 11, as parcelas indenizatórias previstas em lei <strong>não</strong> entram no teto.'},
+    {t:'As funções de confiança serão exercidas ______ por servidores ocupantes de cargo efetivo, e os cargos em comissão serão preenchidos por servidores de carreira nos casos, condições e percentuais mínimos previstos em lei; ambos destinam-se apenas às atribuições de ______.',
+     o:['exclusivamente · direção, chefia e assessoramento','preferencialmente · direção, chefia e assessoramento','exclusivamente · direção, chefia e execução técnica','prioritariamente · chefia e fiscalização','exclusivamente · qualquer atividade de interesse público'],a:0,
+     w:'Art. 37, V. Função de confiança é <strong>exclusiva</strong> de efetivo; o cargo em comissão admite pessoas de fora, respeitado um percentual mínimo de servidores de carreira.'},
+    {t:'Nos termos do art. 39, § 3º, da Constituição, aplicam-se aos servidores ocupantes de cargo público os seguintes direitos previstos no art. 7º, EXCETO:',
+     o:['décimo terceiro salário com base na remuneração integral.','gozo de férias anuais remuneradas com, pelo menos, um terço a mais do que o salário normal.','fundo de garantia do tempo de serviço.','licença à gestante, sem prejuízo do emprego e do salário, com a duração de cento e vinte dias.','remuneração do trabalho noturno superior à do diurno.'],a:2,
+     w:'O FGTS (art. 7º, III) não está na lista do art. 39, § 3º. Também não estão o seguro-desemprego, o aviso prévio e o adicional de insalubridade.'},
+    {t:'Até que entre em vigor lei federal sobre o tema, a aposentadoria voluntária do servidor público federal exige, cumulativamente, segundo a Emenda Constitucional 103/2019:',
+     o:['60 anos de idade, se mulher, e 65, se homem, e 30 anos de contribuição.','55 anos de idade, se mulher, e 60, se homem, e 35 anos de contribuição.','62 anos de idade, se mulher, e 65, se homem, e 15 anos de contribuição.','apenas tempo de contribuição de 30 anos, se mulher, e 35, se homem.','62 anos de idade, se mulher, e 65, se homem; 25 anos de contribuição; 10 anos de efetivo exercício no serviço público; e 5 anos no cargo em que se der a aposentadoria.'],a:4,
+     w:'Art. 40, § 1º, III, e art. 10 da EC 103/2019. Os 15 anos de contribuição são do regime geral (INSS), não do servidor federal.'},
+    {t:'A redução de cinco anos na idade mínima para a aposentadoria voluntária do professor aplica-se a quem comprovar tempo de efetivo exercício das funções de magistério:',
+     o:['na educação infantil e no ensino fundamental e médio.','em qualquer nível de ensino, inclusive o superior.','apenas no ensino superior público.','apenas no ensino médio.','em qualquer função exercida em estabelecimento de ensino.'],a:0,
+     w:'Art. 40, § 5º. O professor universitário <strong>não</strong> tem redução. Foi o que tornou desatualizada a questão real sobre a professora Joelma.'},
+    {t:'Um veículo oficial da UFPE, conduzido por servidor em serviço, colidiu com o carro de um particular, causando-lhe danos. De acordo com o art. 37, § 6º, da Constituição:',
+     o:['a UFPE só responderá se o particular provar a culpa do servidor.','somente o servidor responderá, pois foi ele quem causou o dano.','a UFPE responderá apenas se o servidor for condenado criminalmente.','a UFPE responderá objetivamente, assegurado o direito de regresso contra o servidor nos casos de dolo ou culpa.','a UFPE e o servidor responderão objetivamente, em conjunto.'],a:3,
+     w:'Responsabilidade <strong>objetiva</strong> da pessoa jurídica de direito público, com regresso contra o agente só havendo dolo ou culpa (responsabilidade subjetiva dele). A vítima aciona a UFPE, não o servidor.'},
+    {t:'Segundo o art. 37, § 4º, da Constituição, os atos de improbidade administrativa importarão:',
+     o:['a suspensão dos direitos políticos, a perda da função pública, a indisponibilidade dos bens e o ressarcimento ao erário, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível.','a cassação dos direitos políticos, a perda da função pública e o ressarcimento ao erário.','a perda definitiva dos direitos políticos e o confisco dos bens.','a suspensão da função pública e a prisão administrativa do agente.','apenas o ressarcimento ao erário, excluída a esfera penal.'],a:0,
+     w:'São quatro consequências: suspensão dos direitos políticos, perda da função, indisponibilidade dos bens e ressarcimento. A Constituição proíbe a <strong>cassação</strong> de direitos políticos (art. 15).'},
+    {t:'Uma universidade federal publicou em suas redes uma campanha sobre vacinação estudantil com a foto, o nome e o slogan pessoal do reitor. Considerando o art. 37 da Constituição, a campanha:',
+     o:['é regular, pois tem caráter educativo e foi custeada com recursos públicos.','viola somente o princípio da eficiência.','viola o § 1º do art. 37, pois a publicidade oficial não pode conter nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades, em afronta à impessoalidade.','é regular, desde que o reitor autorize expressamente o uso de sua imagem.','viola apenas o princípio da legalidade, por falta de licitação.'],a:2,
+     w:'O caráter educativo não salva a peça: o § 1º proíbe nomes, símbolos ou imagens de promoção pessoal. É a aplicação típica da impessoalidade.'}
+  ];
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var F=[
+    ['Princípios expressos do art. 37, caput','Legalidade, impessoalidade, moralidade, publicidade e eficiência (LIMPE).'],
+    ['Princípio incluído pela EC 19/1998','Eficiência.'],
+    ['A quem se aplica o art. 37','À administração direta e indireta de qualquer dos Poderes da União, dos Estados, do DF e dos Municípios.'],
+    ['Estrangeiro pode ocupar cargo público?','Sim, na forma da lei (art. 37, I). Nas universidades federais, a 8.112 permite professores, técnicos e cientistas estrangeiros.'],
+    ['Modalidades de concurso público','Provas, ou provas e títulos. Não existe concurso só de títulos.'],
+    ['Exceção à exigência de concurso (art. 37, II)','Cargo em comissão declarado em lei de livre nomeação e exoneração.'],
+    ['Prazo de validade do concurso','Até 2 anos, prorrogável uma vez, por igual período.'],
+    ['Consequência de desrespeitar o concurso ou a validade (§ 2º)','Nulidade do ato e punição da autoridade responsável.'],
+    ['Aprovado dentro do número de vagas tem…','Direito subjetivo à nomeação durante a validade (STF, RE 598.099).'],
+    ['Súmula Vinculante 43','Inconstitucional o provimento, sem concurso, em cargo de outra carreira (fim da ascensão e da transferência).'],
+    ['Súmula Vinculante 44','Exame psicotécnico só pode ser exigido se houver lei.'],
+    ['Função de confiança × cargo em comissão: quem ocupa','Função: exclusivamente servidor efetivo. Comissão: qualquer pessoa, com percentual mínimo de servidores de carreira fixado em lei.'],
+    ['Função de confiança e cargo em comissão servem para…','Apenas direção, chefia e assessoramento.'],
+    ['Direito de greve do servidor civil','Nos termos de lei específica (nunca editada). O STF manda aplicar a Lei 7.783/1989 no que couber.'],
+    ['Contratação temporária (art. 37, IX)','Por tempo determinado, para necessidade temporária de excepcional interesse público. Na União: Lei 8.745/1993.'],
+    ['Revisão geral anual (art. 37, X)','Sempre na mesma data e sem distinção de índices, por lei específica.'],
+    ['Teto na União (todos os Poderes)','Subsídio mensal de Ministro do STF.'],
+    ['Subtetos estaduais','Executivo: Governador. Legislativo: Deputados estaduais. Judiciário, MP, Procuradores e Defensores: Desembargadores, até 90,25% do Ministro do STF.'],
+    ['Teto municipal','Subsídio do Prefeito.'],
+    ['Parcelas indenizatórias entram no teto?','Não, se previstas em lei (§ 11, redação da EC 135/2024).'],
+    ['Art. 37, XIII','Vedada a vinculação ou equiparação de espécies remuneratórias.'],
+    ['Irredutibilidade (XV) é nominal ou real?','Nominal: não garante reposição da inflação. Ressalvados teto, XIV, subsídio e impostos.'],
+    ['As 3 hipóteses de acumulação lícita (redação vigente)','a) 2 de professor; b) professor + outro de qualquer natureza (EC 138/2025); c) 2 privativos de saúde com profissão regulamentada.'],
+    ['Requisitos sempre exigidos na acumulação lícita','Compatibilidade de horários e respeito ao teto sobre a soma.'],
+    ['A vedação de acumular alcança…','Empregos e funções em autarquias, fundações, empresas públicas, sociedades de economia mista, subsidiárias e controladas (XVII).'],
+    ['Proventos + remuneração (§ 10): exceções','Cargos acumuláveis, cargos eletivos e cargos em comissão.'],
+    ['Improbidade (§ 4º): as 4 consequências','Suspensão dos direitos políticos, perda da função pública, indisponibilidade dos bens e ressarcimento ao erário, sem prejuízo da ação penal.'],
+    ['Responsabilidade do Estado (§ 6º)','Objetiva, das PJ de direito público e das privadas prestadoras de serviço público; regresso contra o agente por dolo ou culpa.'],
+    ['Art. 38: mandato federal, estadual ou distrital','Afastado do cargo.'],
+    ['Art. 38: Prefeito','Afastado do cargo, facultado optar pela remuneração.'],
+    ['Art. 38: Vereador','Com compatibilidade de horários, acumula. Sem compatibilidade, aplica-se a regra do Prefeito.'],
+    ['Tempo de afastamento para mandato conta para…','Todos os efeitos legais, exceto promoção por merecimento.'],
+    ['Direitos do art. 7º que NÃO valem para o servidor (exemplos)','FGTS, seguro-desemprego, aviso prévio, adicional de insalubridade (este o servidor federal recebe pela 8.112).'],
+    ['Aposentadoria voluntária do servidor federal (EC 103, art. 10)','62 anos (mulher) / 65 (homem), 25 de contribuição, 10 no serviço público e 5 no cargo.'],
+    ['Estabilidade: prazo e condição','3 anos de efetivo exercício + avaliação especial de desempenho por comissão.'],
+    ['Hipóteses de perda do cargo pelo estável','Sentença transitada em julgado; PAD com ampla defesa; avaliação periódica (LC); excesso de despesa com pessoal (art. 169, § 4º).']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 leg1'];}),'ufpe2027-legislacao-1.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 leg1'];});
+    dl(rows,'ufpe2027-legislacao-1-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var C=[
+    'Recitar o LIMPE e dizer qual princípio veio com a EC 19/1998.',
+    'Explicar a validade do concurso e a prioridade de convocação (III e IV).',
+    'Diferenciar função de confiança e cargo em comissão (quem ocupa, para quê).',
+    'Citar as regras de greve, sindicato e contratação temporária.',
+    'Desenhar o esquema de tetos por esfera, com os subtetos estaduais.',
+    'Listar as três hipóteses de acumulação na redação da EC 138/2025 e os dois requisitos comuns.',
+    'Dizer quando se podem somar proventos e remuneração (§ 10).',
+    'Citar as quatro consequências da improbidade e explicar a responsabilidade do § 6º.',
+    'Desenhar o mapa do art. 38 (federal/estadual, Prefeito, Vereador) e a exceção da promoção por merecimento.',
+    'Dizer dois direitos do art. 7º que valem e dois que não valem para o servidor.',
+    'Enunciar os requisitos da aposentadoria voluntária do servidor federal e a regra do professor.',
+    'Desenhar a linha do tempo até a estabilidade e listar as quatro hipóteses de perda do cargo pelo estável.',
+    'Explicar reintegração, recondução, aproveitamento e disponibilidade (art. 41, §§ 2º e 3º).'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>

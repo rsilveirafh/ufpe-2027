@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Português I para o concurso UFPE 2027 (níveis D e E): esfera pública/oficial, com estrutura da lei, impessoalização, modalização, coesão e conectivos, questões reais da FADE, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+<title>Português I · Esfera oficial</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+
+/* extras Português I */
+.lvE{display:inline-block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:1px 8px;border-radius:99px;background:var(--amber-soft);color:var(--amber);vertical-align:2px;margin-left:4px}
+.lvD{display:inline-block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:1px 8px;border-radius:99px;background:var(--cyan-soft);color:var(--cyan);vertical-align:2px;margin-left:4px}
+.ann{background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);padding:16px 18px;margin:14px 0 18px;font-family:Georgia,"Times New Roman",serif;font-size:15.5px;line-height:1.55}
+.ann .u{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:8px 0;border-bottom:1px dashed var(--rule2);align-items:start}
+.ann .u:last-child{border-bottom:0}
+.ann .u .tg{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;text-align:center;align-self:start}
+.ann .cap .tg{background:var(--mag-soft);color:var(--mag)}
+.ann .inc .tg{background:var(--cyan-soft);color:var(--cyan)}
+.ann .par .tg{background:var(--green-soft);color:var(--green)}
+.ann .inc .tx{padding-left:14px;border-left:3px solid var(--cyan-soft)}
+.ann .par .tx{padding-left:14px;border-left:3px solid var(--green-soft)}
+.ann mark{background:var(--amber-soft);color:inherit;padding:0 2px;border-radius:2px}
+.ann .note{display:block;font-family:"Segoe UI",-apple-system,Roboto,sans-serif;font-size:12.5px;color:var(--ink3);margin-top:4px}
+.coes{background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);padding:16px 18px;margin:14px 0;font-size:15.5px;line-height:1.9}
+.coes .ref{border-bottom:2px solid var(--mag);padding:0 1px}
+.coes .ret{background:var(--mag-soft);border-radius:3px;padding:1px 4px;font-weight:600}
+.coes .ret2{background:var(--cyan-soft);border-radius:3px;padding:1px 4px;font-weight:600}
+.coes .ref2{border-bottom:2px solid var(--cyan);padding:0 1px}
+.coes sup{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:10px;color:var(--ink3)}
+@media (max-width:560px){.ann .u{grid-template-columns:1fr;gap:4px}.ann .u .tg{justify-self:start}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro da semana</a>
+  <a href="#edital">O que o edital pede</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#estrutura">1 · Estrutura da lei</a>
+  <a href="#leitura">2 · Ler normas e reivindicações</a>
+  <a href="#impessoal">3 · Impessoalização</a>
+  <a href="#modal">4 · Imperativo e modalização</a>
+  <a href="#coesao">5 · Coesão referencial</a>
+  <a href="#conectivos">6 · Conectivos das normas</a>
+  <a href="#multi">7 · Forma e multissemiose</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <a class="back" href="../index.html#cado">← Plano do Cado</a> <span class="muted" style="margin:0 6px">·</span> <a class="back" href="../index.html#gabi">Plano da Gabi</a>
+  <div class="eyebrow">Português · comum aos dois · Esfera pública/oficial · Semana 1</div>
+  <h1>Português I<br><em>a esfera pública e oficial</em></h1>
+  <p class="dek">Como se lê uma lei, por que a norma fala de forma impessoal, como o texto oficial retoma o que já disse e o que cada conectivo jurídico faz. É o primeiro dos cinco eixos do Português retificado, igual nos dois níveis, com algumas exigências a mais no nível E, que aparecem marcadas com <span class="lvE">nível E</span>.</p>
+  <div class="meta"><span class="hot">semana 05/10 → 11/10</span><span>qua 07/10 juntos</span><span>9 questões reais FADE</span><span>15 no simulado</span><span>30 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#edital">Edital</a><a href="#comocai">Como cai</a><a href="#estrutura">Estrutura</a><a href="#leitura">Leitura</a><a href="#impessoal">Impessoal</a><a href="#modal">Modalização</a><a href="#coesao">Coesão</a><a href="#conectivos">Conectivos</a><a href="#multi">Multissemiose</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro da semana</span>
+    <h2>Quem faz o quê, e quando</h2>
+    <div class="plan">
+      <div class="row"><div class="d"><b>Ter 06/10</b>Gabi · 1h30</div><div>Leia <a href="#comocai">Como cai</a> e faça as <a href="#reais">8 questões reais</a> <strong>sem consultar</strong>, anotando o tempo. Depois leia as seções <a href="#estrutura">1</a> e <a href="#leitura">2</a> e refaça as que errou.</div></div>
+      <div class="row"><div class="d"><b>Ter 06/10</b>Cado · 30 min</div><div>Só as <a href="#reais">8 questões reais</a>, cronometradas. Os erros vão para o caderno. A teoria fica para quarta.</div></div>
+      <div class="row"><div class="d"><b>Qua 07/10</b>👫 juntos · 1h30</div><div><strong>Sessão principal.</strong> Seções <a href="#estrutura">1</a> a <a href="#multi">7</a>, cerca de 60 min. Um lê o texto anotado do art. 37 em voz alta e o outro aponta caput, incisos e parágrafos. Nos 30 min finais, cada um faz metade do <a href="#simulado">simulado</a> e corrige a do outro.</div></div>
+      <div class="row"><div class="d"><b>Dom 11/10</b>revisão</div><div>Terminem o simulado, passem pelos <a href="#cartoes">flashcards</a> (exportem os de "revisar" para o Anki) e marquem o <a href="#dominio">checklist</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- EDITAL -->
+  <section class="sec" id="edital">
+    <span class="lbl">O que o edital pede · Retificação de 10/08/2026</span>
+    <h2>Eixo 1: textos da esfera pública/oficial</h2>
+    <p class="muted">O foco declarado é "o papel social dos discursos institucionais e normativos" e "a interação do cidadão com as instâncias de poder". Na coluna do meio está o que vale para os dois níveis. Na da direita, o que o nível E acrescenta ou aprofunda.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th></th><th>Os dois (D e E)</th><th>Só no nível E <span class="lvE">Cado</span></th></tr></thead>
+      <tbody>
+        <tr><td>Leitura</td><td>Relacionar texto normativo, textos de reivindicação e propostas públicas com direitos, deveres, ética e cidadania · apreender o sentido global e o propósito comunicativo · <strong>localizar informação explícita</strong> em normas · <strong>inferir intenções implícitas</strong> em campanhas sociais e manifestações · compreender a <strong>hierarquia das ideias em artigos, parágrafos e incisos</strong></td><td>Reconhecer os <strong>pressupostos de poder</strong> em discursos políticos oficiais · entender a <strong>lógica informacional complexa</strong> (seções, incisos, <em>caput</em>) de textos administrativos · <strong>sintetizar dados de fontes institucionais</strong> · inferir estratégias argumentativas em debates públicos</td></tr>
+        <tr><td>Análise linguística</td><td>Efeitos da linguagem <strong>"supostamente impessoal"</strong>, dos verbos no <strong>imperativo</strong> e das <strong>expressões adverbiais</strong> em normas · <strong>coesão referencial</strong> em textos oficiais · <strong>relações lógico-discursivas dos conectivos</strong> da normatização · <strong>elementos multissemióticos</strong> (formatação, logomarcas, diagramação, tabelas) · ortografia e pontuação da escrita pública · adequação à norma de referência</td><td><strong>Léxico institucional</strong> como legitimação de poder · <strong>apassivação pronominal, indefinição do sujeito, clichês institucionais</strong> · <strong>verbos modais e modalizadores</strong> que atenuam imposições ou ratificam o poder coercitivo · <strong>articuladores em premissas diplomáticas e jurídicas</strong> · <strong>regência, concordância, colocação e crase em expedientes oficiais</strong></td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Tradução prática</span><p>Três perguntas estarão por trás de quase toda questão deste eixo: <strong>onde está a regra e onde está a exceção</strong> (estrutura), <strong>quem age e por que o texto esconde isso</strong> (impessoalização e modalização) e <strong>a que este termo se refere e que relação este conectivo cria</strong> (coesão e conectivos).</p></div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>O Português da FADE em 2023</h2>
+    <p>A mesma banca fez o concurso de técnico-administrativo da UFPE em 2023. Lemos as duas provas de Português: <strong>Assistente em Administração</strong> (nível D) e <strong>Administrador</strong> (nível E), com 20 questões cada. O programa daquele ano era outro, sem as esferas, então o que se aproveita é o <strong>jeito de perguntar</strong>.</p>
+    <div class="grid2">
+      <div class="card"><h4 style="margin-top:0">4 textos por prova</h4><p class="small muted" style="margin:0">Nível D: artigo de opinião sobre o servidor público (Correio Braziliense), <strong>peça institucional da UFPR</strong> sobre integridade, tirinha e texto jornalístico com dados. Nível E: trecho de livro acadêmico (Faraco), infográfico, texto de divulgação (Museu da Língua) e artigo sobre línguas indígenas. Metade dos textos é <strong>multimodal</strong> (imagem, tirinha ou infográfico).</p></div>
+      <div class="card"><h4 style="margin-top:0">O tema conversa com o cargo</h4><p class="small muted" style="margin:0">Em 2023 o nível D girou em torno do <strong>serviço público</strong> (papel do servidor, supersalários, ética) e o nível E em torno da <strong>própria língua</strong> (variação, norma, multilinguismo). A esfera pública/oficial de 2026 tende a seguir esse caminho: textos sobre o Estado, direitos e o servidor.</p></div>
+    </div>
+    <h3>O que foi cobrado (40 questões)</h3>
+    <div class="scroll"><table class="tbl">
+      <thead><tr><th>Habilidade</th><th>Nº</th><th>Exemplos de comando</th></tr></thead>
+      <tbody>
+        <tr><td>Compreensão global e inferência</td><td><strong>20</strong></td><td>"O Texto 1 tematiza…", "título que corresponde à síntese", "informação explícita", "posição do autor", "propósito", "contexto sociocultural", "efeito humorístico"</td></tr>
+        <tr><td>Conectivos e relações de sentido</td><td>5</td><td>"relação concessiva", "indica causalidade", "com o conectivo destacado, o autor sinaliza…"</td></tr>
+        <tr><td>Ortografia, acentuação e hífen</td><td>5</td><td>Acordo Ortográfico (voo, leem, trema, ideia, sub-/sub, S × Z)</td></tr>
+        <tr><td>Sentido de palavras e paráfrase</td><td>4</td><td>"mito capenga significa…", "sentido mantido em…"</td></tr>
+        <tr><td>Coesão e recursos lexicais</td><td>2</td><td>Retomada por pronome, sinonímia, repetição, referência genérica</td></tr>
+        <tr><td>Morfossintaxe a serviço do sentido</td><td>2</td><td>Ordem inversa, imperativo, 1ª pessoa do plural, crase</td></tr>
+        <tr><td>Pontuação</td><td>1</td><td>Vírgula entre orações</td></tr>
+        <tr><td>Formação de palavras</td><td>1</td><td>Prefixo de negação</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>Metade é leitura.</strong> A gramática aparece "a serviço do sentido": a questão cita um trecho e pergunta o efeito, e não pede para classificar a oração. É exatamente o que o edital de 2026 formalizou.</li>
+      <li><strong>"Analise as proposições · Estão corretas:"</strong> apareceu 4 vezes, sempre com 4 itens que citam trechos do texto. Cada item costuma testar um recurso diferente.</li>
+      <li><strong>As alternativas erradas são plausíveis, mas extrapolam</strong>: dizem "urge que a sociedade clame…" quando o texto só constata, ou trocam o sentido de um conectivo ("Além disso" apresentado como contraste).</li>
+      <li><strong>Enunciados didáticos:</strong> a banca explica o conceito no próprio comando ("Sabemos que a vírgula é um sinal… Mas ela também é utilizada para separar ORAÇÕES"). Leia o comando inteiro, porque ele muitas vezes entrega a chave.</li>
+    </ul>
+    <div class="cx cai"><span class="k">Onde estão os pontos neste eixo · estimativa</span><p>Com 20 questões e 5 esferas, a esfera pública/oficial deve render de <strong>3 a 5 questões</strong>, além de reaparecer nas outras, porque conectivos, coesão e concordância são transversais. As mais prováveis: <strong>localizar a regra e a exceção num artigo</strong>, <strong>relação criada por um conectivo</strong> ("salvo", "desde que", "ressalvado"), <strong>efeito da impessoalização</strong>, <strong>a que termo um pronome se refere</strong> e <strong>função de um elemento visual</strong> numa peça institucional.</p></div>
+  </section>
+
+  <!-- 1 ESTRUTURA -->
+  <section class="sec" id="estrutura">
+    <span class="lbl">Seção 1 · Qua (Gabi já na ter)</span>
+    <h2>A estrutura do texto normativo</h2>
+    <p>Quem manda na forma das leis é a <strong>Lei Complementar nº 95/1998</strong>, que dispõe sobre a elaboração, a redação e a alteração das leis. O art. 3º divide toda lei em <strong>três partes</strong>:</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 360" role="img" aria-label="As três partes de uma lei segundo a Lei Complementar 95 de 1998">
+        <rect x="20" y="16" width="440" height="330" rx="6" class="cell"/>
+        <rect x="36" y="30" width="408" height="30" rx="3" class="fms"/><text x="240" y="50" text-anchor="middle" font-size="13" class="tb">LEI Nº 8.112, DE 11 DE DEZEMBRO DE 1990</text>
+        <rect x="120" y="68" width="324" height="40" rx="3" class="fms"/><text x="130" y="84" font-size="11.5">Dispõe sobre o regime jurídico dos servidores públicos</text><text x="130" y="100" font-size="11.5">civis da União, das autarquias e das fundações […]</text>
+        <rect x="36" y="116" width="408" height="30" rx="3" class="fms"/><text x="46" y="136" font-size="11.5">O PRESIDENTE DA REPÚBLICA Faço saber que o Congresso Nacional decreta…</text>
+        <rect x="36" y="154" width="408" height="26" rx="3" class="fms" opacity=".6"/><text x="46" y="172" font-size="11.5">Art. 1º Esta Lei institui o Regime Jurídico dos Servidores…</text>
+        <rect x="36" y="190" width="408" height="84" rx="3" class="fcs"/>
+        <text x="46" y="210" font-size="11.5">Art. 2º … Art. 3º … Art. 4º …</text><text x="46" y="228" font-size="11.5">Títulos, capítulos, seções, artigos:</text><text x="46" y="246" font-size="11.5">o conteúdo substantivo (direitos, deveres,</text><text x="46" y="264" font-size="11.5">proibições, prazos, penalidades)</text>
+        <rect x="36" y="284" width="408" height="52" rx="3" class="fgs"/>
+        <text x="46" y="304" font-size="11.5">Disposições transitórias e finais · "Esta Lei entra em</text><text x="46" y="322" font-size="11.5">vigor na data de sua publicação." · "Ficam revogadas…"</text>
+        <g font-size="12">
+          <line x1="468" y1="45" x2="500" y2="45" class="ln2"/><text x="506" y="49" class="tb">Epígrafe</text><text x="585" y="49" class="t2" font-size="11">maiúsculas; espécie, nº e ano</text>
+          <line x1="468" y1="88" x2="500" y2="88" class="ln2"/><text x="506" y="92" class="tb">Ementa</text><text x="572" y="92" class="t2" font-size="11">resume o objeto, em realce</text>
+          <line x1="468" y1="131" x2="500" y2="131" class="ln2"/><text x="506" y="135" class="tb">Preâmbulo</text><text x="590" y="135" class="t2" font-size="11">quem edita e base legal</text>
+          <line x1="468" y1="167" x2="500" y2="167" class="ln2"/><text x="506" y="171" class="tb">Art. 1º</text><text x="562" y="171" class="t2" font-size="11">objeto e âmbito de aplicação</text>
+          <line x1="468" y1="232" x2="500" y2="232" class="ln2"/><text x="506" y="236" class="tb">Parte normativa</text>
+          <line x1="468" y1="310" x2="500" y2="310" class="ln2"/><text x="506" y="306" class="tb">Parte final</text><text x="506" y="322" class="t2" font-size="11">vigência e revogação</text>
+        </g>
+        <path d="M740 30 V 180" class="sm" stroke-width="3"/><text x="732" y="110" text-anchor="middle" font-size="11" class="t2" transform="rotate(-90 732 110)">parte preliminar</text>
+      </svg>
+      <figcaption>As três partes de uma lei (LC 95/1998, art. 3º), com o começo da Lei 8.112/1990 como exemplo. Texto abreviado.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Elemento</th><th>O que a LC 95 diz</th></tr></thead>
+      <tbody>
+        <tr><td>Epígrafe (art. 4º)</td><td>"grafada em caracteres maiúsculos", identifica a lei pelo <strong>título da espécie normativa, número e ano</strong></td></tr>
+        <tr><td>Ementa (art. 5º)</td><td>"grafada por meio de caracteres que a realcem", explicita <strong>de modo conciso e sob a forma de título, o objeto da lei</strong></td></tr>
+        <tr><td>Preâmbulo (art. 6º)</td><td>indica o <strong>órgão ou instituição competente</strong> para o ato e sua <strong>base legal</strong></td></tr>
+        <tr><td>Cláusula de vigência (art. 8º)</td><td>"entra em vigor na data de sua publicação" fica reservada às leis de <strong>pequena repercussão</strong>. As demais usam "entra em vigor após decorridos (o número de) dias de sua publicação oficial" (a <em>vacatio legis</em>)</td></tr>
+        <tr><td>Cláusula de revogação (art. 9º)</td><td>"deverá <strong>enumerar, expressamente</strong>, as leis ou disposições legais revogadas". A fórmula genérica "revogam-se as disposições em contrário" deixou de ser a técnica prevista</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>A articulação: do artigo ao item</h3>
+    <figure class="fig">
+      <svg viewBox="0 0 760 330" role="img" aria-label="Hierarquia de articulação: artigo, parágrafo, inciso, alínea e item">
+        <rect x="290" y="14" width="180" height="50" rx="6" class="fms" stroke="var(--mag)"/><text x="380" y="36" text-anchor="middle" class="tb" font-size="14">ARTIGO</text><text x="380" y="54" text-anchor="middle" font-size="11" class="t2">Art. 1º … Art. 9º · Art. 10 …</text>
+        <text x="484" y="36" font-size="11.5" class="t2">caput = a regra</text><text x="484" y="52" font-size="11.5" class="t2">"um único assunto" por artigo</text>
+        <path d="M340 64 V 92 H 160 V 110 M420 64 V 92 H 600 V 110" class="ln" stroke-width="1.8"/>
+        <rect x="70" y="110" width="180" height="50" rx="6" class="fgs" stroke="var(--green)"/><text x="160" y="132" text-anchor="middle" class="tb" font-size="13.5">PARÁGRAFO</text><text x="160" y="150" text-anchor="middle" font-size="11" class="t2">§ 1º … § 9º · § 10 · Parágrafo único</text>
+        <rect x="510" y="110" width="180" height="50" rx="6" class="fcs" stroke="var(--cyan)"/><text x="600" y="132" text-anchor="middle" class="tb" font-size="13.5">INCISO</text><text x="600" y="150" text-anchor="middle" font-size="11" class="t2">algarismos romanos: I, II, III</text>
+        <text x="160" y="182" text-anchor="middle" font-size="11.5" class="t2">complementos da regra</text><text x="160" y="197" text-anchor="middle" font-size="11.5" class="t2">e <tspan class="tb">exceções</tspan> ao caput</text>
+        <text x="600" y="182" text-anchor="middle" font-size="11.5" class="t2">discriminações e</text><text x="600" y="197" text-anchor="middle" font-size="11.5" class="t2"><tspan class="tb">enumerações</tspan></text>
+        <path d="M200 160 Q 380 200 555 164" class="ln2" stroke-dasharray="4 3" marker-end="url(#ah)"/><text x="380" y="210" text-anchor="middle" font-size="10.5" class="t3">o parágrafo também pode ter incisos</text>
+        <path d="M600 204 V 228" class="ln" stroke-width="1.8"/>
+        <rect x="510" y="228" width="180" height="40" rx="6" class="fas" stroke="var(--amber)"/><text x="600" y="246" text-anchor="middle" class="tb" font-size="13">ALÍNEA</text><text x="600" y="261" text-anchor="middle" font-size="11" class="t2">letras minúsculas: a), b), c)</text>
+        <path d="M600 268 V 286" class="ln" stroke-width="1.8"/>
+        <rect x="530" y="286" width="140" height="36" rx="6" class="soft" stroke="var(--ink3)"/><text x="600" y="303" text-anchor="middle" class="tb" font-size="12.5">ITEM</text><text x="600" y="317" text-anchor="middle" font-size="10.5" class="t2">algarismos arábicos: 1, 2</text>
+        <text x="20" y="250" font-size="11.5" class="tb">Numeração (art. 10)</text>
+        <text x="20" y="268" font-size="11.5" class="t2">ordinal até o nono: Art. 9º, § 9º</text>
+        <text x="20" y="284" font-size="11.5" class="t2">cardinal a partir do décimo: Art. 10, § 10</text>
+        <text x="20" y="300" font-size="11.5" class="t2">só um parágrafo: "Parágrafo único", por extenso</text>
+        <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="fg"/></marker></defs>
+      </svg>
+      <figcaption>LC 95/1998, art. 10, II: "os artigos desdobrar-se-ão em parágrafos ou em incisos; os parágrafos em incisos, os incisos em alíneas e as alíneas em itens".</figcaption>
+    </figure>
+    <p><strong>Os agrupamentos</strong> (art. 10, V), do menor para o maior: artigos formam a <strong>Subseção</strong>, que forma a <strong>Seção</strong>, que forma o <strong>Capítulo</strong>, que forma o <strong>Título</strong>, que forma o <strong>Livro</strong>, que forma a <strong>Parte</strong>. Capítulos, títulos, livros e partes vêm em maiúsculas e algarismos romanos. Seções e subseções vêm em romanos, com letras minúsculas em negrito.</p>
+
+    <h3>Texto anotado · Constituição Federal, art. 37</h3>
+    <div class="ann" role="figure" aria-label="Artigo 37 da Constituição Federal com caput, incisos e parágrafos identificados">
+      <div class="u cap"><span class="tg">caput</span><div class="tx"><strong>Art. 37.</strong> A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios <mark>obedecerá</mark> aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência e, também, ao seguinte:<span class="note">A regra geral. O futuro do presente ("obedecerá") tem valor de <strong>obrigação</strong>. Os dois-pontos anunciam a enumeração que vem nos incisos.</span></div></div>
+      <div class="u inc"><span class="tg">inciso I</span><div class="tx">I - os cargos, empregos e funções públicas são acessíveis aos brasileiros que preencham os requisitos estabelecidos em lei, assim como aos estrangeiros, <mark>na forma da lei</mark>;<span class="note">"na forma da lei" = <strong>remissão</strong>: o detalhe fica para uma lei específica.</span></div></div>
+      <div class="u inc"><span class="tg">inciso II</span><div class="tx">II - a investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, <mark>ressalvadas</mark> as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração;<span class="note">A exceção pode vir <strong>dentro do próprio inciso</strong>, introduzida por "ressalvadas". A regra é o concurso; a exceção, os cargos em comissão.</span></div></div>
+      <div class="u inc"><span class="tg">inciso III</span><div class="tx">III - o prazo de validade do concurso público será <mark>de até dois anos</mark>, prorrogável <mark>uma vez, por igual período</mark>;<span class="note">Expressões adverbiais delimitam o alcance: "até" é teto, não prazo fixo; "uma vez" limita a prorrogação.</span></div></div>
+      <div class="u par"><span class="tg">§ 1º</span><div class="tx">§ 1º A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter caráter educativo, informativo ou de orientação social, <mark>dela</mark> não podendo constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores públicos.<span class="note">Parágrafo = aspecto complementar. "dela" retoma "a publicidade dos atos […]": coesão referencial por pronome.</span></div></div>
+      <div class="u par"><span class="tg">§ 2º</span><div class="tx">§ 2º A não observância do disposto nos <mark>incisos II e III</mark> implicará a nulidade do ato e a punição da autoridade responsável, nos termos da lei.<span class="note">Remissão <strong>expressa</strong> a incisos, como pede a LC 95 (art. 11, II, g): indicar o dispositivo em vez de dizer "anterior" ou "seguinte".</span></div></div>
+    </div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>Numa questão de "informação explícita", a resposta está <strong>literalmente</strong> no artigo. Se a alternativa diz "o prazo de validade do concurso é de dois anos", ela <strong>erra</strong>: o texto diz "de até dois anos". Uma palavra delimitadora ("até", "somente", "exclusivamente", "uma vez") costuma ser o que separa a certa da errada.</p></div>
+    <div class="cx lig"><span class="k">Ligação</span><p>Esses mesmos artigos são matéria de <strong>Legislação</strong> no sábado: a CF, arts. 37 a 41, na semana 1, e a Lei 8.112 da semana 2 em diante. Lendo a lei como texto na quarta, vocês chegam ao sábado sabendo onde está cada coisa.</p></div>
+  </section>
+
+  <!-- 2 LEITURA -->
+  <section class="sec" id="leitura">
+    <span class="lbl">Seção 2 · Qua (Gabi já na ter)</span>
+    <h2>Ler normas, reivindicações e campanhas</h2>
+    <h3>Três famílias de textos</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Família</th><th>Exemplos</th><th>O que a questão costuma pedir</th></tr></thead>
+      <tbody>
+        <tr><td>Normativos</td><td>Constituição, lei, decreto, portaria, resolução, edital, regimento, código de ética</td><td>Localizar regra, exceção, prazo, sujeito obrigado · hierarquia caput/inciso/parágrafo · efeito da impessoalidade</td></tr>
+        <tr><td>Reivindicação e propostas públicas</td><td>Abaixo-assinado, petição, carta aberta, manifesto, nota pública, moção, proposta legislativa popular</td><td><strong>Propósito comunicativo</strong> (reivindicar, denunciar, propor) · quem fala, para quem e com que legitimidade · direitos invocados</td></tr>
+        <tr><td>Campanhas sociais e manifestações</td><td>Campanha de vacinação, de trânsito, contra assédio; cartazes de protesto; peças institucionais (como a da UFPR em 2023)</td><td><strong>Intenção implícita</strong> · imperativo e interlocução · relação entre imagem e texto · público-alvo</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Explícito, pressuposto e subentendido</h3>
+    <ul>
+      <li><strong>Explícito:</strong> está escrito. "O servidor público estável só perderá o cargo: I - em virtude de sentença judicial transitada em julgado; […]" (CF, art. 41, § 1º).</li>
+      <li><strong>Pressuposto:</strong> vem marcado na própria frase e continua verdadeiro mesmo se a frase for negada. Em "a <em>nova</em> gestão também precisa corrigir distorções", pressupõe-se que houve uma gestão anterior e que há distorções. Palavras que ativam pressupostos: <em>também, ainda, já, deixar de, continuar, voltar a, novo</em>.</li>
+      <li><strong>Subentendido:</strong> depende do contexto e é responsabilidade de quem interpreta. Numa campanha "Denuncie. O silêncio também agride.", subentende-se que quem se cala é cúmplice.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha da FADE</span><p>A alternativa errada transforma <strong>constatação em prescrição</strong> ("urge que a sociedade clame…" quando o texto só descreve) ou <strong>generaliza</strong> ("todos", "sempre", "nenhum" onde o texto relativiza). Em 2023, a questão 2 do nível D foi construída assim. Pergunte sempre: <em>isso está no texto ou é conclusão minha?</em></p></div>
+    <h3>Direitos, deveres e a voz do poder <span class="lvE">nível E</span></h3>
+    <p>O nível E pede para reconhecer os <strong>pressupostos de poder</strong> nos textos oficiais: quem tem competência para impor, quem é destinatário da obrigação e como o texto legitima essa relação.</p>
+    <ul>
+      <li><strong>Léxico institucional:</strong> "administração pública", "autoridade competente", "o servidor", "o interessado", "o administrado". Ninguém tem nome. A instituição fala por meio de <strong>funções</strong>, o que dá impessoalidade e autoridade.</li>
+      <li><strong>Clichês institucionais:</strong> "no uso de suas atribuições legais", "tendo em vista o disposto em", "para os devidos fins", "nos termos da lei". São fórmulas que ancoram o ato numa base legal.</li>
+      <li><strong>Síntese de fontes institucionais:</strong> juntar dados de um relatório, de uma tabela e de uma norma para chegar a uma conclusão. É o que o infográfico de 2023 exigia: "informa explicitamente que os supersalários representam um percentual ínfimo".</li>
+    </ul>
+  </section>
+
+  <!-- 3 IMPESSOALIZAÇÃO -->
+  <section class="sec" id="impessoal">
+    <span class="lbl">Seção 3 · Qua</span>
+    <h2>Impessoalização: a linguagem "supostamente impessoal"</h2>
+    <p>O edital escolheu bem o advérbio: a linguagem oficial é <strong>supostamente</strong> impessoal. Esconder o agente é uma escolha, que produz efeitos: <strong>objetividade</strong>, <strong>generalidade</strong> (a norma vale para todos), <strong>autoridade</strong> (não é "eu mando", é "a lei determina") e, às vezes, <strong>diluição de responsabilidade</strong> (quem decidiu?).</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Recurso</th><th>Exemplo real ou típico</th><th>O que acontece</th></tr></thead>
+      <tbody>
+        <tr><td>Voz passiva analítica (ser + particípio)</td><td>"para tais pessoas <strong>serão reservadas</strong> até 20% das vagas" (Lei 8.112, art. 5º, § 2º)</td><td>O agente (a administração) some. O foco vai para o que é reservado.</td></tr>
+        <tr><td>Voz passiva sintética (VTD + se)</td><td>"<strong>Revogam-se</strong> as disposições…"; "<strong>devem-se evitar</strong> tais comportamentos"</td><td>Mesma ideia da analítica, com o "se" como <strong>partícula apassivadora</strong>. O verbo concorda com o sujeito paciente.</td></tr>
+        <tr><td>Sujeito indeterminado (verbo + se)</td><td>"<strong>Trata-se</strong> de medidas urgentes"; "<strong>Precisa-se</strong> de servidores"</td><td>"se" = <strong>índice de indeterminação</strong> com verbo que não é transitivo direto. O verbo fica <strong>sempre no singular</strong>.</td></tr>
+        <tr><td>Sujeito indeterminado (3ª do plural)</td><td>"<strong>Dizem</strong> que o prazo mudou."</td><td>Verbo no plural sem referente no texto.</td></tr>
+        <tr><td>Estruturas impessoais com adjetivo</td><td>"<strong>É proibida</strong> a prestação de serviços gratuitos" (Lei 8.112, art. 4º); "<strong>é vedada</strong> a acumulação" (CF, art. 37, XVI)</td><td>A proibição vira um <strong>estado de coisas</strong>, e não a ordem de alguém.</td></tr>
+        <tr><td>Nominalização</td><td>"a <strong>investidura</strong> em cargo […] depende de <strong>aprovação</strong> prévia" (CF, art. 37, II)</td><td>O processo (investir, aprovar) vira nome, sem quem investe nem quem aprova.</td></tr>
+        <tr><td>Terceira pessoa e genérico</td><td>"<strong>o servidor</strong>", "<strong>quem</strong> pensa que…", "<strong>o brasileiro</strong>"</td><td>Refere uma classe inteira. Na FADE 2023, "a vida do brasileiro" era referência genérica a todos.</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig">
+      <svg viewBox="0 0 760 300" role="img" aria-label="Fluxograma para classificar o se e decidir a concordância">
+        <rect x="270" y="12" width="220" height="40" rx="20" class="fms" stroke="var(--mag)"/><text x="380" y="37" text-anchor="middle" class="tb" font-size="13">Verbo + SE, sem agente</text>
+        <path d="M380 52 V 76" class="ln" stroke-width="1.8"/>
+        <rect x="235" y="76" width="290" height="44" rx="6" class="cell"/><text x="380" y="96" text-anchor="middle" font-size="12.5" class="tb">O verbo é transitivo direto?</text><text x="380" y="112" text-anchor="middle" font-size="11" class="t2">pede complemento SEM preposição</text>
+        <path d="M290 120 V 150 H 160 V 170" class="ln" stroke-width="1.8"/><text x="220" y="143" font-size="12" class="tb">sim</text>
+        <path d="M470 120 V 150 H 600 V 170" class="ln" stroke-width="1.8"/><text x="530" y="143" font-size="12" class="tb">não</text><text x="508" y="164" font-size="10.5" class="t3">VTI · VI · VL</text>
+        <rect x="40" y="170" width="240" height="116" rx="6" class="fcs" stroke="var(--cyan)"/>
+        <text x="160" y="192" text-anchor="middle" class="tb" font-size="13">PARTÍCULA APASSIVADORA</text>
+        <text x="160" y="210" text-anchor="middle" font-size="11.5" class="t2">voz passiva sintética</text>
+        <text x="160" y="228" text-anchor="middle" font-size="11.5">verbo concorda com o sujeito</text>
+        <text x="160" y="250" text-anchor="middle" font-size="12" class="tb">Vendem-se casas.</text>
+        <text x="160" y="268" text-anchor="middle" font-size="12" class="tb">Devem-se evitar abusos.</text>
+        <rect x="480" y="170" width="240" height="116" rx="6" class="fas" stroke="var(--amber)"/>
+        <text x="600" y="192" text-anchor="middle" class="tb" font-size="13">ÍNDICE DE INDETERMINAÇÃO</text>
+        <text x="600" y="210" text-anchor="middle" font-size="11.5" class="t2">sujeito indeterminado</text>
+        <text x="600" y="228" text-anchor="middle" font-size="11.5">verbo SEMPRE no singular</text>
+        <text x="600" y="250" text-anchor="middle" font-size="12" class="tb">Precisa-se de técnicos.</text>
+        <text x="600" y="268" text-anchor="middle" font-size="12" class="tb">Trata-se de casos graves.</text>
+        <text x="380" y="235" text-anchor="middle" font-size="11" class="t3">teste: passe</text><text x="380" y="250" text-anchor="middle" font-size="11" class="t3">para a analítica</text><text x="380" y="265" text-anchor="middle" font-size="11" class="t3">"casas são vendidas"</text>
+      </svg>
+      <figcaption>O "se" sem agente: a transitividade do verbo decide a classificação e a concordância.</figcaption>
+    </figure>
+    <div class="cx dec"><span class="k">Decoreba · o teste da passiva analítica</span><p>Se dá para reescrever com <strong>ser + particípio</strong> sem mudar o sentido, o "se" é apassivador e o verbo concorda: "Alugam-se salas" equivale a "Salas são alugadas". Se não dá, porque haveria uma preposição no caminho ("Precisa-se <em>de</em> técnicos" não vira "técnicos são precisados"), o "se" é índice de indeterminação e o verbo fica no singular. <strong>"Aluga-se salas"</strong> e <strong>"Precisam-se de técnicos"</strong> são os dois erros clássicos.</p></div>
+    <div class="cx cai"><span class="k">Caiu · FADE 2023, nível D</span><p>A questão 12 pedia a reescrita de "São comportamentos que vão contra a ética […] e, por isso, <em>devem ser evitados</em>". A correta usava "<strong>devem-se evitar</strong>": passiva analítica trocada pela sintética, com o mesmo sentido. <a href="#q-a12">Resolva →</a></p></div>
+  </section>
+
+  <!-- 4 MODALIZAÇÃO -->
+  <section class="sec" id="modal">
+    <span class="lbl">Seção 4 · Qua</span>
+    <h2>Imperativo, expressões adverbiais e modalização</h2>
+    <h3>O imperativo: raro na lei, comum na campanha</h3>
+    <p>A LC 95 manda preferir o <strong>presente</strong> ou o <strong>futuro do presente</strong> (art. 11, I, d): "a lei <em>será</em> estruturada", "a posse <em>ocorrerá</em> no prazo de trinta dias". Na norma, o futuro tem <strong>valor de ordem</strong>. O <strong>imperativo</strong> aparece nos gêneros de <strong>interlocução direta</strong>: campanhas ("Vacine-se"), cartilhas, avisos e artigos de opinião ("<em>Acredite</em>: o serviço público está em tudo", FADE 2023). O efeito é dialogar com o leitor e convocá-lo.</p>
+    <div class="cx dec"><span class="k">Decoreba · colocação no imperativo</span><p>No imperativo afirmativo, o pronome vem em <strong>ênclise</strong>: "Vacine-se", "Proteja-se", "Informe-se". No negativo, que tem palavra atrativa, vem em <strong>próclise</strong>: "Não se automedique". A campanha "Se cuida!" usa a próclise típica da fala, que é aceita na publicidade como aproximação do público (esfera jornalística, semana 4).</p></div>
+    <h3>Expressões adverbiais delimitam o alcance</h3>
+    <p>Na norma, advérbios e locuções adverbiais <strong>fecham brechas</strong>: "<em>exclusivamente</em> por servidores ocupantes de cargo efetivo" (CF, art. 37, V), "<em>somente</em>", "<em>no prazo de trinta dias</em> contados da publicação" (Lei 8.112, art. 13, § 1º), "<em>em qualquer caso</em>", "<em>previamente</em>", "<em>sem prévia autorização</em> do chefe imediato" (art. 117, I). Na leitura, são essas expressões que decidem se a alternativa extrapola ou não.</p>
+    <h3>Modalização: a força do dever</h3>
+    <figure class="fig">
+      <svg viewBox="0 0 760 210" role="img" aria-label="Escala de modalização deôntica da proibição à obrigação">
+        <defs><linearGradient id="mg" x1="0" x2="1"><stop offset="0" stop-color="var(--mag)"/><stop offset=".5" stop-color="var(--amber)"/><stop offset="1" stop-color="var(--cyan)"/></linearGradient></defs>
+        <rect x="40" y="70" width="680" height="14" rx="7" fill="url(#mg)"/>
+        <g text-anchor="middle">
+          <text x="100" y="56" class="tb" font-size="13">PROIBIÇÃO</text>
+          <text x="380" y="56" class="tb" font-size="13">PERMISSÃO / POSSIBILIDADE</text>
+          <text x="660" y="56" class="tb" font-size="13">OBRIGAÇÃO</text>
+          <text x="100" y="108" font-size="11.5" class="t2">é vedado · é proibido</text><text x="100" y="124" font-size="11.5" class="t2">não poderá · fica vedado</text><text x="100" y="140" font-size="11.5" class="t2">"Ao servidor é proibido:"</text>
+          <text x="380" y="108" font-size="11.5" class="t2">pode · poderá · é facultado</text><text x="380" y="124" font-size="11.5" class="t2">é permitido · a critério de</text><text x="380" y="140" font-size="11.5" class="t2">"podem justificar a exigência"</text>
+          <text x="660" y="108" font-size="11.5" class="t2">deve · deverá · é obrigatório</text><text x="660" y="124" font-size="11.5" class="t2">futuro com valor de ordem</text><text x="660" y="140" font-size="11.5" class="t2">"obedecerá aos princípios"</text>
+        </g>
+        <text x="40" y="180" font-size="11.5" class="t3">Modalizadores epistêmicos (grau de certeza) são outra escala: certamente · provavelmente · é possível que · talvez.</text>
+        <text x="40" y="198" font-size="11.5" class="t3">Na FADE 2023, "precisa avaliar" expressava necessidade, e não possibilidade: essa era a alternativa errada.</text>
+      </svg>
+      <figcaption>Modalização <strong>deôntica</strong> (dever, poder, proibir), a que domina o texto normativo.</figcaption>
+    </figure>
+    <p><span class="lvE">nível E</span> O edital de nível E pede os modais "exigidos para <strong>atenuar imposições ou ratificar o poder coercitivo</strong>". <strong>Atenuar:</strong> "recomenda-se", "sugere-se", "poderá ser adotado", "sempre que possível". <strong>Ratificar:</strong> "deverá", "é vedado", "sob pena de", "fica obrigado", "será punido". Numa questão, a troca de "deverá" por "poderá" <strong>muda o sentido</strong> de obrigação para faculdade. É um jeito comum de a alternativa errar a paráfrase.</p>
+  </section>
+
+  <!-- 5 COESÃO -->
+  <section class="sec" id="coesao">
+    <span class="lbl">Seção 5 · Qua</span>
+    <h2>Coesão referencial nos textos oficiais</h2>
+    <p>Coesão referencial é a forma como o texto <strong>retoma</strong> (anáfora) ou <strong>antecipa</strong> (catáfora) o que fala, garantindo a continuidade. Veja no parágrafo abaixo, montado com trechos da CF e da Lei 8.112:</p>
+    <div class="coes">
+      <span class="ref">A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos</span><sup>1</sup> deverá ter caráter educativo, informativo ou de orientação social, <span class="ret">dela</span><sup>1</sup> não podendo constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores públicos. — CF, art. 37, § 1º<br><br>
+      São requisitos básicos para investidura em cargo público <span class="ret2">os seguintes</span><sup>2</sup>: <span class="ref2">a nacionalidade brasileira, o gozo dos direitos políticos […]</span><sup>2</sup>. — adaptado da Lei 8.112, art. 5º
+    </div>
+    <p class="small muted">1: <strong>anáfora pronominal</strong>: "dela" retoma um sintagma longo, e o leitor precisa voltar para identificá-lo. 2: <strong>catáfora</strong>: "os seguintes" anuncia o que vem depois. O dois-pontos e a enumeração em incisos são o equivalente normativo da catáfora.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Mecanismo</th><th>Exemplo</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td>Pronomes (pessoais, demonstrativos, relativos, possessivos)</td><td>"a lei… <strong>ela</strong>", "<strong>este</strong> artigo", "o servidor, <strong>cujo</strong> cargo…", "<strong>sua</strong> base legal"</td><td><em>Este/isto</em> = o que vem ou o mais próximo; <em>esse/isso</em> = o que já foi dito; <em>aquele</em> = o mais distante numa retomada dupla</td></tr>
+        <tr><td>Elipse (zero)</td><td>"O servidor tomará posse e Ø entrará em exercício."</td><td>O sujeito é recuperado pela flexão verbal</td></tr>
+        <tr><td>Sinonímia</td><td>"investidura… provimento"; "funcionário… servidor"</td><td>No texto legal é <strong>desaconselhada</strong>: a LC 95 manda repetir as mesmas palavras e evitar "sinonímia com propósito meramente estilístico" (art. 11, II, b)</td></tr>
+        <tr><td>Hiperônimo e hipônimo</td><td>"professor, médico, engenheiro… esses <strong>profissionais</strong>"</td><td>O termo geral resume os específicos</td></tr>
+        <tr><td>Nominalização</td><td>"O servidor foi <em>exonerado</em>. A <strong>exoneração</strong> foi publicada."</td><td>Retoma um processo inteiro por um nome. Muito usada no texto técnico</td></tr>
+        <tr><td>Repetição</td><td>"serviço público… serviço público…"</td><td>Não é pobreza vocabular quando <strong>garante precisão</strong> ou dá ênfase. Em 2023, a alternativa que dizia "repetir indica escassez vocabular" estava errada</td></tr>
+        <tr><td>Expressões remissivas</td><td>"o <strong>referido</strong> servidor", "o <strong>citado</strong> inciso", "o disposto no inciso XI"</td><td>Típicas do registro oficial. Na lei, prefere-se a remissão <strong>expressa</strong> ("inciso XI") a "anterior" ou "seguinte" (LC 95, art. 11, II, g)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinha · "o mesmo"</span><p>"O servidor chegou e <em>o mesmo</em> assinou o termo" usa "o mesmo" como pronome, uma construção que os manuais de redação oficial recomendam evitar. Use "ele" ou uma elipse: "O servidor chegou e assinou o termo". Em questão de adequação ao registro formal, é o tipo de construção que aparece como inadequada.</p></div>
+    <div class="cx dec"><span class="k">Decoreba · ambiguidade referencial</span><p>"O diretor comunicou ao servidor que <em>sua</em> licença foi negada." A licença é de quem? Quando há dois antecedentes possíveis, o texto oficial resolve com repetição ou com "dele": "a licença <em>do servidor</em>". A banca adora perguntar qual reescrita desfaz a ambiguidade.</p></div>
+  </section>
+
+  <!-- 6 CONECTIVOS -->
+  <section class="sec" id="conectivos">
+    <span class="lbl">Seção 6 · Qua</span>
+    <h2>Os conectivos da normatização</h2>
+    <p>Nas normas, os conectivos têm função <strong>jurídica</strong>: eles dizem quando a regra vale, quando não vale e quem fica de fora. É o grupo de questões mais previsível do eixo.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Relação</th><th>Conectivos</th><th>Exemplo real</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Exceção / ressalva</strong></td><td>salvo, exceto, ressalvado(a/s), com exceção de, a não ser que</td><td>"É proibida a prestação de serviços gratuitos, <strong>salvo</strong> os casos previstos em lei." (Lei 8.112, art. 4º) · "<strong>ressalvadas</strong> as nomeações para cargo em comissão" (CF, art. 37, II) · "exercer o comércio, <strong>exceto</strong> na qualidade de acionista, cotista ou comanditário" (Lei 8.112, art. 117, X)</td></tr>
+        <tr><td><strong>Condição</strong></td><td>desde que, contanto que, caso, se, uma vez que (+ subjuntivo), quando</td><td>"é vedada a acumulação remunerada de cargos públicos, exceto, <strong>quando</strong> houver compatibilidade de horários" (CF, art. 37, XVI): exceção sob condição</td></tr>
+        <tr><td><strong>Conformidade / remissão</strong></td><td>na forma de, nos termos de, conforme, de acordo com, segundo, observado(s)</td><td>"<strong>na forma da lei</strong>" (CF, art. 37, I) · "<strong>observado</strong> em qualquer caso o disposto no inciso XI" (CF, art. 37, XVI)</td></tr>
+        <tr><td><strong>Adição sem exclusão</strong></td><td>sem prejuízo de, além de, bem como, assim como</td><td>"aos brasileiros […], <strong>assim como</strong> aos estrangeiros" (CF, art. 37, I). "Sem prejuízo de" = "sem excluir, além de"</td></tr>
+        <tr><td><strong>Meio / modo</strong></td><td>mediante, por meio de, por intermédio de</td><td>"só perderá o cargo: […] II - <strong>mediante</strong> processo administrativo em que lhe seja assegurada ampla defesa" (CF, art. 41, § 1º)</td></tr>
+        <tr><td><strong>Causa</strong></td><td>em virtude de, em razão de, por força de, porque, visto que</td><td>"os servidores nomeados para cargo de provimento efetivo <strong>em virtude de</strong> concurso público" (CF, art. 41)</td></tr>
+        <tr><td><strong>Concessão</strong></td><td>embora, ainda que, mesmo que, apesar de, não obstante</td><td>"o serviço público está em tudo, […] <strong>ainda que</strong> pareça invisível" (FADE 2023, nível D, questão 6)</td></tr>
+        <tr><td><strong>Oposição</strong></td><td>mas, porém, contudo, no entanto, todavia</td><td>"<strong>No entanto</strong>, a maioria dos servidores…" introduz informação que se opõe (FADE 2023, nível D, questão 19)</td></tr>
+        <tr><td><strong>Conclusão</strong></td><td>portanto, logo, assim, por conseguinte</td><td>"Essa história […], <strong>portanto</strong>, não passa de um mito" (FADE 2023, nível E, questão 19)</td></tr>
+        <tr><td><strong>Finalidade</strong></td><td>a fim de, para que, com vistas a, visando a</td><td>"para dar mais espaço a grupos historicamente sub-representados" (FADE 2023, texto 1, nível D)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinhas de conectivo</span><ul>
+      <li><strong>"Desde que"</strong> + subjuntivo é <strong>condição</strong> ("desde que haja autorização"). Com indicativo e valor temporal, é tempo ("desde que entrou, trabalha aqui").</li>
+      <li><strong>"Uma vez que"</strong> + indicativo é <strong>causa</strong> ("uma vez que houve fraude, anulou-se"). Com subjuntivo, é <strong>condição</strong> ("uma vez que seja comprovado").</li>
+      <li><strong>Relação sem conectivo:</strong> "<em>sob pressão das línguas majoritárias</em>, tenderá a desaparecer" expressa <strong>causa</strong>, mesmo sem "porque" (FADE 2023, nível E, questão 8).</li>
+      <li><strong>"Além disso"</strong> é adição, nunca contraste. Uma proposição de 2023 dizia o contrário e estava errada.</li>
+    </ul></div>
+    <p><span class="lvE">nível E</span> Os "articuladores em <strong>premissas diplomáticas e jurídicas</strong>" são os que montam o raciocínio do ato administrativo: <em>considerando que</em> (premissas de uma resolução), <em>tendo em vista</em>, <em>à vista de</em>, <em>isto posto</em>, <em>ante o exposto</em>, <em>nesse sentido</em>. Em resoluções e portarias, a série de "CONSIDERANDO…" apresenta as <strong>premissas</strong>, e o "RESOLVE:" apresenta a <strong>conclusão normativa</strong>.</p>
+  </section>
+
+  <!-- 7 MULTISSEMIOSE -->
+  <section class="sec" id="multi">
+    <span class="lbl">Seção 7 · Qua</span>
+    <h2>Forma, formalidade e multissemiose</h2>
+    <p>O edital cobra a "função textual-discursiva de elementos multissemióticos, como aspectos da formatação, logomarcas, diagramação, tabelas estruturais" <strong>em articulação com o texto verbal</strong>. Não é design pelo design: a pergunta é o que cada elemento <strong>significa</strong> no texto oficial.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Elemento</th><th>Função</th></tr></thead>
+      <tbody>
+        <tr><td>Brasão da República, logomarca do órgão</td><td><strong>Autoria institucional e legitimidade</strong>: quem fala é o Estado ou o órgão, não uma pessoa. Na publicidade oficial, a CF proíbe "nomes, símbolos ou imagens que caracterizem promoção pessoal" (art. 37, § 1º)</td></tr>
+        <tr><td>Maiúsculas na epígrafe, realce na ementa, negrito em seções</td><td><strong>Hierarquia visual = hierarquia normativa</strong>, e é a própria LC 95 que exige (arts. 4º, 5º e 10, VI e VII)</td></tr>
+        <tr><td>Recuos, numeração romana, letras</td><td>Tornam <strong>visível</strong> a subordinação entre artigo, inciso e alínea</td></tr>
+        <tr><td>Tabelas e anexos</td><td>Organizam dados comparáveis (vagas, remuneração, cronograma), como nos anexos do próprio edital. A questão pede para <strong>cruzar</strong> tabela e texto</td></tr>
+        <tr><td>Ícones, cores e imagens em campanhas</td><td>Reforçam o apelo e o público-alvo; o texto verbal ancora o sentido da imagem. Na peça da UFPR (2023, nível D), a função era <strong>advertir</strong> o servidor</td></tr>
+        <tr><td>Infográficos</td><td>Síntese visual de dados. A questão pede a informação <strong>explícita</strong> (o que o gráfico mostra) e não a opinião</td></tr>
+      </tbody>
+    </table></div>
+    <h3>A norma de referência nos expedientes <span class="lvE">nível E</span></h3>
+    <p>O nível E pede "regência, concordância, colocação e crase previstos pela norma de referência <strong>em expedientes oficiais</strong>". A referência é o <strong>Manual de Redação da Presidência da República</strong> (3ª edição, 2018), que adota o <strong>padrão ofício</strong> para todos os expedientes.</p>
+    <ul>
+      <li><strong>Pronomes de tratamento</strong> levam o verbo e os possessivos para a <strong>3ª pessoa</strong>: "Vossa Excelência <em>receberá</em> o relatório em <em>sua</em> sala", e nunca "vossa sala". <em>Vossa</em> é usado com quem se fala, <em>Sua</em>, de quem se fala. <strong>Reitor: Vossa Magnificência</strong>, com o vocativo "Magnífico Reitor,".</li>
+      <li><strong>Fechos:</strong> "Respeitosamente," para autoridade de hierarquia superior; "Atenciosamente," para mesma hierarquia ou inferior.</li>
+      <li>O Manual de 2018 aboliu "Digníssimo" (DD.) e "Ilustríssimo" (Ilmo.) no endereçamento.</li>
+      <li><strong>Crase nos expedientes:</strong> "encaminho <em>à</em> Pró-Reitoria", "em resposta <em>ao</em> Ofício nº…", "de 8h <em>às</em> 12h", "<em>a</em> partir de" (sem crase, porque "partir" é verbo), "<em>a</em> Vossa Senhoria" (sem crase, porque pronome de tratamento não admite artigo).</li>
+      <li><strong>Regência frequente:</strong> "proceder <em>a</em>" (realizar: "procedeu-se à análise"), "visar <em>a</em>" (objetivar), "obedecer <em>a</em>", "implicar" (acarretar, transitivo direto: "implicará <em>a</em> nulidade", como na CF, art. 37, § 2º).</li>
+    </ul>
+    <div class="cx cai"><span class="k">Caiu · FADE 2023, nível D</span><p>"A qualidade do serviço público prestado <em>à</em> população nunca será superior <em>à</em> qualidade do prestador." A proposição dizia que essa crase era facultativa, e estava <strong>errada</strong>: "superior a" + "a qualidade" é crase obrigatória. <a href="#q-a8">Resolva →</a></p></div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais · Ter (Gabi 1h30 · Cado 30 min)</span>
+    <h2>FADE/UFPE 2023, comentadas</h2>
+    <p class="muted">Transcritas das provas oficiais do concurso UFPE 2023 (Edital nº 10/2023, banca FADE/UFPE), com os gabaritos publicados. Os textos-base longos foram <strong>recortados</strong>: quase todas as alternativas citam o trecho de que precisam. Faça sem consultar e só depois abra o comentário.</p>
+    <div class="cx dec"><span class="k">Texto-base das questões do nível D</span><p><strong>Texto 1</strong>: "O papel do servidor nos novos tempos", artigo de opinião (Correio Braziliense, 08/12/2022, adaptado), defendendo a relevância do serviço público e a gestão de pessoas no Estado. <strong>Texto 2</strong>: peça institucional da UFPR sobre "riscos para a integridade" (imagem), que lista comportamentos a evitar no serviço público. <strong>Texto 4</strong>: infográfico da DIAP sobre a remuneração do funcionalismo.</p></div>
+
+    <div class="q" id="q-a11">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 11</span></div>
+      <p>Considerando o gênero do Texto 2 e sua mensagem, é correto afirmar que ele cumpre principalmente a função de</p>
+      <ol class="alt"><li data-l="A">denunciar servidores com condutas antiéticas no trabalho.</li><li data-l="B">definir as regras de comportamento para servidores, no trabalho.</li><li data-l="C">criticar servidores que descumprem as regras de comportamento.</li><li data-l="D">advertir os servidores sobre seu comportamento no trabalho.</li><li data-l="E">homenagear servidores com comportamento exemplar no trabalho.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: D.</span> É uma <strong>campanha institucional</strong>: seu propósito comunicativo é prevenir, alertar. "Definir as regras" (B) é função do código de ética, que é um texto normativo, e não da peça que o divulga. "Denunciar" e "criticar" (A, C) pressupõem alvos concretos, que o texto não tem. Aqui está a diferença entre <strong>texto normativo</strong> e <strong>campanha</strong> que o edital de 2026 cobra.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a12">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 12</span></div>
+      <p>"São comportamentos que vão contra a ética e as regras do serviço público e, por isso, devem ser evitados.". Assinale a alternativa na qual o sentido desse enunciado do Texto 2 está mantido.</p>
+      <ol class="alt"><li data-l="A">Trata-se de comportamentos que, por infringirem a ética e as regras do serviço público, devem-se evitar.</li><li data-l="B">São comportamentos que, uma vez negligenciados, ferem a ética e as regras do serviço público.</li><li data-l="C">Devem ser menosprezados todos os comportamentos que vão ao encontro da ética e das regras do serviço público.</li><li data-l="D">São comportamentos antiéticos e afeitos ao serviço público, razão pela qual devem ser rechaçados.</li><li data-l="E">Comportamentos que devem ser evitados são todos aqueles que transgridem a ética e descumprem as regras do serviço público.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: A.</span> Três transformações que preservam o sentido: "São comportamentos" vira "<strong>Trata-se de</strong> comportamentos", com índice de indeterminação e verbo no singular; "e, por isso" vira "<strong>por infringirem</strong>", com a causa mantida; e "devem ser evitados" vira "<strong>devem-se evitar</strong>", da passiva analítica para a sintética. B inverte a lógica. C troca "contra" por "ao encontro de" (a favor). D afirma que os comportamentos são "afeitos" (próprios) ao serviço público. E <strong>generaliza</strong>: transforma "estes comportamentos devem ser evitados" em "os comportamentos a evitar são todos aqueles que…".</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a5">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 5</span></div>
+      <p>Para expressar suas ideias e defender seu ponto de vista, o autor do Texto 1 emprega diversos recursos, lexicais e gramaticais. Acerca desses recursos, é correto afirmar que</p>
+      <ol class="alt"><li data-l="A">a opção por repetir a mesma expressão, "serviço público", em vários trechos ao longo do texto, indica escassez vocabular do autor.</li><li data-l="B">ao longo do texto, o autor opta pelo emprego dos termos "servidor" e "funcionário" para distinguir, respectivamente, trabalhadores do setor público e do privado.</li><li data-l="C">com a expressão destacada no trecho "<u>Ou seja</u>: os supersalários são exceção [...]" (3º §), o autor sinaliza para o leitor que um novo tema será introduzido no texto.</li><li data-l="D">ao optar pelo emprego da forma verbal destacada no trecho "O novo governo <u>precisa</u> avaliar as formas de acesso ao serviço público" (4º §), o autor pretendeu expressar possibilidade.</li><li data-l="E">apesar de ter empregado uma forma masculina singular em: "Engana-se quem pensa que o serviço público tem papel pequeno ou irrelevante na vida <u>do brasileiro</u>" (1º §), o autor faz referência genérica a todos os brasileiros.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: E.</span> Uma questão que cobre quase toda a seção de análise linguística. A: a repetição é <strong>coesão</strong> e ênfase, não pobreza vocabular. B: "servidor" e "funcionário" são usados como <strong>sinônimos</strong> no texto. C: "ou seja" é <strong>reformulação/explicação</strong>, e não abre tema novo. D: "precisa" é <strong>necessidade</strong> (modalização deôntica), não possibilidade. E: "o brasileiro" é singular <strong>genérico</strong>, que representa a classe inteira.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a6">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 6</span></div>
+      <p>Cabe ao leitor reconhecer que há uma relação concessiva no seguinte trecho do Texto 1:</p>
+      <ol class="alt"><li data-l="A">"[...] o serviço público está em tudo, em todos os aspectos da nossa vida, ainda que pareça invisível para olhos mais desatentos." (1º §)</li><li data-l="B">"O setor privado não tem a abrangência, a capilaridade, os incentivos nem a legitimidade que o governo tem para lidar com nossos variados problemas sociais." (2º §)</li><li data-l="C">"Portanto, não há caminho para o nosso desenvolvimento, como uma sociedade justa e igualitária, que não passe pela profissionalização e modernização do serviço público." (2º §)</li><li data-l="D">"O novo governo precisa avaliar as formas de acesso ao serviço público — seja o acesso para servidores efetivos, via concursos, seja o acesso para cargos de confiança". (4º §)</li><li data-l="E">"Também é urgente ampliar medidas que promovam maior diversidade na burocracia, para dar mais espaço a grupos historicamente sub-representados no Estado brasileiro." (4º §)</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: A.</span> "Ainda que" + subjuntivo ("pareça") é concessão: um obstáculo que não impede o fato principal. C é conclusão ("Portanto"), D é alternância ("seja… seja") e E é finalidade ("para dar").</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a8">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 8</span></div>
+      <p>Em um texto, os aspectos morfossintáticos estão a serviço dos sentidos pretendidos pelo autor. No que se refere a aspectos morfossintáticos do Texto 1, analise as proposições a seguir.</p>
+      <ol class="items" style="list-style:none;padding:0">
+        <li>1) No trecho "Engana-se quem pensa que o serviço público tem papel pequeno ou irrelevante na vida do brasileiro." (1º §), a opção de colocar o sujeito do verbo "enganar" após o verbo confere realce ao verbo que inicia o enunciado.</li>
+        <li>2) No trecho "Acredite: o serviço público está em tudo" (1º §), a opção pelo uso de uma forma verbal no modo imperativo é um recurso por meio do qual o autor dialoga diretamente com seu leitor.</li>
+        <li>3) No trecho "Precisamos nos preparar para a reconstrução do Estado brasileiro" (4º §), a opção de empregar a primeira pessoa do plural é um recurso empregado para aumentar o envolvimento entre autor e leitor(es), pois o autor se inclui no que enuncia.</li>
+        <li>4) No trecho "A qualidade do serviço público prestado à população nunca será superior à qualidade do prestador." (5º §), o sinal indicativo de crase é facultativo, já que "prestado" não exige preposição.</li>
+      </ol>
+      <p>Estão corretas, apenas:</p>
+      <ol class="alt"><li data-l="A">1 e 2.</li><li data-l="B">2 e 3.</li><li data-l="C">3 e 4.</li><li data-l="D">1 e 4.</li><li data-l="E">1, 2 e 3.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: E.</span> O item 4 é o único falso: "prestado a" (quem presta, presta algo <em>a</em> alguém) e "superior a" exigem preposição, então as duas crases são <strong>obrigatórias</strong>. O item 2 é exatamente o "imperativo como interlocução" do edital, e o item 1 é o sujeito oracional posposto ("quem pensa…").</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a19">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 19 · Texto 4 (infográfico)</span></div>
+      <p>Com a expressão destacada no trecho "<u>No entanto</u>, a maioria dos servidores […]", o autor sinaliza para o leitor que vai</p>
+      <ol class="alt"><li data-l="A">manter a mesma linha argumentativa adotada nos trechos anteriores.</li><li data-l="B">aprofundar conteúdos que já tinham sido mencionados antes, no texto.</li><li data-l="C">introduzir informações que se opõem às informações já dadas no texto.</li><li data-l="D">sintetizar as ideias apresentadas e encaminhar o texto para a conclusão.</li><li data-l="E">alterar a proposta temática do texto com a inserção de diversos subtemas.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: C.</span> "No entanto" é adversativo. As alternativas erradas descrevem as funções de <strong>outros</strong> conectivos: A = adição ("além disso"), B = explicação ("isto é"), D = conclusão ("portanto"). Decore essa correspondência, porque a FADE a reutiliza.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-e7">
+      <div class="src"><span class="tag c">FADE 2023 · nível E</span><span>Administrador · questão 7 · Texto 1: Faraco, <em>História sociopolítica da língua portuguesa</em> (recortado)</span></div>
+      <p>Para elaborar o Texto 1, o autor se vale de alguns recursos lexicais e gramaticais. Acerca desses recursos, analise as proposições abaixo.</p>
+      <ol class="items" style="list-style:none;padding:0">
+        <li>1) O autor opera a substituição de alguns termos por pronomes, evitando assim repetições desnecessárias e interligando adequadamente as partes do texto. É o que se vê no trecho "Em todos esses contextos, com exceção de Portugal e Brasil, <u>ela</u> é língua minoritária. No caso das comunidades de imigrantes e das comunidades remanescentes, <u>seu</u> futuro é incerto."</li>
+        <li>2) Ao longo do texto, o autor emprega os termos "língua portuguesa" e "português" com sentidos distintos, para diferenciar uma língua majoritária de uma língua minoritária. É o que se vê, por exemplo, no trecho "Do ponto de vista quantitativo, há hoje pouco mais de 250.000.000 de pessoas que falam o português, como primeira ou segunda língua, no mundo."</li>
+        <li>3) O conectivo inicial do trecho "<u>Além disso</u>, a língua portuguesa enfrenta também a dissonância […]" é empregado para indicar que as informações a serem trazidas para o texto contrastam com aquelas que foram apresentadas até esse ponto.</li>
+        <li>4) No trecho "Em todos esses contextos, <u>com exceção de Portugal e Brasil</u>, ela é língua minoritária.", o segmento destacado funciona como uma ressalva.</li>
+      </ol>
+      <p>Estão corretas:</p>
+      <ol class="alt"><li data-l="A">1 e 4, apenas.</li><li data-l="B">2 e 3, apenas.</li><li data-l="C">1, 2 e 3, apenas.</li><li data-l="D">2, 3 e 4, apenas.</li><li data-l="E">1, 2, 3 e 4.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: A.</span> O item 1 é <strong>coesão referencial por pronome</strong>: "ela" e "seu" retomam "a língua portuguesa". O item 4 é <strong>ressalva/exceção</strong>, a mesma relação do "salvo" e do "ressalvado" das normas. O item 2 é falso porque são <strong>sinônimos</strong>, usados para variar. O item 3 é falso porque "Além disso" é <strong>adição</strong>. É o modelo de questão mais provável para este eixo em 2026: 4 itens, cada um testando um mecanismo diferente.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-e8">
+      <div class="src"><span class="tag c">FADE 2023 · nível E</span><span>Administrador · questão 8</span></div>
+      <p>Assinale a alternativa em que o segmento destacado indica causalidade.</p>
+      <ol class="alt"><li data-l="A">"Nos contextos em que ela é língua oficial, <u>mas não hegemônica</u>, prevê-se que ampliará sua presença".</li><li data-l="B">"E o conjunto de países de língua oficial portuguesa não encontrou ainda os rumos para ações coletivas e compartilhadas, <u>embora disponham do Instituto Internacional da Língua Portuguesa para isso</u>."</li><li data-l="C">"Poderá continuar sendo falada ou, <u>sob pressão das línguas majoritárias</u>, tenderá progressivamente a desaparecer".</li><li data-l="D">"o sistema educacional brasileiro, <u>embora tenha universalizado, no fim da década de 1990, o acesso infantil às primeiras séries do ensino fundamental</u>, não conseguiu ainda superar os altos índices de evasão e o baixíssimo rendimento da ação escolar."</li><li data-l="E">"O país tem tido, ao longo de século e meio, grandes dificuldades para reconhecer sua "cara linguística" e, <u>em consequência</u>, para promover uma educação linguística consistente."</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito: C.</span> A causa vem numa <strong>locução prepositiva</strong>, sem conjunção: tenderá a desaparecer <em>por causa da</em> pressão. A é oposição, B e D são concessão, e E é <strong>consequência</strong>, o outro lado da causa (a pegadinha da questão). Repare também em "<strong>prevê-se</strong> que ampliará" (A): passiva sintética com sujeito oracional, um dos recursos de impessoalização.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · Qua (30 min finais) e Dom</span>
+    <h2>15 questões no estilo da FADE</h2>
+    <p class="muted">Questões autorais sobre trechos <strong>reais</strong> de normas (CF, Lei 8.112, LC 95), no formato da banca. As marcadas com <span class="lvE">nível E</span> vão além do programa do nível D, mas a Gabi pode fazer também. A última nota fica salva neste navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · Dom</span>
+    <h2>30 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar e marque <strong>sei</strong> ou <strong>revisar</strong>. O botão de exportar gera um CSV (frente;verso) para o Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Fontes.</strong> Edital UFPE nº 12/2026, Anexo II, Português, na redação da Retificação publicada no DOU de 10/08/2026 · Lei Complementar nº 95/1998 · Constituição Federal de 1988, arts. 37 e 41 · Lei nº 8.112/1990, arts. 3º, 4º, 5º, 13 e 117 (textos conferidos no portal da legislação do Planalto em 26/09/2026) · <em>Manual de Redação da Presidência da República</em>, 3ª ed., 2018.</p>
+    <p><strong>Questões reais:</strong> provas de Português do concurso UFPE 2023 (Edital nº 10/2023, banca FADE/UFPE), cargos Assistente em Administração (nível D) e Administrador (nível E), com os gabaritos publicados. Os pesos por tema são estimativa. O simulado e os cartões são autorais.</p>
+    <p>Voltar: <a href="../index.html#cado">plano do Cado</a> · <a href="../index.html#gabi">plano da Gabi</a> · Próxima página de Português: pontuação e ortografia (semana 2).</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:comum:port1';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Leia o dispositivo da Lei nº 8.112/1990.<br><em>"Art. 5º São requisitos básicos para investidura em cargo público: I - a nacionalidade brasileira; II - o gozo dos direitos políticos; [...] VI - aptidão física e mental. § 1º As atribuições do cargo podem justificar a exigência de outros requisitos estabelecidos em lei."</em><br>Sobre a organização desse dispositivo, é correto afirmar que',
+     o:['o § 1º está hierarquicamente subordinado ao inciso VI, pois vem logo depois dele.','os incisos enumeram os requisitos anunciados no <em>caput</em>, e o parágrafo acrescenta um aspecto complementar à regra.','o <em>caput</em> é a parte do artigo reservada às exceções à regra geral.','a numeração "Art. 5º", em ordinal, contraria a técnica legislativa, que exige cardinais.','os incisos deveriam ser representados por letras minúsculas.'],a:1,
+     w:'Pela LC 95, os incisos fazem "discriminações e enumerações" e os parágrafos trazem "aspectos complementares à norma enunciada no caput" e exceções. O parágrafo se subordina ao <em>artigo</em>, não ao inciso anterior. Ordinal vai até o nono; letras minúsculas são alíneas.'},
+    {t:'De acordo com as regras de articulação da Lei Complementar nº 95/1998, está corretamente representado:',
+     o:['"Art. 10º", seguido de "Art. 11º".','"Art. 9º", seguido de "Art. 10".','"§ único", quando houver apenas um parágrafo.','alínea "IV", após o inciso "b".','item "c", subordinado à alínea "2".'],a:1,
+     w:'Ordinal até o nono e cardinal a partir do décimo: "Art. 9º" e depois "Art. 10". Com um só parágrafo, escreve-se "Parágrafo único" por extenso. Incisos têm romanos, alíneas têm letras minúsculas e itens têm arábicos.'},
+    {t:'Em "LEI Nº 8.112, DE 11 DE DEZEMBRO DE 1990" e "Dispõe sobre o regime jurídico dos servidores públicos civis da União, das autarquias e das fundações públicas federais.", identificam-se, respectivamente,',
+     o:['a ementa e o preâmbulo.','a epígrafe e a ementa.','o preâmbulo e a epígrafe.','a epígrafe e o preâmbulo.','a ementa e a cláusula de vigência.'],a:1,
+     w:'Epígrafe: em maiúsculas, com espécie, número e ano. Ementa: resume o objeto "sob a forma de título". O preâmbulo indica quem edita e com que base ("O PRESIDENTE DA REPÚBLICA Faço saber…").'},
+    {t:'A cláusula "Esta Lei entra em vigor na data de sua publicação" integra, segundo a LC nº 95/1998,',
+     o:['a parte preliminar da lei.','a ementa.','a parte final da lei.','a epígrafe.','o preâmbulo.'],a:2,
+     w:'A parte final reúne as medidas de implementação, as disposições transitórias e as cláusulas de vigência e de revogação (art. 3º, III). A LC ainda reserva essa fórmula às leis de pequena repercussão (art. 8º).'},
+    {t:'"II - a investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, [...] na forma prevista em lei, <u>ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração</u>;" (CF, art. 37). O segmento sublinhado expressa',
+     o:['condição.','exceção.','causa.','finalidade.','conclusão.'],a:1,
+     w:'"Ressalvadas" = "exceto", "salvo". A regra é o concurso; os cargos em comissão ficam de fora. Está no mesmo grupo de "salvo os casos previstos em lei" (Lei 8.112, art. 4º).'},
+    {t:'Considere o enunciado, inspirado no art. 117, I, da Lei 8.112: "O servidor poderá ausentar-se do serviço durante o expediente, <u>desde que</u> haja prévia autorização do chefe imediato." A substituição do termo sublinhado que mantém o sentido e a correção é:',
+     o:['embora haja','contanto que haja','porquanto haja','à medida que houver','ainda que haja'],a:1,
+     w:'"Desde que" + subjuntivo = condição, e "contanto que" também é condicional. "Embora" e "ainda que" são concessivos (invertem a lógica), "porquanto" é causal e "à medida que" é proporcional.'},
+    {t:'Assinale a alternativa em que a concordância verbal está de acordo com a norma-padrão.',
+     o:['Precisam-se de servidores qualificados na Pró-Reitoria.','Vende-se imóveis funcionais desocupados.','Trata-se de medidas urgentes de gestão.','Aluga-se salas no prédio anexo.','Necessitam-se de novos concursos públicos.'],a:2,
+     w:'"Tratar de" é VTI: "se" índice de indeterminação, verbo no singular. Em B e D o verbo é transitivo direto: o "se" é apassivador e o verbo deve ir ao plural ("Vendem-se imóveis", "Alugam-se salas"). Em A e E o verbo é VTI e deveria ficar no singular ("Precisa-se de", "Necessita-se de").'},
+    {t:'Na reescrita de "Os comportamentos antiéticos devem ser evitados.", mantêm-se o sentido e a correção gramatical em:',
+     o:['Deve-se evitarem os comportamentos antiéticos.','Devem-se evitar os comportamentos antiéticos.','Os comportamentos antiéticos deve-se evitá-los.','Evitam-se de comportamentos antiéticos.','Devem evitarem-se os comportamentos antiéticos.'],a:1,
+     w:'Passiva analítica vira passiva sintética: o "se" é partícula apassivadora e a locução concorda com o sujeito "os comportamentos antiéticos", como na questão 12 da FADE 2023. Alguns gramáticos também aceitam "Deve-se evitar os comportamentos", mas a forma que a banca usou foi a do plural.'},
+    {t:'Em "Discutiu-se a proposta de reajuste" e "Discutiu-se sobre a proposta de reajuste", o pronome "se" classifica-se, respectivamente, como',
+     o:['índice de indeterminação do sujeito e partícula apassivadora.','partícula apassivadora e índice de indeterminação do sujeito.','pronome reflexivo em ambos os casos.','partícula apassivadora em ambos os casos.','índice de indeterminação do sujeito em ambos os casos.'],a:1,
+     w:'No primeiro, "discutir" é transitivo direto: "a proposta foi discutida" (apassivadora). No segundo, "discutir sobre" tem preposição: sujeito indeterminado.'},
+    {t:'"Art. 3º Cargo público é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional que <u>devem</u> ser cometidas a um servidor." e "§ 1º As atribuições do cargo <u>podem</u> justificar a exigência de outros requisitos estabelecidos em lei." (Lei 8.112). Os verbos sublinhados expressam, respectivamente,',
+     o:['possibilidade e obrigação.','obrigação e possibilidade.','certeza e dúvida.','obrigação e proibição.','ordem e desejo.'],a:1,
+     w:'Modalização deôntica: "devem" impõe e "podem" autoriza ou possibilita. Trocar um pelo outro numa paráfrase muda o sentido, que é uma das formas mais comuns de a alternativa errada ser construída.'},
+    {t:'"§ 1º A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter caráter educativo, informativo ou de orientação social, <u>dela</u> não podendo constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores públicos." (CF, art. 37). O pronome sublinhado retoma',
+     o:['"caráter educativo".','"orientação social".','"A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos".','"campanhas".','"promoção pessoal".'],a:2,
+     w:'Anáfora pronominal com antecedente longo. O núcleo é "publicidade" (feminino singular, que concorda com "dela"). "Campanhas" está dentro do sintagma, mas é plural.'},
+    {t:'A LC nº 95/1998 determina que, para obter precisão, o texto legal deve "expressar a ideia, quando repetida no texto, por meio das mesmas palavras, evitando o emprego de sinonímia com propósito meramente estilístico". Essa orientação se justifica porque',
+     o:['a repetição torna o texto legal mais próximo da linguagem literária.','a variação por sinônimos poderia gerar dúvida sobre se se trata do mesmo conceito jurídico.','a norma-padrão proíbe o uso de sinônimos em textos formais.','repetir palavras aumenta a extensão da lei e, assim, sua força normativa.','o texto normativo não admite nenhum mecanismo de coesão referencial.'],a:1,
+     w:'Na lei, cada palavra pode ser um conceito com efeito jurídico. Trocar "servidor" por "funcionário" poderia sugerir outra categoria. A repetição é um mecanismo de coesão que garante precisão.'},
+    {t:'Uma campanha pública traz o enunciado "Vacine-se. Proteja quem você ama." Sobre o uso do modo verbal, é correto afirmar que',
+     o:['indica ordem jurídica, sujeita a sanção em caso de descumprimento.','marca a interlocução direta com o cidadão, recurso típico do apelo persuasivo.','é inadequado ao registro formal e constitui desvio da norma-padrão.','expressa uma hipótese sobre o comportamento do leitor.','situa a ação no passado, em referência a campanhas anteriores.'],a:1,
+     w:'O imperativo em campanhas convoca o leitor. Na lei, a obrigação vem pelo futuro do presente ou por "deverá". "Vacine-se" está correto: ênclise no imperativo afirmativo.'},
+    {t:'<span class="lvE">nível E</span> Em expediente oficial dirigido ao reitor de uma universidade federal, está de acordo com a norma de referência e com o Manual de Redação da Presidência da República:',
+     o:['Vossa Magnificência recebereis o relatório em vossa sala.','Vossa Magnificência receberá o relatório em sua sala.','Vossa Magnificência receberá o relatório em vossa sala.','Sua Magnificência, envio-vos o relatório.','Vós, Magnificência, recebereis o relatório.'],a:1,
+     w:'Pronomes de tratamento levam verbo e possessivo para a 3ª pessoa: "receberá", "sua". "Vossa" é usado com quem se fala (o próprio reitor), e "Sua", para falar dele a um terceiro.'},
+    {t:'<span class="lvE">nível E</span> "A penalidade será aplicada <u>sem prejuízo da</u> responsabilidade civil e penal do servidor." A expressão sublinhada pode ser substituída, sem alteração de sentido, por',
+     o:['em substituição à','com exclusão da','independentemente e além da','em vez da','sob condição da'],a:2,
+     w:'"Sem prejuízo de" = sem excluir, além de. A penalidade administrativa não afasta as outras responsabilidades. A, B e D fazem o contrário: substituem ou excluem.'}
+  ];
+  /* distribui as respostas corretas entre A e E (Q7 e Q15 citam letras no comentário e ficam fixas) */
+  var T=[0,3,4,2,1,3,2,0,4,1,2,3,4,1,2];
+  Q.forEach(function(q,i){ var t=T[i]; if(t!==q.a){ var x=q.o[t]; q.o[t]=q.o[q.a]; q.o[q.a]=x; q.a=t; } });
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var F=[
+    ['Três partes de uma lei (LC 95, art. 3º)','Preliminar (epígrafe, ementa, preâmbulo, objeto e âmbito) · normativa · final (implementação, transitórias, vigência, revogação).'],
+    ['Epígrafe','Em maiúsculas: espécie normativa + número + ano. Ex.: LEI Nº 8.112, DE 11 DE DEZEMBRO DE 1990.'],
+    ['Ementa','Resume o objeto da lei, de modo conciso e sob a forma de título, em realce. Ex.: "Dispõe sobre…".'],
+    ['Preâmbulo','Indica o órgão competente e a base legal. Ex.: "O PRESIDENTE DA REPÚBLICA Faço saber que…".'],
+    ['Cláusula de revogação (LC 95, art. 9º)','Deve enumerar expressamente as leis ou disposições revogadas.'],
+    ['Vigência "na data de sua publicação"','Reservada às leis de pequena repercussão. As demais: "após decorridos (n) dias de sua publicação oficial".'],
+    ['Ordem de desdobramento do artigo','Artigo → parágrafos ou incisos; parágrafo → incisos; inciso → alíneas; alínea → itens.'],
+    ['Representação de inciso, alínea e item','Inciso: romanos (I, II). Alínea: letras minúsculas (a, b). Item: arábicos (1, 2).'],
+    ['Numeração de artigos e parágrafos','Ordinal até o nono (Art. 9º, § 9º); cardinal a partir do décimo (Art. 10, § 10). Um só: "Parágrafo único".'],
+    ['Função do caput, dos incisos e dos parágrafos','Caput: a regra. Incisos: enumerações. Parágrafos: aspectos complementares e exceções.'],
+    ['Agrupamentos, do menor ao maior','Subseção → Seção → Capítulo → Título → Livro → Parte.'],
+    ['Tempos verbais preferidos na lei (LC 95, art. 11)','Presente ou futuro simples do presente. O futuro tem valor de obrigação ("obedecerá").'],
+    ['Partícula apassivadora: quando?','Verbo transitivo direto + se. O verbo concorda com o sujeito: "Vendem-se casas".'],
+    ['Índice de indeterminação: quando?','Verbo VTI, VI ou VL + se. Verbo sempre no singular: "Precisa-se de técnicos", "Trata-se de casos".'],
+    ['Teste do "se"','Se dá para passar para a analítica ("casas são vendidas"), o "se" é apassivador.'],
+    ['"Devem ser evitados" na passiva sintética','"Devem-se evitar (os comportamentos)". A locução concorda com o sujeito plural.'],
+    ['Efeitos da impessoalização','Objetividade, generalidade, autoridade institucional e, às vezes, diluição da responsabilidade.'],
+    ['Nominalização','Transformar um processo em nome ("investir" → "a investidura"), apagando o agente. Também retoma ideias (coesão).'],
+    ['Modalização deôntica: escala','Proibição (é vedado) · permissão (pode, é facultado) · obrigação (deve, é obrigatório).'],
+    ['"Precisa avaliar" expressa…','Necessidade (deôntica), e não possibilidade. Foi a alternativa errada da FADE 2023.'],
+    ['Imperativo: na lei × na campanha','Lei: quase nunca (usa futuro/deverá). Campanha: interlocução direta, apelo ("Vacine-se").'],
+    ['Anáfora × catáfora','Anáfora retoma o que já foi dito. Catáfora antecipa o que vem ("os seguintes:").'],
+    ['Este × esse','Este/isto: o que vem a seguir ou o mais próximo. Esse/isso: o que já foi dito.'],
+    ['Por que a lei evita sinônimos?','LC 95, art. 11, II, b: repetir as mesmas palavras dá precisão. Um sinônimo pode sugerir outro conceito jurídico.'],
+    ['"O mesmo" como pronome','Evitar ("o mesmo assinou"). Usar "ele" ou elipse.'],
+    ['Conectivos de exceção','Salvo, exceto, ressalvado, com exceção de, a não ser que.'],
+    ['"Desde que" + subjuntivo × "uma vez que" + indicativo','"Desde que haja" = condição. "Uma vez que houve" = causa.'],
+    ['"Sem prejuízo de" / "na forma da lei" / "mediante"','Adição sem exclusão / conformidade, remissão / meio.'],
+    ['Pronome de tratamento: concordância','Verbo e possessivo na 3ª pessoa: "Vossa Excelência receberá… em sua sala". Reitor: Vossa Magnificência.'],
+    ['Fechos do padrão ofício (MRPR 2018)','"Respeitosamente," para superior hierárquico; "Atenciosamente," para mesma hierarquia ou inferior.']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 port1'];}),'ufpe2027-portugues-1.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 port1'];});
+    dl(rows,'ufpe2027-portugues-1-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var C=[
+    'Nomear as três partes de uma lei e o que vai em cada uma.',
+    'Distinguir epígrafe, ementa e preâmbulo num texto real.',
+    'Dizer como se numeram e representam artigos, parágrafos, incisos, alíneas e itens.',
+    'Encontrar, num artigo, onde está a regra e onde está a exceção.',
+    'Ler um dispositivo e responder a uma questão de informação explícita sem extrapolar.',
+    'Diferenciar texto normativo, texto de reivindicação e campanha social pelo propósito.',
+    'Classificar o "se" (apassivador × indeterminação) e acertar a concordância.',
+    'Reescrever uma passiva analítica como sintética e vice-versa.',
+    'Posicionar deve, pode, é vedado e é facultado na escala de modalização.',
+    'Identificar o antecedente de um pronome em período longo e desfazer ambiguidade.',
+    'Dar a relação de sentido de salvo, desde que, ressalvado, sem prejuízo de, mediante e na forma de.',
+    'Explicar a função de brasão, realce, tabela e imagem num texto oficial (e, no nível E, usar pronomes de tratamento e fechos corretamente).'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Desenho técnico I para o concurso de Desenhista de Artes Gráficas da UFPE 2027: normas ABNT (folhas, linhas, escalas, legenda, dobramento) e projeções ortogonais, com questões reais comentadas, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+<title>Desenho Técnico I</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+
+/* extras desta página */
+.lnrow svg{width:150px;height:14px;display:block}
+.tbl td.ln{width:170px;padding-top:12px}
+svg .dash{stroke-dasharray:8 5} svg .dash2{stroke-dasharray:6 4}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro da semana</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#normas">1 · As normas (e os números novos)</a>
+  <a href="#formatos">2 · Formatos da série A</a>
+  <a href="#folha">3 · Margens e legenda</a>
+  <a href="#dobra">4 · Dobramento</a>
+  <a href="#linhas">5 · Tipos e larguras de linha</a>
+  <a href="#escrita">6 · Caligrafia técnica</a>
+  <a href="#escalas">7 · Escalas</a>
+  <a href="#projecoes">8 · Projeções e diedros</a>
+  <a href="#vistas">9 · As vistas de uma peça</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <a class="back" href="../index.html#gabi">← Plano da Gabi</a>
+  <div class="eyebrow">Desenhista de Artes Gráficas · Conhecimentos Específicos · Desenho técnico · Semana 1</div>
+  <h1>Desenho técnico I<br><em>normas e vistas</em></h1>
+  <p class="dek">Folhas, margens, legenda, dobramento, linhas, escrita e escalas pelas normas da ABNT, e a base das projeções ortogonais: diedros, símbolo e disposição das vistas. É assunto <strong>novo</strong> em relação à prova da ALECE, e as normas mudaram de número entre 2020 e 2022.</p>
+  <div class="meta"><span class="hot">semana 05/10 → 11/10</span><span>~4h30 de estudo</span><span>8 questões reais</span><span>16 no simulado</span><span>32 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#comocai">Como cai</a><a href="#normas">Normas</a><a href="#formatos">Formatos</a><a href="#folha">Legenda</a><a href="#dobra">Dobramento</a><a href="#linhas">Linhas</a><a href="#escrita">Escrita</a><a href="#escalas">Escalas</a><a href="#projecoes">Diedros</a><a href="#vistas">Vistas</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro da semana</span>
+    <h2>Esta página, sessão por sessão</h2>
+    <p class="muted">O edital pede <em>"desenho técnico"</em> e <em>"normas técnicas aplicadas à área gráfica"</em>. Esta semana cobre as normas de apresentação e as projeções ortogonais. Perspectiva isométrica e cotagem ficam para o Desenho técnico II (semana 2).</p>
+    <div class="plan">
+      <div class="row"><div class="d"><b>Seg 05/10</b>1h30</div><div>Seções <a href="#normas">1</a> a <a href="#dobra">4</a>: quais normas valem, formatos, margens, legenda e dobramento. Resolva as questões reais de <a href="#q-bauru9">dobramento</a>, <a href="#q-bauru14">legenda</a> e <a href="#q-ifrn7">folha</a>.</div></div>
+      <div class="row"><div class="d"><b>Qui 08/10</b>1h30</div><div>Seções <a href="#linhas">5</a>, <a href="#escrita">6</a> e <a href="#escalas">7</a>: linhas, caligrafia e escalas, com as contas. Resolva as questões reais de <a href="#q-bauru6">escala</a>, <a href="#q-ifrn3">escala na folha A4</a> e a <a href="#q-bauru15">questão anulada</a> sobre linhas.</div></div>
+      <div class="row"><div class="d"><b>Sáb 10/10</b>1h30</div><div>Seções <a href="#projecoes">8</a> e <a href="#vistas">9</a> (45 min): diedros, símbolo e vistas. Depois o <a href="#simulado">simulado</a> de 16 questões (45 min). O que errar vai pro caderno de erros.</div></div>
+      <div class="row"><div class="d"><b>Dom 11/10</b>revisão</div><div>Na revisão da semana: <a href="#cartoes">flashcards</a> (exporte os que não souber para o Anki) e o <a href="#dominio">checklist</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>O que as provas de Desenhista da UFPE cobraram</h2>
+    <p>Foram lidas as duas provas anteriores do próprio cargo: <strong>UFPE 2015</strong> e <strong>UFPE 2019</strong> (Edital 53/2019), ambas com 30 questões de Conhecimentos Específicos (questões 31 a 60). O mapa abaixo vale para <strong>todas as semanas</strong> da Gabi.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tema cobrado</th><th>2015</th><th>2019</th><th>No edital de 2026?</th></tr></thead>
+      <tbody>
+        <tr><td>Figura humana e cenários (inclui perspectiva cônica)</td><td>4</td><td>4</td><td>Sim, em <em>ilustração</em></td></tr>
+        <tr><td>Desenho à mão livre (volume, hachura, planos)</td><td>3</td><td>2</td><td>Sim, em <em>ilustração tradicional</em></td></tr>
+        <tr><td>Criação de personagens</td><td>2</td><td>3</td><td>Indireto (ilustração)</td></tr>
+        <tr><td>Roteiro e storyboard</td><td>3</td><td>3</td><td>Não aparece</td></tr>
+        <tr><td>Mesa digitalizadora e scanner</td><td>4</td><td>3</td><td>Sim, em <em>ilustração digital</em></td></tr>
+        <tr><td>Vetor × bitmap</td><td>2</td><td>2</td><td>Sim, em <em>softwares</em></td></tr>
+        <tr><td>Illustrator, Photoshop, CorelDRAW, Corel Painter</td><td>7</td><td>6</td><td>Sim, em <em>softwares</em></td></tr>
+        <tr><td>Adobe Flash</td><td>1</td><td>2</td><td>Não (software descontinuado)</td></tr>
+        <tr><td>Windows 8 e Mac OS (sistemas operacionais)</td><td>4</td><td>5</td><td>Não nos Específicos</td></tr>
+        <tr><td><strong>Desenho técnico, normas ABNT, vistas</strong></td><td><strong>0</strong></td><td><strong>0</strong></td><td><strong>Sim, e é novo</strong></td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">O edital mudou de perfil</h4>
+        <p class="small muted" style="margin:0">As provas de 2015 e 2019 eram de <strong>ilustração e animação</strong>. O edital de 2026 é de <strong>design gráfico</strong> (tipografia, identidade, editorial, impressão, cor) e acrescenta <strong>desenho técnico, normas, acessibilidade, interfaces e direitos autorais</strong>. Nenhuma questão antiga cobre desenho técnico.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">O que se sabe da banca</h4>
+        <p class="small muted" style="margin:0">O estilo da casa aparece nas duas provas: <strong>"analise as proposições… estão corretas, apenas"</strong>, "relacione" e alternativas longas, com o termo certo trocado pela definição do vizinho. Para ver como o <em>conteúdo</em> de desenho técnico cai, as questões reais desta página vêm de <strong>outras bancas</strong> (Bauru 2018 e IFRN 2017).</p>
+      </div>
+    </div>
+    <div class="cx cai"><span class="k">Onde estão os pontos · estimativa</span>
+      <p>Com 25 questões para 13 blocos, desenho técnico deve render de <strong>2 a 3 questões</strong>, e normas técnicas mais 1 ou 2. Nas provas de outras bancas, o que mais se repete é: <strong>qual norma trata de quê</strong>, <strong>tipo de linha e seu uso</strong>, <strong>posição da legenda</strong>, <strong>dobramento para A4</strong>, <strong>conta de escala</strong> e <strong>posição das vistas no 1º diedro</strong>.</p>
+    </div>
+  </section>
+
+  <!-- 1 NORMAS -->
+  <section class="sec" id="normas">
+    <span class="lbl">Seção 1 · Seg</span>
+    <h2>As normas: os números antigos e os novos</h2>
+    <p>Entre 2020 e 2022 a ABNT reescreveu o conjunto básico de desenho técnico, aproximando-o das normas ISO. O conteúdo mudou pouco, mas <strong>os números mudaram</strong>. As bancas ainda citam os números antigos, então é preciso saber os dois.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Assunto</th><th>Norma vigente</th><th>Substituiu</th></tr></thead>
+      <tbody>
+        <tr><td>Folhas: formatos, margens, legenda, dobramento e escalas</td><td><strong>NBR 16752:2020</strong></td><td>NBR 10068:1987 (leiaute e dimensões da folha) e NBR 10582:1988 (apresentação da folha)</td></tr>
+        <tr><td>Linhas e escrita</td><td><strong>NBR 16861:2020</strong></td><td>NBR 8403:1984 (linhas) e NBR 8402:1994 (caligrafia técnica)</td></tr>
+        <tr><td>Métodos de projeção (vistas)</td><td><strong>NBR 17006:2021</strong></td><td>NBR 10067:1995 (princípios gerais de representação)</td></tr>
+        <tr><td>Representações ortográficas (cortes e seções)</td><td><strong>NBR 17067:2022</strong></td><td>NBR 12298 (hachuras)</td></tr>
+        <tr><td>Dimensões e tolerâncias (cotas)</td><td><strong>NBR 17068:2022</strong></td><td>NBR 10126:1987 (cotagem) e NBR 8404 (estado de superfície)</td></tr>
+        <tr><td>Escalas</td><td>Hoje dentro da <strong>NBR 16752</strong></td><td>NBR 8196:1999, que aparece nos catálogos como cancelada</td></tr>
+        <tr><td>Dobramento de cópias</td><td>Hoje dentro da <strong>NBR 16752</strong></td><td>NBR 13142:1999</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinha · número antigo ou novo?</span>
+      <p>Uma questão pode perguntar "qual norma trata do dobramento de cópias?" e ter só números antigos nas alternativas (resposta: 13142), ou misturar antigos e novos. Leia o <strong>enunciado</strong>: se ele cita o ano ("NBR 8403:1984"), responda pela norma antiga. Se pede a norma "vigente" ou "atual", é a da série 16000/17000.</p>
+      <p>A dupla que mais cai é a <strong>NBR 8403 → NBR 16861</strong> (linhas) e a <strong>NBR 10068 → NBR 16752</strong> (folha).</p>
+    </div>
+    <div class="cx dec"><span class="k">Decoreba · as antigas que ainda aparecem</span>
+      <p><strong>10068</strong> folha · <strong>10582</strong> apresentação e legenda · <strong>13142</strong> dobramento · <strong>8196</strong> escalas · <strong>8402</strong> caligrafia · <strong>8403</strong> linhas · <strong>10067</strong> vistas · <strong>12298</strong> hachuras · <strong>10126</strong> cotagem · <strong>10647</strong> terminologia · <strong>8993</strong> representação de roscas. Para arquitetura, a <strong>6492</strong> (representação de projetos de arquitetura) também aparece em prova.</p>
+    </div>
+  </section>
+
+  <!-- 2 FORMATOS -->
+  <section class="sec" id="formatos">
+    <span class="lbl">Seção 2 · Seg</span>
+    <h2>Formatos da série A</h2>
+    <p>A série A parte do <strong>A0, com área de 1 m²</strong> e lados na razão <strong>1 : √2</strong> (cerca de 1 : 1,414). Cada formato seguinte é a metade do anterior, cortado pelo lado maior, e a razão entre os lados se mantém. É o padrão ISO 216, adotado pela ABNT.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 520" role="img" aria-label="Formatos A0 a A5 aninhados, cada um metade do anterior">
+        <rect x="50" y="30" width="654" height="463" class="cell"/>
+        <line x1="377" y1="30" x2="377" y2="493" class="ln" stroke-width="1.6"/>
+        <line x1="377" y1="261.5" x2="704" y2="261.5" class="ln" stroke-width="1.6"/>
+        <line x1="540.5" y1="261.5" x2="540.5" y2="493" class="ln" stroke-width="1.6"/>
+        <line x1="540.5" y1="377" x2="704" y2="377" class="ln" stroke-width="1.6"/>
+        <rect x="377" y="30" width="327" height="231.5" class="fcs" opacity=".6"/>
+        <rect x="377" y="261.5" width="163.5" height="231.5" class="fms" opacity=".6"/>
+        <rect x="540.5" y="261.5" width="163.5" height="115.5" class="fgs" opacity=".8"/>
+        <g text-anchor="middle">
+          <text x="213" y="250" class="tb" font-size="28">A1</text><text x="213" y="276" font-size="13" class="t2">594 × 841 mm</text>
+          <text x="540" y="140" class="tb" font-size="24">A2</text><text x="540" y="164" font-size="13" class="t2">420 × 594 mm</text>
+          <text x="459" y="372" class="tb" font-size="20">A3</text><text x="459" y="394" font-size="12" class="t2">297 × 420</text>
+          <text x="622" y="316" class="tb" font-size="17">A4</text><text x="622" y="336" font-size="11.5" class="t2">210 × 297</text>
+          <text x="622" y="440" class="t3" font-size="14">A5</text>
+        </g>
+        <text x="377" y="514" text-anchor="middle" font-size="13" class="t2">A0 inteiro = 841 × 1189 mm = 1 m²</text>
+      </svg>
+      <figcaption>Cada formato cabe exatamente duas vezes no anterior. Todos os formatos têm a mesma proporção 1 : √2.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl">
+      <thead><tr><th>Formato</th><th>Dimensões (mm)</th><th>Relação com o A4</th></tr></thead>
+      <tbody>
+        <tr><td>A0</td><td>841 × 1189</td><td>16 folhas A4 · área de 1 m²</td></tr>
+        <tr><td>A1</td><td>594 × 841</td><td>8 folhas A4</td></tr>
+        <tr><td>A2</td><td>420 × 594</td><td>4 folhas A4</td></tr>
+        <tr><td>A3</td><td>297 × 420</td><td>2 folhas A4</td></tr>
+        <tr><td>A4</td><td>210 × 297</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Truque para não decorar tudo</span><p>Decore só o <strong>A4 (210 × 297)</strong>. O lado <em>maior</em> de um formato é o lado <em>menor</em> do formato anterior: o A3 é 297 × 420, porque 420 = 2 × 210. O A2 é 420 × 594, porque 594 = 2 × 297. E assim até o A0.</p></div>
+  </section>
+
+  <!-- 3 FOLHA -->
+  <section class="sec" id="folha">
+    <span class="lbl">Seção 3 · Seg</span>
+    <h2>Margens, quadro e legenda</h2>
+    <figure class="fig">
+      <svg viewBox="0 0 760 470" role="img" aria-label="Folha de desenho com margens, quadro e legenda no canto inferior direito">
+        <rect x="120" y="30" width="588" height="416" class="cell"/>
+        <rect x="148" y="44" width="546" height="388" fill="none" class="ln" stroke-width="2.6"/>
+        <rect x="442" y="362" width="252" height="70" class="fas" stroke="var(--amber)" stroke-width="1.6"/>
+        <line x1="442" y1="382" x2="694" y2="382" class="ln2"/>
+        <text x="568" y="400" text-anchor="middle" class="tb" font-size="13">LEGENDA</text>
+        <text x="568" y="424" text-anchor="middle" font-size="11" class="t2">180 mm · canto inferior direito</text>
+        <text x="421" y="210" text-anchor="middle" font-size="14" class="t3">espaço para desenho</text>
+        <text x="421" y="230" text-anchor="middle" font-size="12" class="t3">(dentro do quadro)</text>
+        <g class="sm" stroke-width="1.4"><line x1="120" y1="236" x2="148" y2="236"/><line x1="120" y1="232" x2="120" y2="240"/><line x1="148" y1="232" x2="148" y2="240"/></g>
+        <text x="110" y="226" text-anchor="end" font-size="12" class="tb">20 mm</text>
+        <text x="110" y="242" text-anchor="end" font-size="11" class="t2">margem esquerda</text>
+        <text x="110" y="256" text-anchor="end" font-size="11" class="t2">(arquivamento)</text>
+        <g class="sc" stroke-width="1.4"><line x1="694" y1="120" x2="708" y2="120"/><line x1="421" y1="30" x2="421" y2="44"/></g>
+        <text x="716" y="116" font-size="12" class="tb">10</text><text x="716" y="130" font-size="11" class="t2">mm</text>
+        <text x="429" y="22" font-size="11.5" class="t2">10 mm nas outras três margens</text>
+        <text x="120" y="466" font-size="11.5" class="t2">Folha deitada (paisagem) para A0 a A3. A4 é usado em pé (retrato), com a legenda ao longo da largura.</text>
+      </svg>
+      <figcaption>Folha pela NBR 16752 (fora de escala). O quadro é a linha contínua larga que limita o espaço de desenho.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Item</th><th>NBR 16752:2020 (vigente)</th><th>NBR 10068 / 10582 (antigas)</th></tr></thead>
+      <tbody>
+        <tr><td>Margem esquerda</td><td><strong>20 mm</strong> em todos os formatos</td><td><strong>25 mm</strong> em todos os formatos</td></tr>
+        <tr><td>Demais margens</td><td><strong>10 mm</strong> em todos os formatos</td><td>10 mm no A0 e no A1; <strong>7 mm</strong> no A2, A3 e A4</td></tr>
+        <tr><td>Largura da legenda</td><td><strong>180 mm</strong> em todos os formatos</td><td><strong>178 mm</strong> no A4, A3 e A2; <strong>175 mm</strong> no A1 e A0</td></tr>
+        <tr><td>Posição da legenda</td><td colspan="2">Sempre no <strong>canto inferior direito</strong>, dentro do quadro. No A4 ocupa a largura da folha</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>O que vai na legenda</strong> (quadro de identificação): identificação da empresa ou instituição, <strong>título do desenho</strong>, <strong>número do desenho</strong> (a indicação sequencial), <strong>escala</strong>, <strong>data</strong>, responsáveis (desenhou, verificou, aprovou), <strong>revisão</strong>, unidade de medida e o <strong>símbolo do diedro</strong>. Informações como notas, convenções e planta de situação ficam no <strong>espaço para informações complementares</strong>, acima da legenda.</p>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"A legenda tem largura diferente no formato A2" estava <strong>errado</strong> até na norma antiga: no A2 ela media 178 mm, igual ao A3 e ao A4. Só o A1 e o A0 tinham 175 mm. Na norma vigente são 180 mm em todos. Caiu no IFRN 2017: <a href="#q-ifrn7">veja a questão</a>.</p></div>
+  </section>
+
+  <!-- 4 DOBRA -->
+  <section class="sec" id="dobra">
+    <span class="lbl">Seção 4 · Seg</span>
+    <h2>Dobramento de cópias</h2>
+    <p>Regras da NBR 13142:1999, cujo conteúdo hoje está dentro da NBR 16752:</p>
+    <ol>
+      <li>Cópias em A0, A1, A2 e A3 são dobradas até ficarem no <strong>formato A4</strong>. Formatos maiores que o A0 e especiais também terminam em A4.</li>
+      <li>A <strong>legenda fica visível</strong> na frente, depois de dobrada.</li>
+      <li>O dobramento começa <strong>pelo lado direito</strong>, com <strong>dobras verticais</strong> (em sanfona). Depois vêm as dobras horizontais, quando necessárias.</li>
+      <li>Se a cópia (A0, A1 ou A2) vai ser <strong>perfurada para arquivamento</strong>, o <strong>canto superior esquerdo é dobrado para trás</strong>, para que o furo não atravesse o desenho.</li>
+    </ol>
+    <div class="cx cai"><span class="k">Caiu · Bauru 2018</span><p>"Qual a norma que fixa as condições exigíveis para o dobramento de cópias?" As alternativas eram 8196, 10067, 12298 e 13142. <a href="#q-bauru9">Resolva →</a></p></div>
+  </section>
+
+  <!-- 5 LINHAS -->
+  <section class="sec" id="linhas">
+    <span class="lbl">Seção 5 · Qui</span>
+    <h2>Tipos e larguras de linha</h2>
+    <p>A tabela clássica é a da <strong>NBR 8403:1984</strong>, com tipos identificados por letras (A a K). É a que as bancas mais cobram. A <strong>NBR 16861:2020</strong>, vigente, segue a ISO 128: numera <strong>15 tipos básicos</strong> (01 a 15) e mantém os mesmos usos para as linhas do dia a dia.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Linha</th><th>Nome (NBR 8403)</th><th>Uso</th></tr></thead>
+      <tbody>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="3.2"/></svg></td><td><strong>A</strong> · contínua larga</td><td><strong>Contornos e arestas visíveis</strong></td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="1.2"/></svg></td><td><strong>B</strong> · contínua estreita</td><td>Linhas de <strong>cota</strong>, auxiliares (de extensão) e de chamada; <strong>hachuras</strong>; interseções imaginárias; contorno de seção rebatida na vista; linhas de centro curtas</td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><path d="M2 7 C 14 1, 22 13, 36 6 S 58 2, 72 8 S 96 12, 110 6 S 136 3, 148 8" class="ln" stroke-width="1.2"/></svg></td><td><strong>C</strong> · contínua estreita à mão livre</td><td><strong>Limites de vistas ou cortes parciais</strong> (ruptura)</td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><path d="M2 7 H62 L68 1 L76 13 L82 7 H148" class="ln" stroke-width="1.2"/></svg></td><td><strong>D</strong> · contínua estreita em ziguezague</td><td>O mesmo uso da C, em desenho feito por máquina</td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="3.2" stroke-dasharray="11 5"/></svg></td><td><strong>E</strong> · tracejada larga</td><td>Contornos e <strong>arestas não visíveis</strong></td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="1.2" stroke-dasharray="8 4"/></svg></td><td><strong>F</strong> · tracejada estreita</td><td>Contornos e <strong>arestas não visíveis</strong> (a mais usada)</td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="1.2" stroke-dasharray="20 4 2 4"/></svg></td><td><strong>G</strong> · traço e ponto estreita</td><td><strong>Linhas de centro, de simetria</strong> e trajetórias</td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="1.2" stroke-dasharray="20 4 2 4"/><line x1="2" y1="7" x2="18" y2="7" class="ln" stroke-width="3.4"/><line x1="132" y1="7" x2="148" y2="7" class="ln" stroke-width="3.4"/></svg></td><td><strong>H</strong> · traço e ponto estreita, <strong>larga nas extremidades</strong> e nas mudanças de direção</td><td><strong>Planos de corte</strong></td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="3.2" stroke-dasharray="20 5 3 5"/></svg></td><td><strong>J</strong> · traço e ponto larga</td><td>Indicação de linhas ou superfícies com exigência especial (ex.: tratamento térmico)</td></tr>
+        <tr><td class="ln"><svg viewBox="0 0 150 14" aria-hidden="true"><line x1="2" y1="7" x2="148" y2="7" class="ln" stroke-width="1.2" stroke-dasharray="20 4 2 4 2 4"/></svg></td><td><strong>K</strong> · traço e dois pontos estreita</td><td>Contornos de <strong>peças adjacentes</strong>, <strong>posição-limite de peças móveis</strong>, linha de centro de gravidade, contorno antes da conformação, detalhes antes do plano de corte</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Larguras</h3>
+    <ul>
+      <li>Série de larguras (mm): <strong>0,13 · 0,18 · 0,25 · 0,35 · 0,50 · 0,70 · 1,00 · 1,40 · 2,00</strong>. Cada valor é o anterior × √2, a mesma razão dos formatos. Assim, ampliar ou reduzir um desenho de A4 para A3 mantém as linhas na série.</li>
+      <li>Linha larga e estreita: pela NBR 8403, a relação entre elas <strong>não deve ser menor que 2</strong> (ex.: 0,5 e 0,25). A NBR 16861 segue a ISO 128, com as proporções <strong>extralarga : larga : estreita = 4 : 2 : 1</strong>.</li>
+      <li>No mesmo desenho, na mesma escala, cada tipo de linha mantém <strong>a mesma largura</strong> em todas as vistas.</li>
+    </ul>
+    <h3>Quando duas linhas coincidem</h3>
+    <p>Vale a ordem de prioridade: <strong>1º</strong> arestas e contornos visíveis (contínua larga) → <strong>2º</strong> arestas e contornos não visíveis (tracejada) → <strong>3º</strong> planos de corte → <strong>4º</strong> linhas de centro → <strong>5º</strong> linhas de centro de gravidade → <strong>6º</strong> linhas de cota e auxiliares. Desenha-se só a de maior prioridade.</p>
+    <div class="cx peg"><span class="k">Pegadinha · caiu e foi anulada</span><p>Em Bauru 2018 a pergunta era "linha com traço e ponto estreita representa…" e a alternativa esperada era "planos de corte". A questão foi <strong>anulada</strong>: pela NBR 8403, a traço e ponto estreita (G) é linha de <strong>centro e simetria</strong>. Plano de corte é a <strong>H</strong>, que é estreita mas <strong>larga nas extremidades</strong>. Na sua prova, esse detalhe decide a questão. <a href="#q-bauru15">Veja a questão</a>.</p></div>
+  </section>
+
+  <!-- 6 ESCRITA -->
+  <section class="sec" id="escrita">
+    <span class="lbl">Seção 6 · Qui</span>
+    <h2>Caligrafia técnica</h2>
+    <p>A caligrafia técnica (NBR 8402, hoje dentro da NBR 16861) busca <strong>legibilidade, uniformidade</strong> e a possibilidade de reprodução e microfilmagem.</p>
+    <ul>
+      <li>Letras e algarismos <strong>sem serifa</strong>, em traço de largura constante. Podem ser <strong>verticais</strong> ou <strong>inclinados 15° para a direita</strong> (75° com a horizontal).</li>
+      <li>Alturas padronizadas da letra maiúscula (h), em mm: <strong>2,5 · 3,5 · 5 · 7 · 10 · 14 · 20</strong>, de novo na razão √2. A menor recomendada é <strong>2,5 mm</strong>.</li>
+      <li>A largura do traço é proporcional à altura: h/10 no tipo mais usado (tipo B) e h/14 no tipo A, mais condensado.</li>
+      <li>Usam caligrafia técnica a <strong>cotagem</strong>, a <strong>legenda</strong>, as notas e as indicações em geral.</li>
+    </ul>
+    <div class="cx cai"><span class="k">Caiu · IFRN 2017</span><p>"Nas normas técnicas da ABNT, a caligrafia técnica utiliza-se de letras com serifa" era uma das alternativas erradas. A certa: "cotagem e legenda utilizam caligrafia técnica". <a href="#q-ifrn7">Veja a questão</a>.</p></div>
+  </section>
+
+  <!-- 7 ESCALAS -->
+  <section class="sec" id="escalas">
+    <span class="lbl">Seção 7 · Qui</span>
+    <h2>Escalas</h2>
+    <p><strong>Escala</strong> é a relação entre a medida no desenho e a medida real (em verdadeira grandeza) do objeto: <strong>E = desenho : real</strong>.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tipo</th><th>Forma</th><th>Escalas recomendadas</th></tr></thead>
+      <tbody>
+        <tr><td>Natural</td><td>1 : 1</td><td>1 : 1</td></tr>
+        <tr><td>Redução</td><td>1 : n (desenho menor que o objeto)</td><td>1:2 · 1:5 · 1:10 · 1:20 · 1:50 · 1:100 · 1:200 · 1:500 · 1:1000 · 1:2000 · 1:5000 · 1:10000</td></tr>
+        <tr><td>Ampliação</td><td>n : 1 (desenho maior que o objeto)</td><td>2:1 · 5:1 · 10:1 · 20:1 · 50:1</td></tr>
+      </tbody>
+    </table></div>
+    <p>A série recomendada usa sempre <strong>1, 2 e 5</strong> multiplicados por potências de 10. Escalas como 1:75 ou 1:25 existem em arquitetura, mas não fazem parte da série recomendada da norma de desenho técnico.</p>
+    <h3>As três contas</h3>
+    <div class="grid2">
+      <div class="card"><h4 style="margin-top:0">Achar a medida no desenho</h4><p class="small" style="margin:0">desenho = real × escala<br>Parede de 4,5 m em 1:50 → 4500 mm ÷ 50 = <strong>90 mm</strong></p></div>
+      <div class="card"><h4 style="margin-top:0">Achar a medida real</h4><p class="small" style="margin:0">real = desenho ÷ escala<br>30 mm num desenho em 1:200 → 30 × 200 = 6000 mm = <strong>6 m</strong></p></div>
+      <div class="card"><h4 style="margin-top:0">Achar a escala</h4><p class="small" style="margin:0">E = desenho ÷ real (mesma unidade)<br>Peça de 150 mm desenhada com 30 mm → 30/150 = 1/5 → <strong>1:5</strong></p></div>
+    </div>
+    <ul>
+      <li>A escala é indicada na <strong>legenda</strong> ("ESCALA 1:50" ou "ESC 1:50"). Se o desenho tem várias escalas, a principal vai na legenda e as outras junto das vistas ou dos detalhes a que se referem.</li>
+      <li><strong>A cota sempre informa a medida real</strong>, qualquer que seja a escala. Se uma cota estiver fora de escala (o desenho não bate com a medida), ela deve ser <strong>sublinhada</strong>, e vale a medida escrita.</li>
+      <li><strong>Escala gráfica</strong> é uma régua desenhada na folha. Continua valendo se a cópia for ampliada ou reduzida, o que a escala numérica não garante. Por isso é comum em mapas e plantas.</li>
+    </ul>
+    <div class="cx cai"><span class="k">Caiu · IFRN 2017</span><p>Um círculo com 7,90 m de raio (15,8 m de diâmetro) desenhado numa folha A4 com margens: qual escala foi usada? Faça a conta pela área útil da folha. <a href="#q-ifrn3">Resolva →</a></p></div>
+  </section>
+
+  <!-- 8 PROJEÇÕES -->
+  <section class="sec" id="projecoes">
+    <span class="lbl">Seção 8 · Sáb</span>
+    <h2>Projeções ortogonais e diedros</h2>
+    <p>Na <strong>projeção ortogonal</strong> (cilíndrica ortogonal), as projetantes são paralelas entre si e perpendiculares ao plano. As faces paralelas ao plano aparecem em <strong>verdadeira grandeza</strong>. Dois planos perpendiculares, um vertical e um horizontal, dividem o espaço em <strong>quatro diedros</strong>. O desenho técnico usa o <strong>1º</strong> e o <strong>3º</strong>.</p>
+    <div class="grid2">
+      <div class="card"><h4 style="margin-top:0">1º diedro</h4><p class="small muted" style="margin:0">Ordem: <strong>observador → objeto → plano</strong>. A vista é "empurrada" através da peça para o plano de trás. É o método europeu, <strong>adotado preferencialmente no Brasil</strong> pela ABNT.</p></div>
+      <div class="card"><h4 style="margin-top:0">3º diedro</h4><p class="small muted" style="margin:0">Ordem: <strong>observador → plano → objeto</strong>. O plano fica entre o olho e a peça, como uma caixa de vidro. É o método americano, usado nos EUA e no Canadá. A norma brasileira permite, desde que o símbolo esteja indicado.</p></div>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 760 330" role="img" aria-label="Disposição das seis vistas no primeiro e no terceiro diedro, com os símbolos de cada método">
+        <text x="200" y="22" text-anchor="middle" class="tb" font-size="14">1º DIEDRO (Brasil)</text>
+        <text x="580" y="22" text-anchor="middle" class="tb" font-size="14">3º DIEDRO (EUA)</text>
+        <line x1="390" y1="10" x2="390" y2="320" class="ln2" stroke-dasharray="4 4"/>
+        <g font-size="11.5" text-anchor="middle">
+          <!-- 1º diedro: F centro; I acima; S abaixo; LD à esquerda; LE à direita; P à direita de LE -->
+          <rect x="150" y="100" width="60" height="40" class="fms" stroke="var(--mag)" stroke-width="1.8"/><text x="180" y="124" class="tb">frontal</text>
+          <rect x="150" y="50" width="60" height="40" class="cell"/><text x="180" y="74">inferior</text>
+          <rect x="150" y="150" width="60" height="40" class="cell"/><text x="180" y="174" class="tb">superior</text>
+          <rect x="80" y="100" width="60" height="40" class="cell"/><text x="110" y="118">lateral</text><text x="110" y="132">direita</text>
+          <rect x="220" y="100" width="60" height="40" class="cell"/><text x="250" y="118" class="tb">lateral</text><text x="250" y="132" class="tb">esquerda</text>
+          <rect x="290" y="100" width="60" height="40" class="cell"/><text x="320" y="124">posterior</text>
+          <!-- 3º diedro -->
+          <rect x="540" y="100" width="60" height="40" class="fcs" stroke="var(--cyan)" stroke-width="1.8"/><text x="570" y="124" class="tb">frontal</text>
+          <rect x="540" y="50" width="60" height="40" class="cell"/><text x="570" y="74" class="tb">superior</text>
+          <rect x="540" y="150" width="60" height="40" class="cell"/><text x="570" y="174">inferior</text>
+          <rect x="470" y="100" width="60" height="40" class="cell"/><text x="500" y="118">lateral</text><text x="500" y="132">esquerda</text>
+          <rect x="610" y="100" width="60" height="40" class="cell"/><text x="640" y="118" class="tb">lateral</text><text x="640" y="132" class="tb">direita</text>
+          <rect x="680" y="100" width="60" height="40" class="cell"/><text x="710" y="124">posterior</text>
+        </g>
+        <text x="200" y="218" text-anchor="middle" font-size="11.5" class="t2">superior embaixo · lateral esquerda à direita</text>
+        <text x="580" y="218" text-anchor="middle" font-size="11.5" class="t2">superior em cima · lateral direita à direita</text>
+        <!-- símbolo 1º diedro: trapézio com lado menor longe dos círculos -->
+        <g transform="translate(130,240)">
+          <polygon points="0,20 50,6 50,54 0,40" fill="none" class="ln" stroke-width="2"/>
+          <line x1="-8" y1="30" x2="58" y2="30" class="ln2" stroke-dasharray="10 3 2 3"/>
+          <circle cx="100" cy="30" r="24" fill="none" class="ln" stroke-width="2"/><circle cx="100" cy="30" r="10" fill="none" class="ln" stroke-width="2"/>
+          <line x1="68" y1="30" x2="132" y2="30" class="ln2" stroke-dasharray="10 3 2 3"/><line x1="100" y1="-2" x2="100" y2="62" class="ln2" stroke-dasharray="10 3 2 3"/>
+        </g>
+        <text x="200" y="320" text-anchor="middle" font-size="11.5" class="t2">símbolo: lado menor do trapézio <tspan class="tb">longe</tspan> dos círculos</text>
+        <!-- símbolo 3º diedro: lado menor voltado para os círculos -->
+        <g transform="translate(510,240)">
+          <polygon points="0,6 50,20 50,40 0,54" fill="none" class="ln" stroke-width="2"/>
+          <line x1="-8" y1="30" x2="58" y2="30" class="ln2" stroke-dasharray="10 3 2 3"/>
+          <circle cx="100" cy="30" r="24" fill="none" class="ln" stroke-width="2"/><circle cx="100" cy="30" r="10" fill="none" class="ln" stroke-width="2"/>
+          <line x1="68" y1="30" x2="132" y2="30" class="ln2" stroke-dasharray="10 3 2 3"/><line x1="100" y1="-2" x2="100" y2="62" class="ln2" stroke-dasharray="10 3 2 3"/>
+        </g>
+        <text x="580" y="320" text-anchor="middle" font-size="11.5" class="t2">símbolo: lado menor do trapézio <tspan class="tb">voltado</tspan> para os círculos</text>
+      </svg>
+      <figcaption>A vista frontal fica no centro nos dois métodos. O que muda é o lado em que cada vista é desenhada. O símbolo do método vai na legenda.</figcaption>
+    </figure>
+    <div class="cx dec"><span class="k">Como lembrar</span><p>No <strong>1º diedro, tudo fica do lado oposto</strong>: o que se vê de cima vai para baixo, e o que se vê pela esquerda vai para a direita. No <strong>3º diedro, cada vista fica do lado de onde foi olhada</strong>, como uma caixa aberta. No símbolo, o tronco de cone e sua vista lateral seguem essa mesma lógica: no 1º diedro o lado menor do trapézio fica longe dos círculos, e no 3º fica voltado para eles.</p></div>
+  </section>
+
+  <!-- 9 VISTAS -->
+  <section class="sec" id="vistas">
+    <span class="lbl">Seção 9 · Sáb</span>
+    <h2>As vistas de uma peça</h2>
+    <figure class="fig">
+      <svg viewBox="0 0 760 330" role="img" aria-label="Peça em L em perspectiva e suas vistas frontal, superior e lateral esquerda no primeiro diedro">
+        <text x="160" y="22" text-anchor="middle" class="tb" font-size="13">A PEÇA</text>
+        <g transform="translate(10,40)" stroke-linejoin="round">
+          <polygon points="105,106 172.5,145 172.5,119 138.7,99.5 138.7,73.5 105,54" class="fms" stroke="var(--ink)" stroke-width="1.8"/>
+          <polygon points="172.5,145 217.6,119 217.6,93 172.5,119" class="soft" stroke="var(--ink)" stroke-width="1.8"/>
+          <polygon points="138.7,99.5 172.5,119 217.6,93 183.8,73.5" class="cell" stroke-width="1.8"/>
+          <polygon points="138.7,99.5 183.8,73.5 183.8,47.5 138.7,73.5" class="soft" stroke="var(--ink)" stroke-width="1.8"/>
+          <polygon points="105,54 138.7,73.5 183.8,47.5 150,28" class="cell" stroke-width="1.8"/>
+          <path d="M40 150 L 92 116" class="sm" stroke-width="2" marker-end="url(#dtarr)"/>
+          <text x="30" y="168" font-size="12" class="tb">frontal</text>
+          <text x="30" y="183" font-size="11" class="t2">(a face em L)</text>
+        </g>
+        <defs><marker id="dtarr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="fm"/></marker></defs>
+        <text x="520" y="22" text-anchor="middle" class="tb" font-size="13">AS VISTAS NO 1º DIEDRO</text>
+        <!-- linhas de chamada entre vistas -->
+        <g class="ln2" stroke-width=".8" stroke-dasharray="3 3">
+          <line x1="400" y1="140" x2="400" y2="180"/><line x1="460" y1="140" x2="460" y2="180"/><line x1="520" y1="140" x2="520" y2="180"/>
+          <line x1="520" y1="60" x2="570" y2="60"/><line x1="520" y1="100" x2="570" y2="100"/>
+        </g>
+        <!-- frontal -->
+        <polygon points="400,140 520,140 520,100 460,100 460,60 400,60" fill="none" class="ln" stroke-width="2.6"/>
+        <text x="460" y="158" text-anchor="middle" font-size="11.5" class="t2">frontal</text>
+        <!-- superior (abaixo) -->
+        <rect x="400" y="180" width="120" height="80" fill="none" class="ln" stroke-width="2.6"/>
+        <line x1="460" y1="180" x2="460" y2="260" class="ln" stroke-width="2.6"/>
+        <text x="460" y="278" text-anchor="middle" font-size="11.5" class="t2">superior (embaixo)</text>
+        <!-- lateral esquerda (à direita) -->
+        <rect x="570" y="60" width="80" height="80" fill="none" class="ln" stroke-width="2.6"/>
+        <line x1="570" y1="100" x2="650" y2="100" class="ln" stroke-width="1.4" stroke-dasharray="7 4"/>
+        <text x="610" y="158" text-anchor="middle" font-size="11.5" class="t2">lateral esquerda (à direita)</text>
+        <text x="662" y="96" font-size="11" class="t2">aresta</text><text x="662" y="110" font-size="11" class="t2">oculta</text>
+        <text x="380" y="304" font-size="11.5" class="t2">A frontal e a superior têm a mesma largura;</text><text x="380" y="319" font-size="11.5" class="t2">a frontal e a lateral, a mesma altura.</text>
+      </svg>
+      <figcaption>Vista pela esquerda, o degrau baixo fica escondido atrás da parte alta. A aresta dele aparece como <strong>tracejada</strong>.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Escolha da vista frontal (principal):</strong> a que mostra <strong>mais detalhes da forma</strong>, com a peça na posição de uso, fabricação ou montagem, e com o menor número de arestas ocultas.</li>
+      <li><strong>Número de vistas:</strong> o <strong>mínimo necessário</strong> para definir a peça sem ambiguidade. Muitas peças se resolvem com duas ou três vistas: frontal, superior e lateral esquerda no 1º diedro.</li>
+      <li><strong>Alinhamento:</strong> as vistas ficam alinhadas entre si, sem nome, na posição que o método determina. Uma vista fora da posição deve ser identificada com letra e seta (vista A, por exemplo).</li>
+      <li><strong>Correspondência:</strong> frontal e superior compartilham a <strong>largura</strong>; frontal e lateral, a <strong>altura</strong>; superior e lateral, a <strong>profundidade</strong>.</li>
+    </ul>
+    <div class="cx lig"><span class="k">Para a semana 2</span><p>A perspectiva isométrica (eixos a 120° entre si; no desenho isométrico, as medidas são marcadas em verdadeira grandeza nos três eixos) e a cotagem ficam para o Desenho técnico II. Nesta semana basta saber ler e montar as vistas.</p></div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais</span>
+    <h2>O que já caiu, comentado</h2>
+    <p class="muted">As provas de Desenhista da UFPE (2015 e 2019) <strong>não tiveram</strong> questões de desenho técnico. As oito abaixo são de outros concursos públicos, com gabarito oficial: <strong>Prefeitura de Bauru-SP 2018</strong> (Técnico em Construção Civil/Infraestrutura – Desenhista Projetista, nível próximo ao da Gabi) e <strong>IFRN 2017</strong> (professor de Desenho Técnico, banca FUNCERN, nível mais alto). As questões com figura foram deixadas de fora. Transcrição com formatação ajustada. Tente responder antes de abrir.</p>
+
+    <div class="q" id="q-bauru9">
+      <div class="src"><span class="tag b">Bauru 2018</span><span>Desenhista Projetista · Edital 13/2018 · questão 9</span></div>
+      <p>Qual a norma que fixa as condições exigíveis para o dobramento de cópias de padrão de desenho técnico?</p>
+      <ol class="alt"><li data-l="A">NBR 8196.</li><li data-l="B">NBR 10067.</li><li data-l="C">NBR 12298.</li><li data-l="D">NBR 13142.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> As alternativas são uma aula de números: <strong>8196</strong> escalas, <strong>10067</strong> princípios de representação (vistas), <strong>12298</strong> hachuras e <strong>13142</strong> dobramento. Numa prova de 2026 a mesma pergunta pode trazer a <strong>NBR 16752</strong>, que hoje reúne folha, legenda, escalas e dobramento. Se ela aparecer junto da 13142, leia se o enunciado pede a norma vigente.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-bauru14">
+      <div class="src"><span class="tag b">Bauru 2018</span><span>Desenhista Projetista · Edital 13/2018 · questão 14</span></div>
+      <p>Em toda prancha de projeto é necessário identificação contendo, por exemplo, projetista, tipo de projeto, escala, folha, entre outras informações. Essas identificações são locadas na legenda da prancha. Onde fica localizada essa legenda?</p>
+      <ol class="alt">
+        <li data-l="A">Deve ficar no canto inferior direito nos formatos A0, A1, A2, A3, ou ao longo da largura da folha de desenho no formato A4.</li>
+        <li data-l="B">Deve ficar no canto inferior esquerdo nos formatos A0, A1, A2, A3, ou ao longo da largura da folha de desenho no formato A4.</li>
+        <li data-l="C">Deve ficar no canto superior esquerdo nos formatos A0, A1, A2, A3, ou ao longo da largura da folha de desenho no formato A4.</li>
+        <li data-l="D">Deve ficar onde se enquadrar melhor nos formatos A0, A1, A2, A3, ou lateral verticalmente da folha de desenho no formato A4.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: A.</span> Canto <strong>inferior direito</strong>, porque é a parte que fica visível quando a cópia é dobrada para A4. No A4, usado em pé, a legenda ocupa a largura da folha. A regra continua a mesma na NBR 16752.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-ifrn7">
+      <div class="src"><span class="tag">IFRN 2017</span><span>Professor de Desenho Técnico · FUNCERN · Edital 22/2016 · questão 7</span></div>
+      <p>Nas normas técnicas da ABNT aplicadas ao desenho técnico, a</p>
+      <ol class="alt">
+        <li data-l="A">dobradura de uma folha a reduz ao formato de papel A0.</li>
+        <li data-l="B">legenda tem largura diferente no formato de papel A2.</li>
+        <li data-l="C">caligrafia técnica utiliza-se de letras com serifa.</li>
+        <li data-l="D">cotagem e a legenda utilizam caligrafia técnica.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> A: a dobradura reduz ao <strong>A4</strong>, não ao A0. B: na norma da época a legenda media 178 mm no A2, <strong>igual</strong> ao A3 e ao A4; só o A1 e o A0 tinham 175 mm. C: a caligrafia técnica é <strong>sem serifa</strong>. D: correta, cotas e legenda são escritas em caligrafia técnica.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-ifrn17">
+      <div class="src"><span class="tag">IFRN 2017</span><span>Professor de Desenho Técnico · FUNCERN · Edital 22/2016 · questão 17</span></div>
+      <p>Segundo as normas técnicas da ABNT, devem constar na Legenda das folhas de Desenho Técnico,</p>
+      <ol class="alt">
+        <li data-l="A">autoria do desenho e do projeto, identificação do cliente e escalas gráficas.</li>
+        <li data-l="B">identificação do cliente, nome do projeto ou do empreendimento e planta-chave.</li>
+        <li data-l="C">descrição da revisão, data, título do desenho, escalas e convenções gráficas.</li>
+        <li data-l="D">título do desenho, escalas, indicação de revisão e indicação sequencial do projeto.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> Título, escala, revisão e número do desenho ("indicação sequencial") são itens de legenda. As outras alternativas misturam itens que não ficam na legenda: a <strong>planta-chave</strong> e as <strong>convenções gráficas</strong> vão no espaço de informações complementares, e "escala gráfica" é a régua desenhada na folha, não a escala indicada na legenda.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-bauru6">
+      <div class="src"><span class="tag b">Bauru 2018</span><span>Desenhista Projetista · Edital 13/2018 · questão 6</span></div>
+      <p>O que é escala?</p>
+      <ol class="alt">
+        <li data-l="A">É uma relação que se estabelece entre as dimensões de uma edificação sem necessidade de ser em verdadeira grandeza e aquelas que ele possui em um desenho.</li>
+        <li data-l="B">Não é uma relação que se estabelece entre as dimensões de um objeto em verdadeira grandeza e aquelas que ele possui em um desenho.</li>
+        <li data-l="C">É uma relação que se estabelece entre as dimensões de um objeto em verdadeira grandeza e aquelas que ele possui em um desenho sem referência em relação a verdadeira grandeza.</li>
+        <li data-l="D">É uma relação que se estabelece entre as dimensões de um objeto em verdadeira grandeza e aquelas que ele possui em um desenho.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> Questão de leitura atenta: A, B e C são a definição correta com um trecho que a estraga ("sem necessidade de ser em verdadeira grandeza", "não é", "sem referência"). É o tipo de alternativa que se elimina procurando a palavra que não pertence.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-ifrn3">
+      <div class="src"><span class="tag">IFRN 2017</span><span>Professor de Desenho Técnico · FUNCERN · Edital 22/2016 · questão 3</span></div>
+      <p>A planta baixa de uma edificação de formato circular, com raio externo medindo 7 metros e 90 centímetros, foi desenhada numa folha A4 que já continha margem conforme as normas da ABNT. A escala utilizada para esse desenho foi</p>
+      <ol class="alt"><li data-l="A">1:25.</li><li data-l="B">1:50.</li><li data-l="C">1:75.</li><li data-l="D">1:100.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> O diâmetro é 15,8 m = 15.800 mm. A área útil do A4 é de cerca de <strong>178 × 277 mm</strong> pela norma antiga (margens de 25 e 7 mm) ou <strong>180 × 277 mm</strong> pela atual (20 e 10 mm).</p>
+        <ul class="items">
+          <li>1:25 → 632 mm: não cabe.</li>
+          <li>1:50 → 316 mm: não cabe.</li>
+          <li>1:75 → cerca de 211 mm: não cabe em 178 ou 180 mm, e 1:75 nem é escala recomendada.</li>
+          <li><strong>1:100 → 158 mm: cabe</strong>, e é a única.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="q" id="q-ifrn10">
+      <div class="src"><span class="tag">IFRN 2017</span><span>Professor de Desenho Técnico · FUNCERN · Edital 22/2016 · questão 10</span></div>
+      <p>No desenho técnico, a cotagem expressa as dimensões do objeto representado. Caso haja divergência entre a medida desenhada e a do objeto, prevalecerá a</p>
+      <ol class="alt"><li data-l="A">do objeto desde que a cota esteja sublinhada.</li><li data-l="B">desenhada desde que a cota esteja inclinada.</li><li data-l="C">do objeto desde que a cota esteja inclinada.</li><li data-l="D">desenhada desde que a cota esteja sublinhada.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: A.</span> A cota informa sempre a medida real. Quando o desenho não está em escala naquele ponto, a cota é <strong>sublinhada</strong> e vale a medida do objeto, que é a escrita. Cotagem é assunto da semana 2, mas o princípio "a cota é sempre verdadeira grandeza" já vale para a questão de escala.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-bauru15">
+      <div class="src"><span class="tag c">Bauru 2018</span><span>Desenhista Projetista · Edital 13/2018 · questão 15 · ANULADA</span></div>
+      <p>A NBR 8403 (ABNT, 1984) fixa tipos e o escalonamento de larguras de linhas para uso em desenhos técnicos e documentos semelhantes. Linha com traço e ponto estreita representa:</p>
+      <ol class="alt"><li data-l="A">Plano de detalhamento.</li><li data-l="B">Planos de corte.</li><li data-l="C">Projeção de verga e contra verga.</li><li data-l="D">Projeção de telhado.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito preliminar B, questão anulada após recurso</span> (republicação do gabarito). Pela NBR 8403, a traço e ponto <strong>estreita</strong> (tipo G) serve para <strong>linhas de centro, simetria e trajetórias</strong>, e nenhuma alternativa dizia isso. O plano de corte usa a traço e ponto estreita <strong>larga nas extremidades e nas mudanças de direção</strong> (tipo H). A lição: numa questão de linhas, <strong>cada palavra do nome da linha importa</strong>.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · Sáb · 45 min</span>
+    <h2>16 questões no estilo da banca</h2>
+    <p class="muted">Questões autorais, nos formatos que a UFPE usa. Marque tudo e só depois corrija. A última nota fica salva neste navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · Dom</span>
+    <h2>32 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar. Depois de ver a resposta, marque <strong>sei</strong> ou <strong>revisar</strong>. O botão de exportar gera um CSV (frente;verso) pronto para importar no Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Fontes.</strong> ABNT NBR 16752:2020 (folhas de desenho), NBR 16861:2020 (linhas e escrita), NBR 17006:2021 (métodos de projeção), NBR 17067:2022 e NBR 17068:2022, e as normas que elas substituíram: NBR 10068, 10582, 8403, 8402, 10067, 8196 e 13142:1999 (texto consultado). Correspondência entre normas antigas e novas: Boufleur, <em>Normas ABNT/NBR de Desenho Técnico: atualização 2020-22</em>, Departamento de Design da UFRN. Margens e legenda da NBR 16752: resumos técnicos da norma. Simbologia dos diedros: ISO 128 e ISO 5456-2.</p>
+    <p><strong>Questões reais:</strong> Prefeitura de Bauru-SP, Edital 13/2018, com gabarito republicado após recursos; IFRN, Edital 22/2016 (FUNCERN, 2017), gabarito final de 11/10/2017. O mapa de temas vem das provas oficiais de Desenhista de Artes Gráficas da UFPE 2015 e 2019. Os pesos são estimativa. O simulado e os cartões são autorais.</p>
+    <p><a href="../index.html#gabi">← Voltar ao plano</a> · Próxima página: Desenho técnico II (perspectiva isométrica, cotagem e normas técnicas gráficas), semana 2.</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:gabi:dt1';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Sobre os formatos de papel da série A, analise as proposições.<br>1) O formato A0 tem área de 1 m².<br>2) A razão entre os lados de qualquer formato da série é 1 : √2.<br>3) O formato A3 mede 297 mm × 420 mm.<br>4) Cada formato tem o dobro da área do formato de número imediatamente superior (o A1 tem o dobro da área do A2).<br>5) O formato A4 mede 210 mm × 280 mm.<br>Estão corretas, apenas:',
+     o:['1, 2 e 3.','1, 2, 3 e 4.','2, 3 e 5.','1, 3, 4 e 5.','1 e 4.'],a:1,
+     w:'Só o item 5 é falso: o A4 mede 210 × <strong>297</strong> mm. O item 4 é verdadeiro, porque o A2 é o A1 cortado ao meio.'},
+    {t:'Pela ABNT NBR 16752:2020, as margens da folha de desenho, para todos os formatos da série A, são de:',
+     o:['25 mm à esquerda e 7 mm nas demais.','20 mm à esquerda e 10 mm nas demais.','10 mm em todos os lados.','25 mm à esquerda e 10 mm nas demais.','20 mm em todos os lados.'],a:1,
+     w:'20 mm à esquerda, para perfurar e arquivar, e 10 mm nas outras três. A alternativa A é a regra antiga (NBR 10068) para A2, A3 e A4.'},
+    {t:'A legenda das folhas de desenho técnico deve ser posicionada:',
+     o:['no canto superior direito, para facilitar a consulta com a folha pendurada.','no canto inferior esquerdo, junto à margem de arquivamento.','no canto inferior direito, ficando visível após o dobramento da cópia.','no centro da margem inferior, em qualquer formato.','em qualquer posição, desde que dentro do quadro.'],a:2,
+     w:'Canto inferior direito, dentro do quadro. É essa posição que permite que a legenda fique à vista quando a cópia é dobrada para A4.'},
+    {t:'Quanto ao dobramento de cópias de desenho técnico, é correto afirmar, EXCETO:',
+     o:['O formato final das cópias em A0, A1, A2 e A3 deve ser o A4.','As cópias devem ser dobradas de modo a deixar visível a legenda.','O dobramento deve ser feito a partir do lado direito, em dobras verticais.','Quando cópias em A0, A1 e A2 forem perfuradas para arquivamento, dobra-se para trás o canto superior esquerdo.','O dobramento deve começar pelo lado esquerdo, com a legenda voltada para dentro, para protegê-la.'],a:4,
+     w:'Começa pelo lado <strong>direito</strong>, e a legenda fica <strong>visível</strong>, não protegida por dentro.'},
+    {t:'Relacione os tipos de linha (NBR 8403) aos seus usos.<br>1. Contínua larga &nbsp; 2. Tracejada estreita &nbsp; 3. Traço e ponto estreita &nbsp; 4. Traço e ponto estreita, larga nas extremidades<br>( ) Arestas não visíveis.<br>( ) Planos de corte.<br>( ) Arestas e contornos visíveis.<br>( ) Linhas de centro e de simetria.<br>A sequência correta é:',
+     o:['2, 4, 1, 3.','2, 3, 1, 4.','3, 4, 1, 2.','1, 4, 2, 3.','4, 2, 1, 3.'],a:0,
+     w:'Tracejada: aresta oculta (2). Traço e ponto com as pontas largas: plano de corte (4). Contínua larga: aresta visível (1). Traço e ponto estreita: centro e simetria (3).'},
+    {t:'A linha traço e dois pontos estreita é empregada para representar:',
+     o:['arestas visíveis de peças em corte.','hachuras de seções.','contornos de peças adjacentes e posições-limite de peças móveis.','limites de vistas parciais, feitos à mão livre.','linhas de cota e de chamada.'],a:2,
+     w:'A traço e dois pontos (tipo K) mostra o que não é a peça desenhada: a vizinha, a posição extrema de uma parte móvel, o centro de gravidade.'},
+    {t:'Em uma vista, uma aresta não visível coincide exatamente com uma linha de centro. De acordo com a ordem de prioridade das linhas, deve-se desenhar:',
+     o:['a linha de centro, por ser mais importante para a fabricação.','as duas linhas sobrepostas, com larguras diferentes.','a aresta não visível, com linha tracejada.','nenhuma das duas, indicando a coincidência com nota.','a linha de cota correspondente.'],a:2,
+     w:'Ordem: aresta visível, aresta oculta, plano de corte, linha de centro, centro de gravidade, cota e auxiliares. A aresta oculta vem antes da linha de centro.'},
+    {t:'Sobre as larguras de linha em desenho técnico, analise as proposições.<br>1) As larguras seguem uma série em que cada valor é aproximadamente o anterior multiplicado por √2.<br>2) Valores da série incluem 0,25 mm, 0,35 mm, 0,50 mm e 0,70 mm.<br>3) Pela NBR 8403, a relação entre as larguras de linha larga e estreita não deve ser inferior a 2.<br>4) Um mesmo tipo de linha pode ter larguras diferentes em vistas diferentes de um mesmo desenho, na mesma escala.<br>Estão corretas, apenas:',
+     o:['1 e 2.','1, 2 e 3.','2, 3 e 4.','1, 3 e 4.','3 e 4.'],a:1,
+     w:'O item 4 é falso: na mesma escala, cada tipo de linha mantém a mesma largura em todas as vistas.'},
+    {t:'Uma peça com 150 mm de comprimento foi representada, em desenho, com 30 mm. A escala utilizada foi:',
+     o:['1:2.','1:5.','5:1.','1:50.','1:15.'],a:1,
+     w:'E = desenho ÷ real = 30 ÷ 150 = 1/5, então 1:5. É redução, porque o desenho é menor que a peça.'},
+    {t:'Em uma planta na escala 1:50, uma parede de 4,5 m de comprimento será representada com:',
+     o:['4,5 mm.','9 mm.','45 mm.','90 mm.','225 mm.'],a:3,
+     w:'4,5 m = 4500 mm; 4500 ÷ 50 = 90 mm.'},
+    {t:'Sobre escalas em desenho técnico, é correto afirmar:',
+     o:['Na escala 2:1, o desenho é a metade do tamanho real do objeto.','As cotas devem ser escritas com o valor medido no desenho, e não com a medida real.','A escala 1:75 faz parte da série de escalas de redução recomendadas pela norma de desenho técnico.','Quando há mais de uma escala na folha, a principal é indicada na legenda e as demais junto das vistas a que se referem.','A escala gráfica deixa de valer quando o desenho é ampliado ou reduzido em cópia.'],a:3,
+     w:'A: 2:1 é ampliação (dobro). B: a cota é sempre a medida real. C: a série usa 1, 2 e 5 vezes potências de 10. E: é o contrário, a escala gráfica acompanha a ampliação ou a redução da cópia.'},
+    {t:'Sobre os métodos de projeção ortogonal, analise as proposições.<br>1) No 1º diedro, a ordem é observador, objeto e plano de projeção.<br>2) No 3º diedro, o plano de projeção fica entre o observador e o objeto.<br>3) A ABNT adota preferencialmente o 1º diedro.<br>4) O método utilizado deve ser indicado pelo seu símbolo, na legenda.<br>5) No 3º diedro, a vista superior é desenhada abaixo da vista frontal.<br>Estão corretas, apenas:',
+     o:['1, 2 e 3.','1, 2, 3 e 4.','2, 3 e 5.','1, 4 e 5.','3, 4 e 5.'],a:1,
+     w:'O item 5 é falso: no 3º diedro a vista superior fica <strong>acima</strong> da frontal. Ela fica abaixo no 1º diedro.'},
+    {t:'Em um desenho no 1º diedro, com a vista frontal ao centro, é correto afirmar que:',
+     o:['a vista superior fica acima da vista frontal.','a vista lateral esquerda fica à direita da vista frontal.','a vista lateral direita fica à direita da vista frontal.','a vista inferior fica abaixo da vista frontal.','a vista posterior fica sempre abaixo da vista superior.'],a:1,
+     w:'No 1º diedro tudo vai para o lado oposto de onde se olhou: a vista pela esquerda é desenhada à direita, e a de cima, embaixo.'},
+    {t:'No símbolo que indica o método de projeção, formado por um tronco de cone e sua vista lateral (duas circunferências concêntricas), o 1º diedro se reconhece porque:',
+     o:['as circunferências são tracejadas.','o lado menor do trapézio fica voltado para as circunferências.','o lado menor do trapézio fica afastado das circunferências.','o trapézio é desenhado acima das circunferências.','o símbolo traz o número 1 no centro das circunferências.'],a:2,
+     w:'No 1º diedro, o lado menor do trapézio fica longe dos círculos. No 3º, fica voltado para eles.'},
+    {t:'Relacione as normas vigentes aos seus assuntos.<br>1. NBR 16752 &nbsp; 2. NBR 16861 &nbsp; 3. NBR 17006 &nbsp; 4. NBR 17068<br>( ) Métodos de projeção.<br>( ) Dimensões e tolerâncias (cotas).<br>( ) Folhas de desenho: formatos, margens, legenda, dobramento e escalas.<br>( ) Linhas e escrita.<br>A sequência correta é:',
+     o:['3, 4, 1, 2.','1, 2, 3, 4.','3, 1, 4, 2.','4, 3, 1, 2.','2, 4, 1, 3.'],a:0,
+     w:'17006 projeções (3); 17068 cotas (4); 16752 folhas (1); 16861 linhas e escrita (2).'},
+    {t:'São características da caligrafia técnica, EXCETO:',
+     o:['letras e algarismos legíveis e uniformes, que permitam reprodução.','alturas padronizadas como 2,5; 3,5; 5; 7 e 10 mm.','possibilidade de escrita vertical ou inclinada a 15° para a direita.','uso de letras com serifa, para facilitar a leitura em cópias.','largura do traço proporcional à altura da letra.'],a:3,
+     w:'A caligrafia técnica é <strong>sem serifa</strong>, com traço de largura constante.'}
+  ];
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var F=[
+    ['Norma vigente de folhas de desenho (formatos, margens, legenda, dobramento, escalas)','NBR 16752:2020. Substituiu a 10068 e a 10582.'],
+    ['Norma vigente de linhas e escrita','NBR 16861:2020. Substituiu a 8403 (linhas) e a 8402 (caligrafia).'],
+    ['Norma vigente de métodos de projeção (vistas)','NBR 17006:2021. Substituiu a 10067.'],
+    ['Norma vigente de cotas (dimensões e tolerâncias)','NBR 17068:2022. Substituiu a 10126.'],
+    ['Norma vigente de cortes e seções (representações ortográficas)','NBR 17067:2022. Substituiu a 12298 (hachuras).'],
+    ['Norma antiga de dobramento de cópias','NBR 13142:1999.'],
+    ['Norma antiga de escalas','NBR 8196.'],
+    ['Área do A0 e razão entre os lados da série A','1 m²; lados na razão 1 : √2.'],
+    ['Dimensões do A4, A3, A2, A1 e A0 (mm)','A4 210×297 · A3 297×420 · A2 420×594 · A1 594×841 · A0 841×1189.'],
+    ['Quantas folhas A4 cabem num A0?','16.'],
+    ['Margens pela NBR 16752','20 mm à esquerda e 10 mm nas demais, em todos os formatos.'],
+    ['Margens pela antiga NBR 10068','25 mm à esquerda; demais 10 mm (A0 e A1) e 7 mm (A2, A3 e A4).'],
+    ['Largura da legenda: norma vigente e antiga','Vigente: 180 mm em todos. Antiga: 178 mm (A4, A3, A2) e 175 mm (A1, A0).'],
+    ['Posição da legenda','Canto inferior direito, dentro do quadro. No A4, ao longo da largura.'],
+    ['Itens típicos da legenda','Instituição, título, número do desenho, escala, data, responsáveis, revisão, unidade e símbolo do diedro.'],
+    ['Regras do dobramento','Final em A4; legenda visível; começa pela direita em dobras verticais; canto superior esquerdo para trás se for perfurar (A0, A1, A2).'],
+    ['Contínua larga: uso','Contornos e arestas visíveis.'],
+    ['Contínua estreita: usos','Cotas, linhas auxiliares e de chamada, hachuras, interseções imaginárias, linhas de centro curtas.'],
+    ['Tracejada: uso','Contornos e arestas não visíveis.'],
+    ['Traço e ponto estreita: uso','Linhas de centro, de simetria e trajetórias.'],
+    ['Traço e ponto estreita, larga nas extremidades: uso','Planos de corte.'],
+    ['Traço e dois pontos estreita: uso','Peças adjacentes, posição-limite de peças móveis, centro de gravidade.'],
+    ['Contínua estreita à mão livre ou em ziguezague: uso','Limites de vistas ou cortes parciais (ruptura).'],
+    ['Série de larguras de linha (mm)','0,13 · 0,18 · 0,25 · 0,35 · 0,50 · 0,70 · 1,00 · 1,40 · 2,00 (razão √2).'],
+    ['Prioridade de linhas coincidentes','Aresta visível > aresta oculta > plano de corte > linha de centro > centro de gravidade > cota e auxiliares.'],
+    ['Caligrafia técnica: alturas e inclinação','2,5 · 3,5 · 5 · 7 · 10 · 14 · 20 mm; vertical ou inclinada 15° para a direita; sem serifa.'],
+    ['Escalas de redução recomendadas','1:2, 1:5, 1:10, 1:20, 1:50, 1:100, 1:200, 1:500, 1:1000…'],
+    ['Escalas de ampliação recomendadas','2:1, 5:1, 10:1, 20:1, 50:1.'],
+    ['Cota fora de escala','É sublinhada; vale a medida escrita (a real).'],
+    ['1º diedro: ordem dos elementos e posição das vistas','Observador → objeto → plano. Superior embaixo da frontal; lateral esquerda à direita.'],
+    ['3º diedro: ordem dos elementos e posição das vistas','Observador → plano → objeto. Superior em cima; lateral direita à direita.'],
+    ['Símbolo: como distinguir 1º de 3º diedro','1º: lado menor do trapézio longe dos círculos. 3º: lado menor voltado para os círculos.']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 desenho-tecnico-1'];}),'ufpe2027-desenho-tecnico-1.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 desenho-tecnico-1'];});
+    dl(rows,'ufpe2027-desenho-tecnico-1-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var C=[
+    'Dizer a norma vigente e a antiga de: folha, linhas, escrita, vistas, cotas, dobramento e escalas.',
+    'Escrever as dimensões de A4 a A0 partindo só do A4.',
+    'Explicar por que a série A tem razão 1 : √2 e área do A0 de 1 m².',
+    'Dar as margens da NBR 16752 e da NBR 10068.',
+    'Dizer onde fica a legenda, a largura dela e o que ela contém.',
+    'Descrever as quatro regras do dobramento para A4.',
+    'Associar cada tipo de linha (A a K) ao seu uso, sem consultar.',
+    'Aplicar a ordem de prioridade de linhas coincidentes.',
+    'Citar a série de larguras de linha e as alturas da caligrafia técnica.',
+    'Fazer as três contas de escala (desenho, real e escala).',
+    'Montar as seis vistas no 1º e no 3º diedro e reconhecer o símbolo de cada um.',
+    'Desenhar as três vistas de uma peça simples, com aresta oculta tracejada.'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>
