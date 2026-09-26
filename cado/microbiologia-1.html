@@ -166,6 +166,8 @@ svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var
 footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
 a{color:var(--cyan)}
 @media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+
+@media (max-width:640px){figure.fig{overflow-x:auto;-webkit-overflow-scrolling:touch}figure.fig svg{min-width:620px}figure.fig figcaption{position:sticky;left:0}}
 </style>
 </head>
 <body>
