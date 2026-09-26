@@ -128,6 +128,9 @@ p{margin:0 0 10px}
 .item label{cursor:pointer}
 .item .who{font-size:11px;color:var(--ink3);display:block}
 .item.checked label{color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--rule)}
+a.study{display:inline-block;margin-top:6px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--mag);text-decoration:none;border:1px solid var(--mag);border-radius:99px;padding:3px 10px}
+a.study:hover{background:var(--mag);color:#fff}
+.item.checked a.study{opacity:.6}
 .badge-now{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--mag);color:#fff;padding:2px 8px;border-radius:99px}
 
 .cta{display:flex;flex-direction:column;text-decoration:none;color:inherit}
@@ -449,7 +452,7 @@ a.pick .go{margin-top:auto;padding-top:12px;font-family:"Helvetica Neue",Helveti
       {w:'ambos',c:'leg',x:'Descobrir o caminho do registro exigido na posse (conselho para Biólogo, MTE/Radialista para Desenhista).'}
     ]},
     {k:'w1',n:'Sem. 1',a:'2026-10-05',t:'Início da primeira passada',items:[
-      {w:'cado',c:'esp',x:'<strong>Microbiologia I</strong>: bactérias (morfologia, fisiologia, genética, taxonomia).'},
+      {w:'cado',c:'esp',h:'cado/microbiologia-1.html',x:'<strong>Microbiologia I</strong>: bactérias (morfologia, fisiologia, genética, taxonomia).'},
       {w:'gabi',c:'esp',x:'<strong>Desenho técnico I</strong>: normas ABNT (formatos, linhas, escalas, legenda, dobramento), projeções ortogonais e vistas.'},
       {w:'ambos',c:'port',x:'Esfera <strong>pública/oficial</strong>: estrutura normativa (caput, artigo, inciso), impessoalização, coesão referencial.'},
       {w:'ambos',c:'leg',x:'<strong>CF/88, arts. 37 a 41</strong>.'},
@@ -568,7 +571,8 @@ a.pick .go{margin-top:auto;padding-top:12px;font-family:"Helvetica Neue",Helveti
         var j=w.items.indexOf(it), id=p+':'+w.k+'-'+j, tg=TAG[it.c];
         var tagHtml = NOTAG[w.k] ? '' : '<span class="tag '+tg[0]+'">'+tg[1]+'</span>';
         var who = it.w==='ambos' ? '<span class="who">👫 '+OTHER[p]+'</span>' : '';
-        h+='<div class="item"><input type="checkbox" id="'+id+'"'+(state.checks[id]?' checked':'')+'><span>'+tagHtml+'</span><label for="'+id+'">'+who+it.x+'</label></div>';
+        var study = it.h ? '<a class="study" href="'+it.h+'">📖 Abrir a página de estudo →</a>' : '';
+        h+='<div class="item"><input type="checkbox" id="'+id+'"'+(state.checks[id]?' checked':'')+'><span>'+tagHtml+'</span><div><label for="'+id+'">'+who+it.x+'</label>'+study+'</div></div>';
       });
       h+='</div>'; det.innerHTML=h; box.appendChild(det);
     });

@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Microbiologia I para o concurso de Biólogo da UFPE 2027: bactérias (morfologia, fisiologia, genética e taxonomia), com questões reais comentadas, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦠</text></svg>">
+<title>Microbiologia I · Bactérias</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro da semana</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#celula">1 · A célula procariótica</a>
+  <a href="#morfo">2 · Formas e arranjos</a>
+  <a href="#envelope">3 · Parede e envelope</a>
+  <a href="#coloracao">4 · Colorações</a>
+  <a href="#estruturas">5 · Estruturas externas e internas</a>
+  <a href="#fisio">6 · Nutrição e metabolismo</a>
+  <a href="#crescimento">7 · Crescimento e cultivo</a>
+  <a href="#genetica">8 · Genética bacteriana</a>
+  <a href="#taxonomia">9 · Taxonomia e identificação</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <a class="back" href="../index.html#cado">← Plano do Cado</a>
+  <div class="eyebrow">Biólogo · Conhecimentos Específicos · Microbiologia · Semana 1</div>
+  <h1>Microbiologia I<br><em>bactérias</em></h1>
+  <p class="dek">Morfologia, fisiologia, genética e taxonomia de bactérias. É a base de todo o bloco de microbiologia, que deve render de 6 a 8 das 45 questões específicas, e reaparece em biossegurança, vigilância, saneamento e biologia molecular.</p>
+  <div class="meta"><span class="hot">semana 05/10 → 11/10</span><span>~5h30 de estudo</span><span>6 questões reais</span><span>16 no simulado</span><span>40 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#comocai">Como cai</a><a href="#celula">Célula</a><a href="#morfo">Formas</a><a href="#envelope">Parede</a><a href="#coloracao">Colorações</a><a href="#estruturas">Estruturas</a><a href="#fisio">Metabolismo</a><a href="#crescimento">Crescimento</a><a href="#genetica">Genética</a><a href="#taxonomia">Taxonomia</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro da semana</span>
+    <h2>Esta página, sessão por sessão</h2>
+    <p class="muted">O edital pede <em>"Microbiologia: morfologia, fisiologia, genética e taxonomia de bactérias, fungos, vírus e parasitos"</em>. Esta semana cobre só as bactérias. Fungos, vírus, parasitos e patogenicidade ficam para a Microbiologia II.</p>
+    <div class="plan">
+      <div class="row"><div class="d"><b>Seg 05/10</b>1h30</div><div>Seções <a href="#celula">1</a>, <a href="#morfo">2</a> e <a href="#envelope">3</a>: a célula, as formas e a parede. Desenhe de memória o esquema Gram+ × Gram− no fim da sessão.</div></div>
+      <div class="row"><div class="d"><b>Ter 06/10</b>1h</div><div>Seções <a href="#coloracao">4</a> e <a href="#estruturas">5</a>: colorações e estruturas. Faça a questão real do HC-UFPE 2014 sobre coloração.</div></div>
+      <div class="row"><div class="d"><b>Qui 08/10</b>1h30</div><div>Seções <a href="#fisio">6</a> e <a href="#crescimento">7</a>: metabolismo, oxigênio, temperatura, curva de crescimento e meios de cultura.</div></div>
+      <div class="row"><div class="d"><b>Sáb 10/10</b>1h30</div><div>Seções <a href="#genetica">8</a> e <a href="#taxonomia">9</a> (45 min) e depois o <a href="#simulado">simulado</a> de 16 questões (45 min). O que errar vai pro caderno de erros.</div></div>
+      <div class="row"><div class="d"><b>Dom 11/10</b>revisão</div><div><a href="#cartoes">Flashcards</a>: exporte os que não souber para o Anki e marque o <a href="#dominio">checklist</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>O que as provas anteriores mostram</h2>
+    <p>Foram lidas as quatro provas de Biólogo disponíveis da própria universidade: <strong>UFPE 2008</strong>, <strong>UFPE 2016</strong> (Recife e Vitória, edital 84/2016) e <strong>HC-UFPE 2014</strong> (EBSERH, banca IDECAN). Duas conclusões:</p>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">1. Cada prova seguiu o edital da época</h4>
+        <p class="small muted" style="margin:0">2016 foi coleções biológicas, biossegurança, citogenética, radioproteção e legislação de biodiversidade. 2008 foi parasitologia, zoonoses e ecologia. <strong>O edital de 2026 é outro</strong>, com foco em saúde e laboratório. As provas antigas servem mais para mostrar <strong>o estilo</strong> da banca do que para prever o conteúdo.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">2. Bactéria aparece aplicada</h4>
+        <p class="small muted" style="margin:0">Nenhuma questão pediu "defina peptidoglicano". Caíram <strong>técnica de coloração</strong> (HC 2014), <strong>efeito da temperatura no crescimento</strong> (2008), <strong>antibiograma</strong> (2008), <strong>doenças bacterianas ligadas a saneamento</strong> (2008), <strong>procedimentos que geram aerossol na bancada</strong> e <strong>classes de risco</strong> (2016).</p>
+      </div>
+    </div>
+    <h3>O estilo das questões</h3>
+    <ul>
+      <li><strong>Enunciado longo e contextualizado</strong>, com um parágrafo de teoria antes da pergunta. Muitas vezes a resposta começa no próprio enunciado.</li>
+      <li><strong>"Analise as proposições 1 a 5 · Estão corretas, apenas:"</strong> é o formato mais frequente nas provas da UFPE. Um item falso elimina várias alternativas: comece pelo item de que você tem mais certeza.</li>
+      <li><strong>"Relacione as colunas"</strong> e <strong>"marque a alternativa incorreta / EXCETO"</strong>. Atenção redobrada à negativa.</li>
+      <li>Alternativas com <strong>troca de pares</strong>: o termo certo com a definição do vizinho (ex.: coloração negativa descrita como a que identifica micobactérias).</li>
+    </ul>
+    <div class="cx cai"><span class="k">Onde estão os pontos · estimativa</span>
+      <p>Para o bloco de bactérias, os temas com maior chance, em ordem: <strong>parede Gram+ × Gram− e coloração de Gram</strong>; <strong>endósporo</strong>; <strong>relação com o oxigênio e com a temperatura</strong>; <strong>curva de crescimento</strong>; <strong>transformação, transdução e conjugação</strong>; <strong>meios seletivos e diferenciais</strong>; <strong>mecanismos de resistência e antibiograma</strong>; <strong>três domínios e Archaea</strong>. É a combinação do que caiu na UFPE com o que é recorrente em provas de biólogo de outras bancas. O edital não distribui as questões por tópico.</p>
+    </div>
+  </section>
+
+  <!-- 1 CÉLULA -->
+  <section class="sec" id="celula">
+    <span class="lbl">Seção 1 · Seg</span>
+    <h2>A célula procariótica</h2>
+    <p>Bactérias e arqueias são <strong>procariotos</strong>: o DNA fica num <strong>nucleoide</strong>, sem envoltório nuclear, e não há organelas delimitadas por membrana. A maioria mede de 0,5 a 5 µm. O tamanho pequeno dá uma relação superfície/volume alta, que permite trocas rápidas com o meio e crescimento rápido.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Característica</th><th>Procarioto (bactéria)</th><th>Eucarioto</th></tr></thead>
+      <tbody>
+        <tr><td>Material genético</td><td>Nucleoide; em geral 1 cromossomo circular; sem histonas verdadeiras</td><td>Núcleo com envoltório; vários cromossomos lineares; histonas</td></tr>
+        <tr><td>Ribossomos</td><td><strong>70S</strong> (50S + 30S); rRNA 16S na subunidade menor</td><td><strong>80S</strong> (60S + 40S) no citoplasma; 70S em mitocôndrias e cloroplastos</td></tr>
+        <tr><td>Organelas membranosas</td><td>Ausentes</td><td>Mitocôndria, RE, Golgi, lisossomos…</td></tr>
+        <tr><td>Parede celular</td><td>Quase sempre com <strong>peptidoglicano</strong> (exceto micoplasmas)</td><td>Celulose (plantas), quitina (fungos) ou ausente (animais)</td></tr>
+        <tr><td>Membrana</td><td>Sem esteróis (exceto micoplasmas); é o local da respiração e da fotossíntese</td><td>Com esteróis (colesterol, ergosterol)</td></tr>
+        <tr><td>Divisão</td><td><strong>Fissão binária</strong>, sem mitose</td><td>Mitose e meiose</td></tr>
+        <tr><td>Flagelo</td><td>Filamento de flagelina que <strong>gira</strong> (motor rotatório)</td><td>Microtúbulos 9+2 que <strong>batem</strong></td></tr>
+        <tr><td>Transcrição e tradução</td><td><strong>Acopladas</strong> no citoplasma; mRNA frequentemente policistrônico (operons)</td><td>Separadas (núcleo e citoplasma); mRNA monocistrônico e processado</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Decoreba</span><p>70S = 50S + 30S. Unidades Svedberg medem velocidade de sedimentação e <strong>não se somam</strong>. É uma pegadinha clássica. Os antibióticos que agem no ribossomo 70S são seletivos por isso: aminoglicosídeos e tetraciclinas atuam na 30S; macrolídeos, cloranfenicol e lincosamidas, na 50S.</p></div>
+    <div class="cx lig"><span class="k">Ligação</span><p>A semelhança entre ribossomos bacterianos e mitocondriais (70S) é um dos argumentos da <strong>teoria endossimbiótica</strong>, e também explica parte da toxicidade de alguns antibióticos.</p></div>
+  </section>
+
+  <!-- 2 MORFOLOGIA -->
+  <section class="sec" id="morfo">
+    <span class="lbl">Seção 2 · Seg</span>
+    <h2>Formas e arranjos</h2>
+    <p>A forma é determinada pela parede. O <strong>arranjo</strong> depende do plano de divisão e de as células-filhas ficarem ou não unidas.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 330" role="img" aria-label="Formas bacterianas: cocos e seus arranjos, bacilos e seus arranjos, e formas espiraladas">
+        <text x="10" y="22" class="tb" font-size="13">COCOS</text>
+        <g><circle cx="40" cy="70" r="14" class="cell"/><text x="40" y="112" text-anchor="middle" font-size="12">coco</text></g>
+        <g><circle cx="110" cy="70" r="13" class="cell"/><circle cx="137" cy="70" r="13" class="cell"/><text x="123" y="112" text-anchor="middle" font-size="12">diplococo</text></g>
+        <g><circle cx="200" cy="70" r="11" class="cell"/><circle cx="222" cy="70" r="11" class="cell"/><circle cx="244" cy="70" r="11" class="cell"/><circle cx="266" cy="70" r="11" class="cell"/><circle cx="288" cy="70" r="11" class="cell"/><text x="244" y="112" text-anchor="middle" font-size="12">estreptococo</text><text x="244" y="126" text-anchor="middle" font-size="11" class="t3">cadeia · 1 plano</text></g>
+        <g><circle cx="352" cy="60" r="10" class="cell"/><circle cx="372" cy="56" r="10" class="cell"/><circle cx="392" cy="62" r="10" class="cell"/><circle cx="360" cy="79" r="10" class="cell"/><circle cx="381" cy="78" r="10" class="cell"/><circle cx="401" cy="82" r="10" class="cell"/><circle cx="371" cy="97" r="10" class="cell"/><text x="377" y="126" text-anchor="middle" font-size="12">estafilococo</text><text x="377" y="140" text-anchor="middle" font-size="11" class="t3">cacho · planos aleatórios</text></g>
+        <g><circle cx="462" cy="58" r="11" class="cell"/><circle cx="485" cy="58" r="11" class="cell"/><circle cx="462" cy="81" r="11" class="cell"/><circle cx="485" cy="81" r="11" class="cell"/><text x="473" y="112" text-anchor="middle" font-size="12">tétrade</text><text x="473" y="126" text-anchor="middle" font-size="11" class="t3">2 planos</text></g>
+        <g><circle cx="560" cy="62" r="10" class="cell"/><circle cx="581" cy="62" r="10" class="cell"/><circle cx="560" cy="83" r="10" class="cell"/><circle cx="581" cy="83" r="10" class="cell"/><circle cx="571" cy="52" r="10" class="cell"/><circle cx="592" cy="52" r="10" class="cell"/><circle cx="592" cy="73" r="10" class="cell"/><text x="576" y="112" text-anchor="middle" font-size="12">sarcina</text><text x="576" y="126" text-anchor="middle" font-size="11" class="t3">cubo · 3 planos</text></g>
+
+        <text x="10" y="172" class="tb" font-size="13">BACILOS</text>
+        <g><rect x="20" y="192" width="52" height="22" rx="11" class="cell"/><text x="46" y="238" text-anchor="middle" font-size="12">bacilo</text></g>
+        <g><rect x="100" y="192" width="44" height="22" rx="11" class="cell"/><rect x="146" y="192" width="44" height="22" rx="11" class="cell"/><text x="145" y="238" text-anchor="middle" font-size="12">diplobacilo</text></g>
+        <g><rect x="218" y="192" width="36" height="20" rx="10" class="cell"/><rect x="256" y="192" width="36" height="20" rx="10" class="cell"/><rect x="294" y="192" width="36" height="20" rx="10" class="cell"/><rect x="332" y="192" width="36" height="20" rx="10" class="cell"/><text x="293" y="238" text-anchor="middle" font-size="12">estreptobacilo</text></g>
+        <g><ellipse cx="420" cy="203" rx="19" ry="13" class="cell"/><text x="420" y="238" text-anchor="middle" font-size="12">cocobacilo</text></g>
+
+        <text x="480" y="172" class="tb" font-size="13">ESPIRALADAS</text>
+        <g><path d="M495 212 q 18 -30 42 -8" class="ln" stroke-width="10" stroke-linecap="round" style="stroke:var(--ink)"/><path d="M495 212 q 18 -30 42 -8" fill="none" stroke-width="7" stroke-linecap="round" style="stroke:var(--svg-fill)"/><text x="516" y="238" text-anchor="middle" font-size="12">vibrião</text><text x="516" y="252" text-anchor="middle" font-size="11" class="t3">Vibrio</text></g>
+        <g><path d="M565 205 q 12 -18 24 0 t 24 0 t 24 0" fill="none" stroke-width="9" stroke-linecap="round" style="stroke:var(--ink)"/><path d="M565 205 q 12 -18 24 0 t 24 0 t 24 0" fill="none" stroke-width="6" stroke-linecap="round" style="stroke:var(--svg-fill)"/><text x="601" y="238" text-anchor="middle" font-size="12">espirilo</text><text x="601" y="252" text-anchor="middle" font-size="11" class="t3">rígido</text></g>
+        <g><path d="M660 205 q 5 -10 10 0 t 10 0 t 10 0 t 10 0 t 10 0 t 10 0 t 10 0 t 10 0" fill="none" stroke-width="3" stroke-linecap="round" class="sm"/><text x="700" y="238" text-anchor="middle" font-size="12">espiroqueta</text><text x="700" y="252" text-anchor="middle" font-size="11" class="t3">flexível</text></g>
+        <text x="10" y="300" font-size="12" class="t2">Exemplos de espiroquetas: Treponema pallidum (sífilis), Leptospira (leptospirose), Borrelia (doença de Lyme).</text>
+      </svg>
+      <figcaption>Formas e arranjos. O arranjo de cocos depende do número de planos de divisão.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Pleomorfismo</strong>: algumas bactérias variam de forma (ex.: <em>Corynebacterium</em>, <em>Rhizobium</em>). Micoplasmas, sem parede, não têm forma fixa.</li>
+      <li><strong>Espirilo × espiroqueta</strong>: o espirilo é rígido e se move com flagelos externos. A espiroqueta é flexível e se move com <strong>endoflagelos (filamento axial)</strong> no periplasma.</li>
+      <li>Nomes genéricos não indicam necessariamente a forma: <em>Streptococcus</em> é coco, mas "bacilo" também é gênero (<em>Bacillus</em>).</li>
+    </ul>
+  </section>
+
+  <!-- 3 ENVELOPE -->
+  <section class="sec" id="envelope">
+    <span class="lbl">Seção 3 · Seg</span>
+    <h2>Parede celular e envelope</h2>
+    <p>O <strong>peptidoglicano</strong> (mureína) é uma malha de cadeias alternadas de <strong>N-acetilglicosamina (NAG)</strong> e <strong>ácido N-acetilmurâmico (NAM)</strong>, ligadas entre si por <strong>tetrapeptídeos</strong> presos ao NAM. Ele dá forma e resistência à pressão osmótica. É o alvo da <strong>lisozima</strong>, que quebra a ligação β-1,4 entre NAM e NAG, e dos <strong>β-lactâmicos</strong> (penicilinas, cefalosporinas, carbapenêmicos), que bloqueiam as transpeptidases (PBPs) que fazem as ligações cruzadas.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 830 360" role="img" aria-label="Comparação entre envelope de bactéria Gram-positiva e Gram-negativa">
+        <text x="180" y="24" text-anchor="middle" class="tb" font-size="14">GRAM-POSITIVA</text>
+        <text x="570" y="24" text-anchor="middle" class="tb" font-size="14">GRAM-NEGATIVA</text>
+        <!-- G+ -->
+        <g>
+          <rect x="40" y="70" width="280" height="110" class="fms" rx="3"/>
+          <g class="sm" stroke-width="1.2" opacity=".7">
+            <line x1="40" y1="92" x2="320" y2="92"/><line x1="40" y1="114" x2="320" y2="114"/><line x1="40" y1="136" x2="320" y2="136"/><line x1="40" y1="158" x2="320" y2="158"/>
+          </g>
+          <g class="sa" stroke-width="2.4"><line x1="58" y1="52" x2="58" y2="180"/><line x1="92" y1="52" x2="92" y2="180"/><line x1="268" y1="52" x2="268" y2="180"/><line x1="302" y1="60" x2="302" y2="205"/></g>
+          <g class="fa"><circle cx="58" cy="50" r="4"/><circle cx="92" cy="50" r="4"/><circle cx="268" cy="50" r="4"/><circle cx="302" cy="58" r="4"/></g>
+          <rect x="40" y="190" width="280" height="30" class="fcs" rx="3"/>
+          <line x1="40" y1="193" x2="320" y2="193" class="sc" stroke-width="2"/><line x1="40" y1="217" x2="320" y2="217" class="sc" stroke-width="2"/>
+          <text x="180" y="130" text-anchor="middle" font-size="12.5" class="tb">peptidoglicano espesso</text>
+          <text x="180" y="146" text-anchor="middle" font-size="11.5" class="t2">20–80 nm · até ~90% da parede</text>
+          <text x="180" y="210" text-anchor="middle" font-size="12">membrana plasmática</text>
+          <text x="40" y="244" font-size="11.5" class="t2">— ácidos teicoicos atravessam a parede; os</text>
+          <text x="40" y="259" font-size="11.5" class="t2">lipoteicoicos (laranja comprido) ancoram na membrana</text>
+          <text x="40" y="280" font-size="11.5" class="t2">— sem membrana externa e sem LPS</text>
+          <text x="40" y="301" font-size="11.5" class="t2">— retém o cristal violeta: cora de roxo</text>
+        </g>
+        <!-- G- -->
+        <g>
+          <g class="fg"><circle cx="440" cy="48" r="4"/><circle cx="480" cy="44" r="4"/><circle cx="520" cy="48" r="4"/><circle cx="600" cy="44" r="4"/><circle cx="640" cy="48" r="4"/><circle cx="680" cy="44" r="4"/></g>
+          <g class="sg" stroke-width="2"><line x1="440" y1="52" x2="440" y2="72"/><line x1="480" y1="48" x2="480" y2="72"/><line x1="520" y1="52" x2="520" y2="72"/><line x1="600" y1="48" x2="600" y2="72"/><line x1="640" y1="52" x2="640" y2="72"/><line x1="680" y1="48" x2="680" y2="72"/></g>
+          <rect x="420" y="72" width="290" height="28" class="fgs" rx="3"/>
+          <line x1="420" y1="75" x2="710" y2="75" class="sg" stroke-width="2"/><line x1="420" y1="97" x2="710" y2="97" class="sg" stroke-width="2"/>
+          <rect x="552" y="68" width="22" height="36" rx="4" class="cell"/>
+          <text x="563" y="62" text-anchor="middle" font-size="11" class="t2">porina</text>
+          <rect x="420" y="100" width="290" height="70" class="soft"/>
+          <rect x="420" y="126" width="290" height="12" class="fms"/>
+          <line x1="420" y1="132" x2="710" y2="132" class="sm" stroke-width="1.2"/>
+          <rect x="420" y="170" width="290" height="30" class="fcs" rx="3"/>
+          <line x1="420" y1="173" x2="710" y2="173" class="sc" stroke-width="2"/><line x1="420" y1="197" x2="710" y2="197" class="sc" stroke-width="2"/>
+          <text x="720" y="50" font-size="11.5" class="t2">LPS</text>
+          <text x="720" y="90" font-size="11.5" class="t2">membrana</text><text x="720" y="104" font-size="11.5" class="t2">externa</text>
+          <text x="720" y="122" font-size="11.5" class="t2">periplasma</text>
+          <text x="720" y="140" font-size="11.5" class="t2">peptidoglicano</text><text x="720" y="154" font-size="11.5" class="t2">fino</text>
+          <text x="720" y="190" font-size="11.5" class="t2">membrana</text><text x="720" y="204" font-size="11.5" class="t2">plasmática</text>
+          <text x="420" y="244" font-size="11.5" class="t2">— LPS = lipídeo A (endotoxina) + núcleo + antígeno O</text>
+          <text x="420" y="259" font-size="11.5" class="t2">— peptidoglicano fino (2–7 nm), no periplasma</text>
+          <text x="420" y="280" font-size="11.5" class="t2">— porinas: canais para moléculas pequenas</text>
+          <text x="420" y="301" font-size="11.5" class="t2">— perde o cristal violeta no álcool: cora com</text>
+          <text x="420" y="316" font-size="11.5" class="t2">  safranina (rosa/vermelho)</text>
+        </g>
+        <line x1="380" y1="40" x2="380" y2="330" class="ln2" stroke-dasharray="4 4"/>
+      </svg>
+      <figcaption>Envelope de Gram-positivas e Gram-negativas (esquema fora de escala).</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Característica</th><th>Gram-positiva</th><th>Gram-negativa</th></tr></thead>
+      <tbody>
+        <tr><td>Peptidoglicano</td><td>Espesso, várias camadas</td><td>Fino, 1–2 camadas, no periplasma</td></tr>
+        <tr><td>Ácidos teicoicos</td><td><strong>Presentes</strong> (exclusivos)</td><td>Ausentes</td></tr>
+        <tr><td>Membrana externa e LPS</td><td>Ausentes</td><td><strong>Presentes</strong>; o lipídeo A é a <strong>endotoxina</strong></td></tr>
+        <tr><td>Periplasma</td><td>Pequeno ou ausente</td><td>Amplo, rico em enzimas (inclusive β-lactamases)</td></tr>
+        <tr><td>Sensibilidade à lisozima e à penicilina</td><td>Alta</td><td>Menor: a membrana externa é uma barreira</td></tr>
+        <tr><td>Toxinas</td><td>Exotoxinas</td><td>Endotoxina (LPS) e também exotoxinas</td></tr>
+        <tr><td>Exemplos</td><td><em>Staphylococcus, Streptococcus, Bacillus, Clostridium, Listeria</em></td><td><em>Escherichia, Salmonella, Shigella, Vibrio, Pseudomonas, Neisseria</em></td></tr>
+      </tbody>
+    </table></div>
+    <h3>Os casos especiais (caem muito como pegadinha)</h3>
+    <ul>
+      <li><strong>Álcool-ácido resistentes</strong> (<em>Mycobacterium</em>, <em>Nocardia</em>): parede rica em <strong>ácidos micólicos</strong>, cerosa e hidrofóbica. Coram mal pelo Gram e são identificadas pelo <strong>Ziehl-Neelsen</strong> (BAAR). Crescem lentamente, e a parede lhes dá resistência a dessecação e a vários desinfetantes.</li>
+      <li><strong>Micoplasmas</strong> (<em>Mycoplasma</em>): <strong>sem parede</strong>, portanto pleomórficos e naturalmente resistentes aos β-lactâmicos. Têm <strong>esteróis</strong> na membrana e são as menores bactérias de vida livre.</li>
+      <li><strong>Formas L e protoplastos/esferoplastos</strong>: células que perderam a parede (por lisozima ou penicilina). Protoplasto vem de Gram+ e perde toda a parede. Esferoplasto vem de Gram− e mantém restos da membrana externa. Ambos lisam em meio hipotônico.</li>
+      <li><strong>Archaea</strong>: <strong>não têm peptidoglicano</strong>. Algumas têm pseudomureína, com ácido N-acetiltalosaminurônico no lugar do NAM, que não é atacada por lisozima nem por penicilina.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"Gram-negativas são mais sensíveis à lisozima por terem menos peptidoglicano" está <strong>errado</strong>: a membrana externa impede a lisozima de chegar ao peptidoglicano. E "endotoxina é secretada pela bactéria" também está errado: o LPS é componente estrutural e é liberado sobretudo na lise celular.</p></div>
+    <div class="cx dec"><span class="k">Decoreba · membrana plasmática</span><p>Bicamada fosfolipídica <strong>sem esteróis</strong>, permeabilidade seletiva, e local da cadeia transportadora de elétrons e da ATP-sintase (as bactérias não têm mitocôndria). Transporte: difusão simples e facilitada, osmose, transporte ativo e <strong>translocação de grupo</strong> (sistema fosfotransferase, PTS: a molécula é modificada ao entrar, como a glicose fosforilada). A translocação de grupo é exclusiva de procariotos.</p></div>
+  </section>
+
+  <!-- 4 COLORAÇÃO -->
+  <section class="sec" id="coloracao">
+    <span class="lbl">Seção 4 · Ter</span>
+    <h2>Colorações</h2>
+    <p>Corantes são sais. Nos <strong>corantes básicos</strong> (cristal violeta, azul de metileno, safranina, fucsina) o íon colorido é <strong>positivo</strong> e se liga à superfície bacteriana, que é negativa: cora a célula. Nos <strong>corantes ácidos</strong> (nigrosina, eosina, tinta nanquim) o íon colorido é <strong>negativo</strong> e é repelido pela célula: cora o fundo.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tipo</th><th>Para quê</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td>Simples</td><td>Um só corante básico. Mostra <strong>forma e arranjo</strong>, mas não distingue grupos.</td><td>Azul de metileno, cristal violeta</td></tr>
+        <tr><td>Diferencial</td><td>Mais de um corante. <strong>Distingue grupos</strong> de bactérias.</td><td><strong>Gram</strong>; <strong>Ziehl-Neelsen</strong> (álcool-ácido)</td></tr>
+        <tr><td>Especial</td><td>Evidencia <strong>estruturas</strong> específicas.</td><td><strong>Negativa</strong> (cápsula), <strong>Schaeffer-Fulton</strong> (endósporo), coloração de flagelos</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig">
+      <svg viewBox="0 0 760 250" role="img" aria-label="Etapas da coloração de Gram e o resultado em Gram-positivas e Gram-negativas">
+        <g font-size="12.5">
+          <text x="95" y="22" text-anchor="middle" class="tb">1 · Cristal violeta</text><text x="95" y="38" text-anchor="middle" class="t3" font-size="11">corante primário · 1 min</text>
+          <text x="285" y="22" text-anchor="middle" class="tb">2 · Lugol (iodo)</text><text x="285" y="38" text-anchor="middle" class="t3" font-size="11">mordente: forma complexo CV-I</text>
+          <text x="475" y="22" text-anchor="middle" class="tb">3 · Álcool-acetona</text><text x="475" y="38" text-anchor="middle" class="t3" font-size="11">descoloração · etapa crítica</text>
+          <text x="665" y="22" text-anchor="middle" class="tb">4 · Safranina</text><text x="665" y="38" text-anchor="middle" class="t3" font-size="11">contracorante</text>
+        </g>
+        <g>
+          <text x="10" y="96" font-size="12" class="tb">G+</text><text x="10" y="176" font-size="12" class="tb">G−</text>
+          <rect x="60" y="78" width="70" height="28" rx="14" fill="#6B3FA0" stroke="var(--ink)"/><rect x="60" y="158" width="70" height="28" rx="14" fill="#6B3FA0" stroke="var(--ink)"/>
+          <rect x="250" y="78" width="70" height="28" rx="14" fill="#5A2E8C" stroke="var(--ink)"/><rect x="250" y="158" width="70" height="28" rx="14" fill="#5A2E8C" stroke="var(--ink)"/>
+          <rect x="440" y="78" width="70" height="28" rx="14" fill="#5A2E8C" stroke="var(--ink)"/><rect x="440" y="158" width="70" height="28" rx="14" class="cell" stroke-dasharray="4 3"/>
+          <rect x="630" y="78" width="70" height="28" rx="14" fill="#5A2E8C" stroke="var(--ink)"/><rect x="630" y="158" width="70" height="28" rx="14" fill="#E0588F" stroke="var(--ink)"/>
+          <g class="ln2" stroke-width="1.4"><path d="M140 92 H240 M140 172 H240 M330 92 H430 M330 172 H430 M520 92 H620 M520 172 H620"/></g>
+          <text x="475" y="214" text-anchor="middle" font-size="11.5" class="t2">G− perde o complexo</text>
+          <text x="475" y="229" text-anchor="middle" font-size="11.5" class="t2">(peptidoglicano fino)</text>
+          <text x="665" y="214" text-anchor="middle" font-size="11.5" class="t2">G+ roxo</text>
+          <text x="665" y="229" text-anchor="middle" font-size="11.5" class="t2">G− rosa/vermelho</text>
+        </g>
+      </svg>
+      <figcaption>Coloração de Gram. Antes, o esfregaço é fixado (em geral pelo calor).</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Por que funciona:</strong> no Gram+, o álcool desidrata o peptidoglicano espesso, os poros se fecham e o complexo cristal violeta-iodo fica preso. No Gram−, o álcool dissolve lipídeos da membrana externa, e o peptidoglicano fino não segura o complexo.</li>
+      <li><strong>Erros técnicos:</strong> descolorir demais faz Gram+ parecer Gram− (falso negativo). Cultura velha também perde a parede e pode corar como Gram−. Por isso a leitura é feita em cultura jovem, de 18 a 24h.</li>
+      <li><strong>Ziehl-Neelsen (BAAR):</strong> <strong>fucsina fenicada a quente</strong>, depois descoloração com <strong>álcool-ácido</strong> e contracoloração com <strong>azul de metileno</strong>. Micobactérias ficam <strong>vermelhas</strong> sobre fundo azul. É a baciloscopia da tuberculose e da hanseníase.</li>
+      <li><strong>Negativa:</strong> nigrosina ou tinta nanquim coram o fundo. A <strong>cápsula</strong> aparece como halo claro. É usada para <em>Cryptococcus</em> (um fungo) no liquor, assunto da Microbiologia II.</li>
+      <li><strong>Schaeffer-Fulton (endósporo):</strong> <strong>verde malaquita a quente</strong>, depois safranina. O endósporo fica verde e a célula vegetativa, vermelha.</li>
+    </ul>
+    <div class="cx cai"><span class="k">Caiu · HC-UFPE 2014</span><p>A questão trocava os pares: dizia que o Ziehl-Neelsen mostra endósporos, que a coloração negativa distingue micobactérias e que o Gram serve para ver formas e arranjos. <a href="#q-hc37">Resolva a questão real →</a></p></div>
+  </section>
+
+  <!-- 5 ESTRUTURAS -->
+  <section class="sec" id="estruturas">
+    <span class="lbl">Seção 5 · Ter</span>
+    <h2>Estruturas externas e internas</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Estrutura</th><th>O que é</th><th>Função e o que cai</th></tr></thead>
+      <tbody>
+        <tr><td>Glicocálice</td><td>Camada de polissacarídeo e/ou polipeptídeo. <strong>Cápsula</strong> = organizada e aderida; <strong>camada limosa</strong> = frouxa</td><td>A cápsula protege da <strong>fagocitose</strong> e é fator de virulência (<em>S. pneumoniae</em>, <em>K. pneumoniae</em>). A matriz do <strong>biofilme</strong> dá adesão e tolerância a antimicrobianos (cateteres, placa dental).</td></tr>
+        <tr><td>Flagelo</td><td>Filamento de <strong>flagelina</strong> + gancho + corpo basal (motor). Gram− têm 2 pares de anéis; Gram+, 1 par</td><td><strong>Motilidade</strong> por rotação, movida pela força próton-motiva. É o <strong>antígeno H</strong>. Quimiotaxia: corridas e tombos.</td></tr>
+        <tr><td>Filamento axial</td><td>Endoflagelos no periplasma das espiroquetas</td><td>Movimento em saca-rolhas (<em>Treponema</em>, <em>Leptospira</em>)</td></tr>
+        <tr><td>Fímbrias</td><td>Apêndices curtos e numerosos de pilina</td><td><strong>Adesão</strong> a superfícies e tecidos (<em>E. coli</em> uropatogênica, <em>Neisseria gonorrhoeae</em>)</td></tr>
+        <tr><td>Pili</td><td>Mais longos e em menor número (1–2)</td><td><strong>Pilus sexual (F)</strong>: aproxima as células na <strong>conjugação</strong>. Pili tipo IV: motilidade por contração</td></tr>
+        <tr><td>Endósporo</td><td>Estrutura de resistência formada dentro da célula, sobretudo em <strong><em>Bacillus</em></strong> e <strong><em>Clostridium</em></strong>/<em>Clostridioides</em> (Gram+)</td><td>Resiste a calor, dessecação, radiação e desinfetantes. <strong>Dipicolinato de cálcio</strong>, cerne desidratado, proteínas SASP e córtex de peptidoglicano. <strong>Não é reprodução</strong>: 1 célula gera 1 esporo, que germina em 1 célula</td></tr>
+        <tr><td>Plasmídeos</td><td>DNA circular extracromossômico, replicação autônoma</td><td>Não essenciais, mas carregam genes de <strong>resistência (plasmídeo R)</strong>, toxinas, fator F</td></tr>
+        <tr><td>Inclusões</td><td>Grânulos de reserva</td><td><strong>Volutina</strong>/grânulos metacromáticos (polifosfato; <em>Corynebacterium diphtheriae</em>), <strong>PHB</strong> (poli-β-hidroxibutirato), glicogênio, enxofre, <strong>magnetossomos</strong> (magnetita, magnetotaxia), <strong>carboxissomos</strong> (RuBisCO), vesículas de gás (flutuação em cianobactérias)</td></tr>
+      </tbody>
+    </table></div>
+    <p>Arranjo dos flagelos: <strong>monotríquio</strong> (1 polar, como <em>Vibrio</em>), <strong>anfitríquio</strong> (1 em cada polo), <strong>lofotríquio</strong> (tufo em um polo) e <strong>peritríquio</strong> (pelo corpo todo, como <em>E. coli</em> e <em>Proteus</em>). Bactéria sem flagelo é <strong>atríquia</strong>.</p>
+    <div class="cx dec"><span class="k">Decoreba · esterilização de esporos</span><p>Endósporos são a referência de resistência. A <strong>autoclave</strong> (121 °C, 1 atm acima da pressão ambiente, cerca de 15 a 20 min) é validada com indicadores biológicos de <em>Geobacillus stearothermophilus</em>. Fervura a 100 °C <strong>não esteriliza</strong>. Esse ponto se liga à Biossegurança II (semana 5).</p></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"Fímbrias participam da conjugação" está errado: quem participa é o <strong>pilus sexual</strong>. E "o endósporo é uma forma de reprodução assexuada" também está errado. Nos fungos, sim, esporos são reprodutivos. Nas bactérias, o endósporo é resistência.</p></div>
+  </section>
+
+  <!-- 6 FISIOLOGIA -->
+  <section class="sec" id="fisio">
+    <span class="lbl">Seção 6 · Qui</span>
+    <h2>Nutrição e metabolismo</h2>
+    <p>Os tipos nutricionais combinam três perguntas: de onde vem a <strong>energia</strong>, de onde vem o <strong>carbono</strong> e quem <strong>doa os elétrons</strong>.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tipo</th><th>Energia</th><th>Carbono</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td>Fotoautotrófico</td><td>Luz</td><td>CO₂</td><td>Cianobactérias (fotossíntese oxigênica), bactérias verdes e púrpuras sulfurosas (anoxigênica, doador H₂S)</td></tr>
+        <tr><td>Foto-heterotrófico</td><td>Luz</td><td>Compostos orgânicos</td><td>Bactérias verdes e púrpuras não sulfurosas</td></tr>
+        <tr><td>Quimiolitoautotrófico</td><td>Oxidação de compostos <strong>inorgânicos</strong></td><td>CO₂</td><td><strong>Nitrificantes</strong>: <em>Nitrosomonas</em> (NH₄⁺ → NO₂⁻) e <em>Nitrobacter</em> (NO₂⁻ → NO₃⁻); oxidantes de enxofre e de ferro</td></tr>
+        <tr><td>Quimio-organo-heterotrófico</td><td>Oxidação de compostos <strong>orgânicos</strong></td><td>Compostos orgânicos</td><td><strong>A maioria</strong>: todos os patógenos humanos, decompositores</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Respiração e fermentação</h3>
+    <ul>
+      <li><strong>Respiração aeróbia:</strong> glicólise, ciclo de Krebs e cadeia transportadora na <strong>membrana plasmática</strong>, com O₂ como aceptor final. Rende até <strong>38 ATP</strong> por glicose em procariotos (valor teórico).</li>
+      <li><strong>Respiração anaeróbia:</strong> o aceptor final é inorgânico e diferente do O₂: nitrato (NO₃⁻ → N₂ na <strong>desnitrificação</strong>, <em>Pseudomonas</em>), sulfato (SO₄²⁻ → H₂S, <em>Desulfovibrio</em>) ou CO₂ (→ CH₄ nas metanogênicas, que são <strong>arqueias</strong>). Rende menos ATP que a aeróbia.</li>
+      <li><strong>Fermentação:</strong> sem cadeia transportadora. O aceptor final é orgânico e o rendimento é de <strong>2 ATP</strong> por glicose, só da glicólise. Pode ser <strong>lática</strong> (<em>Lactobacillus</em>, <em>Streptococcus</em>: iogurte, queijo), <strong>alcoólica</strong> (sobretudo leveduras), <strong>ácida mista</strong> (<em>E. coli</em>) ou butanodiólica (<em>Enterobacter</em>). Os produtos da fermentação são a base das provas bioquímicas de identificação.</li>
+      <li><strong>Fixação de N₂:</strong> enzima <strong>nitrogenase</strong>, que é inativada pelo O₂. <em>Rhizobium</em> nos nódulos de leguminosas (a leg-hemoglobina controla o O₂), cianobactérias nos <strong>heterocistos</strong> (<em>Anabaena</em>, <em>Nostoc</em>) e <em>Azotobacter</em> de vida livre. Aprofundado em Ecologia (ciclo do nitrogênio).</li>
+    </ul>
+    <h3>Oxigênio</h3>
+    <figure class="fig">
+      <svg viewBox="0 0 760 290" role="img" aria-label="Crescimento em tubos de tioglicolato conforme a relação com o oxigênio">
+        <defs><linearGradient id="o2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--cyan)" stop-opacity=".45"/><stop offset=".35" stop-color="var(--cyan)" stop-opacity="0"/></linearGradient></defs>
+        <g id="tubes">
+          <g transform="translate(40,20)"><rect x="0" y="0" width="70" height="180" rx="10" class="cell"/><rect x="2" y="2" width="66" height="176" rx="9" fill="url(#o2)"/></g>
+          <g transform="translate(190,20)"><rect x="0" y="0" width="70" height="180" rx="10" class="cell"/><rect x="2" y="2" width="66" height="176" rx="9" fill="url(#o2)"/></g>
+          <g transform="translate(340,20)"><rect x="0" y="0" width="70" height="180" rx="10" class="cell"/><rect x="2" y="2" width="66" height="176" rx="9" fill="url(#o2)"/></g>
+          <g transform="translate(490,20)"><rect x="0" y="0" width="70" height="180" rx="10" class="cell"/><rect x="2" y="2" width="66" height="176" rx="9" fill="url(#o2)"/></g>
+          <g transform="translate(640,20)"><rect x="0" y="0" width="70" height="180" rx="10" class="cell"/><rect x="2" y="2" width="66" height="176" rx="9" fill="url(#o2)"/></g>
+        </g>
+        <g class="fm">
+          <!-- aeróbio obrigatório: topo -->
+          <rect x="46" y="26" width="58" height="16" rx="4"/>
+          <!-- facultativo: denso em cima, presente embaixo -->
+          <rect x="196" y="26" width="58" height="22" rx="4"/><rect x="196" y="56" width="58" height="136" rx="4" opacity=".45"/>
+          <!-- anaeróbio obrigatório: fundo -->
+          <rect x="346" y="130" width="58" height="62" rx="4"/>
+          <!-- aerotolerante: uniforme -->
+          <rect x="496" y="26" width="58" height="166" rx="4" opacity=".55"/>
+          <!-- microaerófilo: faixa abaixo do topo -->
+          <rect x="646" y="64" width="58" height="14" rx="4"/>
+        </g>
+        <g font-size="12" text-anchor="middle">
+          <text x="75" y="222" class="tb">aeróbio</text><text x="75" y="237" class="tb">obrigatório</text>
+          <text x="225" y="222" class="tb">anaeróbio</text><text x="225" y="237" class="tb">facultativo</text>
+          <text x="375" y="222" class="tb">anaeróbio</text><text x="375" y="237" class="tb">obrigatório</text>
+          <text x="525" y="222" class="tb">anaeróbio</text><text x="525" y="237" class="tb">aerotolerante</text>
+          <text x="675" y="222" class="tb">micro-</text><text x="675" y="237" class="tb">aerófilo</text>
+          <text x="75" y="258" class="t3" font-size="11">catalase + · SOD +</text>
+          <text x="225" y="258" class="t3" font-size="11">catalase + · SOD +</text>
+          <text x="375" y="258" class="t3" font-size="11">em geral sem ambas</text>
+          <text x="525" y="258" class="t3" font-size="11">SOD + · catalase −</text>
+          <text x="675" y="258" class="t3" font-size="11">pouca, sensível a O₂ alto</text>
+          <text x="75" y="276" class="t2" font-size="11">Mycobacterium</text><text x="225" y="276" class="t2" font-size="11">E. coli, Staphylococcus</text><text x="375" y="276" class="t2" font-size="11">Clostridium</text><text x="525" y="276" class="t2" font-size="11">Lactobacillus</text><text x="675" y="276" class="t2" font-size="11">Campylobacter</text>
+        </g>
+      </svg>
+      <figcaption>Tubos com tioglicolato: o azul indica o oxigênio, que só existe perto da superfície. O rosa mostra onde a bactéria cresce.</figcaption>
+    </figure>
+    <p>O O₂ gera formas tóxicas: superóxido (O₂⁻) e peróxido de hidrogênio (H₂O₂). A <strong>superóxido dismutase (SOD)</strong> converte o superóxido em H₂O₂, e a <strong>catalase</strong> converte o H₂O₂ em água e O₂. Quem não tem essas enzimas morre na presença de oxigênio.</p>
+    <div class="cx dec"><span class="k">Decoreba · o facultativo e o aerotolerante</span><p>O <strong>facultativo</strong> <em>usa</em> o O₂ quando tem (respira) e fermenta quando não tem, por isso cresce <strong>mais</strong> no topo. O <strong>aerotolerante</strong> <em>ignora</em> o O₂, só fermenta, e cresce <strong>igual</strong> no tubo todo.</p></div>
+    <h3>Temperatura, pH e pressão osmótica</h3>
+    <div class="scroll"><table class="tbl">
+      <thead><tr><th>Grupo</th><th>Faixa aproximada</th><th>Onde</th></tr></thead>
+      <tbody>
+        <tr><td>Psicrófilo</td><td>0–20 °C (ótima ~15 °C)</td><td>Oceano profundo, gelo polar</td></tr>
+        <tr><td>Psicrotrófico</td><td>0–30 °C (ótima 20–30 °C)</td><td><strong>Estraga alimento na geladeira</strong> (<em>Listeria</em> cresce a 4 °C)</td></tr>
+        <tr><td>Mesófilo</td><td>10–45 °C (ótima 25–40 °C)</td><td><strong>A maioria</strong>, incluindo os patógenos humanos (~37 °C)</td></tr>
+        <tr><td>Termófilo</td><td>45–80 °C (ótima 50–60 °C)</td><td>Fontes termais, compostagem</td></tr>
+        <tr><td>Hipertermófilo</td><td>&gt; 80 °C</td><td>Fontes hidrotermais; quase todos são <strong>Archaea</strong></td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>pH:</strong> a maioria é neutrófila (ótimo entre 6,5 e 7,5). Há acidófilas (<em>Acidithiobacillus</em>, <em>Helicobacter pylori</em>, que tolera o estômago usando urease) e alcalófilas.</li>
+      <li><strong>Osmose:</strong> meio hipertônico causa <strong>plasmólise</strong> e inibe o crescimento, que é o princípio da conservação por sal e açúcar. <strong>Halófilos</strong> obrigatórios precisam de sal (arqueias halófilas extremas). <em>Staphylococcus aureus</em> é <strong>halotolerante</strong>, e é por isso que o ágar manitol salgado o seleciona.</li>
+      <li><strong>Atividade de água (a<sub>w</sub>):</strong> a maioria das bactérias precisa de a<sub>w</sub> acima de 0,9. Fungos toleram valores menores.</li>
+    </ul>
+    <div class="cx cai"><span class="k">Caiu · UFPE 2008</span><p>"Por que o leite longa vida deve ir para a geladeira depois de aberto?" A resposta envolvia a multiplicação mais lenta em temperatura baixa, a contaminação pelo ar depois de aberto e a velocidade das reações químicas. <a href="#q-2008-19">Resolva →</a></p></div>
+  </section>
+
+  <!-- 7 CRESCIMENTO -->
+  <section class="sec" id="crescimento">
+    <span class="lbl">Seção 7 · Qui</span>
+    <h2>Crescimento e cultivo</h2>
+    <p>Bactérias se multiplicam por <strong>fissão binária</strong>. O <strong>tempo de geração</strong> é o tempo para a população dobrar: cerca de 20 min para <em>E. coli</em> em condições ótimas e cerca de 20 h para <em>M. tuberculosis</em>. Na fase exponencial:</p>
+    <div class="card" style="text-align:center;font-size:18px;margin:10px 0 16px"><strong>N = N₀ × 2ⁿ</strong> &nbsp;·&nbsp; n = número de gerações = tempo ÷ tempo de geração</div>
+    <p class="small muted">Exemplo: 100 células, tempo de geração de 30 min, após 3 h: n = 6, então N = 100 × 64 = <strong>6.400</strong>. Esse cálculo aparece em prova e é a única conta do tópico.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 300" role="img" aria-label="Curva de crescimento bacteriano com as quatro fases">
+        <rect x="80" y="30" width="120" height="220" class="fcs" opacity=".7"/>
+        <rect x="200" y="30" width="200" height="220" class="fms" opacity=".7"/>
+        <rect x="400" y="30" width="170" height="220" class="fgs" opacity=".7"/>
+        <rect x="570" y="30" width="160" height="220" class="fas" opacity=".7"/>
+        <line x1="80" y1="250" x2="740" y2="250" class="ln" stroke-width="1.6"/><line x1="80" y1="30" x2="80" y2="250" class="ln" stroke-width="1.6"/>
+        <path d="M80 222 C 140 222, 170 220, 200 212 L 400 72 C 430 58, 470 56, 570 56 C 620 58, 680 90, 730 130" class="ln" stroke-width="3.2"/>
+        <g font-size="13" class="tb" text-anchor="middle">
+          <text x="140" y="50">lag</text><text x="300" y="50">log (exponencial)</text><text x="485" y="50">estacionária</text><text x="650" y="50">declínio (morte)</text>
+        </g>
+        <g font-size="11" class="t2" text-anchor="middle">
+          <text x="140" y="270">adaptação, síntese</text><text x="140" y="284">de enzimas; sem divisão</text>
+          <text x="300" y="270">divisão máxima e constante;</text><text x="300" y="284">mais sensível a antibióticos</text>
+          <text x="485" y="270">divisão = morte; nutrientes</text><text x="485" y="284">acabam; esporulação começa</text>
+          <text x="650" y="270">morte &gt; divisão;</text><text x="650" y="284">queda logarítmica</text>
+        </g>
+        <text x="40" y="140" transform="rotate(-90 40 140)" font-size="12" text-anchor="middle" class="t2">log do nº de células</text>
+        <text x="735" y="244" font-size="11" text-anchor="end" class="t3">tempo →</text>
+      </svg>
+      <figcaption>Curva de crescimento em cultura fechada (batch). Em quimiostato, com fluxo contínuo, a cultura fica mantida na fase log.</figcaption>
+    </figure>
+    <h3>Como medir</h3>
+    <ul>
+      <li><strong>Diretos:</strong> contagem em placa em <strong>UFC</strong> (unidades formadoras de colônia; conta só células viáveis; por semeadura em superfície ou em profundidade, com diluições seriadas); filtração em membrana (água); <strong>NMP</strong> (número mais provável, em tubos múltiplos, para coliformes); contagem direta ao microscópio (câmara de Petroff-Hausser, que conta vivas e mortas).</li>
+      <li><strong>Indiretos:</strong> <strong>turbidez</strong> em espectrofotômetro (densidade óptica), atividade metabólica, peso seco.</li>
+    </ul>
+    <h3>Meios de cultura</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tipo</th><th>Ideia</th><th>Exemplos que caem</th></tr></thead>
+      <tbody>
+        <tr><td>Quimicamente definido</td><td>Composição exata conhecida</td><td>Meio para autotróficos, estudos de nutrição</td></tr>
+        <tr><td>Complexo</td><td>Extratos (carne, levedura, peptona)</td><td>Caldo nutriente, ágar nutriente, BHI</td></tr>
+        <tr><td><strong>Seletivo</strong></td><td>Inibe uns e deixa outros crescerem</td><td>Manitol salgado (7,5% de NaCl, seleciona <em>Staphylococcus</em>); Sabouraud (pH ácido, fungos); Thayer-Martin (<em>Neisseria</em>)</td></tr>
+        <tr><td><strong>Diferencial</strong></td><td>Mostra diferença visível entre grupos</td><td><strong>Ágar sangue</strong>: hemólise β (total, halo claro, <em>S. pyogenes</em>), α (parcial, esverdeada, <em>S. pneumoniae</em>) e γ (nenhuma)</td></tr>
+        <tr><td><strong>Seletivo e diferencial</strong></td><td>Os dois ao mesmo tempo</td><td><strong>MacConkey</strong>: sais biliares e cristal violeta inibem Gram+; lactose com vermelho neutro deixa colônias <strong>rosa</strong> se fermentam lactose (<em>E. coli</em>) e incolores se não (<em>Salmonella</em>, <em>Shigella</em>). <strong>EMB</strong>: <em>E. coli</em> com brilho verde metálico. Manitol salgado: amarelo se fermenta manitol (<em>S. aureus</em>)</td></tr>
+        <tr><td>Enriquecimento</td><td>Favorece um grupo raro na amostra, em caldo</td><td>Caldo selenito ou tetrationato (<em>Salmonella</em> em fezes)</td></tr>
+        <tr><td>Redutor / anaeróbio</td><td>Remove O₂</td><td><strong>Tioglicolato</strong>; jarra de anaerobiose</td></tr>
+        <tr><td>Transporte</td><td>Mantém viável, sem multiplicar</td><td>Stuart, Cary-Blair</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>O ágar sangue é <strong>enriquecido e diferencial</strong>, não seletivo. O MacConkey é o exemplo-padrão de <strong>seletivo e diferencial</strong>. E cultura <strong>pura</strong> se obtém por esgotamento em estrias (semeadura em placa), com o isolamento de uma colônia.</p></div>
+    <div class="cx lig"><span class="k">Ligação · antibiograma (caiu em 2008)</span><p>No <strong>método de disco-difusão (Kirby-Bauer)</strong>, a bactéria é semeada em tapete sobre ágar Mueller-Hinton, e discos com antibióticos são colocados por cima. Quanto <strong>maior o halo de inibição</strong> (a zona sem crescimento), mais sensível a bactéria. O resultado sai como sensível, intermediário ou resistente, pelos critérios do BrCAST/EUCAST ou CLSI. A <strong>CIM</strong> (concentração inibitória mínima) é a menor concentração que impede o crescimento visível. Na prova de 2008, a resposta certa era o disco com o <strong>maior halo</strong>.</p></div>
+  </section>
+
+  <!-- 8 GENÉTICA -->
+  <section class="sec" id="genetica">
+    <span class="lbl">Seção 8 · Sáb</span>
+    <h2>Genética bacteriana</h2>
+    <p>Cromossomo em geral <strong>circular</strong>, haploide, com uma única origem de replicação (bidirecional). Genes relacionados costumam estar organizados em <strong>operons</strong>: vários genes sob um mesmo promotor e operador, transcritos juntos num mRNA policistrônico.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 270" role="img" aria-label="Operon lac com e sem lactose">
+        <g font-size="12">
+          <text x="10" y="24" class="tb" font-size="13">SEM LACTOSE · operon desligado</text>
+          <line x1="20" y1="70" x2="740" y2="70" class="ln" stroke-width="2"/>
+          <rect x="30" y="56" width="70" height="28" class="fas" stroke="var(--amber)"/><text x="65" y="75" text-anchor="middle">lacI</text>
+          <rect x="170" y="56" width="50" height="28" class="soft" stroke="var(--ink3)"/><text x="195" y="75" text-anchor="middle">P</text>
+          <rect x="220" y="56" width="50" height="28" class="soft" stroke="var(--ink3)"/><text x="245" y="75" text-anchor="middle">O</text>
+          <rect x="270" y="56" width="170" height="28" class="fcs" stroke="var(--cyan)"/><text x="355" y="75" text-anchor="middle">lacZ (β-galactosidase)</text>
+          <rect x="440" y="56" width="140" height="28" class="fcs" stroke="var(--cyan)"/><text x="510" y="75" text-anchor="middle">lacY (permease)</text>
+          <rect x="580" y="56" width="150" height="28" class="fcs" stroke="var(--cyan)"/><text x="655" y="75" text-anchor="middle">lacA (transacetilase)</text>
+          <path d="M226 50 q 19 -24 38 0 z" class="fa"/><text x="272" y="42" class="t2" font-size="11">← repressor ativo ligado ao operador</text>
+          <ellipse cx="160" cy="44" rx="26" ry="14" class="fgs" stroke="var(--green)"/><text x="160" y="48" text-anchor="middle" font-size="10.5">RNA pol</text>
+          <text x="112" y="102" class="t2" font-size="11">RNA polimerase bloqueada: não há transcrição</text>
+        </g>
+        <g font-size="12" transform="translate(0,130)">
+          <text x="10" y="24" class="tb" font-size="13">COM LACTOSE · operon induzido</text>
+          <line x1="20" y1="70" x2="740" y2="70" class="ln" stroke-width="2"/>
+          <rect x="30" y="56" width="70" height="28" class="fas" stroke="var(--amber)"/><text x="65" y="75" text-anchor="middle">lacI</text>
+          <rect x="170" y="56" width="50" height="28" class="soft" stroke="var(--ink3)"/><text x="195" y="75" text-anchor="middle">P</text>
+          <rect x="220" y="56" width="50" height="28" class="soft" stroke="var(--ink3)"/><text x="245" y="75" text-anchor="middle">O</text>
+          <rect x="270" y="56" width="170" height="28" class="fcs" stroke="var(--cyan)"/><text x="355" y="75" text-anchor="middle">lacZ</text>
+          <rect x="440" y="56" width="140" height="28" class="fcs" stroke="var(--cyan)"/><text x="510" y="75" text-anchor="middle">lacY</text>
+          <rect x="580" y="56" width="150" height="28" class="fcs" stroke="var(--cyan)"/><text x="655" y="75" text-anchor="middle">lacA</text>
+          <path d="M40 60 q 19 -24 38 0 z" class="fa"/><circle cx="59" cy="54" r="6" class="fm"/><text x="84" y="50" class="t2" font-size="11">alolactose + repressor</text><text x="84" y="63" class="t2" font-size="11">(inativo, solta o O)</text>
+          <ellipse cx="300" cy="44" rx="26" ry="14" class="fgs" stroke="var(--green)"/><text x="300" y="48" text-anchor="middle" font-size="10.5">RNA pol</text>
+          <path d="M330 44 H 720" class="sg" stroke-width="2.4" marker-end="url(#arr)"/>
+          <text x="520" y="38" text-anchor="middle" class="t2" font-size="11">mRNA policistrônico: Z, Y e A</text>
+          <text x="112" y="104" class="t2" font-size="11">Com glicose presente, AMPc cai, a proteína CAP não ativa e a transcrição continua baixa (repressão catabólica)</text>
+        </g>
+        <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="fg"/></marker></defs>
+      </svg>
+      <figcaption>Operon lac, que é <strong>indutível</strong>: liga na presença do substrato. O operon trp é <strong>repressível</strong>: o triptofano atua como correpressor e desliga a síntese quando sobra.</figcaption>
+    </figure>
+    <h3>Mutação</h3>
+    <p>Mutações espontâneas são raras (cerca de 1 em 10⁶ a 10⁹ por gene por geração), mas as populações são enormes. Os mutantes resistentes <strong>já existem antes</strong> do antibiótico, que apenas os <strong>seleciona</strong>, como mostraram Luria e Delbrück em 1943 com o teste de flutuação. O <strong>teste de Ames</strong> usa <em>Salmonella</em> auxotrófica para histidina para detectar mutagênicos, e é visto em Ecotoxicologia (semana 9).</p>
+    <h3>Transferência horizontal de genes</h3>
+    <figure class="fig">
+      <svg viewBox="0 0 760 230" role="img" aria-label="Transformação, transdução e conjugação">
+        <g>
+          <text x="125" y="22" text-anchor="middle" class="tb" font-size="13">TRANSFORMAÇÃO</text>
+          <rect x="45" y="60" width="160" height="80" rx="40" class="cell"/>
+          <path d="M70 100 q 20 -22 40 0 t 40 0 t 40 0" class="ln2" stroke-width="1.6"/>
+          <path d="M112 44 q 10 -10 20 0 t 20 0" class="sm" stroke-width="3" fill="none"/><path d="M160 30 q 8 -8 16 0 t 16 0" class="sm" stroke-width="3" fill="none"/>
+          <path d="M140 52 L 132 70" class="sm" stroke-width="1.6" marker-end="url(#arr2)"/>
+          <text x="125" y="166" text-anchor="middle" font-size="11.5" class="t2">DNA livre no meio é captado</text>
+          <text x="125" y="181" text-anchor="middle" font-size="11.5" class="t2">por célula <tspan class="tb">competente</tspan></text>
+          <text x="125" y="202" text-anchor="middle" font-size="11" class="t3">Griffith 1928 · Avery 1944</text>
+        </g>
+        <g>
+          <text x="380" y="22" text-anchor="middle" class="tb" font-size="13">TRANSDUÇÃO</text>
+          <rect x="290" y="80" width="75" height="60" rx="30" class="cell"/><text x="327" y="152" text-anchor="middle" font-size="10.5" class="t3">doadora</text>
+          <rect x="400" y="80" width="75" height="60" rx="30" class="cell"/><text x="437" y="152" text-anchor="middle" font-size="10.5" class="t3">receptora</text>
+          <g transform="translate(372,38)"><polygon points="8,0 16,5 16,15 8,20 0,15 0,5" class="fcs" stroke="var(--cyan)"/><path d="M4 8 q4 -4 8 0" class="sm" stroke-width="1.6" fill="none"/><line x1="8" y1="20" x2="8" y2="34" class="sc" stroke-width="2"/><path d="M8 34 l-6 6 M8 34 l6 6" class="sc" stroke-width="1.5"/></g>
+          <path d="M345 76 Q 360 40 372 48" class="ln2" stroke-dasharray="3 3"/><path d="M396 60 Q 420 60 428 78" class="ln2" stroke-dasharray="3 3" marker-end="url(#arr2)"/>
+          <text x="380" y="176" text-anchor="middle" font-size="11.5" class="t2">um <tspan class="tb">bacteriófago</tspan> carrega DNA</text>
+          <text x="380" y="191" text-anchor="middle" font-size="11.5" class="t2">bacteriano de uma célula a outra</text>
+          <text x="380" y="210" text-anchor="middle" font-size="11" class="t3">Zinder e Lederberg 1952</text>
+        </g>
+        <g>
+          <text x="635" y="22" text-anchor="middle" class="tb" font-size="13">CONJUGAÇÃO</text>
+          <rect x="530" y="70" width="90" height="64" rx="32" class="cell"/><text x="575" y="148" text-anchor="middle" font-size="10.5" class="t3">F⁺ (doadora)</text>
+          <rect x="660" y="70" width="90" height="64" rx="32" class="cell"/><text x="705" y="148" text-anchor="middle" font-size="10.5" class="t3">F⁻ (receptora)</text>
+          <line x1="620" y1="102" x2="660" y2="102" class="sa" stroke-width="5"/>
+          <circle cx="585" cy="102" r="14" fill="none" class="sm" stroke-width="3"/>
+          <circle cx="715" cy="102" r="12" fill="none" class="sm" stroke-width="2.4" stroke-dasharray="4 3"/>
+          <text x="640" y="92" text-anchor="middle" font-size="10" class="t2">pilus</text>
+          <text x="635" y="176" text-anchor="middle" font-size="11.5" class="t2">contato célula a célula; transfere</text>
+          <text x="635" y="191" text-anchor="middle" font-size="11.5" class="t2">o <tspan class="tb">plasmídeo</tspan> (fator F, plasmídeo R)</text>
+          <text x="635" y="210" text-anchor="middle" font-size="11" class="t3">Lederberg e Tatum 1946</text>
+        </g>
+        <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="fm"/></marker></defs>
+      </svg>
+      <figcaption>Os três mecanismos de transferência horizontal. Nenhum deles é reprodução: a reprodução é a fissão binária.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Mecanismo</th><th>Exige</th><th>Detalhes que caem</th></tr></thead>
+      <tbody>
+        <tr><td>Transformação</td><td>DNA livre + célula <strong>competente</strong></td><td>Griffith (1928, pneumococo S virulento morto por calor + R vivo matou o camundongo). Avery, MacLeod e McCarty (1944) mostraram que o "princípio transformante" é o <strong>DNA</strong>. A competência pode ser natural (<em>Streptococcus</em>, <em>Haemophilus</em>, <em>Bacillus</em>) ou induzida em laboratório (CaCl₂, eletroporação), base da <strong>clonagem</strong>. É sensível à DNase.</td></tr>
+        <tr><td>Transdução</td><td><strong>Bacteriófago</strong></td><td><strong>Generalizada</strong>: no ciclo lítico, o fago empacota por engano <em>qualquer</em> trecho do DNA do hospedeiro. <strong>Especializada</strong>: um profago lisogênico sai mal excisado e leva só os genes <em>vizinhos</em> ao sítio de integração (fago λ, genes gal/bio). A toxina diftérica, a toxina colérica e a Shiga vêm de genes de fago (<strong>conversão lisogênica</strong>). Resiste à DNase.</td></tr>
+        <tr><td>Conjugação</td><td><strong>Contato</strong> pelo pilus sexual</td><td>F⁺ × F⁻: o plasmídeo F é transferido, e a receptora <strong>vira F⁺</strong>. <strong>Hfr</strong> (F integrado ao cromossomo) × F⁻: transfere parte do <strong>cromossomo</strong>, a receptora em geral <strong>continua F⁻</strong> e há alta frequência de recombinação. F′ carrega um trecho cromossômico. Os plasmídeos R espalham resistência entre espécies.</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>Elementos móveis:</strong> sequências de inserção (IS) e <strong>transposons</strong> ("genes saltadores", que podem carregar genes de resistência); <strong>integrons</strong> capturam cassetes de genes de resistência.</li>
+      <li><strong>CRISPR-Cas:</strong> sistema de "imunidade adaptativa" bacteriana contra fagos. Guarda fragmentos do DNA do invasor e usa a nuclease Cas para cortá-lo numa nova infecção. Virou ferramenta de edição gênica (Nobel de Química de 2020).</li>
+    </ul>
+    <h3>Mecanismos de resistência aos antimicrobianos</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Mecanismo</th><th>Exemplo clássico</th></tr></thead>
+      <tbody>
+        <tr><td>Inativação enzimática</td><td><strong>β-lactamases</strong> quebram o anel β-lactâmico. ESBL (espectro estendido) em enterobactérias; <strong>KPC</strong> (carbapenemase de <em>Klebsiella pneumoniae</em>)</td></tr>
+        <tr><td>Alteração do alvo</td><td><strong>MRSA</strong>: gene <em>mecA</em> codifica a <strong>PBP2a</strong>, com baixa afinidade por β-lactâmicos. VRE: vancomicina com alvo D-Ala-D-Lac</td></tr>
+        <tr><td>Bombas de efluxo</td><td>Expulsam tetraciclinas, fluoroquinolonas; <em>Pseudomonas aeruginosa</em></td></tr>
+        <tr><td>Redução da permeabilidade</td><td>Perda de porinas em Gram−</td></tr>
+        <tr><td>Via metabólica alternativa</td><td>Resistência a sulfonamidas e trimetoprima</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"O antibiótico induz a mutação de resistência" está errado: ele <strong>seleciona</strong> mutantes que já existiam. E "na transdução o DNA passa por contato direto" também está errado: o contato direto é a conjugação.</p></div>
+  </section>
+
+  <!-- 9 TAXONOMIA -->
+  <section class="sec" id="taxonomia">
+    <span class="lbl">Seção 9 · Sáb</span>
+    <h2>Taxonomia e identificação</h2>
+    <figure class="fig">
+      <svg viewBox="0 0 760 250" role="img" aria-label="Árvore dos três domínios da vida">
+        <path d="M380 225 V 180" class="ln" stroke-width="3"/>
+        <path d="M380 180 H 150 V 80" class="ln" stroke-width="3"/>
+        <path d="M380 180 H 530 V 130" class="ln" stroke-width="3"/>
+        <path d="M530 130 H 440 V 80 M530 130 H 640 V 80" class="ln" stroke-width="3"/>
+        <circle cx="380" cy="225" r="6" class="fm"/><text x="394" y="229" font-size="11.5" class="t2">ancestral comum (LUCA)</text>
+        <g text-anchor="middle">
+          <rect x="70" y="30" width="160" height="46" rx="6" class="fcs" stroke="var(--cyan)"/><text x="150" y="51" class="tb" font-size="14">BACTERIA</text><text x="150" y="67" font-size="11" class="t2">peptidoglicano · éster-lipídios</text>
+          <rect x="345" y="30" width="190" height="46" rx="6" class="fas" stroke="var(--amber)"/><text x="440" y="51" class="tb" font-size="14">ARCHAEA</text><text x="440" y="67" font-size="11" class="t2">sem peptidoglicano · éter-lipídios</text>
+          <rect x="565" y="30" width="150" height="46" rx="6" class="fgs" stroke="var(--green)"/><text x="640" y="51" class="tb" font-size="14">EUKARYA</text><text x="640" y="67" font-size="11" class="t2">núcleo · organelas</text>
+        </g>
+        <text x="540" y="150" font-size="11.5" class="t2">Archaea e Eukarya compartilham</text>
+        <text x="540" y="165" font-size="11.5" class="t2">RNA pol complexa e histonas</text>
+        <text x="170" y="116" font-size="11.5" class="t2">Woese (1977, 1990): árvore</text>
+        <text x="170" y="131" font-size="11.5" class="t2">baseada no rRNA da</text>
+        <text x="170" y="146" font-size="11.5" class="t2">subunidade menor (16S/18S)</text>
+      </svg>
+      <figcaption>Os três domínios. Archaea está filogeneticamente mais perto de Eukarya do que de Bacteria.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th></th><th>Bacteria</th><th>Archaea</th><th>Eukarya</th></tr></thead>
+      <tbody>
+        <tr><td>Parede</td><td>Peptidoglicano (com NAM)</td><td>Sem peptidoglicano; pseudomureína, camada S de proteína</td><td>Celulose, quitina ou ausente</td></tr>
+        <tr><td>Lipídeos de membrana</td><td>Ligação <strong>éster</strong>, ácidos graxos</td><td>Ligação <strong>éter</strong>, cadeias <strong>isoprenoides</strong> (algumas em monocamada)</td><td>Éster</td></tr>
+        <tr><td>RNA polimerase</td><td>Uma, simples</td><td>Várias subunidades, parecida com a eucariótica</td><td>Três tipos (I, II, III)</td></tr>
+        <tr><td>Aminoácido iniciador</td><td>Formil-metionina</td><td>Metionina</td><td>Metionina</td></tr>
+        <tr><td>Sensível a estreptomicina e cloranfenicol</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+        <tr><td>Patógenos humanos</td><td>Muitos</td><td><strong>Nenhum conhecido</strong></td><td>Fungos, protozoários, helmintos</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Grupos de arqueias:</strong> <strong>metanogênicas</strong> (anaeróbias, produzem CH₄; em pântano, rúmen e biodigestor), <strong>halófilas extremas</strong> (<em>Halobacterium</em>, com bacteriorrodopsina) e <strong>termoacidófilas / hipertermófilas</strong> (<em>Sulfolobus</em>, <em>Pyrococcus</em>).</p>
+    <h3>Nomenclatura e espécie</h3>
+    <ul>
+      <li>Regida pelo <strong>Código Internacional de Nomenclatura de Procariotos</strong> (ICNP). Nome <strong>binomial, em itálico</strong>, gênero com maiúscula e epíteto com minúscula: <em>Escherichia coli</em>, abreviado <em>E. coli</em>.</li>
+      <li>Referência de classificação: <strong>Bergey's Manual</strong> (<em>of Systematic Bacteriology</em> é o filogenético; <em>of Determinative Bacteriology</em> é o de identificação).</li>
+      <li><strong>Espécie bacteriana</strong> é definida de forma operacional: <strong>hibridização DNA-DNA ≥ 70%</strong>, <strong>ANI ≥ 95–96%</strong> (identidade média de nucleotídeos do genoma) e <strong>rRNA 16S ≥ 98,7%</strong> como triagem. Abaixo da espécie ficam <strong>cepa</strong> (linhagem), sorovar (antígenos O e H) e biovar.</li>
+      <li><strong>Nomes novos de filos (2021):</strong> Proteobacteria passou a <em>Pseudomonadota</em>, Firmicutes a <em>Bacillota</em>, Actinobacteria a <em>Actinomycetota</em> e Bacteroidetes a <em>Bacteroidota</em>. Bancas ainda usam os nomes antigos, então conheça os dois.</li>
+    </ul>
+    <h3>Grupos com importância em saúde</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Grupo</th><th>Pontos-chave</th></tr></thead>
+      <tbody>
+        <tr><td>Cocos Gram+</td><td><em>Staphylococcus</em> (<strong>catalase +</strong>, cachos; <em>S. aureus</em> é <strong>coagulase +</strong>) × <em>Streptococcus</em> (<strong>catalase −</strong>, cadeias; classificados pela hemólise e pelos grupos de Lancefield)</td></tr>
+        <tr><td>Bacilos Gram+ esporulados</td><td><em>Bacillus</em> (aeróbio; <em>B. anthracis</em>) e <em>Clostridium</em> (anaeróbio; <em>C. tetani</em>, <em>C. botulinum</em>, <em>C. perfringens</em>; <em>Clostridioides difficile</em>)</td></tr>
+        <tr><td>Enterobactérias (Gram−)</td><td>Bacilos, anaeróbios facultativos, <strong>oxidase −</strong>, fermentam glicose: <em>E. coli, Salmonella, Shigella, Klebsiella, Proteus</em></td></tr>
+        <tr><td>Não fermentadores (Gram−)</td><td><em>Pseudomonas aeruginosa</em> (<strong>oxidase +</strong>, pigmento verde-azulado, multirresistente, infecção hospitalar)</td></tr>
+        <tr><td>Intracelulares obrigatórios</td><td><em>Chlamydia</em> e <em>Rickettsia</em>: não crescem em meio inerte</td></tr>
+        <tr><td>Cianobactérias</td><td>Fotossíntese oxigênica; heterocistos fixam N₂; <strong>florações tóxicas</strong> (microcistina) em reservatórios. O caso de Caruaru, em 1996, foi uma intoxicação por cianotoxina em hemodiálise</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Como se identifica uma bactéria no laboratório</h3>
+    <ol>
+      <li><strong>Morfologia e Gram</strong> (e colônia: cor, borda, hemólise).</li>
+      <li><strong>Provas bioquímicas:</strong> catalase, coagulase, oxidase, fermentação de açúcares, urease, indol, citrato (a série IMViC).</li>
+      <li><strong>Sorologia</strong> (aglutinação com antissoros para antígenos O, H e K), que se liga às técnicas imunológicas da semana 4.</li>
+      <li><strong>Moleculares:</strong> <strong>sequenciamento do rRNA 16S</strong>, PCR para genes específicos e <strong>MALDI-TOF</strong> (espectrometria de massa das proteínas ribossomais), hoje a rotina nos laboratórios clínicos.</li>
+    </ol>
+    <div class="cx cai"><span class="k">Caiu · UFPE 2008</span><p>"Duas doenças bacterianas evitáveis com saneamento e coleta de lixo": <strong>cólera</strong> (<em>Vibrio cholerae</em>, água contaminada) e <strong>leptospirose</strong> (<em>Leptospira</em>, urina de rato em enchente). <a href="#q-2008-30">Resolva →</a> Esse tema volta na Vigilância II (semana 6).</p></div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais · Sáb</span>
+    <h2>O que já caiu, comentado</h2>
+    <p class="muted">Transcritas das provas oficiais (formatação ajustada, conteúdo preservado). Tente responder <strong>antes</strong> de abrir o gabarito.</p>
+
+    <div class="q" id="q-hc37">
+      <div class="src"><span class="tag">HC-UFPE 2014</span><span>Biólogo · EBSERH · banca IDECAN · questão 37</span></div>
+      <p>A maioria das observações iniciais dos micro-organismos é feita por meio de preparações coradas. A coloração significa simplesmente corar os micro-organismos em um corante que enfatize suas estruturas. Os corantes são sais compostos por um íon positivo e um negativo. Nos corantes básicos estão os íons positivos; em corantes ácidos, estão os íons negativos. Para aplicar os corantes básicos ou ácidos, os microbiologistas utilizam três técnicas de coloração: simples, diferencial e especial. Marque a alternativa que está corretamente relacionada aos tipos de coloração.</p>
+      <ol class="alt">
+        <li data-l="A">A coloração simples é utilizada para distinguir diferentes tipos de bactérias.</li>
+        <li data-l="B">A diferencial álcool-ácido resistente é utilizada para demonstrar a presença de endosporos nas bactérias.</li>
+        <li data-l="C">A especial negativa é utilizada para distinguir espécies de <em>Mycobacterium</em> e algumas espécies de <em>Nocardia</em>.</li>
+        <li data-l="D">A coloração diferencial Gram é utilizada para destacar os micro-organismos e para determinar as formas e os arranjos celulares.</li>
+        <li data-l="E">A coloração especial é utilizada para corar e isolar estruturas, como cápsulas, endosporos e flagelos; algumas vezes, são usadas como auxiliar de diagnósticos.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: E.</span> Questão de <strong>troca de pares</strong>. Cada alternativa errada atribui a uma técnica a função de outra:</p>
+        <ul class="items">
+          <li><strong>A</strong>: quem distingue tipos de bactérias é a <em>diferencial</em>. A simples só mostra forma e arranjo.</li>
+          <li><strong>B</strong>: o álcool-ácido resistente (Ziehl-Neelsen) identifica <em>Mycobacterium</em> e <em>Nocardia</em>. Endósporo é Schaeffer-Fulton.</li>
+          <li><strong>C</strong>: a negativa evidencia a <em>cápsula</em>. Micobactérias são o Ziehl-Neelsen.</li>
+          <li><strong>D</strong>: o Gram distingue Gram+ de Gram−. Forma e arranjo são o papel da coloração simples.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="q" id="q-2008-19">
+      <div class="src"><span class="tag b">UFPE/UFRPE 2008</span><span>Biólogo · banca Covest</span></div>
+      <p>Nas embalagens de alimentos industrializados conhecidos como de "longa vida", recomenda-se manter os alimentos sob refrigeração, após a abertura da embalagem. Tal recomendação se justifica porque:</p>
+      <ol class="items" style="list-style:none;padding:0">
+        <li>1) em geral, a multiplicação de microorganismos é mais rápida em temperaturas mais elevadas do que na temperatura observada em uma geladeira.</li>
+        <li>2) microorganismos existentes no ar podem crescer e se multiplicar, quando encontram alimento e temperatura adequadas.</li>
+        <li>3) em temperaturas superiores à da geladeira, e havendo maior superfície de contato das substâncias que interagem, podem ocorrer transformações químicas mais rapidamente.</li>
+        <li>4) as substâncias utilizadas na industrialização de alimentos são tratadas a temperaturas de 15 °C e assim devem ser mantidas.</li>
+        <li>5) os acidulantes, oxidantes e conservantes encontrados nos alimentos industrializados não resistem a temperaturas altas.</li>
+      </ol>
+      <p>Está(ão) correta(s), apenas:</p>
+      <ol class="alt"><li data-l="A">1, 2, 4 e 5.</li><li data-l="B">1, 2 e 3.</li><li data-l="C">2, 3 e 4.</li><li data-l="D">3 e 5.</li><li data-l="E">3, 4 e 5.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: B.</span> O item 4 é absurdo: o processo UHT aquece a cerca de 135–150 °C por poucos segundos, e não mantém nada a 15 °C. O item 5 não tem base. Eliminando os dois, sobra 1, 2 e 3. É o formato típico da UFPE: <strong>ache um item falso com certeza e elimine as alternativas que o contêm</strong>. Aqui, cortar o item 4 elimina A, C e E de uma vez.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-2008-30">
+      <div class="src"><span class="tag b">UFPE/UFRPE 2008</span><span>Biólogo · banca Covest</span></div>
+      <p>Doenças bacterianas podem assumir caráter epidêmico e afetar parcelas consideráveis da população, algumas das quais poderiam ser evitadas, caso a população tivesse o devido acesso à educação e à informação, dispusesse de saneamento básico e a limpeza urbana fosse mais efetiva, evitando-se a acumulação de lixo, por exemplo. Duas dessas doenças são:</p>
+      <ol class="alt"><li data-l="A">hanseníase e difteria.</li><li data-l="B">tracoma e meningite.</li><li data-l="C">cólera e leptospirose.</li><li data-l="D">difteria e cólera.</li><li data-l="E">botulismo e tétano.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> A pista é o par "saneamento" e "lixo". A cólera se transmite por via fecal-oral, pela água. A leptospirose vem da urina de roedores, que se multiplicam com o lixo, e a transmissão explode nas enchentes. Hanseníase, difteria e meningite são de transmissão respiratória. Tracoma é por contato. Botulismo e tétano não são epidêmicos e são causados por <strong>toxinas</strong> de clostrídios esporulados.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-2016-57">
+      <div class="src"><span class="tag c">UFPE 2016</span><span>Biólogo (Recife) · Edital 84/2016 · questão 57</span></div>
+      <p>Constitui procedimento técnico que gera riscos biológicos:</p>
+      <ol class="alt"><li data-l="A">agitação em alta velocidade de materiais biológicos infecciosos.</li><li data-l="B">rompimento de células com ultrassom.</li><li data-l="C">remoção de meio de cultura, com seringa e agulha, de um frasco contendo material infeccioso.</li><li data-l="D">flambagem de alças de platina nas técnicas bacteriológicas.</li><li data-l="E">descarte da última gota de fluidos de uma pipeta.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: E</span> (também na versão de Vitória, questão 73). <strong>Atenção:</strong> pelos manuais de biossegurança do Ministério da Saúde, <em>todas</em> as cinco práticas geram aerossóis: agitação e vórtex, ultrassom, uso de seringa, flambagem de alça (que espirra material) e sopro da última gota da pipeta. Do jeito que a questão está escrita, há mais de uma alternativa defensável. O gabarito ficou com o exemplo mais citado nos manuais, a <strong>expulsão forçada da última gota</strong>.</p>
+        <p>Lição: essa lista cai. Decore todos os <strong>geradores de aerossol</strong> e as alternativas mais seguras: pipetador automático (nunca pipetar com a boca), incinerador elétrico ou alça descartável no lugar da chama, centrífuga com caçapas vedadas e abertura dentro da cabine de segurança biológica. Aprofundado em Biossegurança (semanas 4 e 5).</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-2016-55">
+      <div class="src"><span class="tag c">UFPE 2016</span><span>Biólogo (Recife) · Edital 84/2016 · questão 55</span></div>
+      <p>Os agentes biológicos que afetam o homem e outros animais são distribuídos em classes de risco. Os que possuem capacidade de transmissão por via respiratória e que causam doenças, potencialmente letais, para as quais existem usualmente medidas de tratamento e/ou de prevenção, e que representam risco se disseminados na comunidade e no meio ambiente, podendo se propagar de pessoa a pessoa, são classificados como:</p>
+      <ol class="alt"><li data-l="A">risco 1.</li><li data-l="B">risco 2.</li><li data-l="C">risco 3.</li><li data-l="D">risco 4.</li><li data-l="E">risco 5.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> Classe 3: alto risco individual, moderado para a comunidade, <strong>transmissão respiratória</strong>, <strong>com tratamento ou prevenção</strong>. Exemplo-padrão: <em>Mycobacterium tuberculosis</em>, que se manipula em NB-3. A classe 4 é a que <strong>não tem</strong> tratamento nem prevenção (vírus Ebola), e a classe 5 não existe. Tema da Biossegurança I (semana 4), aqui porque a bactéria-exemplo é daqui.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-hc35">
+      <div class="src"><span class="tag">HC-UFPE 2014</span><span>Biólogo · EBSERH · IDECAN · questão 35 · bactérias como distratores</span></div>
+      <p>A forma comum e talvez mais antiga de poluir as águas é através do lançamento de dejetos humanos e de animais domésticos em rios, lagos e mares. Esses dejetos aumentam a quantidade de nitrato e fosfato, bem como outros nutrientes no ambiente aquático, causando a eutrofização. A maré vermelha é um exemplo de eutrofização em ambientes marinhos. Assinale o causador do fenômeno maré vermelha nos mares.</p>
+      <ol class="alt"><li data-l="A">Bactérias aeróbicas.</li><li data-l="B">Bactérias anaeróbicas.</li><li data-l="C">Bactérias quimiossintetizantes.</li><li data-l="D">Diclorodifeniltricloretano, o DDT.</li><li data-l="E">Protistas fotossintetizantes, certos dinoflagelados.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: E.</span> A maré vermelha é a floração de <strong>dinoflagelados</strong>, que são protistas e não bactérias. Na eutrofização as bactérias aparecem <em>depois</em>: as aeróbias decompõem a biomassa morta, consomem o O₂ e causam mortandade. O paralelo de água doce são as florações de <strong>cianobactérias</strong>, que <em>são</em> bactérias. Cuidado para não trocar os dois casos.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · Sáb · 45 min</span>
+    <h2>16 questões no estilo da banca</h2>
+    <p class="muted">Questões autorais, escritas nos formatos que a UFPE usa. Marque tudo e só depois corrija. A última nota fica salva neste navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · Dom</span>
+    <h2>40 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar. Depois de ver a resposta, marque <strong>sei</strong> ou <strong>revisar</strong>. O botão de exportar gera um CSV (frente;verso) pronto para importar no Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Fontes.</strong> Tortora, Funke &amp; Case, <em>Microbiologia</em> (12ª ed.) · Madigan et al., <em>Microbiologia de Brock</em> (14ª ed.) · Trabulsi &amp; Alterthum, <em>Microbiologia</em> (6ª ed.) · Ministério da Saúde, <em>Biossegurança em laboratórios biomédicos e de microbiologia</em> e <em>Classificação de risco dos agentes biológicos</em> · Oren &amp; Garrity (2021), <em>Valid publication of the names of forty-two phyla of prokaryotes</em>, IJSEM 71:005056 · BrCAST (disco-difusão).</p>
+    <p><strong>Questões reais:</strong> provas oficiais de Biólogo UFPE/UFRPE 2008 (Covest), UFPE 2016 (Edital 84/2016) e HC-UFPE 2014 (EBSERH/IDECAN), com os gabaritos oficiais. Os pesos por tema são estimativa. O simulado e os cartões são autorais.</p>
+    <p><a href="../index.html#cado">← Voltar ao plano</a> · Próxima página: Microbiologia II (vírus, fungos, parasitos e patogenicidade), semana 2.</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:cado:micro1';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Sobre o envelope celular de bactérias Gram-negativas, analise as proposições.<br>1) Apresenta camada espessa de peptidoglicano associada a ácidos teicoicos.<br>2) Possui membrana externa com lipopolissacarídeo, cujo lipídeo A atua como endotoxina.<br>3) O espaço periplasmático situa-se entre a membrana plasmática e a membrana externa.<br>4) Porinas da membrana externa permitem a passagem de pequenas moléculas hidrofílicas.<br>5) É mais sensível à lisozima que a parede das Gram-positivas, por ter menos peptidoglicano.<br>Estão corretas, apenas:',
+     o:['1, 2 e 3.','2, 3 e 4.','2, 3, 4 e 5.','1, 4 e 5.','3, 4 e 5.'],a:1,
+     w:'O item 1 descreve a Gram-positiva. O item 5 inverte a lógica: a membrana externa protege o peptidoglicano da lisozima, então a Gram-negativa é <strong>menos</strong> sensível.'},
+    {t:'Na coloração de Gram, a etapa responsável por diferenciar efetivamente bactérias Gram-positivas de Gram-negativas é:',
+     o:['a aplicação do cristal violeta.','a aplicação do lugol, que atua como mordente.','a descoloração com álcool-acetona.','a contracoloração com safranina.','a fixação do esfregaço pelo calor.'],a:2,
+     w:'Até o lugol, todas as células estão roxas. É na descoloração que a Gram-negativa perde o complexo cristal violeta-iodo. A safranina só torna visível o que já foi descorado.'},
+    {t:'São características dos endósporos bacterianos, EXCETO:',
+     o:['presença de dipicolinato de cálcio no cerne.','ocorrência em gêneros como <em>Bacillus</em> e <em>Clostridium</em>.','resistência a calor, dessecação e muitos desinfetantes.','constituírem forma de reprodução, já que uma célula vegetativa origina vários esporos.','baixo teor de água no cerne.'],a:3,
+     w:'Uma célula forma <strong>um</strong> endósporo, que germina em <strong>uma</strong> célula. Não há aumento do número de indivíduos, então não é reprodução.'},
+    {t:'Em tubos com meio tioglicolato, determinada bactéria cresce apenas em uma faixa estreita logo abaixo da superfície, sem crescimento na superfície nem no fundo do tubo. Trata-se de um organismo:',
+     o:['aeróbio obrigatório.','anaeróbio facultativo.','microaerófilo.','anaeróbio aerotolerante.','anaeróbio obrigatório.'],a:2,
+     w:'O microaerófilo precisa de O₂, mas em concentração menor que a atmosférica. Por isso fica abaixo da superfície, onde o O₂ já diminuiu (<em>Campylobacter</em>, <em>Helicobacter</em>).'},
+    {t:'Na curva de crescimento bacteriano em sistema fechado, a fase em que o tempo de geração é mínimo e constante e em que as células são mais sensíveis a antimicrobianos que atuam na síntese da parede é a fase:',
+     o:['lag.','log (exponencial).','estacionária.','de declínio.','de latência prolongada.'],a:1,
+     w:'Os β-lactâmicos agem sobre células em divisão, que estão construindo parede. Na fase log a divisão é máxima.'},
+    {t:'Uma cultura bacteriana em fase exponencial inicia com 1,0 × 10³ células e tem tempo de geração de 20 minutos. Após 2 horas, mantidas as condições, o número esperado de células é:',
+     o:['6,0 × 10³.','1,2 × 10⁴.','3,2 × 10⁴.','6,4 × 10⁴.','1,28 × 10⁵.'],a:3,
+     w:'2 h ÷ 20 min = 6 gerações. N = 10³ × 2⁶ = 10³ × 64 = 6,4 × 10⁴.'},
+    {t:'Relacione os mecanismos de transferência gênica às suas características.<br>1. Transformação &nbsp; 2. Transdução &nbsp; 3. Conjugação<br>( ) Mediada por bacteriófago.<br>( ) Captação de DNA livre por célula competente.<br>( ) Requer contato entre células por meio de pilus sexual.<br>A sequência correta é:',
+     o:['2, 1, 3.','1, 2, 3.','3, 1, 2.','2, 3, 1.','1, 3, 2.'],a:0,
+     w:'Fago é transdução (2); DNA livre é transformação (1); pilus é conjugação (3).'},
+    {t:'No cruzamento entre uma linhagem Hfr e uma linhagem F⁻ de <em>Escherichia coli</em>, é correto afirmar que:',
+     o:['a célula receptora quase sempre se torna F⁺ ao final.','o plasmídeo F livre é transferido integralmente antes de qualquer gene cromossômico.','parte do cromossomo da doadora é transferida, e a receptora geralmente permanece F⁻.','não há necessidade de contato entre as células.','o DNA é transportado por um bacteriófago temperado.'],a:2,
+     w:'Na Hfr o fator F está integrado ao cromossomo. A transferência começa no meio do F e o cromossomo vai na frente, mas o contato se rompe antes de o restante do F passar. Por isso a receptora recombina genes cromossômicos e continua F⁻.'},
+    {t:'Em <em>E. coli</em> cultivada em meio com lactose como única fonte de carbono, o operon <em>lac</em> encontra-se:',
+     o:['reprimido, pois a lactose se liga diretamente ao operador.','induzido, pois a alolactose se liga ao repressor e o inativa.','reprimido pelo complexo AMPc-CAP.','induzido, pois o triptofano atua como correpressor.','constitutivo, sendo transcrito igualmente em qualquer condição.'],a:1,
+     w:'O lac é um operon indutível. O complexo AMPc-CAP <strong>ativa</strong> a transcrição (com glicose baixa, o AMPc sobe). O triptofano é o correpressor do operon trp, que é repressível.'},
+    {t:'A resistência do <em>Staphylococcus aureus</em> à meticilina (MRSA) decorre, principalmente, da:',
+     o:['produção de β-lactamase de espectro estendido (ESBL).','expressão de bombas de efluxo inespecíficas.','síntese de proteína ligadora de penicilina alterada (PBP2a), codificada pelo gene <em>mecA</em>.','ausência de parede celular.','alteração da subunidade ribossomal 30S.'],a:2,
+     w:'É alteração do alvo: a PBP2a continua fazendo as ligações cruzadas do peptidoglicano, mas quase não se liga aos β-lactâmicos. ESBL é típica de enterobactérias Gram-negativas.'},
+    {t:'A proposta de classificação dos seres vivos em três domínios (Bacteria, Archaea e Eukarya) fundamentou-se, principalmente, na comparação de sequências:',
+     o:['do DNA mitocondrial.','do rRNA da subunidade menor do ribossomo (16S/18S).','do citocromo c.','de histonas.','de genes plasmidiais.'],a:1,
+     w:'Carl Woese usou o rRNA 16S (18S nos eucariotos). É universal, conservado e tem regiões variáveis, o que o torna o "relógio molecular" ideal.'},
+    {t:'Diferencia as arqueias das bactérias:',
+     o:['a ausência de ribossomos.','a presença de lipídeos de membrana com ligações éter e cadeias isoprenoides.','a presença de peptidoglicano típico com ácido N-acetilmurâmico.','a existência de núcleo delimitado por membrana.','a elevada sensibilidade à penicilina.'],a:1,
+     w:'Arqueias são procariotos (sem núcleo), têm ribossomos 70S, não têm peptidoglicano típico, por isso resistem à penicilina, e se distinguem pelos éter-lipídios.'},
+    {t:'Assinale a alternativa que apresenta a grafia correta do nome científico, segundo as regras de nomenclatura de procariotos:',
+     o:['Escherichia Coli, sem destaque.','escherichia coli, em itálico.','<em>Escherichia coli</em>, em itálico.','E. Coli, em itálico.','<em>Escherichia coli</em> sp.'],a:2,
+     w:'Binomial, em itálico (ou sublinhado à mão), gênero com inicial maiúscula e epíteto específico com minúscula. "sp." só se usa quando a espécie não é identificada.'},
+    {t:'Bactérias do gênero <em>Nitrosomonas</em> obtêm energia pela oxidação da amônia a nitrito e utilizam o CO₂ como fonte de carbono. Quanto ao tipo nutricional, são classificadas como:',
+     o:['fotoautotróficas.','foto-heterotróficas.','quimiolitoautotróficas.','quimio-organo-heterotróficas.','fotolitotróficas.'],a:2,
+     w:'A energia vem de reação química com composto inorgânico (quimiolito), e o carbono vem do CO₂ (autotrófica).'},
+    {t:'O ágar MacConkey é classificado como meio:',
+     o:['apenas seletivo, por conter sangue desfibrinado.','apenas diferencial, por conter manitol e vermelho de fenol.','seletivo, pois sais biliares e cristal violeta inibem Gram-positivas, e diferencial, pela fermentação da lactose revelada pelo vermelho neutro.','de enriquecimento para anaeróbios estritos.','de transporte para amostras de fezes.'],a:2,
+     w:'Colônias rosa fermentam lactose (<em>E. coli</em>); as incolores não fermentam (<em>Salmonella</em>, <em>Shigella</em>). Manitol com vermelho de fenol é o manitol salgado.'},
+    {t:'Relacione as estruturas bacterianas às funções.<br>1. Cápsula &nbsp; 2. Fímbria &nbsp; 3. Flagelo &nbsp; 4. Pilus sexual<br>( ) Adesão a superfícies e tecidos do hospedeiro.<br>( ) Motilidade.<br>( ) Transferência de DNA na conjugação.<br>( ) Evasão da fagocitose.<br>A sequência correta é:',
+     o:['2, 3, 4, 1.','1, 3, 4, 2.','2, 4, 3, 1.','3, 2, 4, 1.','1, 2, 3, 4.'],a:0,
+     w:'Adesão é fímbria (2); motilidade é flagelo (3); conjugação é pilus sexual (4); antifagocitose é cápsula (1).'}
+  ];
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var F=[
+    ['Ribossomo bacteriano: coeficiente e subunidades','70S = 50S + 30S (o rRNA 16S fica na 30S). Eucariotos: 80S = 60S + 40S.'],
+    ['Componentes do peptidoglicano','Cadeias alternadas de NAG e NAM ligadas por tetrapeptídeos (ligações cruzadas feitas pelas PBPs/transpeptidases).'],
+    ['Alvo da lisozima × alvo da penicilina','Lisozima: ligação β-1,4 entre NAM e NAG. Penicilina: transpeptidação (PBPs), impedindo as ligações cruzadas.'],
+    ['Exclusivo de Gram-positivas','Ácidos teicoicos e lipoteicoicos; peptidoglicano espesso.'],
+    ['Exclusivo de Gram-negativas','Membrana externa com LPS, porinas e periplasma amplo.'],
+    ['Partes do LPS e qual é a endotoxina','Lipídeo A (endotoxina) + núcleo polissacarídico + antígeno O.'],
+    ['Etapas do Gram, em ordem','Cristal violeta → lugol (mordente) → álcool-acetona (descoloração) → safranina (contracorante).'],
+    ['Cor final: Gram+ e Gram−','Gram+ roxo; Gram− rosa ou vermelho.'],
+    ['Ziehl-Neelsen: reagentes e alvo','Fucsina fenicada a quente, álcool-ácido e azul de metileno. BAAR vermelho: Mycobacterium, Nocardia.'],
+    ['Coloração que evidencia a cápsula','Negativa (nigrosina ou tinta nanquim): halo claro sobre fundo escuro.'],
+    ['Coloração de endósporo','Schaeffer-Fulton: verde malaquita a quente e safranina. Esporo verde, célula vermelha.'],
+    ['Bactéria sem parede e com esteróis na membrana','Mycoplasma: pleomórfico e resistente a β-lactâmicos.'],
+    ['Substância típica do endósporo','Dipicolinato de cálcio (com cerne desidratado e proteínas SASP).'],
+    ['Gêneros formadores de endósporo','Bacillus (aeróbio) e Clostridium/Clostridioides (anaeróbio). Ambos Gram+.'],
+    ['Endósporo é reprodução?','Não. 1 célula gera 1 esporo, que germina em 1 célula. É estrutura de resistência.'],
+    ['Fímbria × pilus sexual','Fímbria: adesão. Pilus sexual (F): conjugação.'],
+    ['Arranjos de flagelos','Monotríquio, anfitríquio, lofotríquio e peritríquio. Sem flagelo: atríquio.'],
+    ['Antígenos O, H e K','O = LPS (somático); H = flagelo; K = cápsula.'],
+    ['Grânulos de volutina','Polifosfato (metacromáticos), típicos de Corynebacterium diphtheriae.'],
+    ['Nitrosomonas e Nitrobacter: tipo nutricional e reação','Quimiolitoautotróficas. NH₄⁺ → NO₂⁻ (Nitrosomonas); NO₂⁻ → NO₃⁻ (Nitrobacter).'],
+    ['ATP por glicose: respiração aeróbia × fermentação (procarioto)','Até 38 ATP (teórico) × 2 ATP.'],
+    ['Respiração anaeróbia: aceptores e produtos','Nitrato → N₂ (desnitrificação); sulfato → H₂S; CO₂ → CH₄ (arqueias metanogênicas).'],
+    ['Enzimas contra formas tóxicas de O₂','SOD: O₂⁻ → H₂O₂. Catalase: H₂O₂ → H₂O + O₂.'],
+    ['Aerotolerante × facultativo no tioglicolato','Aerotolerante: cresce igual no tubo todo (só fermenta). Facultativo: cresce mais no topo (respira quando há O₂).'],
+    ['Psicrotrófico: importância','Cresce na geladeira e estraga alimento refrigerado (ex.: Listeria a 4 °C).'],
+    ['Hipertermófilos são principalmente…','Arqueias (crescem acima de 80 °C).'],
+    ['Fases da curva de crescimento','Lag → log (exponencial) → estacionária → declínio. A log é a mais sensível a antibióticos.'],
+    ['Fórmula do crescimento exponencial','N = N₀ × 2ⁿ, com n = tempo ÷ tempo de geração.'],
+    ['UFC × contagem direta ao microscópio','UFC conta só células viáveis. A contagem direta conta vivas e mortas.'],
+    ['MacConkey: seletivo por quê? Diferencial por quê?','Seletivo: sais biliares e cristal violeta inibem Gram+. Diferencial: lactose com vermelho neutro (fermentadoras ficam rosa).'],
+    ['Hemólise α, β e γ','β: total, halo claro (S. pyogenes). α: parcial, esverdeada (S. pneumoniae). γ: nenhuma.'],
+    ['Manitol salgado seleciona e diferencia…','Seleciona Staphylococcus (7,5% de NaCl) e diferencia S. aureus (fermenta manitol, fica amarelo).'],
+    ['Transformação: quem provou que é o DNA?','Avery, MacLeod e McCarty (1944), a partir do experimento de Griffith (1928).'],
+    ['Transdução generalizada × especializada','Generalizada: qualquer gene, no ciclo lítico. Especializada: genes vizinhos ao profago, por excisão errada (λ).'],
+    ['F⁺ × F⁻ e Hfr × F⁻: estado final da receptora','F⁺ × F⁻: receptora vira F⁺. Hfr × F⁻: recebe genes cromossômicos e geralmente continua F⁻.'],
+    ['Operon lac × operon trp','Lac: indutível (a alolactose inativa o repressor). Trp: repressível (o triptofano é correpressor).'],
+    ['Mecanismo de resistência do MRSA','Gene mecA codifica a PBP2a, com baixa afinidade por β-lactâmicos.'],
+    ['Luria-Delbrück (1943) demonstraram…','Mutações de resistência são espontâneas e prévias. O agente só seleciona.'],
+    ['Critérios operacionais de espécie bacteriana','DDH ≥ 70%; ANI ≥ 95–96%; rRNA 16S ≥ 98,7%.'],
+    ['Três diferenças de Archaea em relação a Bacteria','Sem peptidoglicano; lipídeos com ligação éter e isoprenoides; RNA polimerase complexa (parecida com a eucariótica). Nenhum patógeno humano conhecido.']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 micro1'];}),'ufpe2027-microbiologia-1.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 micro1'];});
+    dl(rows,'ufpe2027-microbiologia-1-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var C=[
+    'Desenhar o envelope Gram+ e Gram− com todas as camadas.',
+    'Explicar por que o Gram diferencia os dois grupos (etapa e mecanismo).',
+    'Associar cada coloração (simples, Gram, Ziehl-Neelsen, negativa, Schaeffer-Fulton) ao que ela mostra.',
+    'Citar três casos especiais de parede (micobactérias, micoplasmas, arqueias).',
+    'Listar as estruturas do endósporo e por que ele não é reprodução.',
+    'Distinguir fímbria, pilus sexual, flagelo e cápsula pela função.',
+    'Classificar um organismo pelo tipo nutricional (energia, carbono, doador de elétrons).',
+    'Desenhar os 5 tubos de tioglicolato com catalase e SOD.',
+    'Desenhar a curva de crescimento e dizer o que acontece em cada fase.',
+    'Fazer a conta N = N₀ × 2ⁿ.',
+    'Classificar MacConkey, ágar sangue, manitol salgado e EMB (seletivo, diferencial ou ambos).',
+    'Comparar transformação, transdução e conjugação (o que exige e quem descobriu).',
+    'Explicar o operon lac com e sem lactose, e com glicose.',
+    'Citar os 5 mecanismos de resistência com um exemplo cada.',
+    'Listar as diferenças entre Bacteria, Archaea e Eukarya.',
+    'Escrever corretamente um nome científico e saber os nomes novos dos filos.'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>
