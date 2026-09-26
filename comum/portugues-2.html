@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Português II para o concurso UFPE 2027 (níveis D e E): pontuação e ortografia pelo Acordo Ortográfico, com questões reais da FADE e da UFPE, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
+<title>Português II · Pontuação e ortografia</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+
+/* extras Português I */
+.lvE{display:inline-block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:1px 8px;border-radius:99px;background:var(--amber-soft);color:var(--amber);vertical-align:2px;margin-left:4px}
+.lvD{display:inline-block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:1px 8px;border-radius:99px;background:var(--cyan-soft);color:var(--cyan);vertical-align:2px;margin-left:4px}
+.ann{background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);padding:16px 18px;margin:14px 0 18px;font-family:Georgia,"Times New Roman",serif;font-size:15.5px;line-height:1.55}
+.ann .u{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:8px 0;border-bottom:1px dashed var(--rule2);align-items:start}
+.ann .u:last-child{border-bottom:0}
+.ann .u .tg{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;text-align:center;align-self:start}
+.ann .cap .tg{background:var(--mag-soft);color:var(--mag)}
+.ann .inc .tg{background:var(--cyan-soft);color:var(--cyan)}
+.ann .par .tg{background:var(--green-soft);color:var(--green)}
+.ann .inc .tx{padding-left:14px;border-left:3px solid var(--cyan-soft)}
+.ann .par .tx{padding-left:14px;border-left:3px solid var(--green-soft)}
+.ann mark{background:var(--amber-soft);color:inherit;padding:0 2px;border-radius:2px}
+.ann .note{display:block;font-family:"Segoe UI",-apple-system,Roboto,sans-serif;font-size:12.5px;color:var(--ink3);margin-top:4px}
+.coes{background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);padding:16px 18px;margin:14px 0;font-size:15.5px;line-height:1.9}
+.coes .ref{border-bottom:2px solid var(--mag);padding:0 1px}
+.coes .ret{background:var(--mag-soft);border-radius:3px;padding:1px 4px;font-weight:600}
+.coes .ret2{background:var(--cyan-soft);border-radius:3px;padding:1px 4px;font-weight:600}
+.coes .ref2{border-bottom:2px solid var(--cyan);padding:0 1px}
+.coes sup{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:10px;color:var(--ink3)}
+@media (max-width:560px){.ann .u{grid-template-columns:1fr;gap:4px}.ann .u .tg{justify-self:start}}
+
+@media (max-width:640px){figure.fig{overflow-x:auto;-webkit-overflow-scrolling:touch}figure.fig svg{min-width:620px}figure.fig figcaption{position:sticky;left:0}}
+
+/* extras Português II */
+.chat{background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);padding:16px 18px;margin:14px 0;max-width:520px}
+.chat .who{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--ink3);margin:8px 0 2px}
+.chat .bub{display:inline-block;background:var(--band);border-radius:14px 14px 14px 4px;padding:8px 12px;font-size:15px;max-width:92%}
+.chat .me{text-align:right} .chat .me .bub{background:var(--cyan-soft);border-radius:14px 14px 4px 14px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.pair>div{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:10px 14px;font-size:14.5px}
+.pair .ok{border-left:4px solid var(--green)} .pair .no{border-left:4px solid var(--mag)}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro da semana</a>
+  <a href="#edital">O que o edital pede</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#virgula">1 · A vírgula</a>
+  <a href="#lei">2 · Ponto e vírgula e dois-pontos</a>
+  <a href="#sinais">3 · Travessão, aspas e cia.</a>
+  <a href="#expressiva">4 · Pontuação expressiva</a>
+  <a href="#acento">5 · Acentuação</a>
+  <a href="#hifen">6 · Hífen</a>
+  <a href="#pares">7 · Porquês e parônimos</a>
+  <a href="#letras">8 · S, Z, X, CH, G, J</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <a class="back" href="../index.html#cado">← Plano do Cado</a> <span class="muted" style="margin:0 6px">·</span> <a class="back" href="../index.html#gabi">Plano da Gabi</a> <span class="muted" style="margin:0 6px">·</span> <a class="back" href="portugues-1.html">Português I</a>
+  <div class="eyebrow">Português · comum aos dois · Pontuação e ortografia · Semana 2</div>
+  <h1>Português II<br><em>pontuação e ortografia</em></h1>
+  <p class="dek">A vírgula que muda o sentido, a pontuação que organiza a lei, os sinais que viram ironia no meme e as regras do Acordo Ortográfico que a banca adora (voo, leem, ideia, hífen com prefixo, S × Z). O edital cobra as duas coisas: a <strong>norma</strong> da escrita pública e o <strong>efeito de sentido</strong> da pontuação.</p>
+  <div class="meta"><span class="hot">semana 12/10 → 18/10</span><span>qua 14/10 juntos</span><span>9 questões reais</span><span>16 no simulado</span><span>40 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#edital">Edital</a><a href="#comocai">Como cai</a><a href="#virgula">Vírgula</a><a href="#lei">Na lei</a><a href="#sinais">Sinais</a><a href="#expressiva">Expressiva</a><a href="#acento">Acento</a><a href="#hifen">Hífen</a><a href="#pares">Parônimos</a><a href="#letras">Letras</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro da semana</span>
+    <h2>Quem faz o quê, e quando</h2>
+    <div class="plan">
+      <div class="row"><div class="d"><b>Ter 13/10</b>Gabi · 1h30</div><div>Faça as <a href="#reais">9 questões reais</a> <strong>sem consultar</strong> (20 min). Depois leia as seções de ortografia (<a href="#acento">5</a> a <a href="#letras">8</a>) e refaça as que errou. Ortografia é decoreba: é a parte que mais rende estudar sozinha.</div></div>
+      <div class="row"><div class="d"><b>Ter 13/10</b>Cado · 30 min</div><div>Só as <a href="#reais">9 questões reais</a>, cronometradas. Os erros vão para o caderno. A teoria fica para quarta.</div></div>
+      <div class="row"><div class="d"><b>Qua 14/10</b>👫 juntos · 1h30</div><div><strong>Sessão principal.</strong> Seções <a href="#virgula">1</a> a <a href="#expressiva">4</a> (pontuação), cerca de 50 min: um lê as frases dos exemplos em voz alta, com e sem a vírgula, e o outro diz o que muda. Depois 15 min de <a href="#acento">acentuação</a> e <a href="#hifen">hífen</a> (quem leu na terça explica ao outro) e os 25 min finais no <a href="#simulado">simulado</a>, metade cada, corrigindo a do outro.</div></div>
+      <div class="row"><div class="d"><b>Dom 18/10</b>revisão</div><div>Terminem o simulado, passem pelos <a href="#cartoes">flashcards</a> (exportem os de "revisar" para o Anki) e marquem o <a href="#dominio">checklist</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- EDITAL -->
+  <section class="sec" id="edital">
+    <span class="lbl">O que o edital pede · Retificação de 10/08/2026</span>
+    <h2>Pontuação e ortografia aparecem em três esferas</h2>
+    <p class="muted">O Português retificado não tem um tópico "ortografia" solto: os dois assuntos entram dentro das esferas. Os trechos abaixo são <strong>iguais nos níveis D e E</strong>.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Esfera</th><th>Texto do edital</th><th>O que isso quer dizer</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Pública/oficial</td><td>"examine o emprego das <strong>normas ortográficas vigentes</strong> e da <strong>pontuação</strong> exigido pelo rigor e grau de formalidade da escrita pública nacional"</td><td>A <strong>norma</strong>: Acordo Ortográfico, vírgula correta, ponto e vírgula nos incisos, dois-pontos na enumeração.</td></tr>
+        <tr><td>2 · Jornalística/publicitária</td><td>"analise os efeitos de ironia, humor ou crítica provocados por recursos lexicais, <strong>sinais de pontuação</strong> e/ou recursos multimodais em charges, memes midiáticos e outros gêneros verbo-visuais"</td><td>O <strong>efeito</strong>: aspas irônicas, reticências maliciosas, interrogação retórica na charge.</td></tr>
+        <tr><td>5 · Vida cotidiana</td><td>"analise a expressividade dos <strong>sinais de pontuação não convencionais</strong> e outros recursos empregados nos textos escritos instantâneos (várias exclamações, caixa alta, reticências etc.)"</td><td>A <strong>pontuação do chat</strong>: "!!!", CAIXA ALTA, "...", emojis como marcadores de tom.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Tradução prática</span><p>Na esfera oficial a pergunta é "<strong>está certo?</strong>". Nas esferas jornalística e cotidiana é "<strong>que efeito isto produz?</strong>". A mesma reticência é erro de pontuação num ofício e recurso expressivo num meme.</p></div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>O que a FADE e a UFPE já cobraram</h2>
+    <p>O mapa completo das 40 questões de Português da FADE 2023 está na <a href="portugues-1.html#comocai">página da semana 1</a>. Para este tópico, o que importa:</p>
+    <div class="grid2">
+      <div class="card"><h4 style="margin-top:0">FADE 2023: 6 de 40 questões (15%)</h4><p class="small muted" style="margin:0"><strong>5 de ortografia</strong> (acentuação pelo Acordo em duas provas, hífen com "sub-", S × Z) e <strong>1 de pontuação</strong> (vírgula entre orações). Sempre com um termo do próprio texto como gancho: "o autor grafou <em>europeia</em> sem acento… assinale a palavra também correta".</p></div>
+      <div class="card"><h4 style="margin-top:0">UFPE (Covest), provas antigas</h4><p class="small muted" style="margin:0">Biólogo 2016 cobrou <strong>repontuação de um período</strong> ("uma alternativa também correta de pontuação"); Biólogo 2008, <strong>vírgula facultativa × obrigatória</strong>; Desenhista 2019, <strong>grafia</strong> (exceção, estender, paralisação, encharcar). O mesmo núcleo aparece de novo.</p></div>
+    </div>
+    <ul>
+      <li><strong>O Acordo Ortográfico é o assunto número um.</strong> Das 6 questões da FADE, 4 dependiam só do Acordo (voo, leem, trema, ideia, europeia, heroico, sub-). Decorar as mudanças do Acordo vale ponto quase certo.</li>
+      <li><strong>Vírgula cai como sentido, não como regra decorada:</strong> "a vírgula separa ORAÇÕES em…", "uso facultativo EXCETO em…", "outra pontuação também correta". O candidato precisa enxergar a estrutura da frase (sujeito, verbo, complemento, termo deslocado).</li>
+      <li><strong>Comando didático outra vez:</strong> a banca explica a regra no enunciado ("Sabemos que a vírgula é um sinal… Mas ela também é utilizada para separar ORAÇÕES") e pede para aplicar. Leia o comando até o fim.</li>
+    </ul>
+    <div class="cx cai"><span class="k">Onde estão os pontos · estimativa</span><p>De <strong>2 a 4 questões</strong> por prova: 1 ou 2 de ortografia (acentuação e hífen do Acordo são as favoritas), 1 de vírgula e, com o edital novo, possivelmente 1 de <strong>efeito expressivo</strong> da pontuação num meme, charge ou mensagem de chat.</p></div>
+  </section>
+
+  <!-- 1 VÍRGULA -->
+  <section class="sec" id="virgula">
+    <span class="lbl">Seção 1 · Qua (juntos)</span>
+    <h2>A vírgula</h2>
+    <p>A vírgula não marca "respiração": marca <strong>estrutura</strong>. Ela separa o que está <strong>fora da ordem direta</strong> (sujeito → verbo → complemento → adjunto) ou <strong>interrompe</strong> essa ordem. Por isso a regra de ouro é negativa: dentro da ordem direta, <strong>não há vírgula</strong>.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 446" role="img" aria-label="Fluxograma: posso pôr vírgula aqui?">
+        <defs><marker id="av" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="fg"/></marker>
+        <marker id="avm" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="fm"/></marker>
+        <marker id="avn" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" style="fill:var(--ink3)"/></marker></defs>
+        <text x="20" y="22" class="tb" font-size="13">POSSO PÔR VÍRGULA AQUI? Pergunte nesta ordem:</text>
+        <g font-size="13">
+          <rect x="20" y="36" width="480" height="58" rx="6" class="soft" stroke="var(--rule)"/>
+          <text x="34" y="60" class="tb">1. Separa o sujeito do verbo, ou o verbo do complemento?</text>
+          <text x="34" y="80" font-size="11.5" class="t2">Os candidatos(,) tomarão posse · A banca analisou(,) os recursos</text>
+          <rect x="560" y="44" width="180" height="42" rx="21" class="fms" stroke="var(--mag)"/><text x="650" y="70" text-anchor="middle" class="tb">NÃO use vírgula</text>
+          <path d="M500 65 H552" class="sm" stroke-width="2" fill="none" marker-end="url(#avm)"/>
+          <text x="512" y="58" font-size="11" class="t3">sim</text>
+
+          <path d="M60 94 V116" style="stroke:var(--ink3)" stroke-width="1.6" marker-end="url(#avn)"/><text x="68" y="110" font-size="11" class="t3">não</text>
+
+          <rect x="20" y="120" width="480" height="58" rx="6" class="soft" stroke="var(--rule)"/>
+          <text x="34" y="144" class="tb">2. É um termo deslocado para antes da oração principal?</text>
+          <text x="34" y="164" font-size="11.5" class="t2">adjunto adverbial ou oração adverbial: “Após a homologação, a UFPE…”</text>
+          <rect x="560" y="128" width="180" height="42" rx="21" class="fgs" stroke="var(--green)"/><text x="650" y="147" text-anchor="middle" class="tb" font-size="12.5">Use a vírgula</text><text x="650" y="162" text-anchor="middle" font-size="11" class="t2">se curto, é facultativa</text>
+          <path d="M500 149 H552" class="sg" stroke-width="2" fill="none" marker-end="url(#av)"/><text x="512" y="142" font-size="11" class="t3">sim</text>
+
+          <path d="M60 178 V200" style="stroke:var(--ink3)" stroke-width="1.6" marker-end="url(#avn)"/><text x="68" y="194" font-size="11" class="t3">não</text>
+
+          <rect x="20" y="204" width="480" height="58" rx="6" class="soft" stroke="var(--rule)"/>
+          <text x="34" y="228" class="tb">3. É um termo intercalado ou explicativo?</text>
+          <text x="34" y="248" font-size="11.5" class="t2">aposto, vocativo, oração adjetiva explicativa, “porém” deslocado</text>
+          <rect x="560" y="212" width="180" height="42" rx="21" class="fgs" stroke="var(--green)"/><text x="650" y="231" text-anchor="middle" class="tb" font-size="12.5">Use duas vírgulas</text><text x="650" y="246" text-anchor="middle" font-size="11" class="t2">uma de cada lado</text>
+          <path d="M500 233 H552" class="sg" stroke-width="2" fill="none" marker-end="url(#av)"/><text x="512" y="226" font-size="11" class="t3">sim</text>
+
+          <path d="M60 262 V284" style="stroke:var(--ink3)" stroke-width="1.6" marker-end="url(#avn)"/><text x="68" y="278" font-size="11" class="t3">não</text>
+
+          <rect x="20" y="288" width="480" height="58" rx="6" class="soft" stroke="var(--rule)"/>
+          <text x="34" y="312" class="tb">4. É enumeração, verbo omitido, data ou local?</text>
+          <text x="34" y="332" font-size="11.5" class="t2">livros, cadernos e canetas · Eu prefiro café; ela, chá · Recife, 24 de janeiro</text>
+          <rect x="560" y="296" width="180" height="42" rx="21" class="fgs" stroke="var(--green)"/><text x="650" y="322" text-anchor="middle" class="tb" font-size="12.5">Use a vírgula</text>
+          <path d="M500 317 H552" class="sg" stroke-width="2" fill="none" marker-end="url(#av)"/><text x="512" y="310" font-size="11" class="t3">sim</text>
+
+          <path d="M60 346 V368" style="stroke:var(--ink3)" stroke-width="1.6" marker-end="url(#avn)"/><text x="68" y="362" font-size="11" class="t3">não</text>
+
+          <rect x="20" y="372" width="480" height="58" rx="6" class="soft" stroke="var(--rule)"/>
+          <text x="34" y="396" class="tb">5. Liga orações com sujeitos diferentes, ou com “mas”?</text>
+          <text x="34" y="416" font-size="11.5" class="t2">O prazo acabou, e os recursos chegaram · Estudou, mas não passou</text>
+          <rect x="560" y="380" width="180" height="42" rx="21" class="fgs" stroke="var(--green)"/><text x="650" y="399" text-anchor="middle" class="tb" font-size="12.5">Use antes da</text><text x="650" y="414" text-anchor="middle" font-size="12.5" class="tb">conjunção</text>
+          <path d="M500 401 H552" class="sg" stroke-width="2" fill="none" marker-end="url(#av)"/><text x="512" y="394" font-size="11" class="t3">sim</text>
+        </g>
+      </svg>
+      <figcaption>A pergunta 1 vem primeiro porque é a que mais elimina alternativas: vírgula entre sujeito e verbo é o erro que a banca mais planta.</figcaption>
+    </figure>
+
+    <h3>Os casos, um por um</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Caso</th><th>Regra</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td>Sujeito e verbo</td><td><strong>Proibida</strong>, mesmo com sujeito longo</td><td>"Os candidatos aprovados na primeira fase do concurso <strong>tomarão</strong> posse…" (sem vírgula antes do verbo)</td></tr>
+        <tr><td>Verbo e complemento</td><td><strong>Proibida</strong></td><td>"Compete ao Reitor nomear os aprovados." (nada de "Compete ao Reitor, nomear")</td></tr>
+        <tr><td>Adjunto adverbial deslocado</td><td><strong>Curto</strong> (uma ou duas palavras): facultativa. <strong>Longo</strong>: recomendada. No fim da frase, na ordem direta: dispensável</td><td>"Hoje(,) a banca divulgou o gabarito." · "No dia seguinte à aplicação das provas, a banca divulgou o gabarito."</td></tr>
+        <tr><td>Oração subordinada adverbial</td><td><strong>Anteposta</strong> ou intercalada: vírgula. Posposta: em geral facultativa</td><td>"Quando o edital saiu, começamos a estudar." · "Começamos a estudar quando o edital saiu."</td></tr>
+        <tr><td>Aposto explicativo</td><td>Entre vírgulas</td><td>"Recife, capital de Pernambuco, sediará a prova."</td></tr>
+        <tr><td>Vocativo</td><td>Sempre separado</td><td>"Candidatos, atenção ao horário." · "Obrigado, Gabi."</td></tr>
+        <tr><td>Oração adjetiva</td><td><strong>Explicativa</strong>: entre vírgulas. <strong>Restritiva</strong>: sem vírgula. Muda o sentido (veja a figura abaixo)</td><td>"Os servidores, que faltaram, …" × "Os servidores que faltaram…"</td></tr>
+        <tr><td>Conjunção "e"</td><td>Sem vírgula quando liga termos ou orações de mesmo sujeito. Com vírgula quando os <strong>sujeitos são diferentes</strong>, quando tem valor adversativo ou no polissíndeto</td><td>"O prazo acabou, e os recursos ainda chegavam." · "E estudou, e revisou, e passou."</td></tr>
+        <tr><td>"Mas" e adversativas</td><td>"Mas" vem no início da oração, com vírgula antes. <strong>Porém, contudo, todavia, entretanto, no entanto</strong> podem se deslocar: aí ficam entre vírgulas</td><td>"Estudou, mas não passou." · "A banca, porém, manteve o gabarito."</td></tr>
+        <tr><td>Conclusivas deslocadas</td><td><strong>Portanto, logo, pois (= portanto)</strong> depois do verbo ficam entre vírgulas</td><td>"O candidato faltou; perdeu, portanto, o direito à vaga."</td></tr>
+        <tr><td>Elipse do verbo (zeugma)</td><td>A vírgula marca o verbo omitido</td><td>"Eu prefiro Português; ela, Legislação."</td></tr>
+        <tr><td>Datas e locais</td><td>Separa o lugar da data</td><td>"Recife, 24 de janeiro de 2027."</td></tr>
+        <tr><td>Expressões explicativas</td><td>Isto é, ou seja, por exemplo, aliás, a saber: entre vírgulas</td><td>"Os TAE, ou seja, os técnico-administrativos, …"</td></tr>
+      </tbody>
+    </table></div>
+
+    <figure class="fig">
+      <svg viewBox="0 0 760 262" role="img" aria-label="Oração adjetiva restritiva e explicativa como conjuntos">
+        <text x="190" y="24" text-anchor="middle" class="tb" font-size="13">RESTRITIVA · sem vírgula</text>
+        <text x="570" y="24" text-anchor="middle" class="tb" font-size="13">EXPLICATIVA · entre vírgulas</text>
+        <circle cx="190" cy="118" r="78" class="cell"/>
+        <circle cx="160" cy="130" r="38" class="fms" stroke="var(--mag)" stroke-width="1.6"/>
+        <text x="160" y="126" text-anchor="middle" font-size="11.5" class="tb">os que</text><text x="160" y="141" text-anchor="middle" font-size="11.5" class="tb">faltaram</text>
+        <text x="190" y="62" text-anchor="middle" font-size="11" class="t2">servidores</text>
+        <circle cx="570" cy="118" r="78" class="fms" stroke="var(--mag)" stroke-width="1.6"/>
+        <text x="570" y="112" text-anchor="middle" font-size="11.5" class="tb">todos os servidores</text><text x="570" y="128" text-anchor="middle" font-size="11.5" class="tb">(e todos faltaram)</text>
+        <line x1="380" y1="40" x2="380" y2="250" class="ln2" stroke-dasharray="4 4"/>
+        <text x="190" y="222" text-anchor="middle" font-size="12.5">Os servidores que faltaram foram advertidos.</text>
+        <text x="190" y="242" text-anchor="middle" font-size="11.5" class="t2">Só uma parte faltou; só essa parte foi advertida.</text>
+        <text x="570" y="222" text-anchor="middle" font-size="12.5">Os servidores, que faltaram, foram advertidos.</text>
+        <text x="570" y="242" text-anchor="middle" font-size="11.5" class="t2">Todos faltaram; todos foram advertidos.</text>
+      </svg>
+      <figcaption>A restritiva recorta um subconjunto. A explicativa comenta o conjunto inteiro. Tirar ou pôr as vírgulas muda quem foi advertido.</figcaption>
+    </figure>
+
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"A vírgula antes de 'e' é sempre proibida" está <strong>errado</strong>: com sujeitos diferentes ela é usada (foi exatamente a questão 9 da FADE 2023, nível D). E "a vírgula depois de adjunto adverbial curto anteposto é obrigatória" também está errado: é <strong>facultativa</strong>. As provas da UFPE gostam de pedir justamente a vírgula facultativa.</p></div>
+    <div class="cx dec"><span class="k">Teste rápido na prova</span><p>Tire mentalmente tudo o que está entre as vírgulas. Se o que sobra é uma frase completa e com o mesmo sentido básico, as vírgulas isolam um termo intercalado, e estão certas. Se sobra "Os candidatos tomarão posse" quebrado em "Os candidatos, tomarão posse", há vírgula entre sujeito e verbo, e está errado.</p></div>
+  </section>
+
+  <!-- 2 NA LEI -->
+  <section class="sec" id="lei">
+    <span class="lbl">Seção 2 · Qua (juntos)</span>
+    <h2>Ponto e vírgula, dois-pontos e a pontuação da lei</h2>
+    <p>Na semana 1 vocês viram a <a href="portugues-1.html#estrutura">estrutura do texto normativo</a> (caput, inciso, alínea). A pontuação é o que costura essa estrutura: <strong>dois-pontos</strong> anunciam a enumeração no caput, <strong>ponto e vírgula</strong> separa os incisos e o <strong>ponto final</strong> fecha o último.</p>
+    <div class="ann">
+      <div class="u cap"><span class="tg">caput</span><div class="tx">Art. 5º São requisitos básicos para investidura em cargo público<mark>:</mark><span class="note">dois-pontos: anunciam que vem uma enumeração</span></div></div>
+      <div class="u inc"><span class="tg">inciso I</span><div class="tx">I - a nacionalidade brasileira<mark>;</mark><span class="note">ponto e vírgula: ainda há itens a seguir</span></div></div>
+      <div class="u inc"><span class="tg">inciso II</span><div class="tx">II - o gozo dos direitos políticos<mark>;</mark></div></div>
+      <div class="u inc"><span class="tg">inciso III</span><div class="tx">III - a quitação com as obrigações militares e eleitorais<mark>;</mark></div></div>
+      <div class="u inc"><span class="tg">inciso IV</span><div class="tx">IV - o nível de escolaridade exigido para o exercício do cargo<mark>;</mark></div></div>
+      <div class="u inc"><span class="tg">inciso V</span><div class="tx">V - a idade mínima de dezoito anos<mark>;</mark></div></div>
+      <div class="u inc"><span class="tg">inciso VI</span><div class="tx">VI - aptidão física e mental<mark>.</mark><span class="note">ponto final: fecha a enumeração e o dispositivo</span></div></div>
+    </div>
+    <p class="small muted">Lei nº 8.112/1990, art. 5º (texto do Planalto). Em muitas leis o penúltimo inciso termina em "<strong>; e</strong>" (enumeração cumulativa: vale tudo) ou "<strong>; ou</strong>" (alternativa: basta um). É convenção de técnica legislativa, e a conjunção muda o sentido da norma.</p>
+    <div class="grid2">
+      <div class="card"><h4 style="margin-top:0">Ponto e vírgula</h4><ul class="small" style="margin:0"><li>Separa <strong>itens de enumeração</strong>, sobretudo quando longos ou quando já têm vírgulas internas (incisos, considerandos).</li><li>Separa <strong>orações coordenadas</strong> extensas, especialmente antes de adversativa ou conclusiva deslocada: "O prazo acabou; os recursos, porém, continuaram chegando."</li><li>Pausa maior que a vírgula e menor que o ponto.</li></ul></div>
+      <div class="card"><h4 style="margin-top:0">Dois-pontos</h4><ul class="small" style="margin:0"><li>Anunciam <strong>enumeração</strong>: "São requisitos: …"</li><li>Introduzem <strong>citação</strong> ou fala: "O edital determina: …"</li><li>Introduzem <strong>explicação, síntese ou consequência</strong>: "Ou seja: os supersalários são exceção…" (FADE 2023).</li><li>Depois deles, a inicial é minúscula, salvo citação ou nome próprio.</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 3 SINAIS -->
+  <section class="sec" id="sinais">
+    <span class="lbl">Seção 3 · Qua (juntos)</span>
+    <h2>Travessão, parênteses, aspas, reticências, exclamação e interrogação</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Sinal</th><th>Usos normativos</th><th>Efeito de sentido que a banca pergunta</th></tr></thead>
+      <tbody>
+        <tr><td>Travessão</td><td>Marca a fala no diálogo; isola termo intercalado (<strong>duplo travessão</strong>, como vírgulas); introduz um acréscimo no fim da frase</td><td><strong>Realce</strong>: destaca mais que as vírgulas. "O novo governo precisa avaliar as formas de acesso <strong>—</strong> seja via concursos, seja para cargos de confiança" (FADE 2023)</td></tr>
+        <tr><td>Parênteses</td><td>Informação acessória, siglas, referências, datas, remissões ("(art. 37)")</td><td><strong>Rebaixamento</strong>: o que está entre parênteses é secundário, um comentário à parte do autor</td></tr>
+        <tr><td>Aspas</td><td>Citação literal; títulos; estrangeirismos, neologismos e gírias</td><td><strong>Distanciamento</strong> ou <strong>ironia</strong>: o autor não assume a palavra. "A empresa se diz "sustentável"." No jornalismo, aspas marcam a <strong>voz do outro</strong> (polifonia)</td></tr>
+        <tr><td>Reticências</td><td>Interrupção, hesitação, suspensão do pensamento; entre colchetes <strong>[...]</strong>, supressão em citação</td><td><strong>Insinuação</strong>, ironia, suspense, convite para o leitor completar</td></tr>
+        <tr><td>Exclamação</td><td>Frase exclamativa, interjeição, vocativo enfático</td><td>Emoção, espanto, indignação. Repetida ("!!!"), é intensificação típica da escrita informal</td></tr>
+        <tr><td>Interrogação</td><td>Pergunta direta</td><td><strong>Pergunta retórica</strong>: não espera resposta, serve para argumentar ou provocar (muito comum em artigos de opinião e títulos: "Existe um falar certo e um falar errado?", FADE 2023)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"Os travessões podem ser substituídos por vírgulas sem nenhuma alteração" costuma aparecer como alternativa. A <strong>correção gramatical</strong> se mantém, mas o <strong>realce</strong> diminui. Leia se o comando pergunta "correção" ou "sentido/efeito".</p></div>
+  </section>
+
+  <!-- 4 EXPRESSIVA -->
+  <section class="sec" id="expressiva">
+    <span class="lbl">Seção 4 · Qua (juntos)</span>
+    <h2>Pontuação expressiva: chat, meme e charge</h2>
+    <p>O edital pede a "expressividade dos sinais de pontuação não convencionais" nos textos instantâneos. Na escrita digital, pontuação e tipografia substituem a <strong>entonação</strong> e o <strong>rosto</strong> da conversa face a face.</p>
+    <div class="chat" aria-label="Exemplo de conversa em aplicativo de mensagens">
+      <div class="who">GRUPO · ESTUDOS UFPE</div>
+      <div><span class="bub">GENTE!!! O edital foi RETIFICADO... de novo 🙄</span></div>
+      <div class="me"><div class="who">VOCÊ</div><span class="bub">sério???</span></div>
+      <div><div class="who">GABI</div><span class="bub">sim. mudaram o português inteiro.</span></div>
+      <div class="me"><div class="who">VOCÊ</div><span class="bub">ok.</span></div>
+    </div>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Recurso</th><th>Efeito mais comum</th></tr></thead>
+      <tbody>
+        <tr><td>Sinais repetidos ("!!!", "???")</td><td><strong>Intensificação</strong> de emoção: alarme, espanto, entusiasmo, incredulidade</td></tr>
+        <tr><td>CAIXA ALTA</td><td><strong>Ênfase</strong> numa palavra ou "voz alta"/grito quando é o texto inteiro</td></tr>
+        <tr><td>Reticências</td><td>Hesitação, <strong>ironia</strong>, insinuação, frase que "fica no ar" ("... de novo")</td></tr>
+        <tr><td>Ponto final numa mensagem curta</td><td>Pode soar <strong>seco ou frio</strong> ("ok."), justamente porque na conversa informal ele costuma ser omitido</td></tr>
+        <tr><td>Emojis</td><td>Marcadores de <strong>tom</strong> (🙄 = impaciência, ironia) e de relação entre os interlocutores; o edital pede que o nível D saiba "decodificar emojis, siglas e abreviações"</td></tr>
+        <tr><td>Letras repetidas ("siiiim")</td><td>Prolongamento da fala: entusiasmo, ênfase</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Como a questão deve vir</span><p>"Na mensagem, o uso de caixa alta e das exclamações repetidas expressa…". A resposta certa descreve um <strong>efeito</strong> (ênfase, alarme, ironia) e respeita o contexto. A errada costuma <strong>condenar</strong> o recurso como "desvio da norma que compromete a comunicação": na esfera cotidiana, ele é adequado ao gênero. O edital fala em "adequação sociocomunicativa".</p></div>
+    <div class="cx lig"><span class="k">Charge e meme</span><p>Na charge, a pontuação trabalha junto com a imagem: aspas em "progresso" sob um desenho de desmatamento produzem <strong>crítica irônica</strong>; uma interrogação retórica no balão ridiculariza a fala do personagem. Pergunta típica: "o efeito de humor decorre da contradição entre o termo entre aspas e a imagem".</p></div>
+  </section>
+
+  <!-- 5 ACENTUAÇÃO -->
+  <section class="sec" id="acento">
+    <span class="lbl">Seção 5 · Ter (Gabi) e Qua</span>
+    <h2>Acentuação pelo Acordo Ortográfico</h2>
+    <p>O Acordo Ortográfico de 1990 é <strong>obrigatório no Brasil desde 1º de janeiro de 2016</strong> (Decreto nº 7.875/2012). A referência oficial de grafia é o <strong>VOLP</strong>, da Academia Brasileira de Letras. As regras gerais de acentuação continuaram as mesmas; o Acordo mexeu em casos específicos, e são eles que caem.</p>
+    <h3>As regras gerais (não mudaram)</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tipo</th><th>Acentua quando termina em…</th><th>Exemplos</th><th>Não acentua</th></tr></thead>
+      <tbody>
+        <tr><td>Proparoxítonas</td><td><strong>Todas</strong></td><td>público, ínterim, lâmpada, fôlego</td><td>—</td></tr>
+        <tr><td>Paroxítonas</td><td>l, n, r, x, ps · ã(s), ão(s) · i(s), us · um, uns · ditongo oral (crescente ou decrescente)</td><td>fácil, hífen, açúcar, tórax, bíceps, ímã, órfão, júri, vírus, álbum, história, jóquei</td><td>terminadas em a, e, o, em, ens: <strong>item, itens, hifens, polens</strong>, rubrica, gratuito, recorde</td></tr>
+        <tr><td>Oxítonas</td><td>a(s), e(s), o(s), em, ens · ditongos abertos éi, éu, ói</td><td>sofá, café, avô, também, parabéns, papéis, chapéu, herói</td><td>terminadas em i, u: <strong>caju, caqui</strong>, tatu, aqui</td></tr>
+        <tr><td>Monossílabos tônicos</td><td>a(s), e(s), o(s) · ditongos abertos</td><td>pá, fé, nó, pés, réu, dói</td><td>mar, sol, cruz</td></tr>
+        <tr><td>Hiatos com i e u tônicos</td><td>i ou u sozinhos na sílaba (ou com s), depois de vogal</td><td>saída, saúde, país, baú, juízes</td><td>seguidos de nh (rainha) ou com outra letra na sílaba (juiz, ruim, Raul)</td></tr>
+      </tbody>
+    </table></div>
+    <h3>O que o Acordo mudou (o que mais cai)</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Mudança</th><th>Antes</th><th>Hoje</th></tr></thead>
+      <tbody>
+        <tr><td>Ditongos abertos <strong>éi, ói</strong> em <strong>paroxítonas</strong> perderam o acento</td><td>idéia, heróico, assembléia, jibóia, européia, paranóia, platéia</td><td><strong>ideia, heroico, assembleia, jiboia, europeia, paranoia, plateia</strong></td></tr>
+        <tr><td>…mas nas <strong>oxítonas e monossílabos</strong> o acento fica</td><td>herói, papéis, anéis, dói, céu</td><td><strong>herói, heróis, papéis, anéis, dói, céu</strong> (não mudou)</td></tr>
+        <tr><td>Hiatos <strong>ee</strong> e <strong>oo</strong></td><td>crêem, lêem, vêem, dêem, vôo, enjôo</td><td><strong>creem, leem, veem, deem, voo, enjoo</strong></td></tr>
+        <tr><td><strong>i e u</strong> tônicos depois de ditongo em paroxítona</td><td>feiúra, baiúca, bocaiúva</td><td><strong>feiura, baiuca, bocaiuva</strong> (Piauí continua: é oxítona)</td></tr>
+        <tr><td><strong>Trema</strong> abolido</td><td>freqüência, lingüiça, agüentar, argüição</td><td><strong>frequência, linguiça, aguentar, arguição</strong> (só fica em nomes estrangeiros: Müller, mülleriano)</td></tr>
+        <tr><td>Acentos diferenciais caíram</td><td>pára (verbo), pêlo, pólo, pêra, péla</td><td><strong>para, pelo, polo, pera, pela</strong></td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Decoreba · os diferenciais que ficaram</span><ul>
+      <li><strong>pôde</strong> (passado) × pode (presente): obrigatório.</li>
+      <li><strong>pôr</strong> (verbo) × por (preposição): obrigatório.</li>
+      <li><strong>têm, vêm</strong> (plural) × tem, vem (singular): obrigatório. Derivados: ele contém / eles contêm; ele mantém / eles mantêm.</li>
+      <li><strong>fôrma</strong> × forma, <strong>dêmos</strong> × demos: <strong>facultativos</strong>.</li>
+    </ul></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>A banca junta na mesma alternativa uma palavra que perdeu o acento e uma que o manteve: "herois" (errado: <strong>heróis</strong> é oxítona) ao lado de "ideia" (certo). O critério não é "ditongo aberto nunca tem acento": é "ditongo aberto <strong>em paroxítona</strong> não tem". E "ítens" é erro clássico: paroxítona terminada em -ens não se acentua, mas "hífen" (terminada em -n) sim.</p></div>
+  </section>
+
+  <!-- 6 HÍFEN -->
+  <section class="sec" id="hifen">
+    <span class="lbl">Seção 6 · Ter (Gabi) e Qua</span>
+    <h2>Hífen com prefixos</h2>
+    <p>A maior parte dos casos se resolve olhando <strong>a última letra do prefixo</strong> e <strong>a primeira do segundo elemento</strong>.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 300" role="img" aria-label="Tabela do hífen para prefixos terminados em vogal">
+        <text x="20" y="22" class="tb" font-size="13">PREFIXO TERMINADO EM VOGAL (auto, anti, micro, semi, contra, extra, infra, ultra, mini…)</text>
+        <text x="20" y="42" font-size="12" class="t2">e o 2º elemento começa com…</text>
+        <g font-size="12" text-anchor="middle">
+          <rect x="20" y="56" width="140" height="36" rx="4" class="soft"/><text x="90" y="79" class="tb">a mesma vogal</text>
+          <rect x="166" y="56" width="140" height="36" rx="4" class="soft"/><text x="236" y="79" class="tb">vogal diferente</text>
+          <rect x="312" y="56" width="140" height="36" rx="4" class="soft"/><text x="382" y="79" class="tb">r ou s</text>
+          <rect x="458" y="56" width="140" height="36" rx="4" class="soft"/><text x="528" y="79" class="tb">h</text>
+          <rect x="604" y="56" width="140" height="36" rx="4" class="soft"/><text x="674" y="79" class="tb">outra consoante</text>
+
+          <rect x="20" y="98" width="140" height="132" rx="4" class="fms" stroke="var(--mag)"/>
+          <text x="90" y="124" class="tb" font-size="14">HÍFEN</text>
+          <text x="90" y="152">micro-ondas</text><text x="90" y="170">anti-inflamatório</text><text x="90" y="188">contra-ataque</text><text x="90" y="206">semi-internato</text>
+
+          <rect x="166" y="98" width="140" height="132" rx="4" class="fgs" stroke="var(--green)"/>
+          <text x="236" y="124" class="tb" font-size="14">JUNTO</text>
+          <text x="236" y="152">autoescola</text><text x="236" y="170">infraestrutura</text><text x="236" y="188">extraoficial</text><text x="236" y="206">semiárido</text>
+
+          <rect x="312" y="98" width="140" height="132" rx="4" class="fgs" stroke="var(--green)"/>
+          <text x="382" y="124" class="tb" font-size="14">JUNTO</text><text x="382" y="140" font-size="11" class="t2">e dobra a letra</text>
+          <text x="382" y="164">antirrugas</text><text x="382" y="182">minissaia</text><text x="382" y="200">ultrassom</text><text x="382" y="218">contrarregra</text>
+
+          <rect x="458" y="98" width="140" height="132" rx="4" class="fms" stroke="var(--mag)"/>
+          <text x="528" y="124" class="tb" font-size="14">HÍFEN</text>
+          <text x="528" y="152">anti-higiênico</text><text x="528" y="170">mini-hotel</text><text x="528" y="188">extra-humano</text><text x="528" y="206">semi-hospitalar</text>
+
+          <rect x="604" y="98" width="140" height="132" rx="4" class="fgs" stroke="var(--green)"/>
+          <text x="674" y="124" class="tb" font-size="14">JUNTO</text>
+          <text x="674" y="152">autocontrole</text><text x="674" y="170">semicírculo</text><text x="674" y="188">microempresa</text><text x="674" y="206">contracheque</text>
+        </g>
+        <text x="20" y="258" font-size="12" class="t2">Resumo: hífen quando as letras “se chocam” (vogal igual, ou h). Junto quando são diferentes, dobrando r e s</text>
+        <text x="20" y="276" font-size="12" class="t2">para não mudar o som. Exceções importantes: co- e re- vão sempre juntos (coautor, cooperar, reeleição, reeditar).</text>
+      </svg>
+      <figcaption>A regra geral dos prefixos terminados em vogal. Os prefixos especiais estão na tabela abaixo.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Prefixo</th><th>Regra</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td>ex- (anterioridade), vice-, sem-, além-, aquém-, recém-</td><td><strong>Sempre hífen</strong></td><td>ex-diretor, vice-reitor, sem-terra, além-mar, recém-nomeado</td></tr>
+        <tr><td>pré-, pós-, pró- (tônicos)</td><td>Hífen</td><td>pré-escolar, pós-graduação, pró-reitor</td></tr>
+        <tr><td>pre-, pro- (átonos), co-, re-</td><td><strong>Sempre junto</strong>, mesmo com vogal igual</td><td>preestabelecer, prever, promover, coautor, coerdeiro, cooperar, reeleição</td></tr>
+        <tr><td>hiper-, inter-, super-</td><td>Hífen antes de <strong>h</strong> e de <strong>r</strong></td><td>super-homem, inter-regional, hiper-realista · mas interestadual, supermercado</td></tr>
+        <tr><td>sub-</td><td>Hífen antes de <strong>b, r, h</strong>. Com h, o VOLP também registra a forma sem h: subumano</td><td>sub-base, sub-reitor, sub-representados, sub-humano / subumano · mas subsolo, sublocar, submarino, subnutrição</td></tr>
+        <tr><td>circum-, pan-</td><td>Hífen antes de vogal, h, m, n</td><td>pan-americano, circum-navegação · mas pansexual</td></tr>
+        <tr><td>mal-</td><td>Hífen antes de vogal, h, l</td><td>mal-estar, mal-humorado, mal-limpo · mas malcriado, malsucedido</td></tr>
+        <tr><td>bem-</td><td>Em geral com hífen</td><td>bem-vindo, bem-estar, bem-humorado · mas benfeito, benquerer</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Compostos com elemento de ligação</h3>
+    <p>Compostos com preposição ou conjunção no meio <strong>perderam o hífen</strong>: <strong>pé de moleque, dia a dia, fim de semana, mão de obra, cão de guarda, deus nos acuda</strong>. Ficaram com hífen as exceções consagradas citadas no Acordo (<strong>água-de-colônia, arco-da-velha, cor-de-rosa, mais-que-perfeito, pé-de-meia, ao deus-dará, à queima-roupa</strong>) e os nomes de <strong>espécies</strong> da botânica e da zoologia (<strong>bem-te-vi, joão-de-barro, erva-doce, bem-me-quer</strong>). Compostos sem elemento de ligação continuam com hífen: guarda-chuva, segunda-feira, arco-íris.</p>
+    <div class="cx cai"><span class="k">Caiu · FADE 2023, nível D</span><p>"sub-representados" como gancho, pedindo outra palavra com "sub-" corretamente grafada. <a href="#q-a10">Resolva a questão real →</a> A resposta oficial tem uma ressalva importante, por causa do VOLP.</p></div>
+  </section>
+
+  <!-- 7 PARES -->
+  <section class="sec" id="pares">
+    <span class="lbl">Seção 7 · Ter (Gabi) e revisão</span>
+    <h2>Porquês, pares confusos e parônimos</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Forma</th><th>Quando</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td>por que</td><td>Pergunta (= por qual razão), no início ou no meio; ou = pelo qual</td><td>"Por que o edital foi retificado?" · "O motivo por que desisti…"</td></tr>
+        <tr><td>por quê</td><td>No <strong>fim</strong> da frase, antes de pontuação</td><td>"O edital foi retificado por quê?"</td></tr>
+        <tr><td>porque</td><td>Explicação, causa (= pois)</td><td>"Faltou porque estava doente."</td></tr>
+        <tr><td>porquê</td><td>Substantivo (= o motivo), com artigo</td><td>"Ninguém explicou o porquê da anulação."</td></tr>
+        <tr><td>mal × mau</td><td>mal ↔ bem · mau ↔ bom</td><td>"estava mal preparado" · "é um mau servidor" · "de mau humor"</td></tr>
+        <tr><td>há × a</td><td><strong>há</strong> = tempo passado (faz) · <strong>a</strong> = futuro ou distância</td><td>"Há dois meses saiu o edital." · "A prova será daqui a quatro meses." · "fica a 300 km"</td></tr>
+        <tr><td>acerca de × há cerca de × a cerca de</td><td>sobre · faz aproximadamente · a aproximadamente</td><td>"falou acerca do cronograma" · "há cerca de dez anos" · "a cerca de 300 km"</td></tr>
+        <tr><td>onde × aonde</td><td>onde = lugar estático · aonde = movimento (verbos com "a": ir a, chegar a)</td><td>"Onde você mora?" · "Aonde você vai?"</td></tr>
+        <tr><td>senão × se não</td><td>senão = caso contrário, a não ser, mas sim · se não = caso não</td><td>"Estude, senão será reprovado." · "Se não estudar, será reprovado."</td></tr>
+        <tr><td>a fim de × afim</td><td>finalidade · afinidade, semelhança</td><td>"estuda a fim de passar" · "áreas afins"</td></tr>
+        <tr><td>ao encontro de × de encontro a</td><td>a favor, na mesma direção · contra, em choque</td><td>"A medida vai ao encontro do interesse público." · "O carro foi de encontro ao muro."</td></tr>
+        <tr><td>demais × de mais</td><td>excessivamente / os outros · oposto de "de menos"</td><td>"estudou demais" · "não vi nada de mais"</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Parônimos e homônimos que caem em textos oficiais</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Par</th><th>Sentidos</th></tr></thead>
+      <tbody>
+        <tr><td>retificar × ratificar</td><td><strong>retificar</strong> = corrigir · <strong>ratificar</strong> = confirmar. A "Retificação do Edital nº 12/2026" é o exemplo perfeito: ela <strong>corrigiu</strong> o Português</td></tr>
+        <tr><td>infringir × infligir</td><td>infringir = violar (uma norma) · infligir = aplicar (uma pena)</td></tr>
+        <tr><td>deferir × diferir</td><td>deferir = conceder, atender ("o recurso foi deferido") · diferir = adiar ou divergir</td></tr>
+        <tr><td>eminente × iminente</td><td>eminente = ilustre, elevado · iminente = prestes a acontecer</td></tr>
+        <tr><td>descrição × discrição</td><td>ato de descrever · qualidade de discreto</td></tr>
+        <tr><td>cessão × seção (secção) × sessão</td><td>ato de ceder · divisão, departamento · reunião, período de tempo</td></tr>
+        <tr><td>mandato × mandado</td><td>período de representação (mandato eletivo) · ordem judicial (mandado de segurança)</td></tr>
+        <tr><td>tráfego × tráfico</td><td>trânsito · comércio ilegal</td></tr>
+        <tr><td>comprimento × cumprimento</td><td>extensão · saudação ou execução ("cumprimento do dever")</td></tr>
+        <tr><td>emergir × imergir</td><td>vir à tona · mergulhar</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- 8 LETRAS -->
+  <section class="sec" id="letras">
+    <span class="lbl">Seção 8 · Ter (Gabi) e revisão</span>
+    <h2>S, Z, Ç, SS, X, CH, G e J</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Caso</th><th>Regra prática</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td>-isar × -izar</td><td><strong>-isar</strong> quando a palavra de origem já tem s; <strong>-izar</strong> nos demais</td><td>análise → analisar · pesquisa → pesquisar · paralisia → paralisar, <strong>paralisação</strong> · civilizar, realizar, <strong>cicatrizar</strong> (de cicatriz)</td></tr>
+        <tr><td>-ez/-eza × -ês/-esa</td><td>-ez, -eza: substantivos abstratos tirados de adjetivos · -ês, -esa: origem, título, feminino</td><td>gravidez, rapidez, pobreza, beleza · português, francesa, princesa, baronesa</td></tr>
+        <tr><td>-zinho × -sinho</td><td>-zinho quando a palavra não tem s no radical; -inho quando tem</td><td>mãezinha, pãezinhos, cafezinho · casinha (casa), lapisinho (lápis)</td></tr>
+        <tr><td>-ção × -são</td><td>-ter → -tenção · -der/-dir → -são · -ceder → -cessão · -gredir → -gressão · -mitir → -missão</td><td>deter → detenção · compreender → compreensão · conceder → concessão · agredir → agressão · admitir → admissão</td></tr>
+        <tr><td>x × ch</td><td>x depois de ditongo, depois de en- e depois de me- (com poucas exceções)</td><td>caixa, peixe · enxergar, enxurrada · mexer · exceções: encher, encharcar (de cheio, charco), mecha</td></tr>
+        <tr><td>s × x</td><td>Atenção aos pares da mesma família</td><td><strong>estender</strong> mas <strong>extensão</strong> · <strong>exceção</strong>, excesso, excessivo · espontâneo, esplêndido</td></tr>
+        <tr><td>g × j</td><td>-gem em substantivos; j em formas de verbos em -jar e em palavras de origem tupi e africana</td><td>viagem (substantivo) × que eles viajem (verbo) · garagem · laje, traje · jiboia, pajé, jeito</td></tr>
+        <tr><td>Grafias que a UFPE já cobrou</td><td>Formas erradas plantadas nas alternativas</td><td><s>excessão</s> exceção · <s>humidade</s> umidade · <s>enxarcar</s> encharcar · <s>indentidade</s> identidade · <s>estrupo</s> estupro · <s>subzídio</s> subsídio · <s>gravidês</s> gravidez</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Truque da família de palavras</span><p>Na dúvida entre letras, procure a palavra de origem: <strong>paralisia</strong> tem s, então parali<strong>s</strong>ação; <strong>cicatriz</strong> tem z, então cicatri<strong>z</strong>ação; <strong>cheio</strong> tem ch, então en<strong>ch</strong>er. A banca monta alternativas justamente com derivados.</p></div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais · Ter (Gabi 1h30 · Cado 30 min)</span>
+    <h2>FADE 2023 e UFPE, comentadas</h2>
+    <p class="muted">Transcritas das provas oficiais, com os gabaritos publicados. Os textos-base foram omitidos quando a questão não depende deles (quase todas trazem o trecho no próprio enunciado). Faça sem consultar e só depois abra o comentário.</p>
+
+    <div class="q" id="q-a9">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 9 · texto "O papel do servidor nos novos tempos"</span></div>
+      <p>Sabemos que a vírgula é um sinal de pontuação muito empregado para separar termos numa enumeração. Mas ela também é utilizada para separar ORAÇÕES, como podemos ver no seguinte trecho do Texto 1:</p>
+      <ol class="alt">
+        <li data-l="A">"Ele está na certificação de alimentos para consumo, na organização do tráfego das cidades, na moeda utilizada nas compras, na conservação de estradas e em tantos outros momentos." (1º §)</li>
+        <li data-l="B">"O setor privado não tem a abrangência, a capilaridade, os incentivos nem a legitimidade que o governo tem para lidar com nossos variados problemas sociais." (2º §)</li>
+        <li data-l="C">"Ou seja: os supersalários são exceção, e a maioria dos servidores vive com rendimentos módicos." (3º §)</li>
+        <li data-l="D">"Desse total, cerca de 60% são funcionários públicos municipais, com salário médio mensal de R$ 2.800." (3º §)</li>
+        <li data-l="E">"Será necessário ainda criar mecanismos de acompanhamento, engajamento e gestão de desempenho." (4º §)</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> Conte os verbos: em C há dois, "<strong>são</strong> exceção" e "<strong>vive</strong> com rendimentos", com <strong>sujeitos diferentes</strong> (os supersalários × a maioria dos servidores). Por isso a vírgula antes do "e" é usada. A, B e E separam termos de enumeração (um só verbo). Em D a vírgula isola o adjunto deslocado "Desse total" e o termo "com salário médio…", sem nova oração. Repare também nos <strong>dois-pontos</strong> de "Ou seja:", introduzindo a explicação.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a10">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 10</span></div>
+      <p>O autor do Texto 1 optou por trazer para o texto a ideia de "grupos historicamente sub-representados" e grafou com hífen o termo "sub-representados", em atendimento às normas ortográficas vigentes. Assinale a alternativa em que o termo destacado também está grafado de acordo com essas normas.</p>
+      <ol class="alt">
+        <li data-l="A">Os trabalhadores foram encontrados em condições <strong>subumanas</strong>.</li>
+        <li data-l="B">O acidente com o <strong>sub-marino</strong> americano foi um dos piores da história.</li>
+        <li data-l="C">A biblioteca será comandada por um bibliotecário e um <strong>subibliotecário</strong>.</li>
+        <li data-l="D">O contrato não deixa dúvida: é terminantemente proibido <strong>sublocar</strong> o imóvel.</li>
+        <li data-l="E">A <strong>sub-nutrição</strong> infantil é um dos problemas mais graves a ser enfrentado.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito divulgado: D.</span> "sub-" leva hífen antes de <strong>b, r e h</strong>: sub-representados, sub-bibliotecário (C está errada), sub-humano. Antes das demais letras, junta: submarino (B), subnutrição (E), <strong>sublocar</strong> (D).</p>
+        <p><strong>Ressalva:</strong> o VOLP da Academia Brasileira de Letras registra <strong>as duas formas</strong>, "sub-humano" e "subumano", de modo que a alternativa A também está de acordo com a norma. O gabarito divulgado ficou com D. Se uma questão assim cair, marque a alternativa sem nenhuma dúvida (aqui, D) e, se a banca mantiver a outra, lembre que esse é caso de <strong>recurso</strong>.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a16">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 16</span></div>
+      <p>Observe a palavra "empresas", presente no Texto 3. Ela é um exemplo de que, em português, o som de /z/ pode ser grafado com as letras S ou Z. Assinale a alternativa em que ambas as palavras estão grafadas de acordo com as normas de ortografia atuais.</p>
+      <ol class="alt"><li data-l="A">subzídio; imunização</li><li data-l="B">coalizão; paralisação</li><li data-l="C">deslize; gravidês</li><li data-l="D">cicatrisação; baliza</li><li data-l="E">mãesinha; pãesinhos</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: B.</span> Coalizão (com z) e parali<strong>s</strong>ação (de paralisia) estão certas. <strong>Subsídio</strong> é com s (A). <strong>Gravidez</strong>, substantivo abstrato de "grávida", é com z (C). <strong>Cicatrização</strong> vem de cicatriz (D). <strong>Mãezinha, pãezinhos</strong> levam o -zinho (E). Quase toda alternativa se resolve pelo truque da família de palavras.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-a20">
+      <div class="src"><span class="tag b">FADE 2023 · nível D</span><span>Assistente em Administração · questão 20</span></div>
+      <p>As normas ortográficas recomendam grafar com acento agudo o termo "público", presente na expressão "servidor público", do Texto 4. Segundo essas normas, qual das palavras destacadas abaixo também deve ser grafada com acento?</p>
+      <ol class="alt"><li data-l="A">Interessante: sua <strong>rúbrica</strong> é quase idêntica a sua assinatura.</li><li data-l="B">Somente hoje é possível adquirir produtos <strong>gratuítos</strong> naquela loja.</li><li data-l="C">Nice é uma cidade <strong>européia</strong> localizada em bela região da França.</li><li data-l="D">Fiquei dez anos fora do Brasil e, nesse <strong>ínterim</strong>, o país mudou muito.</li><li data-l="E">Todos os <strong>ítens</strong> de cozinha podem ser comprados pela metade do preço.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> "Público" é proparoxítona, e <strong>ínterim</strong> também (ÍN-te-rim): toda proparoxítona é acentuada. As outras são paroxítonas que não levam acento: ru-BRI-ca, gra-TUI-to (a sílaba tônica é o ditongo "tui"), eu-ro-PEI-a (ditongo aberto em paroxítona perdeu o acento com o Acordo) e I-tens (terminada em -ens). A questão cobra ao mesmo tempo <strong>prosódia</strong> (onde está a sílaba forte) e acentuação.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-e10">
+      <div class="src"><span class="tag">FADE 2023 · nível E</span><span>Administrador · questão 10</span></div>
+      <p>Para informar que o português é "a terceira língua europeia mais falada", o autor grafou o termo destacado sem acento, atendendo às normas ortográficas vigentes. Assinale a alternativa em que a palavra destacada está corretamente grafada.</p>
+      <ol class="alt"><li data-l="A">As pessoas <strong>crêem</strong> que sua língua é eterna.</li><li data-l="B">São <strong>herois</strong> aqueles que lutam por sua língua.</li><li data-l="C">A <strong>platéia</strong> aplaudiu seu discurso a favor da língua.</li><li data-l="D">Nem todos <strong>apoiam</strong> as causas linguísticas.</li><li data-l="E">Alguns acham que é <strong>paranóia</strong> defender a língua.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> A: <strong>creem</strong> (hiato ee perdeu o acento). C e E: <strong>plateia, paranoia</strong> (ditongo aberto em paroxítona). B é a armadilha: <strong>heróis</strong> é <strong>oxítona</strong> terminada em ditongo aberto, e o acento continua. Quem decorou "ditongo aberto não tem mais acento", sem o "em paroxítona", erra aqui.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-e16">
+      <div class="src"><span class="tag">FADE 2023 · nível E</span><span>Administrador · questão 16 · texto do Museu da Língua Portuguesa</span></div>
+      <p>De acordo com o Texto 3, "a grafia das palavras é a única matéria linguística sujeita a uma legislação explícita". A "legislação" vigente recomenda que:</p>
+      <ol class="items" style="list-style:none;padding:0">
+        <li>1) palavras como "cajú" e "caquí" sejam grafadas com acento agudo.</li>
+        <li>2) não sejam acentuadas palavras com dupla vogal, como "voo" e "leem".</li>
+        <li>3) não sejam grafadas com trema palavras como "frequência", "linguiça" e "arguição".</li>
+        <li>4) monossílabos tônicos como "cá", "nó" e "fé" sejam acentuados.</li>
+      </ol>
+      <p>Estão corretas:</p>
+      <ol class="alt"><li data-l="A">1, 2 e 3, apenas.</li><li data-l="B">1, 2 e 4, apenas.</li><li data-l="C">1, 3 e 4, apenas.</li><li data-l="D">2, 3 e 4, apenas.</li><li data-l="E">1, 2, 3 e 4.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: D.</span> O item 1 é o único errado: oxítonas terminadas em <strong>i</strong> e <strong>u</strong> não se acentuam (caju, caqui, tatu). Os itens 2 e 3 são mudanças do Acordo, e o 4 é regra antiga (monossílabo tônico terminado em a, e, o). Como o item 1 está em A, B, C e E, basta ter certeza dele para acertar.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-2016-18">
+      <div class="src"><span class="tag c">UFPE 2016</span><span>Biólogo · Edital 84/2016 · questão 18</span></div>
+      <p>Analise a pontuação do seguinte trecho: "Quando falamos ou escrevemos, não temos muita consciência das regras usadas ou das decisões tomadas, pois essas ações são tão rotineiras que fluem de modo inconsciente". Uma alternativa também correta de pontuação desse trecho seria:</p>
+      <ol class="alt">
+        <li data-l="A">Quando falamos, ou escrevemos, não temos muita consciência, das regras usadas ou das decisões tomadas, pois, essas ações são tão rotineiras, que fluem de modo inconsciente.</li>
+        <li data-l="B">Quando falamos ou escrevemos; não temos muita consciência das regras, usadas, ou das decisões, tomadas, pois; essas ações são tão rotineiras, que fluem de modo inconsciente.</li>
+        <li data-l="C">Quando falamos, ou escrevemos, não temos muita consciência das regras usadas, ou das decisões tomadas, pois essas ações são tão rotineiras que fluem de modo inconsciente.</li>
+        <li data-l="D">Quando falamos, ou escrevemos; não temos muita consciência, das regras usadas ou das decisões tomadas, pois, essas ações, são tão rotineiras, que fluem de modo inconsciente.</li>
+        <li data-l="E">Quando falamos, ou escrevemos, não temos, muita consciência, das regras usadas, ou, das decisões tomadas; pois, essas ações são tão rotineiras, que fluem de modo inconsciente.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> Elimine pela regra de ouro. A e D põem vírgula entre "consciência" e seu complemento "das regras". D e E separam sujeito e verbo ou verbo e complemento ("essas ações, são"; "temos, muita consciência"). B usa ponto e vírgula entre a oração adverbial e a principal. Em C, as vírgulas que sobram isolam "ou escrevemos" (termo intercalado, aceitável) e "ou das decisões tomadas" (acréscimo), sem quebrar nenhum vínculo sintático.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-2008-10">
+      <div class="src"><span class="tag c">UFPE/UFRPE 2008</span><span>Biólogo · banca Covest · questão 10 · texto sobre a universidade</span></div>
+      <p>O uso de vírgula(s) é facultativo nos seguintes trechos do Texto 2, EXCETO em:</p>
+      <ol class="alt">
+        <li data-l="A">"Concluo repetindo, também, algo que já falei em outras oportunidades:"</li>
+        <li data-l="B">"Por isso, é necessário que a Universidade ajude a despertar cidadãos competentemente inquietos e dispostos a enfrentar os absurdos que acontecem em nossa sociedade;"</li>
+        <li data-l="C">"E, felizmente, existe uma consciência grande na comunidade acadêmica em geral em abrir caminho nesse sentido."</li>
+        <li data-l="D">"essa é, sem dúvida, uma das questões que mais diretamente inquieta e interroga a muitos daqueles que fazem da Universidade o dia-a-dia de sua vida."</li>
+        <li data-l="E">"Poderíamos aqui discorrer longamente sobre o quanto nossa antropologia, nossa consciência latino-americana e nossas posturas éticas ainda são frágeis".</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: E.</span> Em A a D, as vírgulas isolam expressões adverbiais curtas ("também", "Por isso", "felizmente", "sem dúvida"), cujo isolamento é <strong>facultativo</strong>. Em E, as vírgulas separam os núcleos de um <strong>sujeito composto enumerado</strong> (nossa antropologia, nossa consciência… e nossas posturas), e aí são obrigatórias. Detalhe da época: "dia-a-dia" era a grafia anterior ao Acordo. Hoje é <strong>dia a dia</strong>.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-2019-8">
+      <div class="src"><span class="tag c">UFPE 2019</span><span>Desenhista de Artes Gráficas · Edital 53/2019 · questão 8 · gabarito preliminar</span></div>
+      <p>Observe a correta grafia da expressão "expectativa idealizada". Estão igualmente grafadas com correção as palavras:</p>
+      <ol class="alt"><li data-l="A">excessão e humidade.</li><li data-l="B">abcesso e auto-ajuda.</li><li data-l="C">estender e paralisação.</li><li data-l="D">enxarcar e indentidade.</li><li data-l="E">covalescência e estrupo.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito preliminar: C.</span> <strong>Estender</strong> (com s, embora "extensão" seja com x) e <strong>paralisação</strong>. A: exceção, umidade. B: "abcesso" é registrado como variante de abscesso, mas "auto-ajuda" é <strong>autoajuda</strong> desde o Acordo (vogal diferente: junto). D: encharcar (de charco), identidade. E: convalescença ou convalescência, estupro. É a mesma lógica da FADE: palavras de uso comum com a grafia que "soa" certa.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · Qua (juntos) e Dom</span>
+    <h2>16 questões no estilo da FADE</h2>
+    <p class="muted">Questões autorais, escritas nos formatos da banca. Marque tudo e só depois corrija. A última nota fica salva neste navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · Dom</span>
+    <h2>40 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar. Depois de ver a resposta, marque <strong>sei</strong> ou <strong>revisar</strong>. O botão de exportar gera um CSV (frente;verso) pronto para importar no Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Fontes.</strong> Edital UFPE nº 12/2026, Anexo II, Português, na redação da Retificação publicada no DOU de 10/08/2026 · Acordo Ortográfico da Língua Portuguesa (1990), promulgado pelo Decreto nº 6.583/2008, obrigatório desde 1º/01/2016 (Decreto nº 7.875/2012) · <em>Vocabulário Ortográfico da Língua Portuguesa</em> (VOLP), Academia Brasileira de Letras · Lei nº 8.112/1990, art. 5º (Planalto) · <em>Manual de Redação da Presidência da República</em>, 3ª ed., 2018.</p>
+    <p><strong>Questões reais:</strong> FADE/UFPE 2023 (Edital nº 10/2023): Assistente em Administração, questões 9, 10, 16 e 20; Administrador, questões 10 e 16. UFPE 2016 (Biólogo, Edital 84/2016), questão 18. UFPE/UFRPE 2008 (Biólogo, Covest), questão 10. UFPE 2019 (Desenhista de Artes Gráficas, Edital 53/2019, gabarito preliminar), questão 8. Os pesos por tema são estimativa. O simulado e os cartões são autorais.</p>
+    <p>Voltar: <a href="../index.html#cado">plano do Cado</a> · <a href="../index.html#gabi">plano da Gabi</a> · Anterior: <a href="portugues-1.html">Português I</a> · Próxima página de Português: crase e colocação pronominal (semana 3).</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:comum:port2';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Assinale a alternativa em que a pontuação está de acordo com a norma-padrão.',
+     o:['Os candidatos aprovados no concurso, tomarão posse em até trinta dias.','A comissão analisou, os recursos interpostos pelos candidatos.','Após a homologação do resultado, a universidade publicará a lista de nomeados.','O servidor que, faltar ao serviço sem justificativa terá o dia descontado.','Compete ao Reitor, nomear os aprovados.'],a:2,
+     w:'A vírgula depois do adjunto adverbial deslocado ("Após a homologação do resultado") está correta. A separa sujeito e verbo; B e E, verbo e complemento; D quebra a oração adjetiva restritiva no meio.'},
+    {t:'Considere as frases.<br>I. Os servidores que cumpriram o estágio probatório adquiriram estabilidade.<br>II. Os servidores, que cumpriram o estágio probatório, adquiriram estabilidade.<br>É correto afirmar que',
+     o:['as duas frases têm o mesmo sentido, pois a vírgula, nesse caso, é facultativa.','em I, todos os servidores adquiriram estabilidade.','em II, apenas parte dos servidores cumpriu o estágio probatório.','em I, a oração restringe o grupo aos que cumpriram o estágio; em II, afirma-se que todos o cumpriram.','em II, as vírgulas estão incorretas, porque separam o sujeito do verbo.'],a:3,
+     w:'Restritiva (sem vírgula) recorta um subconjunto; explicativa (entre vírgulas) comenta o grupo inteiro. As vírgulas de II são corretas: isolam uma oração intercalada, e não separam o núcleo do sujeito do verbo.'},
+    {t:'Leia: <em>“Art. 5º São requisitos básicos para investidura em cargo público: I - a nacionalidade brasileira; II - o gozo dos direitos políticos; [...] VI - aptidão física e mental.”</em> (Lei nº 8.112/1990). Sobre a pontuação do dispositivo, é correto afirmar que',
+     o:['os dois-pontos após “público” poderiam ser trocados por vírgula sem prejuízo.','o ponto e vírgula indica que cada inciso é independente do caput.','o ponto e vírgula foi empregado por erro, pois a norma exige vírgula entre itens de enumeração.','o ponto final após “mental” indica que o inciso VI é uma exceção à regra do caput.','os dois-pontos introduzem a enumeração anunciada no caput, e o ponto e vírgula separa os itens, indicando que a enumeração continua.'],a:4,
+     w:'É a convenção da escrita legislativa: dois-pontos anunciam a lista, ponto e vírgula separa os incisos e o ponto final fecha o último. Todos os incisos dependem do caput.'},
+    {t:'Em “A empresa se diz “sustentável”, mas foi multada três vezes por crime ambiental.”, as aspas foram empregadas para',
+     o:['marcar a citação literal de um texto de lei.','destacar um estrangeirismo.','indicar distanciamento irônico do enunciador em relação ao termo.','indicar o título de uma obra.','assinalar um neologismo.'],a:2,
+     w:'O enunciador atribui a palavra à empresa e não a assume: a multa desmente a autodescrição. É o uso de aspas para ironia e distanciamento, frequente no jornalismo e nas charges.'},
+    {t:'Assinale a alternativa em que o emprego do porquê está correto.',
+     o:['Não sei porque o recurso foi indeferido.','O candidato não compareceu por que estava doente.','Porque o edital foi retificado?','Ninguém explicou o porquê da anulação.','Eis o motivo porque desisti.'],a:3,
+     w:'"O porquê" é substantivo (= o motivo), junto e com acento. A e E pedem "por que" (por qual razão / pelo qual); B pede "porque" (causa); C, pergunta, pede "Por que".'},
+    {t:'Segundo o Acordo Ortográfico em vigor, estão corretamente grafadas todas as palavras de:',
+     o:['idéia, heróico, assembléia.','ideia, heroico, assembleia.','vôo, lêem, crêem.','pára (verbo), pêlo, pólo.','freqüência, lingüiça, agüentar.'],a:1,
+     w:'Ditongos abertos em paroxítonas perderam o acento (ideia, heroico, assembleia). Também caíram o acento de voo/leem/creem, os diferenciais de para/pelo/polo e o trema.'},
+    {t:'Assinale a frase em que o acento diferencial, obrigatório pelas regras vigentes, está corretamente empregado.',
+     o:['Ontem ele não pôde comparecer à sessão.','Ele pára o carro sempre no mesmo lugar.','O gato tem o pêlo muito claro.','A cidade é um pólo de tecnologia.','A pêra estava madura.'],a:0,
+     w:'Ficaram obrigatórios pôde (passado) × pode, pôr × por e têm/vêm (plural). Os de para, pelo, polo e pera caíram com o Acordo.'},
+    {t:'Estão grafadas de acordo com o Acordo Ortográfico as palavras de:',
+     o:['auto-escola, anti-rugas, micro-ondas.','autoescola, anti-rugas, microondas.','auto-escola, antirrugas, microondas.','autoescola, antirrugas, micro-ondas.','autoescola, antirrugas, microondas.'],a:3,
+     w:'Vogal diferente: junto (autoescola). R ou S depois de prefixo em vogal: junto e dobra (antirrugas). Vogal igual: hífen (micro-ondas).'},
+    {t:'Assinale a alternativa em que todas as palavras estão corretamente grafadas.',
+     o:['ex-diretor, vice-reitor, pós-graduação.','exdiretor, vice-reitor, pósgraduação.','ex-diretor, vicereitor, pós-graduação.','co-autor, re-eleição, pré-estabelecer.','super-mercado, inter-estadual, hiper-mercado.'],a:0,
+     w:'Ex-, vice- e pós- (tônico) sempre com hífen. Co- e re- vão sempre juntos (coautor, reeleição), e pre- átono também (preestabelecer). Super-, inter- e hiper- só levam hífen antes de h e r (supermercado, interestadual, hipermercado).'},
+    {t:'Com o Acordo Ortográfico, os compostos com elemento de ligação passaram a ser escritos sem hífen, com algumas exceções. Estão corretamente grafados sem hífen, segundo essa regra, os compostos de:',
+     o:['cor de rosa, água de colônia.','bem te vi, joão de barro.','guarda chuva, segunda feira.','arco da velha, pé de meia.','pé de moleque, dia a dia, fim de semana.'],a:4,
+     w:'Cor-de-rosa, água-de-colônia, arco-da-velha e pé-de-meia são exceções que mantêm o hífen. Nomes de espécies (bem-te-vi, joão-de-barro) também. Guarda-chuva e segunda-feira não têm elemento de ligação e continuam com hífen.'},
+    {t:'Assinale a sequência que preenche corretamente as lacunas.<br>“Com a publicação da errata, a universidade ______ o edital. Dias depois, após analisar os recursos, a comissão ______ a decisão anterior, mantendo-a. O servidor que ______ o código de ética poderá ter pena de censura ______ pela comissão.”',
+     o:['ratificou – retificou – infligir – infringida','retificou – ratificou – infringir – infligida','retificou – ratificou – infligir – infringida','ratificou – ratificou – infringir – infligida','retificou – retificou – infringir – infligida'],a:1,
+     w:'Retificar = corrigir (a errata corrige); ratificar = confirmar (mantendo a decisão); infringir = violar a norma; infligir = aplicar a pena.'},
+    {t:'Assinale a sequência que preenche corretamente as lacunas.<br>“______ dois meses, a banca divulgou esclarecimentos ______ do cronograma, e a prova será daqui ______ quatro meses.”',
+     o:['A – a cerca – há','Há – há cerca – há','A – acerca – a','Há – a cerca – a','Há – acerca – a'],a:4,
+     w:'Há = tempo passado (faz dois meses). Acerca de = sobre. A = tempo futuro (daqui a quatro meses).'},
+    {t:'Assinale a alternativa correta quanto à norma-padrão.',
+     o:['O candidato estava de mau humor e mal preparado.','Aonde você mora?','Estude, se não você será reprovado.','Ele é um mal servidor.','Onde você vai amanhã?'],a:0,
+     w:'Mau humor (oposto de bom), mal preparado (oposto de bem). B pede "onde" (lugar estático), E pede "aonde" (ir a). C pede "senão" (caso contrário). D pede "mau servidor".'},
+    {t:'Estão corretamente grafadas todas as palavras de:',
+     o:['paralização, análize, pesquizar.','exceção, excessão, estender.','paralisação, análise, pesquisar.','encher, enxarcar, enxergar.','gravidês, portuguêz, beleza.'],a:2,
+     w:'Família de palavras: paralisia → paralisação; análise → analisar; pesquisa → pesquisar. Em B, "excessão" está errada; em D, encharcar vem de charco; em E, gravidez e português.'},
+    {t:'Leia a mensagem de um grupo de estudos: <em>“GENTE!!! O edital foi RETIFICADO... de novo 🙄”</em>. Sobre os recursos empregados, analise as proposições.<br>1) As exclamações repetidas intensificam o tom de alarme da mensagem.<br>2) A caixa alta em “RETIFICADO” destaca o termo e sugere voz elevada.<br>3) As reticências antes de “de novo” criam uma pausa que reforça a ironia e a irritação, também marcadas pelo emoji.<br>4) Esses recursos devem ser evitados em qualquer gênero textual, por contrariarem a norma-padrão.<br>Estão corretas, apenas:',
+     o:['1 e 2.','1, 2 e 3.','2, 3 e 4.','1, 3 e 4.','1, 2, 3 e 4.'],a:1,
+     w:'O edital pede a "expressividade" desses recursos nos textos instantâneos, onde são adequados ao gênero. A proposição 4 condena o recurso fora de contexto: é o distrator típico.'},
+    {t:'Assinale a alternativa em que a pontuação está INCORRETA.',
+     o:['O prazo terminou, e os candidatos ainda aguardavam o resultado.','A banca, porém, manteve o gabarito.','Ela prefere Português; ele, Legislação.','Recife, 24 de janeiro de 2027.','Os aprovados na primeira fase, deverão apresentar os documentos até o dia 10.'],a:4,
+     w:'Em E, a vírgula separa o sujeito ("Os aprovados na primeira fase") do verbo. A: vírgula antes de "e" com sujeitos diferentes. B: adversativa deslocada entre vírgulas. C: elipse do verbo. D: local e data.'}
+  ];
+  var F=[
+    ['Regra de ouro da vírgula','Não se separa sujeito de verbo nem verbo de complemento, nem com sujeito longo.'],
+    ['Adjunto adverbial curto anteposto: vírgula?','Facultativa ("Hoje(,) a banca divulgou…"). Se longo, recomendada.'],
+    ['Oração subordinada adverbial antes da principal','Leva vírgula: "Quando o edital saiu, começamos a estudar."'],
+    ['Vocativo','Sempre separado por vírgula: "Candidatos, atenção."'],
+    ['Aposto explicativo','Entre vírgulas: "Recife, capital de Pernambuco, sediará…"'],
+    ['Oração adjetiva restritiva × explicativa','Restritiva: sem vírgula, recorta parte do grupo. Explicativa: entre vírgulas, vale para o grupo todo.'],
+    ['Vírgula antes de "e"','Usada quando os sujeitos das orações são diferentes, com valor adversativo ou no polissíndeto.'],
+    ['"Porém", "contudo", "todavia" deslocados','Ficam entre vírgulas: "A banca, porém, manteve o gabarito."'],
+    ['"Mas" e a vírgula','"Mas" inicia a oração e leva vírgula antes: "Estudou, mas não passou."'],
+    ['Zeugma (elipse do verbo)','A vírgula marca o verbo omitido: "Eu prefiro café; ela, chá."'],
+    ['Ponto e vírgula na lei','Separa os incisos de uma enumeração; o último inciso termina em ponto final.'],
+    ['Dois-pontos: três usos','Anunciar enumeração, introduzir citação e introduzir explicação, síntese ou consequência.'],
+    ['Travessão duplo × vírgulas','Ambos isolam termo intercalado; o travessão dá mais realce.'],
+    ['Aspas: efeito além da citação','Distanciamento ou ironia (o enunciador não assume a palavra); marcam a voz do outro.'],
+    ['Reticências','Interrupção, hesitação, insinuação, ironia. [...] marca supressão em citação.'],
+    ['Pergunta retórica','Interrogação que não espera resposta: serve para argumentar ou provocar.'],
+    ['CAIXA ALTA e "!!!" no chat','Ênfase e intensificação da emoção; adequados ao gênero cotidiano.'],
+    ['Ponto final em mensagem curta de chat','Pode soar seco ou frio ("ok."), porque costuma ser omitido nesse gênero.'],
+    ['Acordo Ortográfico: obrigatório desde','1º de janeiro de 2016 (Decreto nº 7.875/2012). Referência: VOLP da ABL.'],
+    ['Ditongos abertos éi, ói: quando perderam o acento?','Nas paroxítonas: ideia, heroico, assembleia, europeia, jiboia.'],
+    ['Herói, papéis, dói: têm acento?','Sim. Oxítonas e monossílabos com ditongo aberto mantiveram o acento.'],
+    ['voo, leem, creem, deem','Hiatos oo e ee perderam o acento com o Acordo.'],
+    ['Trema','Abolido (frequência, linguiça). Só fica em nomes próprios estrangeiros: Müller.'],
+    ['Diferenciais que ficaram','pôde × pode, pôr × por, têm/vêm × tem/vem. Facultativos: fôrma, dêmos.'],
+    ['Diferenciais que caíram','para (verbo), pelo, polo, pera, pela.'],
+    ['Paroxítonas que não se acentuam','Terminadas em a, e, o, em, ens: item, itens, hifens, rubrica, gratuito, recorde.'],
+    ['Oxítonas terminadas em i e u','Não se acentuam: caju, caqui, tatu, aqui.'],
+    ['Proparoxítonas','Todas acentuadas: público, ínterim, lâmpada.'],
+    ['Hífen: prefixo em vogal + mesma vogal','Hífen: micro-ondas, anti-inflamatório, contra-ataque.'],
+    ['Hífen: prefixo em vogal + vogal diferente','Junto: autoescola, infraestrutura, extraoficial.'],
+    ['Hífen: prefixo em vogal + r ou s','Junto, dobrando a letra: antirrugas, minissaia, ultrassom.'],
+    ['Hífen: prefixo + h','Hífen: anti-higiênico, super-homem, sub-humano (o VOLP também aceita subumano).'],
+    ['Prefixos sempre com hífen','ex-, vice-, sem-, além-, aquém-, recém-, e pré-/pós-/pró- tônicos.'],
+    ['Prefixos sempre juntos','co-, re-, pre- e pro- átonos: coautor, cooperar, reeleição, preestabelecer.'],
+    ['sub-: quando tem hífen?','Antes de b, r, h: sub-base, sub-reitor, sub-representados. Demais: submarino, sublocar.'],
+    ['Compostos com elemento de ligação','Sem hífen (pé de moleque, dia a dia, fim de semana), exceto cor-de-rosa, água-de-colônia, pé-de-meia, arco-da-velha e nomes de espécies.'],
+    ['há × a (tempo)','há = passado (faz); a = futuro ou distância.'],
+    ['retificar × ratificar','retificar = corrigir (a retificação do edital); ratificar = confirmar.'],
+    ['infringir × infligir','infringir = violar uma norma; infligir = aplicar uma pena.'],
+    ['-isar × -izar','-isar se a origem tem s (análise → analisar, paralisia → paralisação); senão -izar (cicatriz → cicatrizar).']
+  ];
+  var C=[
+    'Dizer, pela regra de ouro, por que uma vírgula entre sujeito e verbo está errada.',
+    'Distinguir vírgula facultativa (adjunto curto) de obrigatória (enumeração, vocativo, aposto).',
+    'Explicar a mudança de sentido entre oração adjetiva restritiva e explicativa.',
+    'Saber quando se usa vírgula antes de "e".',
+    'Pontuar um artigo de lei com caput, incisos e parágrafo.',
+    'Explicar o efeito de aspas, reticências e interrogação retórica em charge ou notícia.',
+    'Analisar o efeito de "!!!", caixa alta e reticências numa mensagem de chat.',
+    'Listar as mudanças de acentuação do Acordo (éi/ói, ee/oo, trema, diferenciais).',
+    'Acentuar corretamente público, ínterim, rubrica, gratuito, itens, heróis, europeia.',
+    'Aplicar a tabela do hífen com prefixos em vogal e os prefixos especiais (ex-, vice-, co-, re-, sub-).',
+    'Usar corretamente os quatro porquês, mal/mau, há/a, onde/aonde e senão/se não.',
+    'Grafar pelo truque da família de palavras: paralisação, cicatrização, gravidez, encharcar, exceção.'
+  ];
+
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 port2'];}),'ufpe2027-portugues-2.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 port2'];});
+    dl(rows,'ufpe2027-portugues-2-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>

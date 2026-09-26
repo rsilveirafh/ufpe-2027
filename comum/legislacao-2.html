@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Legislação para o concurso UFPE 2027: Lei 8.112/1990, provimento, posse, exercício, estágio probatório, estabilidade e vacância, com questões reais da FADE, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+<title>Legislação II · 8.112 provimento</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+.backs{display:flex;flex-wrap:wrap;gap:16px}
+.lei{font-family:Georgia,"Times New Roman",serif;font-size:15.5px;background:var(--card);border:1px solid var(--rule2);border-left:4px solid var(--ink3);border-radius:0 5px 5px 0;padding:12px 16px;margin:12px 0;color:var(--ink)}
+.lei b{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.06em;color:var(--ink3);display:block;margin-bottom:2px}
+.new{display:inline-block;white-space:nowrap;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.08em;padding:1px 7px;border-radius:99px;background:var(--mag);color:#fff;vertical-align:2px}
+
+@media (max-width:640px){figure.fig{overflow-x:auto;-webkit-overflow-scrolling:touch}figure.fig svg{min-width:620px}figure.fig figcaption{position:sticky;left:0}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro do sábado</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#conceitos">1 · Servidor, cargo e requisitos</a>
+  <a href="#concurso">2 · Concurso</a>
+  <a href="#formas">3 · As 7 formas de provimento</a>
+  <a href="#retornos">4 · Reversão, reintegração, recondução, aproveitamento</a>
+  <a href="#posse">5 · Posse</a>
+  <a href="#exercicio">6 · Exercício e jornada</a>
+  <a href="#estagio">7 · Estágio probatório e estabilidade</a>
+  <a href="#vacancia">8 · Vacância</a>
+  <a href="#pegadinhas">Pegadinhas em série</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <div class="backs"><a class="back" href="../index.html#cado">← Plano do Cado</a><a class="back" href="../index.html#gabi">Plano da Gabi</a><a class="back" href="legislacao-1.html">← Semana 1 · CF 37 a 41</a></div>
+  <div class="eyebrow">Legislação Aplicada ao Servidor · comum aos dois · Lei 8.112: provimento e vacância · Semana 2</div>
+  <h1>Lei 8.112<br><em>entrar e sair do cargo</em></h1>
+  <p class="dek">Como alguém vira servidor e como o cargo fica vago: requisitos, concurso, as sete formas de provimento, posse, exercício, estágio probatório, estabilidade e vacância. É o trecho da 8.112 com mais prazos e mais palavras trocadas em prova.</p>
+  <div class="meta"><span class="hot">sáb 17/10 · 1h30 juntos</span><span>arts. 2º a 35 · texto vigente do Planalto</span><span>5 questões reais</span><span>16 no simulado</span><span>40 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#comocai">Como cai</a><a href="#conceitos">Conceitos</a><a href="#concurso">Concurso</a><a href="#formas">Provimento</a><a href="#retornos">Retornos</a><a href="#posse">Posse</a><a href="#exercicio">Exercício</a><a href="#estagio">Estágio</a><a href="#vacancia">Vacância</a><a href="#pegadinhas">Pegadinhas</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro · sábado 17/10</span>
+    <h2>1h30 juntos, mais 15 minutos antes</h2>
+    <div class="plan">
+      <div class="row"><div class="d"><b>Antes</b>15 min cada</div><div>Leitura corrida da <strong>lei seca</strong>, arts. 2º a 35, no <a href="https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm">site do Planalto</a>. Ignore o texto riscado: é o que foi revogado.</div></div>
+      <div class="row"><div class="d"><b>0–10 min</b>aquecimento</div><div>Um pergunta, o outro responde: prazo da posse, prazo do exercício, as sete formas de provimento, os cinco fatores do estágio. Vale revisar os cartões "revisar" da <a href="legislacao-1.html#cartoes">semana 1</a>.</div></div>
+      <div class="row"><div class="d"><b>10–40 min</b>provimento</div><div>Seções <a href="#conceitos">1</a> a <a href="#retornos">4</a>. O <a href="#formas">mapa das formas</a> e o <a href="#retornos">efeito dominó da reintegração</a> são o coração da aula: expliquem um para o outro sem olhar.</div></div>
+      <div class="row"><div class="d"><b>40–60 min</b>posse a vacância</div><div>Seções <a href="#posse">5</a> a <a href="#vacancia">8</a>. Desenhem juntos a linha do tempo publicação → posse → exercício → estágio → estabilidade, com os prazos.</div></div>
+      <div class="row"><div class="d"><b>60–85 min</b>questões</div><div>As <a href="#reais">5 questões reais</a> juntos, depois o <a href="#simulado">simulado</a> cada um no seu celular. Comparem só onde discordaram.</div></div>
+      <div class="row"><div class="d"><b>85–90 min</b>fechamento</div><div>Os <a href="#cartoes">flashcards</a> marcados como "revisar" vão para o Anki. Os prazos da <a href="#pegadinhas">lista de pegadinhas</a> entram na revisão de domingo.</div></div>
+    </div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>Este recorte nas provas anteriores</h2>
+    <p>O mapa completo de Legislação está na <a href="legislacao-1.html#comocai">página da semana 1</a>: na FADE/UFPE 2023, <strong>12 das 20 questões de Legislação (60%) foram da Lei 8.112</strong>. Dentro da 8.112, este trecho (arts. 2º a 35) apareceu assim:</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Prova</th><th>Questão</th><th>Assunto</th><th>Formato</th></tr></thead>
+      <tbody>
+        <tr><td>FADE 2023 · Assistente (D)</td><td>27</td><td>Fatores avaliados no estágio probatório</td><td>marcar a lista correta</td></tr>
+        <tr><td>FADE 2023 · Administrador (E)</td><td>29</td><td>Licença que não cabe no estágio probatório</td><td>alternativa com a exceção</td></tr>
+        <tr><td>FADE 2023 · Assistente (D)</td><td>31</td><td>Reintegração e o destino do ocupante da vaga</td><td>caso com nome (Ângela)</td></tr>
+        <tr><td>FADE 2023 · Administrador (E)</td><td>28</td><td>Retorno ao serviço público após demissão <span class="new">vizinha</span></td><td>alternativa com a exceção</td></tr>
+        <tr><td>UFPE 2008 · Biólogo</td><td>11</td><td>Definição de readaptação</td><td>definição → nome</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">O que isso diz</h4>
+        <p class="small muted" style="margin:0">Foram <strong>3 das 12</strong> questões de 8.112 da FADE 2023 (uma em cada quatro), e em todas a resposta estava no <strong>texto literal</strong> de um artigo: art. 20, caput e § 4º, e art. 28. Estimativa para 2027: <strong>1 a 2 das 10 questões</strong> de Legislação saem deste trecho, quase certamente sobre formas de provimento, estágio ou prazos de posse e exercício.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Como estudar este trecho</h4>
+        <p class="small muted" style="margin:0">Aqui a FADE troca <strong>uma palavra ou um número</strong>: 30 × 15 dias, "publicação do ato" × "nomeação", "tornado sem efeito" × "exonerado", "estável" × "efetivo". O método é o da semana 1: ler a lei seca, decorar os números e treinar com casos com nome.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 CONCEITOS -->
+  <section class="sec" id="conceitos">
+    <span class="lbl">Seção 1 · arts. 2º a 7º</span>
+    <h2>Servidor, cargo e requisitos de investidura</h2>
+    <div class="lei"><b>Art. 2º</b>Para os efeitos desta Lei, servidor é a pessoa legalmente investida em cargo público.</div>
+    <div class="lei"><b>Art. 3º</b>Cargo público é o conjunto de atribuições e responsabilidades previstas na estrutura organizacional que devem ser cometidas a um servidor.<br><em>Parágrafo único.</em> Os cargos públicos, acessíveis a todos os brasileiros, são <strong>criados por lei</strong>, com denominação própria e vencimento pago pelos cofres públicos, para provimento em caráter <strong>efetivo ou em comissão</strong>.</div>
+    <ul>
+      <li><strong>Art. 4º:</strong> é proibida a prestação de <strong>serviços gratuitos</strong>, salvo os casos previstos em lei.</li>
+      <li><strong>Art. 6º:</strong> o provimento se faz por ato da autoridade competente de cada Poder.</li>
+      <li><strong>Art. 7º:</strong> a <strong>investidura</strong> ocorre com a <strong>posse</strong>, e não com a nomeação. É por isso que a nomeação sozinha não torna ninguém servidor.</li>
+    </ul>
+    <h3>Os seis requisitos básicos (art. 5º)</h3>
+    <div class="scroll"><table class="tbl">
+      <thead><tr><th>Inciso</th><th>Requisito</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td>nacionalidade brasileira</td></tr>
+        <tr><td>II</td><td>gozo dos direitos políticos</td></tr>
+        <tr><td>III</td><td>quitação com as obrigações militares e eleitorais</td></tr>
+        <tr><td>IV</td><td>nível de escolaridade exigido para o cargo</td></tr>
+        <tr><td>V</td><td>idade mínima de <strong>18 anos</strong></td></tr>
+        <tr><td>VI</td><td>aptidão física e mental</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>§ 1º:</strong> as atribuições do cargo podem justificar <strong>outros requisitos estabelecidos em lei</strong>. É daí que vêm o registro no conselho do Biólogo e o registro no MTE do Desenhista, exigidos pelo nosso edital.</li>
+      <li><strong>§ 2º:</strong> a lei reserva às pessoas com deficiência <strong>até 20%</strong> das vagas. O percentual mínimo de 5% vem do Decreto 9.508/2018, que é o citado no edital UFPE 12/2026.</li>
+      <li><strong>§ 3º:</strong> <strong>universidades e instituições de pesquisa federais</strong> podem prover cargos com professores, técnicos e cientistas <strong>estrangeiros</strong>. Por isso o inciso I tem exceção, e isso importa para uma questão sobre a UFPE.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"A investidura ocorre com a nomeação" está errado: ocorre com a <strong>posse</strong> (art. 7º). E "exige-se nacionalidade brasileira sem exceção" também está errado, por causa do § 3º (universidades) e da própria Constituição (art. 37, I: estrangeiros "na forma da lei").</p></div>
+  </section>
+
+  <!-- 2 CONCURSO -->
+  <section class="sec" id="concurso">
+    <span class="lbl">Seção 2 · arts. 10 a 12</span>
+    <h2>Concurso público</h2>
+    <ul>
+      <li><strong>Art. 10:</strong> a nomeação para cargo efetivo depende de <strong>prévia habilitação em concurso</strong> de provas ou de provas e títulos, obedecidas a <strong>ordem de classificação</strong> e o <strong>prazo de validade</strong>.</li>
+      <li><strong>Art. 11:</strong> o concurso pode ser feito em <strong>duas etapas</strong>, e a inscrição pode ser condicionada ao pagamento da taxa, ressalvadas as isenções previstas no edital.</li>
+    </ul>
+    <div class="lei"><b>Art. 12</b>O concurso público terá validade de até 2 (dois) anos, podendo ser prorrogado uma única vez, por igual período.<br>§ 1º O prazo de validade do concurso e as condições de sua realização serão fixados em edital, que será publicado no Diário Oficial da União e em jornal diário de grande circulação.<br>§ 2º <strong>Não se abrirá novo concurso</strong> enquanto houver candidato aprovado em concurso anterior com prazo de validade não expirado.</div>
+    <div class="cx dec"><span class="k">Lei × Constituição · compare com a semana 1</span><p>A Constituição (art. 37, IV) só garante <strong>prioridade de convocação</strong> ao aprovado do concurso anterior, o que permite abrir um novo concurso durante a validade. A 8.112 é <strong>mais rígida</strong> para o servidor federal: <strong>proíbe abrir</strong> novo concurso enquanto houver aprovado em concurso válido. Se a questão disser "segundo a Lei 8.112", vale a proibição.</p></div>
+  </section>
+
+  <!-- 3 FORMAS -->
+  <section class="sec" id="formas">
+    <span class="lbl">Seção 3 · art. 8º</span>
+    <h2>As sete formas de provimento</h2>
+    <p>Provimento é o ato que <strong>preenche</strong> um cargo. O art. 8º lista <strong>sete formas</strong>. A <strong>nomeação</strong> é a única <strong>originária</strong>, porque cria o vínculo; as demais são <strong>derivadas</strong>, porque dependem de um vínculo que já existia. Os incisos III e IV (<strong>ascensão e transferência</strong>) foram <strong>revogados</strong> em 1997: não são mais formas de provimento, e o STF considera inconstitucional qualquer forma de passar a outro cargo sem concurso (Súmula Vinculante 43).</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 360" role="img" aria-label="Mapa das sete formas de provimento, com quem é provido e para onde vai">
+        <text x="100" y="22" text-anchor="middle" font-size="11" class="t3 tb">FORMA</text>
+        <text x="200" y="22" font-size="11" class="t3 tb">QUEM É PROVIDO</text>
+        <text x="480" y="22" font-size="11" class="t3 tb">VAI PARA</text>
+        <g font-size="12">
+          <!-- 1 nomeação -->
+          <rect x="20" y="36" width="160" height="30" rx="15" class="fms" stroke="var(--mag)"/><text x="100" y="56" text-anchor="middle" class="tb">nomeação</text>
+          <text x="200" y="49">quem não tem vínculo: aprovado em</text><text x="200" y="63">concurso ou livre nomeação (comissão)</text>
+          <text x="480" y="49">cargo efetivo ou em comissão</text><text x="480" y="63" class="t2">única forma originária · única com posse</text>
+          <!-- 2 promoção -->
+          <rect x="20" y="82" width="160" height="30" rx="15" class="fgs" stroke="var(--green)"/><text x="100" y="102" text-anchor="middle" class="tb">promoção</text>
+          <text x="200" y="102">servidor da carreira</text>
+          <text x="480" y="95">posição superior na mesma carreira</text><text x="480" y="109" class="t2">também é vacância do cargo anterior</text>
+          <!-- 3 readaptação -->
+          <rect x="20" y="128" width="160" height="30" rx="15" class="fgs" stroke="var(--green)"/><text x="100" y="148" text-anchor="middle" class="tb">readaptação</text>
+          <text x="200" y="141">servidor com limitação física ou</text><text x="200" y="155">mental verificada em inspeção médica</text>
+          <text x="480" y="141">cargo compatível com a limitação</text><text x="480" y="155" class="t2">também é vacância · art. 24</text>
+          <!-- 4 reversão -->
+          <rect x="20" y="174" width="160" height="30" rx="15" class="fcs" stroke="var(--cyan)"/><text x="100" y="194" text-anchor="middle" class="tb">reversão</text>
+          <text x="200" y="187">aposentado (invalidez que cessou, ou</text><text x="200" y="201">voluntário, no interesse da administração)</text>
+          <text x="480" y="187">volta à atividade no mesmo cargo</text><text x="480" y="201" class="t2">ou no transformado · arts. 25 a 27</text>
+          <!-- 5 aproveitamento -->
+          <rect x="20" y="220" width="160" height="30" rx="15" class="fcs" stroke="var(--cyan)"/><text x="100" y="240" text-anchor="middle" class="tb">aproveitamento</text>
+          <text x="200" y="240">servidor em disponibilidade</text>
+          <text x="480" y="233">cargo de atribuições e vencimentos</text><text x="480" y="247" class="t2">compatíveis · obrigatório · arts. 30 a 32</text>
+          <!-- 6 reintegração -->
+          <rect x="20" y="266" width="160" height="30" rx="15" class="fcs" stroke="var(--cyan)"/><text x="100" y="286" text-anchor="middle" class="tb">reintegração</text>
+          <text x="200" y="279">estável cuja demissão foi invalidada</text><text x="200" y="293">(decisão administrativa ou judicial)</text>
+          <text x="480" y="279">o mesmo cargo, com ressarcimento</text><text x="480" y="293" class="t2">de todas as vantagens · art. 28</text>
+          <!-- 7 recondução -->
+          <rect x="20" y="312" width="160" height="30" rx="15" class="fcs" stroke="var(--cyan)"/><text x="100" y="332" text-anchor="middle" class="tb">recondução</text>
+          <text x="200" y="325">estável inabilitado no estágio de outro</text><text x="200" y="339">cargo, ou desalojado por reintegração</text>
+          <text x="480" y="325">o cargo que ocupava antes</text><text x="480" y="339" class="t2">art. 29</text>
+        </g>
+      </svg>
+      <figcaption>Rosa: forma originária. Verde: provimento que é, ao mesmo tempo, vacância. Azul: formas de retorno, detalhadas na seção 4.</figcaption>
+    </figure>
+    <h3>Nomeação (arts. 9º e 10)</h3>
+    <ul>
+      <li>Em <strong>caráter efetivo</strong>, para cargo isolado de provimento efetivo ou de carreira; ou <strong>em comissão</strong>, inclusive como <strong>interino</strong>, para cargo de confiança vago.</li>
+      <li><strong>Parágrafo único do art. 9º</strong> (caiu na FADE 2023, Administrador Q30): o ocupante de cargo em comissão pode ser nomeado <strong>interinamente</strong> para outro cargo de confiança, sem deixar o atual, e <strong>opta pela remuneração de um deles</strong> durante a interinidade.</li>
+    </ul>
+    <h3>Promoção e readaptação</h3>
+    <ul>
+      <li><strong>Promoção (art. 17):</strong> não interrompe o tempo de exercício, que continua contando na nova posição a partir da publicação do ato. Na carreira dos técnico-administrativos em educação, a progressão segue a Lei 11.091/2005 (semana 8).</li>
+      <li><strong>Readaptação (art. 24):</strong> investidura em cargo compatível com a limitação que o servidor sofreu, <strong>verificada em inspeção médica</strong>. Precisa respeitar habilitação exigida, escolaridade e <strong>equivalência de vencimentos</strong>. Sem cargo vago, o servidor exerce as atribuições como <strong>excedente</strong> até surgir vaga. Se for <strong>julgado incapaz</strong> para o serviço público, é <strong>aposentado</strong>.</li>
+    </ul>
+  </section>
+
+  <!-- 4 RETORNOS -->
+  <section class="sec" id="retornos">
+    <span class="lbl">Seção 4 · arts. 25 a 32</span>
+    <h2>Reversão, reintegração, recondução e aproveitamento</h2>
+    <p>São as quatro formas de <strong>voltar</strong>, e as que a banca mais gosta de misturar. A pergunta que resolve quase todas: <strong>de onde a pessoa está voltando?</strong></p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Forma</th><th>Volta de onde</th><th>Exige estabilidade?</th><th>Detalhes que caem</th></tr></thead>
+      <tbody>
+        <tr><td>Reversão</td><td>da <strong>aposentadoria</strong></td><td>No interesse da administração, sim</td><td>(I) <strong>por invalidez</strong>, quando junta médica declara insubsistentes os motivos; (II) <strong>no interesse da administração</strong>, se: a) o aposentado <strong>solicitou</strong>; b) a aposentadoria foi <strong>voluntária</strong>; c) era <strong>estável</strong> na atividade; d) aposentou-se nos <strong>5 anos anteriores</strong>; e) há <strong>cargo vago</strong>. Limite: <strong>não reverte quem tem 70 anos</strong> (art. 27). Na invalidez, sem vaga, fica como excedente. Para ter os proventos recalculados pelas regras atuais, precisa ficar 5 anos no cargo.</td></tr>
+        <tr><td>Reintegração</td><td>da <strong>demissão invalidada</strong></td><td><strong>Sim</strong>, servidor estável</td><td>Volta ao mesmo cargo ou ao resultante da transformação, com <strong>ressarcimento de todas as vantagens</strong>. Cargo extinto: fica em <strong>disponibilidade</strong>. Cargo ocupado: o ocupante é <strong>reconduzido</strong>, <strong>sem indenização</strong>, ou aproveitado em outro cargo, ou posto em disponibilidade.</td></tr>
+        <tr><td>Recondução</td><td>de <strong>outro cargo</strong></td><td><strong>Sim</strong>, servidor estável</td><td>Retorno ao cargo anteriormente ocupado por (I) <strong>inabilitação em estágio probatório de outro cargo</strong> ou (II) <strong>reintegração do anterior ocupante</strong>. Se o cargo de origem estiver provido, é aproveitado em outro.</td></tr>
+        <tr><td>Aproveitamento</td><td>da <strong>disponibilidade</strong></td><td>Sim: só o estável fica em disponibilidade</td><td><strong>Obrigatório</strong>, em cargo de atribuições e vencimentos compatíveis. O órgão central do SIPEC determina o aproveitamento imediato na vaga que surgir. Se não entrar em exercício no prazo legal, o aproveitamento é tornado sem efeito e a disponibilidade é <strong>cassada</strong>, salvo doença comprovada por junta médica.</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig">
+      <svg viewBox="0 0 760 250" role="img" aria-label="Efeito dominó da reintegração">
+        <defs><marker id="ar1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" class="fm"/></marker></defs>
+        <g font-size="11.5">
+          <rect x="10" y="30" width="170" height="78" rx="6" class="fms" stroke="var(--mag)"/>
+          <text x="95" y="52" text-anchor="middle" class="tb">Ângela é reintegrada</text>
+          <text x="95" y="70" text-anchor="middle" class="t2">a demissão foi anulada;</text>
+          <text x="95" y="85" text-anchor="middle" class="t2">volta com todas as</text>
+          <text x="95" y="100" text-anchor="middle" class="t2">vantagens (art. 28)</text>
+          <rect x="205" y="30" width="170" height="78" rx="6" class="fcs" stroke="var(--cyan)"/>
+          <text x="290" y="52" text-anchor="middle" class="tb">Carla, que ocupava a</text>
+          <text x="290" y="67" text-anchor="middle" class="tb">vaga, é reconduzida</text>
+          <text x="290" y="85" text-anchor="middle" class="t2">ao cargo de origem,</text>
+          <text x="290" y="100" text-anchor="middle" class="t2">sem indenização</text>
+          <rect x="400" y="30" width="170" height="78" rx="6" class="fcs" stroke="var(--cyan)"/>
+          <text x="485" y="52" text-anchor="middle" class="tb">origem de Carla</text>
+          <text x="485" y="67" text-anchor="middle" class="tb">também ocupada?</text>
+          <text x="485" y="85" text-anchor="middle" class="t2">Carla é aproveitada</text>
+          <text x="485" y="100" text-anchor="middle" class="t2">em outro cargo</text>
+          <rect x="595" y="30" width="155" height="78" rx="6" class="fas" stroke="var(--amber)"/>
+          <text x="672" y="52" text-anchor="middle" class="tb">sem cargo algum?</text>
+          <text x="672" y="70" text-anchor="middle" class="t2">disponibilidade, com</text>
+          <text x="672" y="85" text-anchor="middle" class="t2">remuneração proporcional</text>
+          <text x="672" y="100" text-anchor="middle" class="t2">ao tempo de serviço</text>
+          <line x1="180" y1="69" x2="202" y2="69" class="sm" stroke-width="2" marker-end="url(#ar1)"/>
+          <line x1="375" y1="69" x2="397" y2="69" class="sm" stroke-width="2" marker-end="url(#ar1)"/>
+          <line x1="570" y1="69" x2="592" y2="69" class="sm" stroke-width="2" marker-end="url(#ar1)"/>
+          <rect x="10" y="150" width="365" height="62" rx="6" class="cell"/>
+          <text x="192" y="172" text-anchor="middle" class="tb">E se o cargo de Ângela tiver sido extinto?</text>
+          <text x="192" y="190" text-anchor="middle" class="t2">Ângela fica em disponibilidade (art. 28, § 1º),</text>
+          <text x="192" y="205" text-anchor="middle" class="t2">e não é readaptada nem aproveitada de imediato</text>
+          <path d="M95 108 V 150" class="ln2" stroke-dasharray="4 3"/>
+          <rect x="400" y="150" width="350" height="62" rx="6" class="cell"/>
+          <text x="575" y="172" text-anchor="middle" class="tb">Quem é "reconduzido" aqui?</text>
+          <text x="575" y="190" text-anchor="middle" class="t2">Carla, a ocupante desalojada (art. 29, II).</text>
+          <text x="575" y="205" text-anchor="middle" class="t2">Ângela é reintegrada, e não reconduzida.</text>
+        </g>
+      </svg>
+      <figcaption>O caso Ângela da FADE 2023 (Assistente, Q31), passo a passo. Cada passo só acontece se o anterior não resolver.</figcaption>
+    </figure>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>Reversão é de <strong>aposentado</strong>; reintegração é de <strong>demitido</strong>; recondução é de quem estava em <strong>outro cargo</strong>; aproveitamento é de quem estava em <strong>disponibilidade</strong>. E o limite de idade da reversão na 8.112 é <strong>70 anos</strong>, mesmo com a aposentadoria compulsória hoje aos 75 (LC 152/2015). A lei não foi atualizada, e a banca cobra o número da lei.</p></div>
+  </section>
+
+  <!-- 5 POSSE -->
+  <section class="sec" id="posse">
+    <span class="lbl">Seção 5 · arts. 13 e 14</span>
+    <h2>Posse</h2>
+    <p>A posse é a <strong>assinatura do termo</strong> em que constam atribuições, deveres, responsabilidades e direitos do cargo, que não podem ser alterados unilateralmente, salvo atos de ofício previstos em lei.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Regra</th><th>O que diz</th></tr></thead>
+      <tbody>
+        <tr><td>Prazo (§ 1º)</td><td><strong>30 dias</strong> contados da <strong>publicação do ato de provimento</strong></td></tr>
+        <tr><td>Servidor de licença ou afastado (§ 2º)</td><td>O prazo conta do <strong>término do impedimento</strong></td></tr>
+        <tr><td>Procuração (§ 3º)</td><td>Pode tomar posse por <strong>procuração específica</strong></td></tr>
+        <tr><td>Quando há posse (§ 4º)</td><td><strong>Só na nomeação</strong>. Nas demais formas de provimento não há posse</td></tr>
+        <tr><td>Documentos (§ 5º)</td><td><strong>Declaração de bens e valores</strong> + declaração sobre exercer ou não <strong>outro cargo, emprego ou função</strong> pública</td></tr>
+        <tr><td>Sem posse no prazo (§ 6º)</td><td>O ato de provimento é <strong>tornado sem efeito</strong>. Não há exoneração, porque a pessoa ainda não é servidora</td></tr>
+        <tr><td>Inspeção médica (art. 14)</td><td>A posse depende de <strong>prévia inspeção médica oficial</strong>; só é empossado quem for julgado <strong>apto física e mentalmente</strong></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- 6 EXERCÍCIO -->
+  <section class="sec" id="exercicio">
+    <span class="lbl">Seção 6 · arts. 15 a 19</span>
+    <h2>Exercício e jornada</h2>
+    <p><strong>Exercício</strong> é o efetivo desempenho das atribuições do cargo ou da função de confiança. Quem dá exercício é a autoridade competente do órgão para onde o servidor foi nomeado.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 230" role="img" aria-label="Linha do tempo da publicação do ato à estabilidade">
+        <line x1="70" y1="110" x2="730" y2="110" class="ln" stroke-width="2.4"/>
+        <rect x="330" y="118" width="400" height="16" rx="3" class="fms"/>
+        <text x="530" y="130" text-anchor="middle" font-size="11" class="tb">estágio probatório</text>
+        <g class="fm"><circle cx="70" cy="110" r="7"/><circle cx="200" cy="110" r="7"/><circle cx="330" cy="110" r="7"/><circle cx="730" cy="110" r="7"/></g>
+        <g class="ln2" stroke-width="1.4"><line x1="463" y1="116" x2="463" y2="140"/><line x1="597" y1="116" x2="597" y2="140"/><line x1="686" y1="116" x2="686" y2="140"/></g>
+        <g font-size="12" text-anchor="middle">
+          <text x="70" y="62" class="tb">ato publicado</text><text x="70" y="78" class="t2" font-size="11">no DOU</text>
+          <text x="200" y="62" class="tb">posse</text><text x="200" y="78" class="t2" font-size="11">termo assinado</text>
+          <text x="330" y="62" class="tb">exercício</text><text x="330" y="78" class="t2" font-size="11">começa o estágio</text>
+          <text x="750" y="62" class="tb" text-anchor="end">estabilidade</text><text x="750" y="78" class="t2" font-size="11" text-anchor="end">3 anos de efetivo exercício</text>
+          <text x="135" y="101" class="tb" font-size="11">até 30 dias</text>
+          <text x="265" y="101" class="tb" font-size="11">até 15 dias</text>
+          <text x="463" y="154" class="t3" font-size="10.5">12º mês</text>
+          <text x="597" y="154" class="t3" font-size="10.5">24º mês</text>
+          <text x="686" y="154" class="t3" font-size="10.5">32º mês</text>
+          <text x="686" y="168" class="t2" font-size="10.5">avaliação final</text>
+          <text x="150" y="162" class="t2" font-size="11">sem posse: ato tornado sem efeito</text>
+          <text x="300" y="180" class="t2" font-size="11">sem exercício: exoneração de ofício</text>
+          <text x="530" y="208" class="t2" font-size="11">24 meses na lei · 3 anos pela CF (EC 19) · 36 meses no Decreto 12.374/2025</text>
+        </g>
+      </svg>
+      <figcaption>Os prazos que mais caem. As marcas de 12, 24 e 32 meses são os ciclos de avaliação do Decreto 12.374/2025; a avaliação final ocorre 4 meses antes do fim do estágio (art. 20, § 1º).</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Regra</th><th>O que diz</th></tr></thead>
+      <tbody>
+        <tr><td>Prazo (art. 15, § 1º)</td><td><strong>15 dias</strong> contados da <strong>posse</strong></td></tr>
+        <tr><td>Sem exercício (§ 2º)</td><td>O servidor é <strong>exonerado</strong> do cargo; se era designação para <strong>função de confiança</strong>, o ato de designação é tornado sem efeito</td></tr>
+        <tr><td>Função de confiança (§ 4º)</td><td>O exercício coincide com a <strong>publicação da designação</strong>; se o servidor estiver de licença, começa no 1º dia útil após o impedimento, sem passar de 30 dias da publicação</td></tr>
+        <tr><td>Mudança de município (art. 18)</td><td>Removido, redistribuído, requisitado, cedido ou em exercício provisório: <strong>mínimo de 10 e máximo de 30 dias</strong> contados da publicação do ato, <strong>incluído o deslocamento</strong>. É <strong>facultado declinar</strong> desses prazos</td></tr>
+        <tr><td>Jornada (art. 19)</td><td>Máximo de <strong>40 horas semanais</strong>, com limites de <strong>6 a 8 horas diárias</strong>, salvo leis especiais. Cargo em comissão e função de confiança: <strong>integral dedicação</strong>, podendo ser convocado sempre que houver interesse da administração</td></tr>
+        <tr><td>Registro (art. 16)</td><td>Início, suspensão, interrupção e reinício do exercício ficam no <strong>assentamento individual</strong></td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx dec"><span class="k">Decoreba · 30 → 15 → 10 a 30</span><p><strong>30</strong> dias da publicação para a posse; <strong>15</strong> dias da posse para o exercício; <strong>10 a 30</strong> dias quando o servidor muda de município. E as consequências: sem posse, o ato é <strong>tornado sem efeito</strong>; sem exercício, o servidor é <strong>exonerado</strong>.</p></div>
+  </section>
+
+  <!-- 7 ESTÁGIO -->
+  <section class="sec" id="estagio">
+    <span class="lbl">Seção 7 · arts. 20 a 22</span>
+    <h2>Estágio probatório e estabilidade</h2>
+    <div class="lei"><b>Art. 20, caput</b>Ao entrar em exercício, o servidor nomeado para cargo de provimento efetivo ficará sujeito a estágio probatório por período de 24 (vinte e quatro) meses, durante o qual a sua aptidão e capacidade serão objeto de avaliação para o desempenho do cargo, observados os seguinte fatores: I – assiduidade; II – disciplina; III – capacidade de iniciativa; IV – produtividade; V – responsabilidade.</div>
+    <div class="cx cai"><span class="k">Caiu · FADE 2023 (Assistente, Q27)</span><p>Os <strong>cinco fatores</strong>: assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade. A banca misturou <strong>probidade</strong> e <strong>honestidade</strong>, que não estão na lista. Para decorar: <strong>"A DIsCiPlina PRoduz Responsabilidade"</strong>, com A de assiduidade, DI de disciplina, C de capacidade de iniciativa, P de produtividade e R de responsabilidade.</p></div>
+    <h3>24 meses, 3 anos ou 36 meses?</h3>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Fonte</th><th>O que diz</th><th>Como responder</th></tr></thead>
+      <tbody>
+        <tr><td>Lei 8.112, art. 20</td><td>Estágio de <strong>24 meses</strong> (texto nunca alterado)</td><td>Enunciado "segundo a Lei 8.112": <strong>24 meses</strong></td></tr>
+        <tr><td>CF, art. 41 (EC 19/1998)</td><td>Estabilidade após <strong>3 anos</strong> de efetivo exercício, com avaliação especial de desempenho</td><td>Enunciado sobre estabilidade: <strong>3 anos</strong>. O art. 21 da 8.112 ("2 anos") está superado, e o próprio Planalto anota "prazo 3 anos"</td></tr>
+        <tr><td>STF, STJ e AGU</td><td>O estágio probatório acompanha o prazo de 3 anos da estabilidade</td><td>Questão sobre jurisprudência: <strong>3 anos</strong></td></tr>
+        <tr><td>Decreto 12.374/2025 <span class="new">novo</span></td><td>Estágio de <strong>36 meses</strong> no Executivo federal, com <strong>3 ciclos de avaliação</strong> aos 12, 24 e 32 meses, nota de 0 a 100 por ciclo, aprovação com <strong>média ≥ 80</strong> e <strong>programa de desenvolvimento inicial</strong> obrigatório</td><td>É a regra que vocês vão viver na UFPE. Não está no edital, mas pode aparecer como distrator</td></tr>
+      </tbody>
+    </table></div>
+    <h3>O que acontece durante o estágio</h3>
+    <ul>
+      <li><strong>§ 1º:</strong> <strong>4 meses antes</strong> do fim do estágio, a avaliação de desempenho feita por <strong>comissão</strong> é submetida à homologação da autoridade competente.</li>
+      <li><strong>§ 2º:</strong> reprovado no estágio, o servidor é <strong>exonerado</strong>; se já era <strong>estável</strong> em outro cargo, é <strong>reconduzido</strong> ao cargo anterior.</li>
+      <li><strong>§ 3º:</strong> pode exercer <strong>cargo em comissão ou função de direção, chefia ou assessoramento no próprio órgão</strong>. Só pode ser <strong>cedido</strong> para cargos de Natureza Especial ou em comissão de nível alto (DAS 6, 5 e 4, ou equivalentes).</li>
+    </ul>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">Pode ter no estágio (§ 4º)</h4>
+        <ul class="small" style="margin:0">
+          <li>Licença por motivo de <strong>doença em pessoa da família</strong></li>
+          <li>Licença por <strong>afastamento do cônjuge ou companheiro</strong></li>
+          <li>Licença para o <strong>serviço militar</strong></li>
+          <li>Licença para <strong>atividade política</strong></li>
+          <li>Afastamento para <strong>mandato eletivo</strong> (art. 94), <strong>estudo ou missão no exterior</strong> (art. 95) e <strong>organismo internacional</strong> (art. 96)</li>
+          <li>Afastamento para <strong>curso de formação</strong> de outro concurso federal</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Não pode ter no estágio</h4>
+        <ul class="small" style="margin:0">
+          <li>Licença para <strong>capacitação</strong> (caiu: FADE 2023, Administrador Q29)</li>
+          <li>Licença para <strong>tratar de interesses particulares</strong></li>
+          <li>Licença para <strong>mandato classista</strong></li>
+        </ul>
+        <h4>Suspendem o estágio (§ 5º)</h4>
+        <p class="small muted" style="margin:0">Licença por <strong>doença em pessoa da família</strong> (art. 83), por <strong>afastamento do cônjuge</strong> (art. 84, § 1º), para <strong>atividade política</strong> (art. 86), afastamento para <strong>organismo internacional</strong> (art. 96) e <strong>curso de formação</strong>. O estágio é retomado ao fim do impedimento.</p>
+      </div>
+    </div>
+    <div class="cx dec"><span class="k">Decoreba · o art. 81 em dois blocos</span><p>O art. 81 lista 7 licenças. As <strong>quatro primeiras (I a IV)</strong> cabem no estágio: família, cônjuge, militar e política. As <strong>três últimas (V a VII)</strong> não cabem: capacitação, interesses particulares e mandato classista.</p></div>
+    <h3>Estabilidade (arts. 21 e 22)</h3>
+    <ul>
+      <li>Adquire estabilidade o servidor <strong>habilitado em concurso</strong> e <strong>empossado em cargo efetivo</strong>, após <strong>3 anos de efetivo exercício</strong> (pela CF; a lei ainda diz 2).</li>
+      <li><strong>Art. 22:</strong> o estável só perde o cargo por <strong>sentença judicial transitada em julgado</strong> ou por <strong>processo administrativo disciplinar</strong> com ampla defesa. A Constituição acrescenta a <strong>avaliação periódica de desempenho</strong>, na forma de lei complementar (art. 41, § 1º, III), e o excesso de despesa com pessoal (art. 169, § 4º). Detalhes na <a href="legislacao-1.html#art41">semana 1</a>.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>Estabilidade é <strong>no serviço público</strong>, não no cargo: o estável que toma posse em outro cargo e é reprovado no novo estágio volta pela <strong>recondução</strong>, mas é <strong>efetivo</strong> no novo cargo desde a posse. "Efetivo" diz respeito ao tipo de cargo; "estável" diz respeito ao tempo de exercício.</p></div>
+  </section>
+
+  <!-- 8 VACÂNCIA -->
+  <section class="sec" id="vacancia">
+    <span class="lbl">Seção 8 · arts. 33 a 35</span>
+    <h2>Vacância</h2>
+    <p>Vacância é o cargo <strong>ficar vago</strong>. O art. 33 lista <strong>sete hipóteses</strong> vigentes (os incisos IV e V, ascensão e transferência, foram revogados junto com os de provimento).</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 300" role="img" aria-label="Diagrama de conjuntos: formas de provimento, de vacância e as que são as duas coisas">
+        <circle cx="300" cy="160" r="130" class="fcs" opacity=".85"/>
+        <circle cx="460" cy="160" r="130" class="fas" opacity=".75"/>
+        <circle cx="300" cy="160" r="130" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+        <circle cx="460" cy="160" r="130" fill="none" stroke="var(--amber)" stroke-width="2"/>
+        <text x="300" y="18" text-anchor="middle" font-size="13" class="tb">PROVIMENTO · art. 8º</text>
+        <text x="460" y="18" text-anchor="middle" font-size="13" class="tb">VACÂNCIA · art. 33</text>
+        <g font-size="12.5" text-anchor="middle">
+          <text x="235" y="110">nomeação</text>
+          <text x="235" y="132">reversão</text>
+          <text x="235" y="154">aproveitamento</text>
+          <text x="235" y="176">reintegração</text>
+          <text x="235" y="198">recondução</text>
+          <text x="380" y="150" class="tb">promoção</text>
+          <text x="380" y="172" class="tb">readaptação</text>
+          <text x="515" y="104">exoneração</text>
+          <text x="515" y="126">demissão</text>
+          <text x="515" y="148">aposentadoria</text>
+          <text x="515" y="170">posse em outro</text>
+          <text x="515" y="186">cargo inacumulável</text>
+          <text x="515" y="208">falecimento</text>
+        </g>
+      </svg>
+      <figcaption>Promoção e readaptação são as únicas que, no mesmo ato, preenchem um cargo e deixam outro vago. Por isso aparecem nas duas listas.</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 760 290" role="img" aria-label="Árvore das formas de vacância com os tipos de exoneração">
+        <rect x="290" y="12" width="180" height="34" rx="6" class="fms" stroke="var(--mag)"/>
+        <text x="380" y="34" text-anchor="middle" font-size="13" class="tb">VACÂNCIA (art. 33)</text>
+        <g class="ln2" stroke-width="1.4">
+          <path d="M380 46 V 66 M70 66 H 705 M70 66 V 88 M175 66 V 88 M280 66 V 88 M385 66 V 88 M490 66 V 88 M600 66 V 88 M705 66 V 88"/>
+          <path d="M70 128 V 150 M40 150 H 130 M40 150 V 170 M130 150 V 170"/>
+        </g>
+        <g font-size="11.5" text-anchor="middle">
+          <rect x="22" y="88" width="96" height="40" rx="5" class="cell"/><text x="70" y="112" class="tb">exoneração</text>
+          <rect x="127" y="88" width="96" height="40" rx="5" class="cell"/><text x="175" y="112" class="tb">demissão</text>
+          <rect x="232" y="88" width="96" height="40" rx="5" class="fgs" stroke="var(--green)"/><text x="280" y="112" class="tb">promoção</text>
+          <rect x="337" y="88" width="96" height="40" rx="5" class="fgs" stroke="var(--green)"/><text x="385" y="112" class="tb">readaptação</text>
+          <rect x="442" y="88" width="96" height="40" rx="5" class="cell"/><text x="490" y="112" class="tb">aposentadoria</text>
+          <rect x="547" y="88" width="106" height="40" rx="5" class="cell"/><text x="600" y="105" class="tb">posse em outro</text><text x="600" y="120" class="tb">inacumulável</text>
+          <rect x="662" y="88" width="86" height="40" rx="5" class="cell"/><text x="705" y="112" class="tb">falecimento</text>
+          <text x="175" y="146" class="t2" font-size="11">é penalidade</text>
+          <text x="280" y="146" class="t2" font-size="11">também é</text><text x="280" y="160" class="t2" font-size="11">provimento</text>
+          <text x="385" y="146" class="t2" font-size="11">também é</text><text x="385" y="160" class="t2" font-size="11">provimento</text>
+          <rect x="4" y="170" width="72" height="30" rx="5" class="fcs" stroke="var(--cyan)"/><text x="40" y="190">a pedido</text>
+          <rect x="92" y="170" width="76" height="30" rx="5" class="fas" stroke="var(--amber)"/><text x="130" y="190">de ofício</text>
+          <text x="130" y="220" class="t2" font-size="11">1. estágio não satisfeito</text>
+          <text x="130" y="236" class="t2" font-size="11">2. tomou posse e não</text>
+          <text x="130" y="250" class="t2" font-size="11">entrou em exercício</text>
+          <text x="500" y="210" class="t2" font-size="11.5">Cargo em comissão ou função de confiança (art. 35):</text>
+          <text x="500" y="228" class="t2" font-size="11.5">exoneração ou dispensa a juízo da autoridade</text>
+          <text x="500" y="246" class="t2" font-size="11.5">competente, ou a pedido do próprio servidor</text>
+        </g>
+      </svg>
+      <figcaption>Exoneração de cargo efetivo (art. 34): a pedido ou de ofício, e de ofício só nas duas hipóteses da lei. Demissão não é exoneração: é penalidade, aplicada após processo disciplinar (semana 5).</figcaption>
+    </figure>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"O servidor que não tomar posse no prazo será exonerado" está errado: sem posse, o ato é <strong>tornado sem efeito</strong>. Exoneração de ofício é para quem <strong>tomou posse e não entrou em exercício</strong>, ou para quem foi reprovado no estágio. E demissão nunca é "a pedido": é punição.</p></div>
+  </section>
+
+  <!-- PEGADINHAS -->
+  <section class="sec" id="pegadinhas">
+    <span class="lbl">Revisão rápida</span>
+    <h2>Pegadinhas em série</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>A banca escreve…</th><th>O certo é…</th><th>Artigo</th></tr></thead>
+      <tbody>
+        <tr><td>posse em 15 dias; exercício em 30</td><td>posse em <strong>30</strong> dias; exercício em <strong>15</strong></td><td>13, § 1º; 15, § 1º</td></tr>
+        <tr><td>prazo da posse contado da nomeação</td><td>contado da <strong>publicação do ato de provimento</strong></td><td>13, § 1º</td></tr>
+        <tr><td>quem não toma posse é exonerado</td><td>o ato é <strong>tornado sem efeito</strong></td><td>13, § 6º</td></tr>
+        <tr><td>há posse em todas as formas de provimento</td><td>posse <strong>só na nomeação</strong></td><td>13, § 4º</td></tr>
+        <tr><td>a investidura ocorre com a nomeação</td><td>ocorre com a <strong>posse</strong></td><td>7º</td></tr>
+        <tr><td>transferência e ascensão são formas de provimento</td><td><strong>revogadas</strong> desde 1997</td><td>8º, III e IV</td></tr>
+        <tr><td>fatores do estágio incluem probidade/honestidade</td><td>assiduidade, disciplina, capacidade de iniciativa, produtividade, responsabilidade</td><td>20, caput</td></tr>
+        <tr><td>no estágio cabe licença para capacitação</td><td><strong>não cabe</strong>; só as do art. 81, I a IV</td><td>20, § 4º</td></tr>
+        <tr><td>reversão aos 5 anos ou 10 anos da aposentadoria, até 75 anos</td><td>aposentadoria nos <strong>5 anos</strong> anteriores; não reverte com <strong>70 anos</strong></td><td>25, II, d; 27</td></tr>
+        <tr><td>o ocupante desalojado pela reintegração é indenizado</td><td><strong>sem direito à indenização</strong></td><td>28, § 2º</td></tr>
+        <tr><td>reintegrado com cargo extinto é readaptado</td><td>fica em <strong>disponibilidade</strong></td><td>28, § 1º</td></tr>
+        <tr><td>recondução vale para servidor efetivo</td><td>vale para servidor <strong>estável</strong></td><td>29</td></tr>
+        <tr><td>é possível abrir concurso com aprovado em concurso anterior válido</td><td><strong>não se abrirá</strong> (pela 8.112)</td><td>12, § 2º</td></tr>
+        <tr><td>jornada de até 44 horas semanais</td><td>máximo de <strong>40 horas</strong>, 6 a 8 por dia</td><td>19</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais</span>
+    <h2>O que a FADE e a UFPE cobraram deste trecho</h2>
+    <p class="muted">Transcrição fiel, formatação ajustada. Duas delas (Q29 e Q31) também aparecem na semana 1; aqui estão no contexto em que nasceram, a Lei 8.112.</p>
+
+    <div class="q" id="q-ass27">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Assistente em Administração · nível D · questão 27 · estágio probatório</span></div>
+      <p>O servidor nomeado para cargo de provimento efetivo, ao entrar em exercício, ficará sujeito a estágio probatório, momento em que serão avaliadas sua aptidão e capacidade para desempenho do cargo. Considerando essa situação, assinale a alternativa que contempla os fatores que serão objeto de observação.</p>
+      <ol class="alt"><li data-l="A">Assiduidade, disciplina e probidade.</li><li data-l="B">Capacidade de iniciativa, produtividade e honestidade.</li><li data-l="C">Responsabilidade, produtividade e probidade.</li><li data-l="D">Capacidade de iniciativa, disciplina, honestidade.</li><li data-l="E">Assiduidade, disciplina, responsabilidade.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: E.</span> Os cinco fatores do art. 20 são assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade. As alternativas erradas <strong>inserem um intruso</strong>: probidade (A e C) ou honestidade (B e D). Não é preciso ter a lista completa na alternativa; basta que <strong>todos</strong> os itens estejam na lei.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-adm29">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Administrador · nível E · questão 29 · licenças no estágio</span></div>
+      <p>Considerando o teor da Lei n.º 8.112/1990, ao servidor em estágio probatório, não poderá ser concedida licença</p>
+      <ol class="alt"><li data-l="A">por motivo de afastamento do cônjuge ou companheiro.</li><li data-l="B">por motivo de doença em pessoa da família.</li><li data-l="C">para capacitação.</li><li data-l="D">para o serviço militar.</li><li data-l="E">para atividade política.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> O art. 20, § 4º, só permite as licenças do art. 81, <strong>incisos I a IV</strong>: doença em pessoa da família, afastamento do cônjuge, serviço militar e atividade política. As quatro erradas são exatamente essas. A licença para capacitação é o inciso V.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-ass31">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Assistente em Administração · nível D · questão 31 · reintegração</span></div>
+      <p>Ângela, servidora pública federal estável, foi demitida de seu cargo. Inconformada, ajuizou demanda judicial que determinou sua reinvestidura ao cargo anteriormente ocupado. Com base na Lei 8.112/1990, a situação relatada é caso de</p>
+      <ol class="alt">
+        <li data-l="A">reintegração e, se o cargo anteriormente ocupado por Ângela tiver sido provido, o seu atual ocupante será reconduzido ao cargo de origem, sem direito à indenização, ou aproveitado em outro cargo, ou, ainda, posto em disponibilidade.</li>
+        <li data-l="B">recondução, e Ângela será ressarcida de todas as vantagens.</li>
+        <li data-l="C">recondução e, se o cargo anteriormente ocupado por Ângela tiver sido extinto, ela será posta em disponibilidade.</li>
+        <li data-l="D">reintegração e, se o cargo anteriormente ocupado por Ângela tiver sido extinto, ela será readaptada.</li>
+        <li data-l="E">redistribuição e, se o cargo anteriormente ocupado por Ângela tiver sido provido, o seu atual ocupante será reconduzido ao cargo de origem, com direito à indenização, aproveitado em outro cargo, ou posto em disponibilidade.</li>
+      </ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: A.</span> Art. 28, § 2º, transcrito. Volta de <strong>demissão invalidada</strong> é reintegração, o que elimina B, C e E. D erra porque, com o cargo extinto, a reintegrada fica em <strong>disponibilidade</strong> (§ 1º); readaptação é para limitação física ou mental. Veja o <a href="#retornos">efeito dominó</a> desenhado na seção 4.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-2008-11">
+      <div class="src"><span class="tag b">UFPE/UFRPE 2008</span><span>Biólogo · banca Covest · questão 11 · readaptação</span></div>
+      <p>Investidura do servidor em cargo de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental verificada em inspeção médica consiste em:</p>
+      <ol class="alt"><li data-l="A">reversão.</li><li data-l="B">reintegração.</li><li data-l="C">readaptação.</li><li data-l="D">promoção.</li><li data-l="E">recondução.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> É o art. 24 palavra por palavra. A banca da casa, em 2008, cobrava definições literais; a FADE, em 2023, passou a embrulhar a mesma definição num caso com nome. Os distratores são as outras formas de provimento, por isso o <a href="#formas">mapa das sete formas</a> resolve a questão.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-adm28">
+      <div class="src"><span class="tag">FADE/UFPE 2023</span><span>Administrador · nível E · questão 28 · retorno após demissão</span><span class="tag c">vizinha · semana 5</span></div>
+      <p>Considerando a Lei n.º 8.112/1990, o servidor que for demitido ou destituído de cargo em comissão poderá retornar ao serviço público federal, mesmo que tenha cometido</p>
+      <ol class="alt"><li data-l="A">crime contra a administração pública.</li><li data-l="B">improbidade administrativa.</li><li data-l="C">aplicação irregular de dinheiros públicos.</li><li data-l="D">corrupção.</li><li data-l="E">insubordinação grave em serviço.</li></ol>
+      <details><summary>Gabarito e comentário</summary>
+        <p><span class="gab">Gabarito oficial: E.</span> O parágrafo único do art. 137 dizia que <strong>não poderia retornar nunca</strong> quem fosse demitido por crime contra a administração, improbidade, aplicação irregular de dinheiros públicos, lesão aos cofres públicos ou corrupção (art. 132, I, IV, VIII, X e XI). Insubordinação grave (art. 132, VI) não está nessa lista.</p>
+        <p><strong>Atenção:</strong> o STF declarou esse parágrafo único <strong>inconstitucional</strong> na <strong>ADI 2.975</strong> (julgada em dezembro de 2020), porque a Constituição proíbe penas perpétuas. Nesses casos aplica-se o impedimento de <strong>5 anos</strong> do caput do art. 137 até que venha nova lei. A FADE cobrou em 2023 o <strong>texto literal</strong>, e a questão não foi anulada. Mesma lição da semana 1: com "considerando a Lei 8.112", responda pela letra da lei. Regime disciplinar completo: semana 5.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · 25 min</span>
+    <h2>16 questões no estilo da FADE</h2>
+    <p class="muted">Questões autorais nos formatos da FADE 2023: casos com nome, assertivas numeradas, relacionar colunas e exceção. Todas pelo texto vigente da Lei 8.112; quando a Constituição ou um decreto mudam a resposta, o enunciado diz qual norma vale. Cada um faz no próprio celular.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · revisão do domingo</span>
+    <h2>40 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar e marque <strong>sei</strong> ou <strong>revisar</strong>. A exportação gera um CSV (frente;verso;tag) para o Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Fontes.</strong> Lei 8.112/1990, arts. 2º a 35, 81 a 96 e 137, texto compilado no <a href="https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm">site do Planalto</a>, conferido em 26/09/2026 (redações das Leis 8.270/1991, 9.527/1997, 11.784/2008, 11.907/2009 e da MP 2.225-45/2001) · Constituição Federal, arts. 37 e 41 (EC 19/1998) · <a href="https://www2.camara.leg.br/legin/fed/decret/2025/decreto-12374-6-fevereiro-2025-796935-publicacaooriginal-174299-pe.html">Decreto 12.374/2025</a> (avaliação no estágio probatório) · Decreto 9.508/2018 (reserva para pessoas com deficiência) · LC 152/2015 · Súmula Vinculante 43 · <a href="https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=457290">STF, ADI 2.975</a>.</p>
+    <p><strong>Questões reais:</strong> FADE/UFPE 2023 (Edital 10/2023), Administrador e Assistente em Administração, e Biólogo UFPE/UFRPE 2008 (Covest), com os gabaritos oficiais. O simulado e os cartões são autorais.</p>
+    <p><a href="../index.html#cado">← Plano do Cado</a> · <a href="../index.html#gabi">Plano da Gabi</a> · <a href="legislacao-1.html">← Semana 1: CF, arts. 37 a 41</a> · Próxima: Lei 8.112, remoção, redistribuição, substituição, vencimento e vantagens (semana 3).</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:comum:leg2';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Marcos foi aprovado em concurso da UFPE, e o ato de sua nomeação foi publicado no Diário Oficial da União. De acordo com a Lei 8.112/1990, Marcos deverá tomar posse no prazo de',
+     o:['15 dias contados da publicação do ato, sob pena de exoneração.','30 dias contados da data em que tomar ciência da nomeação, sob pena de exoneração.','30 dias contados da publicação do ato de provimento, sob pena de o ato ser tornado sem efeito.','30 dias contados da entrada em exercício, sob pena de demissão.','15 dias contados da publicação do ato, sob pena de o ato ser tornado sem efeito.'],a:2,
+     w:'Art. 13, §§ 1º e 6º: <strong>30 dias da publicação</strong>. Sem posse, o ato é <strong>tornado sem efeito</strong>: não há exoneração porque Marcos ainda não é servidor.'},
+    {t:'Após tomar posse, Marcos precisa entrar em exercício. Segundo a Lei 8.112/1990, o prazo e a consequência do descumprimento são:',
+     o:['15 dias contados da posse; exoneração do cargo.','30 dias contados da posse; exoneração do cargo.','15 dias contados da publicação do ato de provimento; demissão.','15 dias contados da posse; o ato de provimento é tornado sem efeito.','de 10 a 30 dias, a critério da administração; cassação da posse.'],a:0,
+     w:'Art. 15, §§ 1º e 2º: 15 dias da posse; se não entrar em exercício, é <strong>exonerado</strong>. O prazo de 10 a 30 dias é para mudança de município (art. 18).'},
+    {t:'Sobre as formas de provimento de cargo público na Lei 8.112/1990, analise as assertivas.<br>1) A transferência é forma de provimento em vigor.<br>2) A readaptação é forma de provimento.<br>3) A ascensão funcional é forma de provimento em vigor.<br>4) A recondução é forma de provimento.<br>5) A reversão é forma de provimento.<br>Estão corretas, apenas:',
+     o:['1, 2 e 3.','1, 4 e 5.','2, 3 e 4.','3, 4 e 5.','2, 4 e 5.'],a:4,
+     w:'Transferência e ascensão (art. 8º, III e IV) foram <strong>revogadas</strong> pela Lei 9.527/1997. Vigoram nomeação, promoção, readaptação, reversão, aproveitamento, reintegração e recondução.'},
+    {t:'Relacione as formas de provimento às situações.<br>1. Reversão &nbsp; 2. Reintegração &nbsp; 3. Recondução &nbsp; 4. Aproveitamento<br>( ) Retorno à atividade de servidor em disponibilidade.<br>( ) Retorno à atividade de servidor aposentado.<br>( ) Reinvestidura do servidor estável quando invalidada sua demissão.<br>( ) Retorno do servidor estável ao cargo anterior por inabilitação no estágio probatório de outro cargo.<br>A sequência correta é:',
+     o:['1, 4, 2, 3.','4, 1, 2, 3.','4, 2, 1, 3.','3, 1, 2, 4.','1, 2, 3, 4.'],a:1,
+     w:'Disponibilidade → aproveitamento (4); aposentado → reversão (1); demissão invalidada → reintegração (2); inabilitação em outro estágio → recondução (3).'},
+    {t:'Acerca da posse, conforme a Lei 8.112/1990, assinale a alternativa correta.',
+     o:['A posse ocorre em todas as formas de provimento.','A posse não pode se dar por procuração, por ser ato personalíssimo.','A declaração de bens e valores só é exigida na exoneração.','Só haverá posse nos casos de provimento por nomeação, e ela poderá dar-se mediante procuração específica.','A posse independe de inspeção médica, que é feita apenas durante o estágio probatório.'],a:3,
+     w:'Art. 13, §§ 3º e 4º. No ato da posse o servidor apresenta declaração de bens e declaração sobre outro cargo (§ 5º), e a posse depende de <strong>prévia</strong> inspeção médica oficial (art. 14).'},
+    {t:'Paulo, recém-empossado na UFPE, está em estágio probatório. Segundo a Lei 8.112/1990, NÃO é fator avaliado no estágio:',
+     o:['probidade.','assiduidade.','disciplina.','produtividade.','responsabilidade.'],a:0,
+     w:'Os cinco fatores são assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade. Probidade foi justamente o intruso usado pela FADE em 2023.'},
+    {t:'Paula, servidora em estágio probatório, formulou alguns pedidos ao setor de pessoal. Com base na Lei 8.112/1990, pode ser concedida a ela licença',
+     o:['para capacitação.','para tratar de interesses particulares.','por motivo de afastamento do cônjuge ou companheiro.','para desempenho de mandato classista.','para capacitação, desde que haja interesse da administração.'],a:2,
+     w:'No estágio, só as licenças do art. 81, I a IV: doença em pessoa da família, afastamento do cônjuge, serviço militar e atividade política (art. 20, § 4º).'},
+    {t:'Segundo o art. 20, § 5º, da Lei 8.112/1990, o estágio probatório fica suspenso durante',
+     o:['as férias.','a licença à gestante.','a licença para tratamento da própria saúde.','a participação em júri.','a licença por motivo de doença em pessoa da família.'],a:4,
+     w:'Suspendem o estágio: licença por doença em pessoa da família (art. 83), por afastamento do cônjuge (art. 84, § 1º), para atividade política (art. 86), afastamento para organismo internacional (art. 96) e curso de formação.'},
+    {t:'João, servidor estável, foi demitido e teve a demissão anulada judicialmente. Ocorre que seu cargo foi extinto nesse meio-tempo. Nos termos da Lei 8.112/1990, João',
+     o:['será reconduzido ao cargo que ocupava antes de ingressar na UFPE.','será readaptado em cargo compatível.','será aproveitado imediatamente em cargo de atribuições superiores.','ficará em disponibilidade.','será exonerado, com direito a indenização.'],a:3,
+     w:'Art. 28, § 1º: reintegração com cargo extinto → <strong>disponibilidade</strong>, observados os arts. 30 e 31. O aproveitamento vem depois, em cargo compatível.'},
+    {t:'Carla ocupava o cargo que pertencia a Ângela, que foi reintegrada. Conforme a Lei 8.112/1990, Carla',
+     o:['será exonerada de ofício, sem direito a indenização.','será reconduzida ao cargo de origem, sem direito à indenização, ou aproveitada em outro cargo, ou posta em disponibilidade.','será reconduzida ao cargo de origem, com direito à indenização.','será readaptada no cargo mais próximo.','será demitida, pois ocupava cargo de forma irregular.'],a:1,
+     w:'Art. 28, § 2º, combinado com o art. 29, II. Carla não fez nada errado: é reconduzida, <strong>sem indenização</strong>, ou aproveitada, ou fica em disponibilidade.'},
+    {t:'São requisitos para a reversão do aposentado no interesse da administração, previstos no art. 25 da Lei 8.112/1990, EXCETO:',
+     o:['ter o aposentado solicitado a reversão.','ter sido voluntária a aposentadoria.','ter a aposentadoria ocorrido nos dez anos anteriores à solicitação.','ter sido estável quando na atividade.','haver cargo vago.'],a:2,
+     w:'O prazo é de <strong>cinco anos</strong> anteriores à solicitação (art. 25, II, d). Os outros quatro requisitos estão corretos.'},
+    {t:'De acordo com a Lei 8.112/1990, não poderá reverter o aposentado que já tiver completado',
+     o:['70 anos de idade.','65 anos de idade.','75 anos de idade.','60 anos de idade.','35 anos de contribuição.'],a:0,
+     w:'Art. 27: <strong>70 anos</strong>. Mesmo com a compulsória elevada a 75 anos pela LC 152/2015, a 8.112 não foi alterada, e é o número da lei que se cobra.'},
+    {t:'Considere as situações a seguir.<br>I. Exoneração.<br>II. Demissão.<br>III. Remoção.<br>IV. Readaptação.<br>V. Posse em outro cargo inacumulável.<br>Geram vacância do cargo público, segundo o art. 33 da Lei 8.112/1990:',
+     o:['I, II e III, apenas.','I, III e V, apenas.','II, III e IV, apenas.','I, II, IV e V, apenas.','I, II, III, IV e V.'],a:3,
+     w:'Remoção é deslocamento do servidor, com ou sem mudança de sede, no mesmo quadro (art. 36): o cargo não fica vago. As demais estão no art. 33.'},
+    {t:'A exoneração de ofício de cargo efetivo, nos termos do art. 34 da Lei 8.112/1990, ocorrerá',
+     o:['a juízo da autoridade competente, a qualquer tempo.','quando o servidor cometer falta disciplinar grave.','quando o nomeado não tomar posse no prazo legal.','sempre que o servidor a requerer.','quando não satisfeitas as condições do estágio probatório ou quando, tendo tomado posse, o servidor não entrar em exercício no prazo estabelecido.'],a:4,
+     w:'A "juízo da autoridade" é a exoneração de cargo em comissão (art. 35). Falta grave gera demissão, que é penalidade. Sem posse, o ato é tornado sem efeito. A pedido não é de ofício.'},
+    {t:'Rita, servidora da UFPE em Recife, foi removida para o campus de Caruaru. Segundo a Lei 8.112/1990, para retomar o efetivo desempenho de suas atribuições, ela terá',
+     o:['15 dias contados da posse.','no mínimo 10 e no máximo 30 dias, contados da publicação do ato, incluído o tempo de deslocamento, sendo-lhe facultado declinar desses prazos.','30 dias improrrogáveis, sem possibilidade de declinar.','10 dias improrrogáveis, excluído o tempo de deslocamento.','o prazo que a chefia imediata fixar, sem limites legais.'],a:1,
+     w:'Art. 18 e § 2º. O prazo vale para mudança de município por remoção, redistribuição, requisição, cessão ou exercício provisório.'},
+    {t:'Analise as assertivas sobre estágio probatório, estabilidade e concurso.<br>1) O texto literal do art. 20 da Lei 8.112/1990 prevê estágio probatório de 24 meses.<br>2) A Constituição exige 3 anos de efetivo exercício para a estabilidade.<br>3) O Decreto 12.374/2025 fixou em 36 meses o estágio probatório no Executivo federal.<br>4) O servidor em estágio probatório não pode exercer cargo em comissão no órgão de lotação.<br>5) Pela Lei 8.112/1990, não se abrirá novo concurso enquanto houver aprovado em concurso anterior com validade não expirada.<br>Estão corretas, apenas:',
+     o:['1 e 2.','2 e 4.','1, 2, 3 e 5.','1, 3 e 4.','1, 2, 3, 4 e 5.'],a:2,
+     w:'A 4 é falsa: o art. 20, § 3º, permite exercer cargo em comissão e funções de direção, chefia ou assessoramento no órgão de lotação. As demais estão corretas.'}
+  ];
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var F=[
+    ['Conceito de servidor (art. 2º)','Pessoa legalmente investida em cargo público.'],
+    ['Conceito de cargo público (art. 3º)','Conjunto de atribuições e responsabilidades previstas na estrutura organizacional, cometidas a um servidor. Criado por lei, efetivo ou em comissão.'],
+    ['Serviço gratuito na 8.112 (art. 4º)','É proibido, salvo os casos previstos em lei.'],
+    ['Os 6 requisitos básicos de investidura (art. 5º)','Nacionalidade brasileira; direitos políticos; quitação militar e eleitoral; escolaridade; 18 anos; aptidão física e mental.'],
+    ['Reserva para pessoas com deficiência na 8.112','Até 20% das vagas (art. 5º, § 2º). O mínimo de 5% vem do Decreto 9.508/2018.'],
+    ['Exceção à nacionalidade na 8.112 (art. 5º, § 3º)','Universidades e instituições de pesquisa federais podem prover cargos com professores, técnicos e cientistas estrangeiros.'],
+    ['A investidura ocorre com…','A posse (art. 7º), e não com a nomeação.'],
+    ['Validade do concurso (art. 12)','Até 2 anos, prorrogável uma única vez por igual período.'],
+    ['Novo concurso na vigência de outro (art. 12, § 2º)','Não se abrirá enquanto houver aprovado em concurso anterior com validade não expirada.'],
+    ['As 7 formas de provimento em vigor (art. 8º)','Nomeação, promoção, readaptação, reversão, aproveitamento, reintegração e recondução.'],
+    ['Formas de provimento revogadas','Ascensão e transferência (art. 8º, III e IV, revogados pela Lei 9.527/1997).'],
+    ['Única forma originária de provimento','Nomeação. As demais são derivadas.'],
+    ['Nomeação: em que caráter (art. 9º)','Efetivo (cargo isolado ou de carreira) ou em comissão, inclusive como interino, para cargo de confiança vago.'],
+    ['Interinidade em outro cargo de confiança (art. 9º, p. único)','O ocupante de cargo em comissão pode ser nomeado interinamente para outro, sem deixar o atual, e opta pela remuneração de um deles.'],
+    ['Readaptação (art. 24)','Investidura em cargo compatível com limitação física ou mental verificada em inspeção médica. Incapaz para o serviço público: aposentado.'],
+    ['Readaptação sem cargo vago','O servidor exerce as atribuições como excedente, até surgir vaga.'],
+    ['Reversão: conceito e hipóteses (art. 25)','Retorno à atividade do aposentado: I) por invalidez cessada (junta médica); II) no interesse da administração.'],
+    ['Os 5 requisitos da reversão no interesse da administração','Solicitação; aposentadoria voluntária; estável na atividade; aposentado nos 5 anos anteriores; cargo vago.'],
+    ['Idade-limite da reversão (art. 27)','Não reverte quem completou 70 anos (número da lei, mesmo com a compulsória aos 75).'],
+    ['Reintegração (art. 28)','Reinvestidura do estável no cargo anterior (ou no transformado) quando invalidada a demissão, com ressarcimento de todas as vantagens.'],
+    ['Reintegração com cargo extinto','O servidor fica em disponibilidade (art. 28, § 1º).'],
+    ['Reintegração com cargo ocupado','O ocupante é reconduzido ao cargo de origem, sem indenização, ou aproveitado em outro, ou posto em disponibilidade (art. 28, § 2º).'],
+    ['Recondução: conceito e causas (art. 29)','Retorno do estável ao cargo anterior por I) inabilitação em estágio de outro cargo ou II) reintegração do anterior ocupante.'],
+    ['Aproveitamento (art. 30)','Retorno obrigatório do servidor em disponibilidade, em cargo de atribuições e vencimentos compatíveis.'],
+    ['Aproveitado que não entra em exercício (art. 32)','O aproveitamento é tornado sem efeito e a disponibilidade é cassada, salvo doença comprovada por junta médica.'],
+    ['Prazo da posse (art. 13, § 1º)','30 dias contados da publicação do ato de provimento.'],
+    ['Posse não ocorrida no prazo (art. 13, § 6º)','O ato de provimento é tornado sem efeito.'],
+    ['Em quais formas de provimento há posse? (art. 13, § 4º)','Só na nomeação.'],
+    ['Documentos no ato da posse (art. 13, § 5º)','Declaração de bens e valores e declaração sobre exercer ou não outro cargo, emprego ou função pública.'],
+    ['Condição prévia da posse (art. 14)','Inspeção médica oficial: só é empossado quem for julgado apto física e mentalmente.'],
+    ['Prazo do exercício (art. 15, § 1º)','15 dias contados da posse.'],
+    ['Empossado que não entra em exercício (art. 15, § 2º)','É exonerado do cargo (ou tornada sem efeito a designação, se for função de confiança).'],
+    ['Prazo para retomar o exercício ao mudar de município (art. 18)','Mínimo de 10 e máximo de 30 dias da publicação, incluído o deslocamento. Pode declinar.'],
+    ['Jornada (art. 19)','Máximo de 40 h semanais, entre 6 e 8 h diárias. Comissão e função de confiança: integral dedicação.'],
+    ['Os 5 fatores do estágio probatório (art. 20)','Assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade.'],
+    ['Estágio: 24 meses, 3 anos ou 36 meses?','24 meses no texto da 8.112; 3 anos de estabilidade pela CF (EC 19); 36 meses no Decreto 12.374/2025.'],
+    ['Licenças permitidas no estágio (art. 20, § 4º)','Art. 81, I a IV: doença em pessoa da família, afastamento do cônjuge, serviço militar e atividade política. Mais os afastamentos dos arts. 94, 95 e 96 e o curso de formação.'],
+    ['O que suspende o estágio (art. 20, § 5º)','Licenças dos arts. 83 (família), 84, § 1º (cônjuge) e 86 (atividade política), afastamento do art. 96 (organismo internacional) e curso de formação.'],
+    ['Reprovado no estágio probatório (art. 20, § 2º)','É exonerado; se estável em outro cargo, é reconduzido ao cargo anterior.'],
+    ['As 7 hipóteses de vacância (art. 33) e as duas formas de exoneração de ofício (art. 34)','Exoneração, demissão, promoção, readaptação, aposentadoria, posse em outro cargo inacumulável e falecimento. De ofício: estágio não satisfeito ou posse sem exercício no prazo.']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 leg2'];}),'ufpe2027-legislacao-2.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 leg2'];});
+    dl(rows,'ufpe2027-legislacao-2-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var C=[
+    'Definir servidor e cargo público e dizer quando ocorre a investidura.',
+    'Listar os 6 requisitos básicos de investidura e as duas exceções/complementos (§§ 1º a 3º).',
+    'Explicar a validade do concurso e a proibição do art. 12, § 2º, comparando com a Constituição.',
+    'Recitar as 7 formas de provimento em vigor e as 2 revogadas.',
+    'Dizer, para cada forma de retorno, de onde a pessoa volta e se precisa ser estável.',
+    'Listar os 5 requisitos da reversão no interesse da administração e a idade-limite.',
+    'Desenhar o efeito dominó da reintegração (ocupante reconduzido, aproveitado ou em disponibilidade).',
+    'Dizer os prazos de posse, de exercício e de mudança de município, e a consequência de cada descumprimento.',
+    'Listar o que é exigido no ato da posse e quando ela pode ser por procuração.',
+    'Recitar os 5 fatores do estágio probatório e as três respostas para "quanto dura o estágio".',
+    'Separar as licenças que cabem, as que não cabem e as que suspendem o estágio.',
+    'Recitar as 7 hipóteses de vacância, as duas formas de exoneração de ofício e a regra do cargo em comissão.'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>

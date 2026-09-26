@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Raciocínio Lógico, semana 2, para o concurso UFPE 2027: razão, proporção, grandezas diretas e inversas, regra de três simples e divisão proporcional, com questões reais, simulado e flashcards.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+<title>RL 2 · Razão e proporção</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+
+/* exemplos resolvidos */
+.ex{background:var(--card);border:1px solid var(--rule2);border-top:3px solid var(--green);border-radius:6px;padding:14px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.ex>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.ex ol{margin:6px 0 0} .ex li{margin:4px 0}
+.ex .res{font-weight:800;color:var(--green)}
+.mono{font-family:"Cascadia Mono",Consolas,monospace;font-size:14px}
+.back2{margin-left:14px}
+.divt{border-collapse:collapse;font-family:"Cascadia Mono",Consolas,monospace;font-size:15px;margin:6px 0}
+.divt td{padding:3px 12px;text-align:right}
+.divt td.p{border-left:2px solid var(--ink);color:var(--mag);font-weight:700;text-align:left}
+.divt td.m{color:var(--green);font-weight:700}
+
+@media (max-width:640px){figure.fig{overflow-x:auto;-webkit-overflow-scrolling:touch}figure.fig svg{min-width:620px}figure.fig figcaption{position:sticky;left:0}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro · 45 min</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#razao">1 · Razão</a>
+  <a href="#proporcao">2 · Proporção</a>
+  <a href="#grandezas">3 · Direta ou inversa?</a>
+  <a href="#regra">4 · Regra de três simples</a>
+  <a href="#divisao">5 · Divisão proporcional</a>
+  <a href="#tipos">6 · Problemas-tipo</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <a class="back" href="../index.html#cado">← Plano do Cado</a><a class="back back2" href="../index.html#gabi">Plano da Gabi</a><a class="back back2" href="rl-1.html">← RL 1</a>
+  <div class="eyebrow">Raciocínio Lógico · comum aos dois · Razão, proporção e regra de três · Semana 2</div>
+  <h1>Razão, proporção<br><em>e regra de três</em></h1>
+  <p class="dek">Comparar grandezas, montar proporção e decidir se a regra de três é direta ou inversa. É a ferramenta mais usada de RL: aparece em escala de planta, em diluição de reagente, em divisão de lucro e em mistura de combustível. O edital pede só a regra de três <strong>simples</strong>.</p>
+  <div class="meta"><span class="hot">dom 18/10 · 45 min juntos</span><span>6 questões reais resolvidas</span><span>12 no simulado</span><span>20 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#comocai">Como cai</a><a href="#razao">Razão</a><a href="#proporcao">Proporção</a><a href="#grandezas">Direta ou inversa</a><a href="#regra">Regra de três</a><a href="#divisao">Divisão</a><a href="#tipos">Problemas-tipo</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro · domingo 18/10</span>
+    <h2>45 minutos, juntos</h2>
+    <p class="muted">O edital pede: <em>"Razão e proporção, regra de três simples"</em>, dentro de "Raciocínio lógico-numérico".</p>
+    <div class="plan">
+      <div class="row"><div class="d"><b>0–10 min</b>teoria</div><div>Seções <a href="#razao">1</a>, <a href="#proporcao">2</a> e <a href="#grandezas">3</a>. Um lê, o outro testa o "se dobra um, o que acontece com o outro?" em cada exemplo.</div></div>
+      <div class="row"><div class="d"><b>10–20 min</b>métodos</div><div>Seções <a href="#regra">4</a> e <a href="#divisao">5</a>: o método das setas e a divisão proporcional. Depois, na seção <a href="#tipos">6</a>, a Gabi explica o problema de escala e o Cado o de diluição.</div></div>
+      <div class="row"><div class="d"><b>20–40 min</b>simulado</div><div>As 12 questões do <a href="#simulado">simulado</a>, cerca de 1,5 min cada, cada um no seu papel. Corrijam juntos.</div></div>
+      <div class="row"><div class="d"><b>40–45 min</b>fecho</div><div>As <a href="#reais">questões reais</a> ficam para a revisão da semana. Marquem os <a href="#cartoes">flashcards</a> e o <a href="#dominio">checklist</a>.</div></div>
+    </div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>Proporção quase nunca vem sozinha</h2>
+    <p>O mapa das 35 questões de matemática e RL das provas anteriores está na <a href="rl-1.html#comocai">página de RL 1</a>. Nele, "razão, proporção e regra de três" aparece em <strong>3 questões</strong> diretas. Mas a proporção é a ferramenta de pelo menos mais três: a mistura de tintas da FADE 2023, a mistura de combustível da UFPE 2015 e o encontro das tartarugas do HC-UFPE 2014.</p>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">O que a banca faz</h4>
+        <p class="small muted" style="margin:0">Dá uma situação concreta (sócios, combustível, tinta, velocidade) e espera que você <strong>perceba</strong> a proporção escondida. A pergunta raramente diz "regra de três". O passo difícil é montar a relação, não fazer a conta.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Onde cada um ganha ponto</h4>
+        <p class="small muted" style="margin:0">A Gabi usa escala todo dia (1:50, 1:100, e na <a href="../gabi/desenho-tecnico-1.html">página de desenho técnico</a>). O Cado usa proporção em diluição de reagente (C₁V₁ = C₂V₂). É a mesma matemática: vale explicar um para o outro.</p>
+      </div>
+    </div>
+    <div class="cx cai"><span class="k">O erro que mais custa ponto</span><p>Montar regra de três <strong>direta</strong> quando as grandezas são <strong>inversas</strong>. Antes de qualquer conta, pergunte: "se uma dobra, a outra dobra ou cai pela metade?". Essa pergunta sozinha resolve metade das questões.</p></div>
+  </section>
+
+  <!-- 1 RAZÃO -->
+  <section class="sec" id="razao">
+    <span class="lbl">Seção 1</span>
+    <h2>Razão</h2>
+    <p><strong>Razão</strong> é a comparação entre duas grandezas por divisão: a razão de <em>a</em> para <em>b</em> é <span class="mono">a/b</span> ou <span class="mono">a : b</span> (lê-se "a está para b"). <em>a</em> é o <strong>antecedente</strong> e <em>b</em> o <strong>consequente</strong>. A ordem importa: "a razão entre meninos e meninas" é meninos/meninas.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Razão especial</th><th>Definição</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td>Escala</td><td>medida no desenho ÷ medida real, <strong>na mesma unidade</strong></td><td class="mono">1 cm no mapa = 500 m reais → 1 : 50.000</td></tr>
+        <tr><td>Velocidade média</td><td>distância ÷ tempo</td><td class="mono">240 km em 3 h → 80 km/h</td></tr>
+        <tr><td>Densidade demográfica</td><td>habitantes ÷ área</td><td class="mono">84.000 hab / 1.200 km² → 70 hab/km²</td></tr>
+        <tr><td>Densidade (massa específica)</td><td>massa ÷ volume</td><td class="mono">500 g / 250 cm³ → 2 g/cm³</td></tr>
+        <tr><td>Concentração</td><td>quantidade de soluto ÷ volume de solução</td><td class="mono">20 g em 500 mL → 40 g/L</td></tr>
+        <tr><td>Porcentagem</td><td>razão com consequente 100</td><td class="mono">3/4 = 75/100 = 75%</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cx peg"><span class="k">Pegadinha · unidades</span><p>Na escala, as duas medidas precisam estar na <strong>mesma unidade</strong>. "2 cm no mapa valem 1 km" não é 2 : 1: é 2 cm : 100.000 cm, ou seja, <strong>1 : 50.000</strong>. Converta sempre antes de dividir.</p></div>
+  </section>
+
+  <!-- 2 PROPORÇÃO -->
+  <section class="sec" id="proporcao">
+    <span class="lbl">Seção 2</span>
+    <h2>Proporção</h2>
+    <p><strong>Proporção</strong> é a igualdade entre duas razões: <span class="mono">a/b = c/d</span>. <em>a</em> e <em>d</em> são os <strong>extremos</strong>; <em>b</em> e <em>c</em>, os <strong>meios</strong>.</p>
+    <div class="card" style="text-align:center;font-size:18px;margin:10px 0 16px"><strong>Propriedade fundamental:</strong> produto dos meios = produto dos extremos &nbsp;·&nbsp; <span class="mono" style="font-size:17px;white-space:nowrap">a/b = c/d ⇔ a × d = b × c</span></div>
+    <ul>
+      <li><strong>Propriedade da soma:</strong> se a/b = c/d, então (a + c)/(b + d) = a/b. É o que faz funcionar a <a href="#divisao">divisão proporcional</a>: somam-se as partes e divide-se o total.</li>
+      <li><strong>Constante de proporcionalidade (k):</strong> se a/b = c/d = k, então a = k·b e c = k·d. Encontrar o <em>k</em> costuma ser o caminho mais curto.</li>
+    </ul>
+    <div class="ex"><span class="k">Exemplo resolvido</span>
+      <p>Resolva (x + 2)/6 = (x − 1)/3.</p>
+      <ol><li>Meios × extremos: 3(x + 2) = 6(x − 1).</li><li>3x + 6 = 6x − 6, então 12 = 3x.</li><li><span class="res">x = 4</span>. Confira: 6/6 = 3/3 = 1.</li></ol>
+    </div>
+  </section>
+
+  <!-- 3 GRANDEZAS -->
+  <section class="sec" id="grandezas">
+    <span class="lbl">Seção 3</span>
+    <h2>Diretamente ou inversamente proporcionais?</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th></th><th>Diretamente proporcionais</th><th>Inversamente proporcionais</th></tr></thead>
+      <tbody>
+        <tr><td>Teste</td><td>Uma <strong>dobra</strong>, a outra <strong>dobra</strong></td><td>Uma <strong>dobra</strong>, a outra <strong>cai à metade</strong></td></tr>
+        <tr><td>O que fica constante</td><td>A <strong>razão</strong>: y/x = k</td><td>O <strong>produto</strong>: x·y = k</td></tr>
+        <tr><td>Gráfico</td><td>Reta que passa pela origem</td><td>Hipérbole</td></tr>
+        <tr><td>Exemplos</td><td>Quantidade × preço total; farinha × nº de porções; distância × combustível</td><td>Nº de operários × dias de obra; velocidade × tempo de viagem; nº de torneiras iguais × tempo para encher</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig">
+      <svg viewBox="0 0 760 270" role="img" aria-label="Gráfico de grandezas diretamente proporcionais, uma reta, e inversamente proporcionais, uma hipérbole">
+        <g>
+          <text x="190" y="22" text-anchor="middle" class="tb" font-size="13">DIRETAMENTE PROPORCIONAIS</text>
+          <line x1="50" y1="220" x2="340" y2="220" class="ln" stroke-width="1.6"/><line x1="50" y1="220" x2="50" y2="40" class="ln" stroke-width="1.6"/>
+          <line x1="50" y1="220" x2="320" y2="60" class="sm" stroke-width="3"/>
+          <circle cx="140" cy="167" r="4.5" class="fm"/><circle cx="230" cy="113" r="4.5" class="fm"/>
+          <line x1="140" y1="167" x2="140" y2="220" class="ln2" stroke-dasharray="3 3"/><line x1="230" y1="113" x2="230" y2="220" class="ln2" stroke-dasharray="3 3"/>
+          <text x="140" y="238" text-anchor="middle" font-size="11.5" class="t2">x</text><text x="230" y="238" text-anchor="middle" font-size="11.5" class="t2">2x</text>
+          <text x="60" y="60" font-size="12" class="t2">y = k · x</text>
+          <text x="190" y="262" text-anchor="middle" font-size="11.5" class="t2">reta pela origem · y/x constante</text>
+        </g>
+        <line x1="380" y1="30" x2="380" y2="250" class="ln2" stroke-dasharray="4 4"/>
+        <g>
+          <text x="570" y="22" text-anchor="middle" class="tb" font-size="13">INVERSAMENTE PROPORCIONAIS</text>
+          <line x1="430" y1="220" x2="720" y2="220" class="ln" stroke-width="1.6"/><line x1="430" y1="220" x2="430" y2="40" class="ln" stroke-width="1.6"/>
+          <path d="M455 50 C 475 130, 520 175, 600 195 S 690 208, 715 210" class="sc" stroke-width="3" fill="none"/>
+          <circle cx="490" cy="136" r="4.5" class="fc"/><circle cx="600" cy="195" r="4.5" class="fc"/>
+          <line x1="490" y1="136" x2="490" y2="220" class="ln2" stroke-dasharray="3 3"/><line x1="600" y1="195" x2="600" y2="220" class="ln2" stroke-dasharray="3 3"/>
+          <text x="490" y="238" text-anchor="middle" font-size="11.5" class="t2">x</text><text x="600" y="238" text-anchor="middle" font-size="11.5" class="t2">2x</text>
+          <text x="560" y="70" font-size="12" class="t2">x · y = k</text>
+          <text x="570" y="262" text-anchor="middle" font-size="11.5" class="t2">hipérbole · produto x·y constante</text>
+        </g>
+      </svg>
+      <figcaption>Se x dobra: na direta, y dobra; na inversa, y cai à metade.</figcaption>
+    </figure>
+    <div class="cx peg"><span class="k">Pegadinha · "aumenta junto" não basta</span><p>O lado de um quadrado e sua área crescem juntos, mas <strong>não</strong> são diretamente proporcionais: dobrar o lado quadruplica a área (a área é proporcional ao <strong>quadrado</strong> do lado). Idade e altura também crescem juntas e não têm proporção nenhuma. O teste é sempre "dobra e dobra?", nunca "cresce e cresce?".</p></div>
+  </section>
+
+  <!-- 4 REGRA DE TRÊS -->
+  <section class="sec" id="regra">
+    <span class="lbl">Seção 4</span>
+    <h2>Regra de três simples: o método das setas</h2>
+    <ol>
+      <li>Monte uma tabela com <strong>duas colunas</strong>, uma por grandeza, e a mesma unidade em cada coluna.</li>
+      <li>Ponha uma seta na coluna do <strong>x</strong>, apontando para o x.</li>
+      <li>Pergunte: "se esta grandeza aumenta, a outra aumenta ou diminui?". Se aumenta, a outra seta vai no <strong>mesmo sentido</strong> (direta). Se diminui, vai no <strong>sentido contrário</strong> (inversa).</li>
+      <li>Na inversa, <strong>inverta</strong> a coluna que não tem x. Depois multiplique em cruz.</li>
+    </ol>
+    <figure class="fig">
+      <svg viewBox="0 0 760 290" role="img" aria-label="Método das setas: regra de três direta com farinha e porções, e inversa com operários e dias">
+        <defs>
+          <marker id="aD" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" class="fm"/></marker>
+          <marker id="aI" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" class="fc"/></marker>
+        </defs>
+        <g>
+          <text x="185" y="22" text-anchor="middle" class="tb" font-size="13">DIRETA · setas no mesmo sentido</text>
+          <text x="110" y="58" text-anchor="middle" font-size="12" class="t2">Farinha (g)</text><text x="260" y="58" text-anchor="middle" font-size="12" class="t2">Pessoas</text>
+          <text x="110" y="100" text-anchor="middle" font-size="18" class="tb">750</text><text x="260" y="100" text-anchor="middle" font-size="18" class="tb">18</text>
+          <text x="110" y="150" text-anchor="middle" font-size="18" class="tb fm" style="fill:var(--mag)">x</text><text x="260" y="150" text-anchor="middle" font-size="18" class="tb">30</text>
+          <line x1="60" y1="84" x2="60" y2="150" class="sm" stroke-width="2.4" marker-end="url(#aD)"/>
+          <line x1="310" y1="84" x2="310" y2="150" class="sm" stroke-width="2.4" marker-end="url(#aD)"/>
+          <text x="185" y="194" text-anchor="middle" font-size="13" class="mono">750/x = 18/30</text>
+          <text x="185" y="216" text-anchor="middle" font-size="13" class="mono">x = 750 × 30 / 18</text>
+          <text x="185" y="242" text-anchor="middle" font-size="14" class="tb">x = 1.250 g</text>
+          <text x="185" y="270" text-anchor="middle" font-size="11.5" class="t2">mais pessoas → mais farinha</text>
+        </g>
+        <line x1="380" y1="30" x2="380" y2="275" class="ln2" stroke-dasharray="4 4"/>
+        <g>
+          <text x="575" y="22" text-anchor="middle" class="tb" font-size="13">INVERSA · setas em sentidos opostos</text>
+          <text x="500" y="58" text-anchor="middle" font-size="12" class="t2">Operários</text><text x="650" y="58" text-anchor="middle" font-size="12" class="t2">Dias</text>
+          <text x="500" y="100" text-anchor="middle" font-size="18" class="tb">6</text><text x="650" y="100" text-anchor="middle" font-size="18" class="tb">10</text>
+          <text x="500" y="150" text-anchor="middle" font-size="18" class="tb">15</text><text x="650" y="150" text-anchor="middle" font-size="18" class="tb" style="fill:var(--cyan)">x</text>
+          <line x1="450" y1="150" x2="450" y2="84" class="sc" stroke-width="2.4" marker-end="url(#aI)"/>
+          <line x1="700" y1="84" x2="700" y2="150" class="sc" stroke-width="2.4" marker-end="url(#aI)"/>
+          <text x="575" y="194" text-anchor="middle" font-size="13" class="mono">inverte: 10/x = 15/6</text>
+          <text x="575" y="216" text-anchor="middle" font-size="13" class="mono">x = 10 × 6 / 15</text>
+          <text x="575" y="242" text-anchor="middle" font-size="14" class="tb">x = 4 dias</text>
+          <text x="575" y="270" text-anchor="middle" font-size="11.5" class="t2">mais operários → menos dias</text>
+        </g>
+      </svg>
+      <figcaption>Na inversa, o produto se mantém: 6 × 10 = 15 × 4 = 60 operários-dia. Esse é um jeito rápido de conferir.</figcaption>
+    </figure>
+    <div class="cx dec"><span class="k">Atalho</span><p><strong>Direta:</strong> x = (valor da mesma coluna) × (razão da outra coluna). <strong>Inversa:</strong> o produto é constante, então x = produto conhecido ÷ novo valor. No exemplo: 6 × 10 = 60, e 60 ÷ 15 = 4.</p></div>
+    <h3>E a regra de três composta?</h3>
+    <p>Quando há <strong>três ou mais grandezas</strong> (ex.: operários, horas por dia e dias), a regra de três é <strong>composta</strong>. Ela <strong>não está no edital</strong>, que pede só a simples. Se aparecer, o método é o mesmo: uma seta por coluna, cada uma comparada com a coluna do x, e multiplicam-se as razões. Saiba reconhecer para não travar, mas não gaste tempo de estudo com ela.</p>
+  </section>
+
+  <!-- 5 DIVISÃO PROPORCIONAL -->
+  <section class="sec" id="divisao">
+    <span class="lbl">Seção 5</span>
+    <h2>Divisão proporcional</h2>
+    <p>Dividir um total em partes <strong>diretamente proporcionais</strong> a números dados é dar a cada um uma quantidade de "partes iguais". Some os pesos, ache o valor de uma parte e multiplique.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 760 200" role="img" aria-label="Barra de divisão proporcional: 12 mil reais divididos na proporção 2, 3 e 5">
+        <text x="20" y="28" font-size="13" class="tb">R$ 12.000 divididos proporcionalmente a 2, 3 e 5 → 2 + 3 + 5 = 10 partes de R$ 1.200</text>
+        <g>
+          <rect x="20" y="50" width="144" height="48" class="fms" stroke="var(--mag)"/>
+          <rect x="164" y="50" width="216" height="48" class="fcs" stroke="var(--cyan)"/>
+          <rect x="380" y="50" width="360" height="48" class="fgs" stroke="var(--green)"/>
+          <g class="ln2" stroke-width="1" stroke-dasharray="2 3">
+            <path d="M92 50 V62 M92 86 V98 M236 50 V62 M236 86 V98 M308 50 V62 M308 86 V98 M452 50 V62 M452 86 V98 M524 50 V62 M524 86 V98 M596 50 V62 M596 86 V98 M668 50 V62 M668 86 V98"/>
+          </g>
+          <text x="92" y="80" text-anchor="middle" font-size="13" class="tb">2 partes</text>
+          <text x="272" y="80" text-anchor="middle" font-size="13" class="tb">3 partes</text>
+          <text x="560" y="80" text-anchor="middle" font-size="13" class="tb">5 partes</text>
+          <text x="92" y="124" text-anchor="middle" font-size="14" class="tb">R$ 2.400</text>
+          <text x="272" y="124" text-anchor="middle" font-size="14" class="tb">R$ 3.600</text>
+          <text x="560" y="124" text-anchor="middle" font-size="14" class="tb">R$ 6.000</text>
+        </g>
+        <text x="20" y="162" font-size="12" class="t2">Inversamente proporcional a 2, 3 e 6: use os inversos 1/2, 1/3 e 1/6, reduza ao mesmo denominador (3/6, 2/6, 1/6)</text>
+        <text x="20" y="182" font-size="12" class="t2">e divida pelos numeradores 3, 2 e 1. Quem tem o maior número recebe a menor parte.</text>
+      </svg>
+      <figcaption>Cada parte vale total ÷ soma dos pesos. Confira sempre: as partes somadas dão o total.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Direta:</strong> parte = total × peso ÷ soma dos pesos.</li>
+      <li><strong>Inversa:</strong> troque cada peso pelo seu inverso e faça a direta. Ex.: prêmio por <em>faltas</em>, em que quem falta menos ganha mais.</li>
+      <li><strong>Composta (dois critérios ao mesmo tempo):</strong> multiplique os pesos. Ex.: lucro proporcional ao capital <em>e</em> às horas trabalhadas: peso = capital × horas. Caiu assim na UFPE 2015 (<a href="#q-d15-13">questão 13</a>).</li>
+    </ul>
+  </section>
+
+  <!-- 6 PROBLEMAS-TIPO -->
+  <section class="sec" id="tipos">
+    <span class="lbl">Seção 6</span>
+    <h2>Os problemas-tipo</h2>
+    <div class="ex"><span class="k">Escala · para a Gabi</span>
+      <p>Numa planta na escala 1 : 50, uma parede mede 8,4 cm. Qual o comprimento real? E uma sala de 20 m², quanto ocupa no desenho?</p>
+      <ol>
+        <li>Comprimento: real = desenho × 50 = 8,4 × 50 = 420 cm = <span class="res">4,2 m</span>.</li>
+        <li>Área: a escala de área é o <strong>quadrado</strong> da escala linear. Em 1 : 50, a área fica 1 : 2.500. 20 m² = 200.000 cm², e 200.000 ÷ 2.500 = <span class="res">80 cm²</span>.</li>
+      </ol>
+      <p class="small muted" style="margin:6px 0 0">Escalas de redução têm o 1 à esquerda (1 : 50, 1 : 100); de ampliação, à direita (2 : 1, 5 : 1). Isso é da norma de desenho técnico da <a href="../gabi/desenho-tecnico-1.html">semana 1 da Gabi</a>.</p>
+    </div>
+    <div class="ex"><span class="k">Diluição · para o Cado</span>
+      <p>Quanto de uma solução-estoque a 2 mol/L é preciso para preparar 500 mL a 0,5 mol/L?</p>
+      <ol>
+        <li>Na diluição, a quantidade de soluto não muda: <span class="mono">C₁ × V₁ = C₂ × V₂</span>. Concentração e volume são <strong>inversamente</strong> proporcionais.</li>
+        <li>2 × V₁ = 0,5 × 500, então V₁ = 250 ÷ 2 = <span class="res">125 mL</span> de estoque, completados com água até 500 mL.</li>
+      </ol>
+      <p class="small muted" style="margin:6px 0 0">O mesmo raciocínio vale para diluir hipoclorito para desinfecção de bancada, tema de biossegurança.</p>
+    </div>
+    <div class="ex"><span class="k">Velocidade × tempo</span>
+      <p>A 80 km/h, uma viagem dura 3 h. Quanto dura a 60 km/h?</p>
+      <ol><li>Mais velocidade, menos tempo: <strong>inversa</strong>. O produto é a distância: 80 × 3 = 240 km.</li><li>240 ÷ 60 = <span class="res">4 h</span>.</li></ol>
+    </div>
+    <div class="ex"><span class="k">Mistura: acrescentar um componente</span>
+      <p>1.825 L de combustível têm 25% de etanol. Quanto etanol acrescentar para chegar a 27%?</p>
+      <ol>
+        <li>A <strong>gasolina não muda</strong>: 75% de 1.825 = 1.368,75 L.</li>
+        <li>No fim, essa gasolina é 73% do total: total = 1.368,75 ÷ 0,73 = 1.875 L.</li>
+        <li>Acréscimo = 1.875 − 1.825 = <span class="res">50 L</span>.</li>
+      </ol>
+      <p class="small muted" style="margin:6px 0 0">Truque: ache a grandeza que <strong>não muda</strong> e monte a proporção com ela. Caiu exatamente assim na UFPE 2015 (<a href="#q-d15-14">questão 14</a>).</p>
+    </div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais</span>
+    <h2>O que já caiu, resolvido</h2>
+    <p class="muted">Transcritas das provas oficiais (formatação ajustada, conteúdo preservado). Todas foram resolvidas de novo e conferem com o gabarito oficial.</p>
+
+    <div class="q" id="q-d15-13">
+      <div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · questão 13 · divisão proporcional composta</span></div>
+      <p>Três amigos, X, Y e Z, são sócios em uma empresa. X, Y e Z contribuíram com, respectivamente, R$ 60.000,00, R$ 80.000,00 e R$ 70.000,00 para a montagem da empresa. Além disso, X, Y e Z trabalham, respectivamente, 8 horas, 5 horas e 6 horas, diariamente, na empresa. O lucro da empresa é dividido entre os três, em partes proporcionais ao valor investido para a montagem da empresa e ao número de horas diárias trabalhadas por cada um deles. Se, em certa ocasião, coube a X o valor de R$ 9.600,00 na divisão do lucro, qual foi o valor total do lucro?</p>
+      <ol class="alt"><li data-l="A">R$ 30.000,00</li><li data-l="B">R$ 29.000,00</li><li data-l="C">R$ 28.000,00</li><li data-l="D">R$ 27.000,00</li><li data-l="E">R$ 26.000,00</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: E.</span> Proporcional aos dois critérios ao mesmo tempo, então o peso é capital × horas (em milhares): X = 60 × 8 = 480; Y = 80 × 5 = 400; Z = 70 × 6 = 420. Soma = 1.300. X recebe 480/1.300 do lucro = 9.600, então o lucro = 9.600 × 1.300 ÷ 480 = <strong>R$ 26.000</strong>.</p>
+        <p class="small muted">Simplifique antes: 480 : 400 : 420 = 24 : 20 : 21, soma 65. Uma parte vale 9.600 ÷ 24 = 400, e o total é 400 × 65 = 26.000.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-d15-14">
+      <div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · questão 14 · mistura</span></div>
+      <p>O combustível para automóveis no Brasil era composto por 25% de etanol e 75% de gasolina. Recentemente, o governo decidiu aumentar o percentual de etanol para 27% e o de gasolina ficou em 73%. Se um posto dispõe de 1.825 litros do combustível com 25% de etanol, quanto deve ser adicionado de etanol a este combustível, para que o percentual de etanol fique em 27%?</p>
+      <ol class="alt"><li data-l="A">50 litros</li><li data-l="B">51 litros</li><li data-l="C">52 litros</li><li data-l="D">53 litros</li><li data-l="E">54 litros</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: A.</span> A gasolina fica fixa em 0,75 × 1.825 = 1.368,75 L e passa a ser 73% do total. Total novo = 1.368,75 ÷ 0,73 = 1.875 L, então o acréscimo é 1.875 − 1.825 = <strong>50 L</strong>.</p>
+        <p class="small muted">Pela equação: (456,25 + x)/(1.825 + x) = 0,27, que dá 0,73x = 36,5 e x = 50.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-d15-15">
+      <div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · questão 15 · razão + porcentagem (mesmo enunciado-base da 14)</span></div>
+      <p>Se considerarmos que a razão entre os preços dos litros do etanol e da gasolina é dada por 4/5, de qual percentual diminuiu o preço do litro do combustível? Indique o valor mais próximo do valor obtido.</p>
+      <ol class="alt"><li data-l="A">42%</li><li data-l="B">4,2%</li><li data-l="C">0,42%</li><li data-l="D">0,042%</li><li data-l="E">0,0042%</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: C.</span> Tome a gasolina = 5 e o etanol = 4 (a razão 4/5). Antes: 0,25 × 4 + 0,75 × 5 = 4,75. Depois: 0,27 × 4 + 0,73 × 5 = 4,73. Queda de 0,02 sobre 4,75 = 0,0042 = <strong>0,42%</strong>.</p>
+        <p class="small muted">Dar valores convenientes que respeitem a razão (4 e 5) evita frações. As alternativas diferem só na vírgula: confira a ordem de grandeza.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-d19-17">
+      <div class="src"><span class="tag">UFPE 2019</span><span>Desenhista de Artes Gráficas · questão 17 · grandezas proporcionais · gabarito preliminar</span></div>
+      <p>Três grandezas, x, y e z, estão relacionadas entre si da seguinte maneira: x é inversamente proporcional ao quadrado de z; y é diretamente proporcional ao cubo de z. Qual das seguintes afirmações descreve corretamente a relação entre x e y?</p>
+      <ol class="alt"><li data-l="A">O cubo de x é inversamente proporcional ao quadrado de y.</li><li data-l="B">O quadrado de x é inversamente proporcional ao cubo de y.</li><li data-l="C">O cubo de x é diretamente proporcional ao quadrado de y.</li><li data-l="D">O quadrado de x é diretamente proporcional ao cubo de y.</li><li data-l="E">x é diretamente proporcional à sexta potência de y.</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito preliminar: A.</span> x = k/z² e y = m·z³. Elevando: x³ = k³/z⁶ e y² = m²·z⁶. Então x³ · y² = k³·m², uma constante. Produto constante = <strong>inversamente proporcionais</strong>: o cubo de x é inversamente proporcional ao quadrado de y.</p>
+        <p class="small muted">A ideia é fazer o z aparecer com o mesmo expoente nas duas (z⁶, o MMC de 2 e 3) para ele sumir. É a questão mais difícil deste tópico nas provas antigas.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-fade-adm22">
+      <div class="src"><span class="tag b">FADE 2023</span><span>UFPE · Administrador · questão 22 · proporção em mistura</span></div>
+      <p>Um artista tem três tubos de 300 ml de tinta: um vermelho, um amarelo e um azul. Misturando quantidades iguais de vermelho e amarelo, ele obtém a cor laranja; misturando quantidades iguais de vermelho e azul, ele obtém púrpura; misturando quantidades iguais de amarelo e azul, ele obtém a cor verde; e, misturando quantidades iguais de vermelho, amarelo e azul, ele obtém a cor marrom. Para pintar um pequeno mural, o artista precisa de 30% de marrom, 20% de vermelho, além de 10% de cada uma das cores seguintes: azul, amarelo, laranja, púrpura e verde. Se, depois de pintar o mural, o artista ainda tiver 60 ml de tinta vermelha, quanto sobrou de tinta azul?</p>
+      <ol class="alt"><li data-l="A">90 ml</li><li data-l="B">120 ml</li><li data-l="C">150 ml</li><li data-l="D">180 ml</li><li data-l="E">210 ml</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: B.</span> Seja T o total de tinta do mural. Vermelho usado: 20% puro + metade de laranja (5%) + metade de púrpura (5%) + um terço de marrom (10%) = 40% de T. Usou 300 − 60 = 240 ml, então T = 600 ml. Azul usado: 10% puro + 5% (púrpura) + 5% (verde) + 10% (marrom) = 30% de 600 = 180 ml. Sobra 300 − 180 = <strong>120 ml</strong>.</p>
+        <p class="small muted">É o estilo da FADE: nenhuma conta difícil, mas é preciso organizar as proporções de cada cor antes de calcular.</p>
+      </details>
+    </div>
+
+    <div class="q" id="q-hc14">
+      <div class="src"><span class="tag c">HC-UFPE 2014</span><span>Biólogo · EBSERH/IDECAN · questão 14 · razão (velocidade)</span></div>
+      <p>Um casal de tartarugas estava inicialmente separado por uma distância de 12 m e ambas começaram a caminhar, simultaneamente, com velocidades constantes, uma de encontro a outra. Sabe-se que o macho se deslocou com velocidade de 6 cm/s. Em 2 minutos e 30 segundos as tartarugas se encontraram, então, a velocidade da fêmea era de</p>
+      <ol class="alt"><li data-l="A">2 cm/s.</li><li data-l="B">3 cm/s.</li><li data-l="C">4 cm/s.</li><li data-l="D">5 cm/s.</li><li data-l="E">6 cm/s.</li></ol>
+      <details><summary>Gabarito e resolução</summary>
+        <p><span class="gab">Gabarito oficial: A.</span> Unidades primeiro: 12 m = 1.200 cm e 2 min 30 s = 150 s. Andando uma em direção à outra, as velocidades se somam: 1.200 ÷ 150 = 8 cm/s juntas. Fêmea = 8 − 6 = <strong>2 cm/s</strong>.</p>
+        <p class="small muted">Metade do trabalho aqui é converter unidades, como na escala.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · 20 min</span>
+    <h2>12 questões no estilo da banca</h2>
+    <p class="muted">Questões autorais, com as contas conferidas. Marque tudo e só depois corrija. A última nota fica salva neste navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · revisão da semana</span>
+    <h2>20 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar. Depois de ver a resposta, marque <strong>sei</strong> ou <strong>revisar</strong>. O botão de exportar gera um CSV (frente;verso) pronto para importar no Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Questões reais:</strong> provas oficiais de Desenhista de Artes Gráficas UFPE 2015 (gabarito oficial) e 2019 (gabarito preliminar), FADE/UFPE 2023 Administrador e HC-UFPE 2014 Biólogo (EBSERH/IDECAN), com os gabaritos publicados. O simulado e os cartões são autorais, com as contas verificadas.</p>
+    <p><a href="../index.html#cado">← Plano do Cado</a> · <a href="../index.html#gabi">Plano da Gabi</a> · <a href="rl-1.html">RL 1: frações, MMC e MDC</a> · Próxima página de RL: porcentagem (semana 3).</p>
+  </footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='ufpe2027:comum:rl2';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---------- SIMULADO ---------- */
+  var Q=[
+    {t:'Em uma planta baixa desenhada na escala 1 : 75, uma parede mede 6 cm. O comprimento real dessa parede é:',
+     o:['0,45 m','1,25 m','45 m','4,5 m','12,5 m'],a:3,
+     w:'Real = desenho × 75 = 6 × 75 = 450 cm = 4,5 m. Converter de cm para m no fim é onde mais se erra.'},
+    {t:'Duas cidades distam 36 km. Em um mapa na escala 1 : 600.000, a distância entre elas, no mapa, é de:',
+     o:['0,6 cm','6 cm','60 cm','3,6 cm','36 cm'],a:1,
+     w:'36 km = 3.600.000 cm. No mapa: 3.600.000 ÷ 600.000 = 6 cm.'},
+    {t:'Um técnico precisa preparar 250 mL de uma solução a 0,2 mol/L a partir de uma solução-estoque a 5 mol/L. O volume da solução-estoque a ser usado é:',
+     o:['10 mL','12,5 mL','25 mL','50 mL','62,5 mL'],a:0,
+     w:'C₁V₁ = C₂V₂: 5 × V₁ = 0,2 × 250 = 50, então V₁ = 10 mL, completados até 250 mL.'},
+    {t:'Oito pedreiros, com o mesmo ritmo de trabalho, constroem um muro em 15 dias. Mantido o ritmo, 12 pedreiros construiriam o mesmo muro em:',
+     o:['22,5 dias','18 dias','12 dias','11 dias','10 dias'],a:4,
+     w:'Mais pedreiros, menos dias: inversa. O produto é constante: 8 × 15 = 120 pedreiros-dia, e 120 ÷ 12 = 10 dias. A alternativa 22,5 é quem montou como direta.'},
+    {t:'Um carro a 90 km/h faz um percurso em 2 h 40 min. Se fizesse o mesmo percurso a 120 km/h, o tempo gasto seria de:',
+     o:['1 h 30 min','1 h 50 min','2 h','2 h 20 min','3 h 33 min'],a:2,
+     w:'Inversa. 2 h 40 min = 160 min. Tempo = 90 × 160 ÷ 120 = 120 min = 2 h. Converta horas e minutos antes da conta.'},
+    {t:'Uma receita de bolo que serve 8 pessoas usa 300 g de açúcar. Mantida a proporção, para servir 20 pessoas serão necessários:',
+     o:['600 g','750 g','800 g','900 g','1.200 g'],a:1,
+     w:'Direta: 300 × 20 ÷ 8 = 750 g.'},
+    {t:'Um prêmio de R$ 18.000,00 foi dividido entre três funcionários em partes diretamente proporcionais a 1, 3 e 5. A maior parte recebida foi de:',
+     o:['R$ 6.000,00','R$ 8.000,00','R$ 9.000,00','R$ 10.000,00','R$ 12.000,00'],a:3,
+     w:'1 + 3 + 5 = 9 partes de 18.000 ÷ 9 = 2.000. A maior é 5 × 2.000 = 10.000.'},
+    {t:'Uma gratificação de R$ 3.300,00 será dividida entre três servidores em partes inversamente proporcionais ao número de faltas de cada um no ano: 2, 3 e 6 faltas. O servidor que teve 3 faltas receberá:',
+     o:['R$ 1.100,00','R$ 550,00','R$ 1.650,00','R$ 1.000,00','R$ 1.320,00'],a:0,
+     w:'Inversos: 1/2, 1/3, 1/6 = 3/6, 2/6, 1/6. Pesos 3, 2 e 1, soma 6, parte de 550. Quem teve 3 faltas tem peso 2: 1.100. Confira: 1.650 + 1.100 + 550 = 3.300.'},
+    {t:'Assinale a alternativa que apresenta um par de grandezas inversamente proporcionais.',
+     o:['Preço total e quantidade de itens comprados, todos de mesmo preço.','Distância percorrida e combustível consumido, a consumo constante.','Medida do lado de um quadrado e sua área.','Idade e altura de uma pessoa.','Número de pintores, de mesmo ritmo, e tempo para pintar um mesmo muro.'],a:4,
+     w:'A e B são diretas. C cresce junto, mas a área é proporcional ao quadrado do lado, então não é proporção simples. D não tem relação de proporção. E: dobrar os pintores divide o tempo por dois.'},
+    {t:'Na proporção (x + 2)/6 = (x − 1)/3, o valor de x é:',
+     o:['1','2','4','6','8'],a:2,
+     w:'Meios × extremos: 3(x + 2) = 6(x − 1), 3x + 6 = 6x − 6, x = 4. Conferência: 6/6 = 3/3.'},
+    {t:'Um município tem área de 1.200 km² e população de 84.000 habitantes. Sua densidade demográfica é de:',
+     o:['70 hab/km²','7 hab/km²','700 hab/km²','14 hab/km²','0,014 hab/km²'],a:0,
+     w:'Densidade = habitantes ÷ área = 84.000 ÷ 1.200 = 70 hab/km². A alternativa 0,014 é a razão invertida.'},
+    {t:'Em um desenho na escala 1 : 100, uma sala retangular de 20 m² ocupa uma área de:',
+     o:['2 cm²','20 cm²','200 cm²','2.000 cm²','0,2 cm²'],a:1,
+     w:'A escala de área é o quadrado da linear: 1 : 10.000. 20 m² = 200.000 cm², e 200.000 ÷ 10.000 = 20 cm². Quem dividiu só por 100 marcou 2.000.'}
+  ];
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  /* ---------- FLASHCARDS ---------- */
+  var F=[
+    ['Razão de a para b','a/b ou a : b. a é o antecedente, b o consequente. A ordem importa.'],
+    ['Escala','Medida no desenho ÷ medida real, na mesma unidade. 1 : 50 é redução; 2 : 1 é ampliação.'],
+    ['Escala de área × escala linear','A de área é o quadrado da linear: 1 : 100 vira 1 : 10.000 em área.'],
+    ['Densidade demográfica','Habitantes ÷ área (hab/km²).'],
+    ['Velocidade média','Distância ÷ tempo. Converta as unidades antes (m e s, km e h).'],
+    ['Propriedade fundamental da proporção','Produto dos meios = produto dos extremos: a/b = c/d ⇔ a·d = b·c.'],
+    ['Propriedade da soma das razões','Se a/b = c/d, então (a + c)/(b + d) = a/b. Base da divisão proporcional.'],
+    ['Teste de grandeza direta','Uma dobra, a outra dobra. A razão y/x é constante. Gráfico: reta pela origem.'],
+    ['Teste de grandeza inversa','Uma dobra, a outra cai à metade. O produto x·y é constante. Gráfico: hipérbole.'],
+    ['Lado do quadrado e área são diretamente proporcionais?','Não. Dobrar o lado quadruplica a área (proporcional ao quadrado).'],
+    ['Método das setas','Seta na coluna do x; mesma direção se direta, oposta se inversa; na inversa, inverte a coluna sem x.'],
+    ['Atalho da regra de três inversa','O produto é constante: x = (produto conhecido) ÷ (novo valor). Ex.: 6 × 10 = 60, 60 ÷ 15 = 4.'],
+    ['Regra de três composta está no edital?','Não. O edital pede só a simples. A composta tem 3 ou mais grandezas.'],
+    ['Divisão diretamente proporcional','Soma os pesos, divide o total pela soma (valor de 1 parte), multiplica por cada peso.'],
+    ['Divisão inversamente proporcional','Usa os inversos dos pesos (1/a, 1/b…), reduz ao mesmo denominador e divide pelos numeradores.'],
+    ['Divisão proporcional a dois critérios','Multiplica os pesos: capital × horas (UFPE 2015).'],
+    ['Diluição de solução','C₁V₁ = C₂V₂: concentração e volume são inversamente proporcionais; o soluto não muda.'],
+    ['Mistura: acrescentar um componente','Ache o componente que não muda e monte a proporção com ele.'],
+    ['Velocidades de encontro (em sentidos opostos)','Somam-se: tempo = distância ÷ (v₁ + v₂).'],
+    ['Como fazer o z sumir em "x ∝ 1/z², y ∝ z³"','Eleve para igualar o expoente de z (z⁶): x³·y² = constante, então x³ é inversamente proporcional a y².']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 rl2'];}),'ufpe2027-rl-2.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 rl2'];});
+    dl(rows,'ufpe2027-rl-2-revisar.csv');
+  });
+  drawFC();
+
+  /* ---------- CHECKLIST ---------- */
+  var C=[
+    'Calcular uma razão especial (escala, velocidade, densidade, concentração) convertendo unidades antes.',
+    'Resolver uma proporção pela propriedade fundamental.',
+    'Decidir se duas grandezas são diretas, inversas ou nenhuma das duas, pelo teste "se dobra".',
+    'Montar uma regra de três direta pelo método das setas.',
+    'Montar uma regra de três inversa e conferir pelo produto constante.',
+    'Converter medidas entre desenho e realidade numa escala, inclusive áreas.',
+    'Dividir um valor em partes diretamente proporcionais.',
+    'Dividir um valor em partes inversamente proporcionais.',
+    'Dividir proporcionalmente a dois critérios ao mesmo tempo.',
+    'Resolver problema de diluição (C₁V₁ = C₂V₂) e de mistura.',
+    'Reconhecer uma regra de três composta (e saber que ela não está no edital).'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  /* ---------- TOC ativo ---------- */
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>

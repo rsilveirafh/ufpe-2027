@@ -1,0 +1,1688 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ilustração tradicional e digital para o concurso de Desenhista de Artes Gráficas da UFPE 2027: perspectiva, luz e sombra, figura humana, personagem, cenário, storyboard, materiais e mesa digitalizadora, com as 28 questões reais do cargo.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✏️</text></svg>">
+<title>Ilustração · Semana 2</title>
+<style>
+:root{
+  --paper:#F1F4F5; --card:#FFFFFF; --band:#E3E9EB;
+  --ink:#12171A; --ink2:#48575E; --ink3:#6B7B82;
+  --rule:#C9D4D8; --rule2:#DEE6E8;
+  --mag:#BE0066; --cyan:#0079AF; --amber:#A35F00; --green:#23784A;
+  --mag-soft:#F9E3EE; --cyan-soft:#E1EFF6; --amber-soft:#F6EBDA; --green-soft:#E0F0E6;
+  --svg-fill:#FFFFFF; --svg-soft:#E8EEF0;
+  --shadow:0 1px 0 rgba(18,23,26,.06), 0 2px 12px rgba(18,23,26,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1315; --card:#161E21; --band:#1A2427;
+    --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+    --rule:#2B383C; --rule2:#212C30;
+    --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+    --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+    --svg-fill:#1D272A; --svg-soft:#243034;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1315; --card:#161E21; --band:#1A2427;
+  --ink:#E7EEF0; --ink2:#A6B5BB; --ink3:#809097;
+  --rule:#2B383C; --rule2:#212C30;
+  --mag:#FF4D9C; --cyan:#48BAEA; --amber:#F0A33C; --green:#5CC98A;
+  --mag-soft:#3A1628; --cyan-soft:#10303F; --amber-soft:#3A2A12; --green-soft:#133222;
+  --svg-fill:#1D272A; --svg-soft:#243034;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI Variable Text","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.hf,h1,h2,h3,h4{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.layout{max-width:1240px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 100px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,1fr)}}
+aside.toc{display:none}
+@media (min-width:1080px){
+  aside.toc{display:block;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-size:13.5px;padding-right:6px}
+  aside.toc a{display:block;color:var(--ink2);text-decoration:none;padding:5px 10px;border-left:2px solid var(--rule2)}
+  aside.toc a:hover{color:var(--mag);border-left-color:var(--mag)}
+  aside.toc a.on{color:var(--ink);font-weight:700;border-left-color:var(--mag)}
+  aside.toc .t{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px 12px}
+  .mtoc{display:none}
+}
+main{min-width:0;max-width:880px}
+.back{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag);text-decoration:none}
+.eyebrow{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:20px}
+h1{font-weight:800;letter-spacing:-.035em;line-height:.98;font-size:clamp(34px,6.4vw,68px);margin:.14em 0 .2em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--mag)}
+h2{font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,28px);line-height:1.15;margin:0 0 10px}
+h3{font-weight:800;font-size:18px;margin:28px 0 8px;letter-spacing:-.01em}
+h4{font-weight:800;font-size:15px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+.dek{color:var(--ink2);font-size:clamp(15.5px,1.8vw,18.5px);max-width:66ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.meta span{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;background:var(--band);color:var(--ink2);padding:3px 10px;border-radius:99px}
+.meta .hot{background:var(--mag);color:#fff}
+.sec{border-top:2px solid var(--ink);padding-top:14px;margin:clamp(44px,7vw,68px) 0 0;scroll-margin-top:16px}
+.lbl{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:10px}
+.muted{color:var(--ink2)} .small{font-size:14px}
+.card{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+strong{font-weight:700}
+.mtoc{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.mtoc a{font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);padding:4px 10px;border-radius:99px}
+
+/* caixas */
+.cx{border-left:4px solid var(--cyan);background:var(--card);padding:12px 16px;border-radius:0 5px 5px 0;margin:16px 0;font-size:15px;box-shadow:var(--shadow)}
+.cx>.k{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cx p:last-child,.cx ul:last-child{margin-bottom:0}
+.cai{border-left-color:var(--mag)} .cai>.k{color:var(--mag)}
+.peg{border-left-color:var(--amber)} .peg>.k{color:var(--amber)}
+.dec{border-left-color:var(--cyan)} .dec>.k{color:var(--cyan)}
+.lig{border-left-color:var(--green)} .lig>.k{color:var(--green)}
+
+/* tabelas */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--rule2);border-radius:6px;box-shadow:var(--shadow);margin:12px 0 16px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+.tbl.wide{min-width:640px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl thead th{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:800;background:var(--band)}
+.tbl td:first-child{font-weight:700}
+
+/* figuras */
+figure.fig{margin:16px 0 20px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px;box-shadow:var(--shadow)}
+figure.fig svg{width:100%;height:auto;display:block}
+figure.fig figcaption{font-size:13px;color:var(--ink3);margin-top:8px}
+svg text{font-family:"Segoe UI",-apple-system,Roboto,sans-serif;fill:var(--ink)}
+svg .t2{fill:var(--ink2)} svg .t3{fill:var(--ink3)}
+svg .tb{font-weight:700}
+svg .ln{stroke:var(--ink);fill:none}
+svg .ln2{stroke:var(--ink3);fill:none}
+svg .cell{fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6}
+svg .soft{fill:var(--svg-soft)}
+svg .fm{fill:var(--mag)} svg .fc{fill:var(--cyan)} svg .fa{fill:var(--amber)} svg .fg{fill:var(--green)}
+svg .sm{stroke:var(--mag)} svg .sc{stroke:var(--cyan)} svg .sa{stroke:var(--amber)} svg .sg{stroke:var(--green)}
+svg .fms{fill:var(--mag-soft)} svg .fcs{fill:var(--cyan-soft)} svg .fas{fill:var(--amber-soft)} svg .fgs{fill:var(--green-soft)}
+
+/* roteiro */
+.plan{display:grid;gap:10px;margin-top:10px}
+.plan .row{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 16px}
+.plan .d{font-family:"Cascadia Mono",Consolas,monospace;font-size:12.5px;color:var(--ink2)}
+.plan .d b{display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);font-size:14px}
+.plan a{color:var(--cyan)}
+
+/* questões reais */
+.q{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.q .src{font-family:"Cascadia Mono",Consolas,monospace;font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.q .src .tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:1px 8px;border-radius:99px;background:var(--mag-soft);color:var(--mag)}
+.q .src .tag.b{background:var(--cyan-soft);color:var(--cyan)}
+.q .src .tag.c{background:var(--amber-soft);color:var(--amber)}
+.q ol.alt{list-style:none;padding:0;margin:8px 0 0}
+.q ol.alt li{padding:3px 0 3px 28px;position:relative}
+.q ol.alt li::before{content:attr(data-l)")";position:absolute;left:4px;font-weight:700;color:var(--ink3)}
+.q details{margin-top:10px;border-top:1px dashed var(--rule);padding-top:10px}
+.q summary{cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.q summary:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.q .gab{font-weight:800;color:var(--green)}
+.q .items{margin:8px 0 0;padding-left:0;list-style:none}
+.q .items li{padding:2px 0}
+
+/* simulado */
+.sq{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:16px 18px;margin:12px 0}
+.sq .n{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.sq label{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;margin:2px 0}
+.sq label:hover{background:var(--band)}
+.sq input{margin:4px 0 0;accent-color:var(--mag)}
+.sq.show label.ok{background:var(--green-soft)}
+.sq.show label.bad{background:var(--mag-soft)}
+.sq .why{display:none;margin-top:10px;font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);padding-top:10px}
+.sq.show .why{display:block}
+.btn{all:unset;cursor:pointer;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.06em;padding:10px 18px;border-radius:99px;background:var(--ink);color:var(--paper);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+.score{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:800;font-size:18px;margin-left:12px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+
+/* flashcards */
+.fcs-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));margin-top:12px}
+.flip{all:unset;cursor:pointer;display:block;min-height:128px;background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px;position:relative}
+.flip .f{font-weight:700}
+.flip .b{display:none;color:var(--ink2)}
+.flip.open .f{display:none} .flip.open .b{display:block}
+.flip.open{border-color:var(--cyan)}
+.flip.known{opacity:.55}
+.flip .hint{position:absolute;right:10px;bottom:6px;font-size:11px;color:var(--ink3)}
+.flip:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed var(--rule2)}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--mag)}
+.chk li.done label{color:var(--ink3);text-decoration:line-through}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:13px;color:var(--ink3)}
+a{color:var(--cyan)}
+@media print{aside.toc,.mtoc,.bar2 .btn{display:none} .layout{display:block} .q,.sq,.card,figure.fig{break-inside:avoid;box-shadow:none} .flip .b{display:block} .flip .f{display:block}}
+
+@media (max-width:640px){figure.fig{overflow-x:auto;-webkit-overflow-scrolling:touch}figure.fig svg{min-width:620px}figure.fig figcaption{position:sticky;left:0}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="toc" aria-label="Nesta página">
+  <div class="t">Nesta página</div>
+  <a href="#roteiro">Roteiro da semana</a>
+  <a href="#comocai">Como cai</a>
+  <a href="#observacao">1 · Desenho de observação</a>
+  <a href="#perspectiva">2 · Perspectiva e profundidade</a>
+  <a href="#luz">3 · Luz, sombra e volume</a>
+  <a href="#figura">4 · Figura humana</a>
+  <a href="#personagem">5 · Criação de personagens</a>
+  <a href="#cenario">6 · Cenário e composição</a>
+  <a href="#storyboard">7 · Roteiro e storyboard</a>
+  <a href="#materiais">8 · Materiais tradicionais</a>
+  <a href="#digital">9 · Ilustração digital</a>
+  <a href="#generos">10 · Gêneros e ilustração científica</a>
+  <a href="#reais">Questões reais</a>
+  <a href="#simulado">Simulado</a>
+  <a href="#cartoes">Flashcards</a>
+  <a href="#dominio">Checklist</a>
+</aside>
+
+<main>
+  <a class="back" href="../index.html#gabi">← Plano da Gabi</a> <span class="muted small">·</span> <a class="back" href="desenho-tecnico-1.html" style="color:var(--ink3)">semana anterior: Desenho Técnico I</a>
+  <div class="eyebrow">Desenhista de Artes Gráficas · Conhecimentos Específicos · Ilustração · Semana 2</div>
+  <h1>Ilustração<br><em>tradicional e digital</em></h1>
+  <p class="dek">O edital de 2026 pede "ilustração tradicional e digital". Nas duas provas anteriores do cargo na UFPE, foi o assunto que mais caiu: figura humana, cenário, personagem, storyboard, desenho à mão livre e mesa digitalizadora ocupam 28 das 60 questões específicas. Por isso este tópico foi adiantado para a semana 2.</p>
+  <div class="meta"><span class="hot">semana 12/10 → 18/10</span><span>~4h30 de estudo</span><span>28 questões reais</span><span>16 no simulado</span><span>36 flashcards</span></div>
+  <nav class="mtoc" aria-label="Seções">
+    <a href="#roteiro">Roteiro</a><a href="#comocai">Como cai</a><a href="#observacao">Observação</a><a href="#perspectiva">Perspectiva</a><a href="#luz">Luz e sombra</a><a href="#figura">Figura humana</a><a href="#personagem">Personagem</a><a href="#cenario">Cenário</a><a href="#storyboard">Storyboard</a><a href="#materiais">Materiais</a><a href="#digital">Digital</a><a href="#generos">Gêneros</a><a href="#reais">Questões</a><a href="#simulado">Simulado</a><a href="#cartoes">Cartões</a>
+  </nav>
+
+  <!-- ROTEIRO -->
+  <section class="sec" id="roteiro">
+    <span class="lbl">Roteiro da semana</span>
+    <h2>Esta página, sessão por sessão</h2>
+    <p class="muted">Segunda (12/10) é feriado, então a sessão pode ser de manhã. As questões reais são muitas (28). Cada sessão termina com o bloco de questões do próprio tema.</p>
+    <div class="plan">
+      <div class="row"><div class="d"><b>Seg 12/10</b>1h30</div><div>Seções <a href="#observacao">1</a>, <a href="#perspectiva">2</a> e <a href="#luz">3</a>: observação, perspectiva e luz. No fim, as <a href="#r-perspectiva">questões reais de perspectiva, volume e mão livre</a> (11 questões).</div></div>
+      <div class="row"><div class="d"><b>Qui 15/10</b>1h30</div><div>Seções <a href="#figura">4</a>, <a href="#personagem">5</a>, <a href="#cenario">6</a> e <a href="#storyboard">7</a>: figura humana, personagem, cenário e storyboard. No fim, as <a href="#r-personagem">questões reais de figura humana, personagem, roteiro e storyboard</a> (13 questões).</div></div>
+      <div class="row"><div class="d"><b>Sáb 17/10</b>1h30</div><div>Seções <a href="#materiais">8</a>, <a href="#digital">9</a> e <a href="#generos">10</a> (35 min), depois as <a href="#r-mesa">4 questões de mesa digitalizadora</a> e o <a href="#simulado">simulado</a> de 16 questões (45 min). O que errar vai pro caderno de erros.</div></div>
+      <div class="row"><div class="d"><b>Dom 18/10</b>revisão</div><div><a href="#cartoes">Flashcards</a>: exporte os que não souber para o Anki e marque o <a href="#dominio">checklist</a>. Se sobrar tempo, faça 10 minutos de desenho de observação com uma esfera ou uma caneca iluminada de lado.</div></div>
+    </div>
+  </section>
+
+  <!-- COMO CAI -->
+  <section class="sec" id="comocai">
+    <span class="lbl">Como cai</span>
+    <h2>O que as provas do cargo cobraram</h2>
+    <p>O mapa completo das provas de Desenhista de Artes Gráficas da UFPE (2015 e 2019, 30 questões específicas cada) está na <a href="desenho-tecnico-1.html#comocai">página de Desenho Técnico I</a>. O recorte que interessa a esta semana:</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Tema</th><th>2015</th><th>2019</th><th>Onde está nesta página</th></tr></thead>
+      <tbody>
+        <tr><td>Figura humana e cenários (inclui perspectiva)</td><td>4</td><td>4</td><td>Seções 2, 4 e 6</td></tr>
+        <tr><td>Desenho à mão livre (volume, hachura, planos, observação)</td><td>3</td><td>2</td><td>Seções 1 e 3</td></tr>
+        <tr><td>Criação de personagens</td><td>2</td><td>3</td><td>Seção 5</td></tr>
+        <tr><td>Roteiro e storyboard</td><td>3</td><td>3</td><td>Seção 7</td></tr>
+        <tr><td>Mesa digitalizadora</td><td>2</td><td>2</td><td>Seção 9</td></tr>
+        <tr><td><strong>Total desta página</strong></td><td><strong>14</strong></td><td><strong>14</strong></td><td>Questões 31 a 44 de cada prova</td></tr>
+        <tr><td class="muted">Scanner, vetor × bitmap, Illustrator, Photoshop, Corel, Flash</td><td class="muted">12</td><td class="muted">11</td><td class="muted">Semana 3 (softwares e imagem digital)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">A banca pergunta o "bom senso do ofício"</h4>
+        <p class="small muted" style="margin:0">Quase nenhuma questão pede uma definição decorada. A maioria descreve uma prática de ateliê e pergunta se ela faz sentido: "a figura humana independe do cenário?", "o storyboard deve ser detalhado e acabado?". Quem já desenha acerta boa parte por raciocínio. O que derruba são as <strong>alternativas absolutas</strong> e os <strong>termos técnicos inventados</strong>.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Três padrões de erro que se repetem</h4>
+        <ul class="small muted" style="margin:0">
+          <li><strong>Absolutos</strong>: "irrelevante", "independe", "não é relevante", "sempre", "fixo e inalterado". Em 2019, três das cinco alternativas da questão 31 eram desse tipo.</li>
+          <li><strong>Jargão falso</strong>: "pigmentação isomórfica", "sublimação e renderização" no storyboard, "cone visual que mede a distância até a luz".</li>
+          <li><strong>Trocar o meio pelo fim</strong>: storyboard "com um fim em si mesmo", mesa digitalizadora como "ferramenta de tratamento de imagens".</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cx cai"><span class="k">Onde estão os pontos · estimativa</span>
+      <p>No edital de 2026, ilustração é 1 dos 13 blocos dos Específicos (25 questões), então pelo peso seria algo entre 1 e 3 questões. Mas o histórico do cargo na UFPE puxa para cima, e figura humana, perspectiva e storyboard conversam com outros blocos (projeto gráfico, editorial, interfaces). <strong>Vale estudar como se valesse 3 a 5 questões.</strong></p>
+    </div>
+  </section>
+
+  <!-- 1 OBSERVAÇÃO -->
+  <section class="sec" id="observacao">
+    <span class="lbl">Seção 1 · Seg</span>
+    <h2>Desenho de observação e fundamentos</h2>
+    <p>Desenhar de observação é traduzir o que se vê em relações: <strong>tamanho relativo, ângulo, posição e valor tonal</strong>. A prova de 2019 perguntou diretamente quais são as bases do desenho de observação à mão livre, e a resposta foi <strong>composição, enquadramento, proporção e perspectiva</strong> (<a href="#r19-36">questão 36</a>).</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Base</th><th>O que é na prática</th><th>Como se treina</th></tr></thead>
+      <tbody>
+        <tr><td>Composição</td><td>Distribuir as massas na folha: onde fica o motivo, quanto de respiro sobra</td><td>Thumbnails de 5 cm antes de começar</td></tr>
+        <tr><td>Enquadramento</td><td>Decidir o que entra e o que fica fora do quadro</td><td>Visor de papelão (moldura vazada) ou o "quadro" das mãos</td></tr>
+        <tr><td>Proporção</td><td>Medir uma parte em função de outra (a cabeça cabe quantas vezes no corpo?)</td><td><strong>Visada</strong>: braço esticado, lápis na vertical, o polegar marca a medida</td></tr>
+        <tr><td>Perspectiva</td><td>Como o espaço e os objetos diminuem e convergem com a distância</td><td>Seção 2</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Do geral para o particular</h3>
+    <ol>
+      <li><strong>Gesto e estrutura:</strong> linhas leves que dão direção, eixo e caixa de encaixe.</li>
+      <li><strong>Formas básicas:</strong> tudo é cilindro, cubo, esfera ou cone (o conselho clássico atribuído a Cézanne).</li>
+      <li><strong>Contorno e planos:</strong> define bordas e as faces que mudam de direção.</li>
+      <li><strong>Valores tonais:</strong> luz, meio-tom e sombra, do maior para o menor contraste.</li>
+      <li><strong>Detalhe e textura</strong> só no fim, e só onde está o foco.</li>
+    </ol>
+    <div class="cx dec"><span class="k">Decoreba · tipos de desenho à mão livre</span><p><strong>Croqui</strong> (esboço rápido de registro ou de ideia), <strong>esboço/rafe</strong> (ideia de composição), <strong>estudo</strong> (investiga um problema, como uma mão ou a luz sobre um tecido), <strong>desenho de contorno cego</strong> (olhar só o objeto, sem olhar a folha: treina a observação) e <strong>desenho de gesto</strong> (30 segundos, captura movimento, não detalhe).</p></div>
+  </section>
+
+  <!-- 2 PERSPECTIVA -->
+  <section class="sec" id="perspectiva">
+    <span class="lbl">Seção 2 · Seg</span>
+    <h2>Perspectiva e profundidade</h2>
+    <p>A <strong>perspectiva cônica</strong> (ou linear) imita o olho: as linhas paralelas que se afastam do observador <strong>convergem</strong> para pontos de fuga, e os objetos <strong>diminuem</strong> com a distância. A <strong>perspectiva paralela</strong> (axonométrica, como a isométrica, e a cavaleira) mantém as paralelas paralelas e não diminui os objetos. É a do desenho técnico, que você vê na semana 4.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Elemento</th><th>Definição</th></tr></thead>
+      <tbody>
+        <tr><td>LH · linha do horizonte</td><td>Linha na <strong>altura dos olhos do observador</strong>. Não é o chão nem o horizonte geográfico visível.</td></tr>
+        <tr><td>LT · linha de terra</td><td>Onde o plano do chão encontra o plano do quadro. É a base do desenho.</td></tr>
+        <tr><td>PV · ponto de vista</td><td>Posição do olho do observador.</td></tr>
+        <tr><td>PF · ponto de fuga</td><td>Onde as paralelas que se afastam se encontram. Para retas horizontais, os PF ficam <strong>sobre a LH</strong>.</td></tr>
+        <tr><td>Cone visual</td><td>O campo de visão nítida (cerca de 60°). Fora dele o desenho deforma.</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig">
+<svg viewBox="0 0 760 300" role="img" aria-label="Perspectiva cônica com um ponto de fuga: estrada e caixa convergindo para o ponto de fuga na linha do horizonte">
+<line x1="10" y1="120" x2="750" y2="120" class="sc" stroke-width="2"/>
+<text x="14" y="112" font-size="12" class="tb" style="fill:var(--cyan)">LH · linha do horizonte = altura dos olhos</text>
+<line x1="150" y1="290" x2="380" y2="120" class="ln" stroke-width="1.8"/>
+<line x1="610" y1="290" x2="380" y2="120" class="ln" stroke-width="1.8"/>
+<line x1="132.0" y1="290.0" x2="132.0" y2="180.0" class="sa" stroke-width="3.8"/>
+<line x1="218.8" y1="230.5" x2="218.8" y2="159.0" class="sa" stroke-width="2.8"/>
+<line x1="280.8" y1="188.0" x2="280.8" y2="144.0" class="sa" stroke-width="2.0"/>
+<line x1="325.4" y1="157.4" x2="325.4" y2="133.2" class="sa" stroke-width="1.5"/>
+<polygon points="500.6,140.1 567.6,140.1 567.6,193.7 500.6,193.7" class="soft" stroke="var(--ink3)" stroke-dasharray="3 3"/>
+<line x1="560" y1="150" x2="500.6" y2="140.1" class="ln2" stroke-width="1.2"/>
+<line x1="660" y1="150" x2="567.6" y2="140.1" class="ln2" stroke-width="1.2"/>
+<line x1="660" y1="230" x2="567.6" y2="193.7" class="ln2" stroke-width="1.2"/>
+<line x1="560" y1="230" x2="500.6" y2="193.7" class="ln2" stroke-width="1.2"/>
+<line x1="560" y1="150" x2="380" y2="120" class="ln2" stroke-dasharray="2 4" stroke-width="1"/>
+<line x1="560" y1="230" x2="380" y2="120" class="ln2" stroke-dasharray="2 4" stroke-width="1"/>
+<polygon points="560,150 660,150 660,230 560,230" class="fms" stroke="var(--mag)" stroke-width="1.8"/>
+<circle cx="380" cy="120" r="6" class="fm"/>
+<text x="380" y="106" text-anchor="middle" font-size="12.5" class="tb">PF</text>
+<text x="500" y="44" font-size="11.5" class="t2">a face de frente fica em verdadeira grandeza;</text>
+<text x="500" y="60" font-size="11.5" class="t2">as de profundidade fogem para o PF</text>
+<text x="20" y="44" font-size="11.5" class="t2">objetos iguais (os postes) diminuem</text>
+<text x="20" y="60" font-size="11.5" class="t2">e convergem com a distância</text>
+</svg>
+      <figcaption>Um ponto de fuga: o objeto está de frente para o observador. É a perspectiva de corredor, rua e interior visto de frente.</figcaption>
+    </figure>
+    <figure class="fig">
+<svg viewBox="0 0 760 332" role="img" aria-label="Perspectiva com dois pontos de fuga e figuras humanas com os olhos na linha do horizonte">
+<line x1="10" y1="110" x2="750" y2="110" class="sc" stroke-width="2"/>
+<text x="30" y="102" font-size="12" class="tb" style="fill:var(--cyan)">LH</text>
+<circle cx="20" cy="110" r="6" class="fm"/>
+<circle cx="740" cy="110" r="6" class="fm"/>
+<text x="22" y="134" font-size="12" class="tb">PF1</text>
+<text x="738" y="134" font-size="12" class="tb" text-anchor="end">PF2</text>
+<polygon points="250,40 146.5,71.5 146.5,187.0 250,250" class="fcs" stroke="var(--cyan)" stroke-width="1.6"/>
+<polygon points="250,40 387.2,59.6 387.2,210.8 250,250" class="fms" stroke="var(--mag)" stroke-width="1.6"/>
+<line x1="250" y1="40" x2="20" y2="110" class="ln2" stroke-dasharray="2 4" stroke-width="1"/>
+<line x1="250" y1="250" x2="20" y2="110" class="ln2" stroke-dasharray="2 4" stroke-width="1"/>
+<line x1="250" y1="40" x2="740" y2="110" class="ln2" stroke-dasharray="2 4" stroke-width="1"/>
+<line x1="250" y1="250" x2="740" y2="110" class="ln2" stroke-dasharray="2 4" stroke-width="1"/>
+<text x="256" y="268" font-size="11" class="t2">aresta vertical continua vertical</text>
+<circle cx="470.0" cy="109.3" r="13.6" class="cell"/>
+<line x1="470.0" y1="122.9" x2="470.0" y2="208.1" class="ln" stroke-width="6.8" stroke-linecap="round"/>
+<line x1="470.0" y1="208.1" x2="457.7" y2="300.0" class="ln" stroke-width="6.1" stroke-linecap="round"/>
+<line x1="470.0" y1="208.1" x2="482.3" y2="300.0" class="ln" stroke-width="6.1" stroke-linecap="round"/>
+<line x1="450.9" y1="144.7" x2="489.1" y2="144.7" class="ln" stroke-width="5.4" stroke-linecap="round"/>
+<circle cx="560.0" cy="109.6" r="7.2" class="cell"/>
+<line x1="560.0" y1="116.8" x2="560.0" y2="161.6" class="ln" stroke-width="3.6" stroke-linecap="round"/>
+<line x1="560.0" y1="161.6" x2="553.5" y2="210.0" class="ln" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="560.0" y1="161.6" x2="566.5" y2="210.0" class="ln" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="550.0" y1="128.3" x2="570.0" y2="128.3" class="ln" stroke-width="2.9" stroke-linecap="round"/>
+<circle cx="630.0" cy="109.8" r="3.9" class="cell"/>
+<line x1="630.0" y1="113.7" x2="630.0" y2="138.4" class="ln" stroke-width="2.0" stroke-linecap="round"/>
+<line x1="630.0" y1="138.4" x2="626.5" y2="165.0" class="ln" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="630.0" y1="138.4" x2="633.5" y2="165.0" class="ln" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="624.5" y1="120.1" x2="635.5" y2="120.1" class="ln" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="690.0" cy="109.9" r="2.0" class="cell"/>
+<line x1="690.0" y1="111.9" x2="690.0" y2="124.5" class="ln" stroke-width="1.0" stroke-linecap="round"/>
+<line x1="690.0" y1="124.5" x2="688.2" y2="138.0" class="ln" stroke-width="1.0" stroke-linecap="round"/>
+<line x1="690.0" y1="124.5" x2="691.8" y2="138.0" class="ln" stroke-width="1.0" stroke-linecap="round"/>
+<line x1="687.2" y1="115.1" x2="692.8" y2="115.1" class="ln" stroke-width="1.0" stroke-linecap="round"/>
+<text x="20" y="288" font-size="12" class="tb">Observador em pé, figuras adultas em pé no mesmo chão:</text>
+<text x="20" y="304" font-size="12" class="t2">os olhos de todas ficam sobre a LH, perto ou longe.</text>
+<text x="20" y="320" font-size="12" class="t2">Só o tamanho do corpo abaixo da LH diminui.</text>
+</svg>
+      <figcaption>Dois pontos de fuga: o objeto está de quina. Com três pontos, as verticais também convergem (visto muito de cima ou muito de baixo, como um prédio alto).</figcaption>
+    </figure>
+    <div class="cx cai"><span class="k">Caiu · UFPE 2019, questão 33</span><p>Figuras humanas no cenário. A regra: com o observador em pé e todas as figuras adultas de pé sobre o mesmo chão, <strong>os olhos de todas ficam na linha do horizonte</strong>, e o que muda com a distância é quanto do corpo aparece abaixo dela. Consequência: todas têm em comum a altura dos olhos em relação à linha de terra. <a href="#r19-33">Resolva →</a></p></div>
+    <h3>Outros recursos de profundidade</h3>
+    <p>A prova de 2015 perguntou como determinar a profundidade de um cenário (<a href="#r15-34">questão 34</a>). Além da perspectiva linear, o desenhista usa:</p>
+    <ul>
+      <li><strong>Sobreposição</strong>: o que tampa está na frente.</li>
+      <li><strong>Diminuição de tamanho</strong> e <strong>altura no plano</strong>: abaixo da LH, o que está mais longe fica mais alto na folha.</li>
+      <li><strong>Perspectiva atmosférica (aérea)</strong>: ao longe, menos contraste, menos detalhe, cores mais frias e azuladas.</li>
+      <li><strong>Gradiente de textura</strong>: a textura fica mais fina e densa com a distância.</li>
+      <li><strong>Planos sucessivos</strong> (primeiro plano, plano médio e fundo): acentuam a profundidade e deixam a composição mais interessante (<a href="#r15-37">2015, questão 37</a>).</li>
+      <li><strong>Sombra projetada</strong>: conhecendo a fonte de luz e o ponto de fuga, a sombra no chão situa o objeto no espaço.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"O observador fica acima da linha do horizonte" está errado: a LH <em>é</em> o nível dos olhos dele. Se a LH está baixa na folha, a vista é de baixo para cima; se está alta, de cima para baixo (vista de pássaro).</p></div>
+  </section>
+
+  <!-- 3 LUZ -->
+  <section class="sec" id="luz">
+    <span class="lbl">Seção 3 · Seg</span>
+    <h2>Luz, sombra e volume</h2>
+    <p>É a luz que transforma um círculo em esfera. Para ressaltar volume à mão livre, o primeiro passo é <strong>identificar a fonte de luz e determinar as sombras</strong> (<a href="#r19-35">2019, questão 35</a>).</p>
+    <figure class="fig">
+<svg viewBox="0 0 760 330" role="img" aria-label="Esfera iluminada com as zonas de luz e sombra">
+<defs><radialGradient id="esf" cx="0.36" cy="0.32" r="0.78"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.12" stop-color="#E9E9E9"/><stop offset="0.45" stop-color="#A9A9A9"/><stop offset="0.68" stop-color="#4C4C4C"/><stop offset="0.86" stop-color="#2A2A2A"/><stop offset="1" stop-color="#5E5E5E"/></radialGradient>
+<radialGradient id="somb" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#1B1B1B" stop-opacity=".85"/><stop offset="1" stop-color="#1B1B1B" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="325" cy="249" rx="150" ry="30" fill="url(#somb)"/>
+<circle cx="230" cy="150" r="105" fill="url(#esf)" stroke="var(--ink3)" stroke-width="1"/>
+<ellipse cx="240" cy="253" rx="40" ry="6" fill="#0E0E0E" opacity=".9"/>
+<g><circle cx="40" cy="30" r="14" class="fa"/>
+<line x1="60.0" y1="30.0" x2="68.0" y2="30.0" class="sa" stroke-width="2"/>
+<line x1="54.1" y1="44.1" x2="59.8" y2="49.8" class="sa" stroke-width="2"/>
+<line x1="40.0" y1="50.0" x2="40.0" y2="58.0" class="sa" stroke-width="2"/>
+<line x1="25.9" y1="44.1" x2="20.2" y2="49.8" class="sa" stroke-width="2"/>
+<line x1="20.0" y1="30.0" x2="12.0" y2="30.0" class="sa" stroke-width="2"/>
+<line x1="25.9" y1="15.9" x2="20.2" y2="10.2" class="sa" stroke-width="2"/>
+<line x1="40.0" y1="10.0" x2="40.0" y2="2.0" class="sa" stroke-width="2"/>
+<line x1="54.1" y1="15.9" x2="59.8" y2="10.2" class="sa" stroke-width="2"/>
+<text x="64" y="26" font-size="11.5" class="t2">luz vinda do alto,</text><text x="64" y="40" font-size="11.5" class="t2">à esquerda</text></g>
+<line x1="192.0" y1="110.0" x2="492" y2="36" class="ln2" stroke-width="1"/>
+<circle cx="192.0" cy="110.0" r="3" class="fm"/>
+<text x="500" y="40" font-size="12.5">brilho (luz máxima)</text>
+<line x1="222.0" y1="117.0" x2="492" y2="71" class="ln2" stroke-width="1"/>
+<circle cx="222.0" cy="117.0" r="3" class="fm"/>
+<text x="500" y="75" font-size="12.5">luz</text>
+<line x1="245.0" y1="135.0" x2="492" y2="106" class="ln2" stroke-width="1"/>
+<circle cx="245.0" cy="135.0" r="3" class="fm"/>
+<text x="500" y="110" font-size="12.5">meio-tom</text>
+<line x1="282.0" y1="172.0" x2="492" y2="141" class="ln2" stroke-width="1"/>
+<circle cx="282.0" cy="172.0" r="3" class="fm"/>
+<text x="500" y="145" font-size="12.5">terminador (linha da sombra)</text>
+<line x1="292.0" y1="198.0" x2="492" y2="176" class="ln2" stroke-width="1"/>
+<circle cx="292.0" cy="198.0" r="3" class="fm"/>
+<text x="500" y="180" font-size="12.5">sombra própria</text>
+<line x1="318.0" y1="200.0" x2="492" y2="211" class="ln2" stroke-width="1"/>
+<circle cx="318.0" cy="200.0" r="3" class="fm"/>
+<text x="500" y="215" font-size="12.5">luz refletida (reflexo)</text>
+<line x1="244.0" y1="253.0" x2="492" y2="246" class="ln2" stroke-width="1"/>
+<circle cx="244.0" cy="253.0" r="3" class="fm"/>
+<text x="500" y="250" font-size="12.5">sombra de contato</text>
+<line x1="400.0" y1="251.0" x2="492" y2="281" class="ln2" stroke-width="1"/>
+<circle cx="400.0" cy="251.0" r="3" class="fm"/>
+<text x="500" y="285" font-size="12.5">sombra projetada</text>
+</svg>
+      <figcaption>As zonas de luz numa esfera. A sequência vale para qualquer volume curvo: brilho, luz, meio-tom, terminador, sombra própria, luz refletida e, fora do objeto, a sombra projetada.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Zona</th><th>O que é</th></tr></thead>
+      <tbody>
+        <tr><td>Brilho (luz máxima)</td><td>Reflexo especular da fonte. Numa superfície fosca é pequeno ou nem existe.</td></tr>
+        <tr><td>Luz e meio-tom</td><td>A parte voltada para a luz, que escurece à medida que a superfície gira para longe dela.</td></tr>
+        <tr><td>Terminador</td><td>A linha onde a luz direta acaba. É o tom mais escuro <em>dentro</em> do objeto.</td></tr>
+        <tr><td>Sombra própria</td><td>A face do objeto que não recebe luz direta.</td></tr>
+        <tr><td>Luz refletida (reflexo)</td><td>Claridade suave na borda da sombra própria, vinda da luz rebatida pelo chão e pelo entorno. É sempre mais escura que o meio-tom.</td></tr>
+        <tr><td>Sombra projetada</td><td>A sombra que o objeto lança sobre outra superfície. É mais nítida e escura perto do objeto.</td></tr>
+        <tr><td>Sombra de contato (oclusão)</td><td>A faixa mais escura, onde o objeto toca o chão e a luz não entra.</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="fig">
+<svg viewBox="0 0 760 300" role="img" aria-label="Escala tonal de nove valores e quatro técnicas de sombreamento">
+<text x="20" y="22" font-size="12.5" class="tb">ESCALA TONAL · 9 valores</text>
+<rect x="20" y="34" width="76" height="46" fill="rgb(255,255,255)" stroke="var(--ink3)"/>
+<text x="58" y="98" text-anchor="middle" font-size="11" class="t3">1</text>
+<rect x="100" y="34" width="76" height="46" fill="rgb(223,223,223)" stroke="var(--ink3)"/>
+<text x="138" y="98" text-anchor="middle" font-size="11" class="t3">2</text>
+<rect x="180" y="34" width="76" height="46" fill="rgb(191,191,191)" stroke="var(--ink3)"/>
+<text x="218" y="98" text-anchor="middle" font-size="11" class="t3">3</text>
+<rect x="260" y="34" width="76" height="46" fill="rgb(159,159,159)" stroke="var(--ink3)"/>
+<text x="298" y="98" text-anchor="middle" font-size="11" class="t3">4</text>
+<rect x="340" y="34" width="76" height="46" fill="rgb(127,127,127)" stroke="var(--ink3)"/>
+<text x="378" y="98" text-anchor="middle" font-size="11" class="t3">5</text>
+<rect x="420" y="34" width="76" height="46" fill="rgb(95,95,95)" stroke="var(--ink3)"/>
+<text x="458" y="98" text-anchor="middle" font-size="11" class="t3">6</text>
+<rect x="500" y="34" width="76" height="46" fill="rgb(63,63,63)" stroke="var(--ink3)"/>
+<text x="538" y="98" text-anchor="middle" font-size="11" class="t3">7</text>
+<rect x="580" y="34" width="76" height="46" fill="rgb(31,31,31)" stroke="var(--ink3)"/>
+<text x="618" y="98" text-anchor="middle" font-size="11" class="t3">8</text>
+<rect x="660" y="34" width="76" height="46" fill="rgb(0,0,0)" stroke="var(--ink3)"/>
+<text x="698" y="98" text-anchor="middle" font-size="11" class="t3">9</text>
+<text x="20" y="116" font-size="11" class="t2">1 = branco do papel · 9 = preto máximo. Enxergar o valor (claro/escuro) importa mais que a cor.</text>
+<rect x="20" y="140" width="170" height="110" fill="#FAFAF6" stroke="var(--ink3)" stroke-width="1"/>
+<clipPath id="cl0"><rect x="20" y="140" width="170" height="110"/></clipPath><g clip-path="url(#cl0)">
+<line x1="-20" y1="250" x2="40" y2="140" stroke="#1E1E1E" stroke-width="0.4"/>
+<line x1="-13" y1="250" x2="47" y2="140" stroke="#1E1E1E" stroke-width="0.4"/>
+<line x1="-6" y1="250" x2="54" y2="140" stroke="#1E1E1E" stroke-width="0.5"/>
+<line x1="1" y1="250" x2="61" y2="140" stroke="#1E1E1E" stroke-width="0.5"/>
+<line x1="8" y1="250" x2="68" y2="140" stroke="#1E1E1E" stroke-width="0.6"/>
+<line x1="15" y1="250" x2="75" y2="140" stroke="#1E1E1E" stroke-width="0.6"/>
+<line x1="22" y1="250" x2="82" y2="140" stroke="#1E1E1E" stroke-width="0.7"/>
+<line x1="29" y1="250" x2="89" y2="140" stroke="#1E1E1E" stroke-width="0.7"/>
+<line x1="36" y1="250" x2="96" y2="140" stroke="#1E1E1E" stroke-width="0.8"/>
+<line x1="43" y1="250" x2="103" y2="140" stroke="#1E1E1E" stroke-width="0.8"/>
+<line x1="50" y1="250" x2="110" y2="140" stroke="#1E1E1E" stroke-width="0.9"/>
+<line x1="57" y1="250" x2="117" y2="140" stroke="#1E1E1E" stroke-width="0.9"/>
+<line x1="64" y1="250" x2="124" y2="140" stroke="#1E1E1E" stroke-width="1.0"/>
+<line x1="71" y1="250" x2="131" y2="140" stroke="#1E1E1E" stroke-width="1.0"/>
+<line x1="78" y1="250" x2="138" y2="140" stroke="#1E1E1E" stroke-width="1.1"/>
+<line x1="85" y1="250" x2="145" y2="140" stroke="#1E1E1E" stroke-width="1.1"/>
+<line x1="92" y1="250" x2="152" y2="140" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="99" y1="250" x2="159" y2="140" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="106" y1="250" x2="166" y2="140" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="113" y1="250" x2="173" y2="140" stroke="#1E1E1E" stroke-width="1.3"/>
+<line x1="120" y1="250" x2="180" y2="140" stroke="#1E1E1E" stroke-width="1.3"/>
+<line x1="127" y1="250" x2="187" y2="140" stroke="#1E1E1E" stroke-width="1.4"/>
+<line x1="134" y1="250" x2="194" y2="140" stroke="#1E1E1E" stroke-width="1.4"/>
+<line x1="141" y1="250" x2="201" y2="140" stroke="#1E1E1E" stroke-width="1.5"/>
+<line x1="148" y1="250" x2="208" y2="140" stroke="#1E1E1E" stroke-width="1.5"/>
+<line x1="155" y1="250" x2="215" y2="140" stroke="#1E1E1E" stroke-width="1.6"/>
+<line x1="162" y1="250" x2="222" y2="140" stroke="#1E1E1E" stroke-width="1.6"/>
+<line x1="169" y1="250" x2="229" y2="140" stroke="#1E1E1E" stroke-width="1.7"/>
+<line x1="176" y1="250" x2="236" y2="140" stroke="#1E1E1E" stroke-width="1.7"/>
+<line x1="183" y1="250" x2="243" y2="140" stroke="#1E1E1E" stroke-width="1.8"/>
+<line x1="190" y1="250" x2="250" y2="140" stroke="#1E1E1E" stroke-width="1.8"/>
+<line x1="197" y1="250" x2="257" y2="140" stroke="#1E1E1E" stroke-width="1.9"/>
+<line x1="204" y1="250" x2="264" y2="140" stroke="#1E1E1E" stroke-width="1.9"/>
+<line x1="211" y1="250" x2="271" y2="140" stroke="#1E1E1E" stroke-width="2.0"/>
+</g>
+<text x="105.0" y="272" text-anchor="middle" font-size="12" class="tb">hachura paralela</text>
+<rect x="205" y="140" width="170" height="110" fill="#FAFAF6" stroke="var(--ink3)" stroke-width="1"/>
+<clipPath id="cl1"><rect x="205" y="140" width="170" height="110"/></clipPath><g clip-path="url(#cl1)">
+<line x1="165" y1="250" x2="225" y2="140" stroke="#1E1E1E" stroke-width="0.4"/>
+<line x1="172" y1="250" x2="232" y2="140" stroke="#1E1E1E" stroke-width="0.4"/>
+<line x1="179" y1="250" x2="239" y2="140" stroke="#1E1E1E" stroke-width="0.5"/>
+<line x1="186" y1="250" x2="246" y2="140" stroke="#1E1E1E" stroke-width="0.5"/>
+<line x1="193" y1="250" x2="253" y2="140" stroke="#1E1E1E" stroke-width="0.6"/>
+<line x1="200" y1="250" x2="260" y2="140" stroke="#1E1E1E" stroke-width="0.6"/>
+<line x1="207" y1="250" x2="267" y2="140" stroke="#1E1E1E" stroke-width="0.7"/>
+<line x1="214" y1="250" x2="274" y2="140" stroke="#1E1E1E" stroke-width="0.7"/>
+<line x1="221" y1="250" x2="281" y2="140" stroke="#1E1E1E" stroke-width="0.8"/>
+<line x1="228" y1="250" x2="288" y2="140" stroke="#1E1E1E" stroke-width="0.8"/>
+<line x1="235" y1="250" x2="295" y2="140" stroke="#1E1E1E" stroke-width="0.9"/>
+<line x1="242" y1="250" x2="302" y2="140" stroke="#1E1E1E" stroke-width="0.9"/>
+<line x1="249" y1="250" x2="309" y2="140" stroke="#1E1E1E" stroke-width="1.0"/>
+<line x1="256" y1="250" x2="316" y2="140" stroke="#1E1E1E" stroke-width="1.0"/>
+<line x1="263" y1="250" x2="323" y2="140" stroke="#1E1E1E" stroke-width="1.1"/>
+<line x1="270" y1="250" x2="330" y2="140" stroke="#1E1E1E" stroke-width="1.1"/>
+<line x1="277" y1="250" x2="337" y2="140" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="284" y1="250" x2="344" y2="140" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="291" y1="250" x2="351" y2="140" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="298" y1="250" x2="358" y2="140" stroke="#1E1E1E" stroke-width="1.3"/>
+<line x1="305" y1="250" x2="365" y2="140" stroke="#1E1E1E" stroke-width="1.3"/>
+<line x1="312" y1="250" x2="372" y2="140" stroke="#1E1E1E" stroke-width="1.4"/>
+<line x1="319" y1="250" x2="379" y2="140" stroke="#1E1E1E" stroke-width="1.4"/>
+<line x1="326" y1="250" x2="386" y2="140" stroke="#1E1E1E" stroke-width="1.5"/>
+<line x1="333" y1="250" x2="393" y2="140" stroke="#1E1E1E" stroke-width="1.5"/>
+<line x1="340" y1="250" x2="400" y2="140" stroke="#1E1E1E" stroke-width="1.6"/>
+<line x1="347" y1="250" x2="407" y2="140" stroke="#1E1E1E" stroke-width="1.6"/>
+<line x1="354" y1="250" x2="414" y2="140" stroke="#1E1E1E" stroke-width="1.7"/>
+<line x1="361" y1="250" x2="421" y2="140" stroke="#1E1E1E" stroke-width="1.7"/>
+<line x1="368" y1="250" x2="428" y2="140" stroke="#1E1E1E" stroke-width="1.8"/>
+<line x1="375" y1="250" x2="435" y2="140" stroke="#1E1E1E" stroke-width="1.8"/>
+<line x1="382" y1="250" x2="442" y2="140" stroke="#1E1E1E" stroke-width="1.9"/>
+<line x1="389" y1="250" x2="449" y2="140" stroke="#1E1E1E" stroke-width="1.9"/>
+<line x1="396" y1="250" x2="456" y2="140" stroke="#1E1E1E" stroke-width="2.0"/>
+<line x1="249" y1="140" x2="309" y2="250" stroke="#1E1E1E" stroke-width="0.4"/>
+<line x1="256" y1="140" x2="316" y2="250" stroke="#1E1E1E" stroke-width="0.5"/>
+<line x1="263" y1="140" x2="323" y2="250" stroke="#1E1E1E" stroke-width="0.5"/>
+<line x1="270" y1="140" x2="330" y2="250" stroke="#1E1E1E" stroke-width="0.6"/>
+<line x1="277" y1="140" x2="337" y2="250" stroke="#1E1E1E" stroke-width="0.7"/>
+<line x1="284" y1="140" x2="344" y2="250" stroke="#1E1E1E" stroke-width="0.7"/>
+<line x1="291" y1="140" x2="351" y2="250" stroke="#1E1E1E" stroke-width="0.8"/>
+<line x1="298" y1="140" x2="358" y2="250" stroke="#1E1E1E" stroke-width="0.8"/>
+<line x1="305" y1="140" x2="365" y2="250" stroke="#1E1E1E" stroke-width="0.9"/>
+<line x1="312" y1="140" x2="372" y2="250" stroke="#1E1E1E" stroke-width="1.0"/>
+<line x1="319" y1="140" x2="379" y2="250" stroke="#1E1E1E" stroke-width="1.0"/>
+<line x1="326" y1="140" x2="386" y2="250" stroke="#1E1E1E" stroke-width="1.1"/>
+<line x1="333" y1="140" x2="393" y2="250" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="340" y1="140" x2="400" y2="250" stroke="#1E1E1E" stroke-width="1.2"/>
+<line x1="347" y1="140" x2="407" y2="250" stroke="#1E1E1E" stroke-width="1.3"/>
+<line x1="354" y1="140" x2="414" y2="250" stroke="#1E1E1E" stroke-width="1.4"/>
+<line x1="361" y1="140" x2="421" y2="250" stroke="#1E1E1E" stroke-width="1.4"/>
+<line x1="368" y1="140" x2="428" y2="250" stroke="#1E1E1E" stroke-width="1.5"/>
+<line x1="375" y1="140" x2="435" y2="250" stroke="#1E1E1E" stroke-width="1.5"/>
+<line x1="382" y1="140" x2="442" y2="250" stroke="#1E1E1E" stroke-width="1.6"/>
+<line x1="389" y1="140" x2="449" y2="250" stroke="#1E1E1E" stroke-width="1.7"/>
+<line x1="396" y1="140" x2="456" y2="250" stroke="#1E1E1E" stroke-width="1.7"/>
+</g>
+<text x="290.0" y="272" text-anchor="middle" font-size="12" class="tb">hachura cruzada</text>
+<rect x="390" y="140" width="170" height="110" fill="#FAFAF6" stroke="var(--ink3)" stroke-width="1"/>
+<clipPath id="cl2"><rect x="390" y="140" width="170" height="110"/></clipPath><g clip-path="url(#cl2)">
+<circle cx="445.1" cy="211.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="452.2" cy="195.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="488.1" cy="247.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="439.2" cy="153.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="498.6" cy="200.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="462.7" cy="204.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="467.0" cy="227.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="508.8" cy="203.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="514.0" cy="247.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="518.7" cy="193.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="520.0" cy="236.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.6" cy="213.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="529.7" cy="182.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="503.7" cy="190.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.8" cy="159.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="434.7" cy="186.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.0" cy="196.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="525.6" cy="183.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="447.8" cy="140.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="451.8" cy="236.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="494.4" cy="167.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="558.8" cy="193.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="530.9" cy="142.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="551.7" cy="156.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="482.3" cy="198.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="556.3" cy="216.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="446.0" cy="229.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="557.4" cy="228.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="529.1" cy="164.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="478.0" cy="143.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.6" cy="243.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="558.0" cy="180.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="532.9" cy="211.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="525.9" cy="212.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.7" cy="222.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="471.3" cy="226.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="555.2" cy="184.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="551.0" cy="158.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="543.8" cy="156.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="501.7" cy="200.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="412.3" cy="246.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="500.4" cy="242.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="530.4" cy="167.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="489.7" cy="186.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="479.0" cy="188.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="421.1" cy="227.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="513.3" cy="175.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.3" cy="201.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="521.3" cy="201.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="507.8" cy="198.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.2" cy="201.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.4" cy="155.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="502.2" cy="237.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="554.5" cy="244.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="558.3" cy="157.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="447.6" cy="175.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="512.8" cy="200.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="464.9" cy="176.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="496.1" cy="147.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="557.5" cy="246.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="436.0" cy="186.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.9" cy="168.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="507.0" cy="148.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.5" cy="228.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="467.1" cy="200.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="547.5" cy="154.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="479.6" cy="152.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="417.4" cy="162.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="519.1" cy="195.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="483.7" cy="192.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="548.9" cy="230.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="531.9" cy="195.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="510.1" cy="184.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="449.1" cy="154.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="433.5" cy="149.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="504.0" cy="166.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="555.3" cy="166.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="554.2" cy="179.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="517.6" cy="218.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="539.4" cy="175.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="557.4" cy="219.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="499.3" cy="231.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="541.6" cy="220.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="528.1" cy="197.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="429.1" cy="154.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="451.3" cy="231.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="473.2" cy="227.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="517.2" cy="198.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="502.1" cy="221.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="432.9" cy="169.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="514.0" cy="221.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="555.9" cy="182.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="520.4" cy="210.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.2" cy="190.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="466.4" cy="163.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.7" cy="204.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.0" cy="230.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="509.6" cy="238.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="472.6" cy="140.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="441.3" cy="177.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="532.6" cy="241.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="490.2" cy="187.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="436.8" cy="151.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="531.9" cy="242.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="476.9" cy="181.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.5" cy="229.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.9" cy="219.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="499.6" cy="145.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="547.6" cy="191.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="457.0" cy="157.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="474.5" cy="239.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="559.4" cy="155.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="422.7" cy="177.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="540.8" cy="185.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="554.5" cy="195.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="547.6" cy="234.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="555.3" cy="152.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="512.7" cy="224.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="499.7" cy="154.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="508.8" cy="147.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="456.0" cy="206.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="470.8" cy="167.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="553.3" cy="173.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="504.7" cy="168.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="428.6" cy="177.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="515.7" cy="162.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="554.9" cy="230.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="519.3" cy="244.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="474.3" cy="164.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="551.3" cy="183.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="414.1" cy="146.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="540.2" cy="249.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="548.4" cy="160.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.1" cy="143.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="503.0" cy="181.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="446.4" cy="140.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.4" cy="246.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="463.5" cy="192.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="542.5" cy="185.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="542.8" cy="170.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.8" cy="168.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="511.8" cy="170.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="545.8" cy="243.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.2" cy="167.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="547.8" cy="228.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="521.4" cy="176.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.0" cy="161.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="518.0" cy="147.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="435.0" cy="150.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="466.0" cy="185.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="503.0" cy="232.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="431.7" cy="237.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="488.3" cy="183.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="558.7" cy="165.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="527.4" cy="249.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="545.4" cy="172.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="555.4" cy="242.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="466.3" cy="225.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.8" cy="205.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="495.4" cy="180.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="500.8" cy="141.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="483.2" cy="151.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="498.7" cy="158.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="508.2" cy="171.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="451.8" cy="220.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="424.6" cy="239.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="468.4" cy="141.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.7" cy="208.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="472.1" cy="241.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="455.2" cy="167.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="518.8" cy="232.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="489.0" cy="212.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="473.2" cy="224.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="522.6" cy="159.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="470.4" cy="154.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="463.2" cy="188.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="476.7" cy="210.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="522.2" cy="146.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="475.7" cy="244.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="559.3" cy="229.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="545.7" cy="226.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="548.2" cy="178.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="518.6" cy="238.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="546.4" cy="168.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="476.0" cy="144.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.2" cy="238.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="498.2" cy="236.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="540.0" cy="249.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="497.1" cy="227.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="488.2" cy="224.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="465.2" cy="221.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="557.3" cy="213.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="443.2" cy="143.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="542.2" cy="165.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="501.0" cy="140.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="450.3" cy="179.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="490.1" cy="208.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="470.7" cy="243.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="431.4" cy="150.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.0" cy="169.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="485.6" cy="211.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="514.7" cy="239.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="459.0" cy="146.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="522.4" cy="200.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.0" cy="161.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="493.4" cy="210.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="528.3" cy="174.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="441.0" cy="237.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.1" cy="140.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="533.6" cy="191.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="516.1" cy="164.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="533.7" cy="169.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="484.1" cy="226.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="479.0" cy="210.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="554.1" cy="236.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.6" cy="176.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="539.6" cy="166.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.3" cy="216.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="487.0" cy="163.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="495.8" cy="240.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="414.6" cy="151.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="547.9" cy="155.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="409.0" cy="233.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="528.0" cy="230.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="497.4" cy="151.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="462.0" cy="168.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="553.9" cy="233.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="495.1" cy="185.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="481.4" cy="234.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="419.0" cy="162.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="508.9" cy="152.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="498.2" cy="226.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="496.7" cy="184.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="475.2" cy="237.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="518.0" cy="178.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="445.5" cy="232.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="521.5" cy="153.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="533.4" cy="157.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="478.8" cy="176.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="513.9" cy="245.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="557.3" cy="220.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="463.9" cy="210.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="456.0" cy="183.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="524.5" cy="195.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="497.5" cy="155.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="492.6" cy="221.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.4" cy="203.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="517.3" cy="165.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="521.6" cy="233.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="467.2" cy="209.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.0" cy="209.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="548.1" cy="212.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="522.3" cy="193.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="555.7" cy="199.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.9" cy="151.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="511.9" cy="210.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="530.9" cy="185.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="551.2" cy="215.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="450.4" cy="170.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="457.9" cy="186.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.8" cy="164.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="526.3" cy="163.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="527.6" cy="191.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="485.5" cy="246.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="469.6" cy="200.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="421.6" cy="219.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="502.1" cy="242.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="535.3" cy="231.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.0" cy="155.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="531.3" cy="141.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="501.5" cy="151.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="522.0" cy="156.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="543.7" cy="158.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="541.5" cy="225.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="484.4" cy="165.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="536.7" cy="232.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="553.3" cy="210.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="498.1" cy="207.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="542.6" cy="219.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="496.3" cy="234.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="530.5" cy="231.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="555.7" cy="227.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="540.6" cy="145.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="441.1" cy="160.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="546.6" cy="212.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="545.4" cy="180.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="485.6" cy="173.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="461.7" cy="187.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="527.8" cy="241.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="465.9" cy="182.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="556.7" cy="185.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="506.2" cy="246.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="411.9" cy="219.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="421.9" cy="225.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="514.1" cy="209.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="510.6" cy="242.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="511.9" cy="141.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="514.0" cy="234.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="472.7" cy="180.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="487.7" cy="214.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="497.1" cy="182.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.4" cy="172.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="556.2" cy="206.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="541.0" cy="215.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="527.3" cy="140.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="540.9" cy="231.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="487.2" cy="233.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="527.2" cy="240.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="449.0" cy="200.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="525.6" cy="222.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="548.4" cy="206.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="505.2" cy="162.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="524.6" cy="149.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="490.2" cy="161.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="415.3" cy="249.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="453.6" cy="209.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.8" cy="205.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="558.4" cy="193.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="486.4" cy="225.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="553.8" cy="144.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.7" cy="205.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="457.6" cy="245.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="503.9" cy="189.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="558.6" cy="144.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="532.3" cy="226.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="557.5" cy="155.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="505.1" cy="205.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="518.8" cy="175.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="433.7" cy="192.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="423.2" cy="242.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="533.2" cy="189.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="484.1" cy="235.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="532.7" cy="158.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="473.5" cy="239.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="503.6" cy="192.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="547.3" cy="171.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="542.4" cy="219.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="448.0" cy="140.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="531.5" cy="160.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="521.0" cy="161.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="493.5" cy="170.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="489.1" cy="147.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="514.6" cy="219.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="537.0" cy="141.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.7" cy="235.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="531.4" cy="158.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.2" cy="196.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="528.9" cy="150.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="508.8" cy="141.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="511.9" cy="153.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="437.5" cy="184.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="536.4" cy="203.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="516.9" cy="230.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="549.4" cy="186.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="532.8" cy="183.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="550.0" cy="177.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.8" cy="167.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="475.8" cy="155.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="554.8" cy="243.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="547.1" cy="167.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="551.6" cy="173.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="500.1" cy="205.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="552.5" cy="169.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="459.1" cy="166.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="532.8" cy="202.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="500.6" cy="218.1" r="1.1" fill="#1E1E1E"/>
+<circle cx="494.2" cy="174.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="477.1" cy="204.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="536.5" cy="201.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="473.5" cy="248.6" r="1.1" fill="#1E1E1E"/>
+<circle cx="417.0" cy="235.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="464.8" cy="182.7" r="1.1" fill="#1E1E1E"/>
+<circle cx="553.1" cy="157.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="489.6" cy="245.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="487.2" cy="226.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="538.4" cy="181.8" r="1.1" fill="#1E1E1E"/>
+<circle cx="512.9" cy="183.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="484.4" cy="175.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="488.9" cy="241.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="544.8" cy="145.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="546.5" cy="199.2" r="1.1" fill="#1E1E1E"/>
+<circle cx="559.7" cy="196.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="506.5" cy="179.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="491.1" cy="244.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="505.0" cy="150.9" r="1.1" fill="#1E1E1E"/>
+<circle cx="528.7" cy="175.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="556.3" cy="196.4" r="1.1" fill="#1E1E1E"/>
+<circle cx="558.3" cy="186.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="498.2" cy="185.3" r="1.1" fill="#1E1E1E"/>
+<circle cx="523.9" cy="216.0" r="1.1" fill="#1E1E1E"/>
+<circle cx="533.2" cy="213.5" r="1.1" fill="#1E1E1E"/>
+<circle cx="484.1" cy="211.1" r="1.1" fill="#1E1E1E"/>
+</g>
+<text x="475.0" y="272" text-anchor="middle" font-size="12" class="tb">pontilhismo</text>
+<rect x="575" y="140" width="170" height="110" fill="#FAFAF6" stroke="var(--ink3)" stroke-width="1"/>
+<clipPath id="cl3"><rect x="575" y="140" width="170" height="110"/></clipPath><g clip-path="url(#cl3)">
+<defs><linearGradient id="gf" x1="0" x2="1"><stop offset="0" stop-color="#888" stop-opacity="0"/><stop offset="1" stop-color="#222" stop-opacity="1"/></linearGradient></defs><rect x="575" y="140" width="170" height="110" fill="url(#gf)"/>
+</g>
+<text x="660.0" y="272" text-anchor="middle" font-size="12" class="tb">esfumado</text>
+<text x="20" y="292" font-size="11" class="t2">Em todas, o tom escurece por densidade: mais traços, traços mais grossos, mais pontos ou mais grafite.</text>
+</svg>
+      <figcaption>Valores tonais e as técnicas de sombreamento mais cobradas.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Hachura</strong>: linhas paralelas. A <strong>hachura cruzada</strong> sobrepõe direções para escurecer. Seguir a forma com traços curvos em superfícies curvas ajuda a ler o volume. A prova de 2015 considerou <em>errado</em> dizer que traços curvos confundem superfícies curvas (<a href="#r15-36">questão 36</a>).</li>
+      <li><strong>Pontilhismo (stippling)</strong>: pontos de nanquim, com o tom dado pela densidade. É a técnica clássica da ilustração científica (seção 10).</li>
+      <li><strong>Esfumado</strong>: grafite ou carvão espalhado com esfuminho, algodão ou o dedo. <em>Sfumato</em> é o nome da passagem suave e sem contorno de Leonardo da Vinci.</li>
+      <li><strong>Desenhar apagando</strong>: a borracha também é ferramenta de desenho. Ela abre luzes, funde contornos e trabalha valores tonais, o que dá um aspecto pictórico (<a href="#r15-35">2015, questão 35</a>). A <strong>borracha limpa-tipo (maleável)</strong> é a mais usada no carvão e no grafite macio: ela levanta o pigmento sem esfregar e não estraga o papel.</li>
+    </ul>
+    <div class="cx dec"><span class="k">Decoreba</span><p>Num desenho a traço, <strong>diferentes tipos de traçado combinados criam planos diferentes e dão sensação de volume</strong> (<a href="#r15-36">2015, questão 36</a>, gabarito A). Traço concentrado escurece e traço disperso clareia: é a densidade que manda.</p></div>
+  </section>
+
+  <!-- 4 FIGURA HUMANA -->
+  <section class="sec" id="figura">
+    <span class="lbl">Seção 4 · Qui</span>
+    <h2>Figura humana</h2>
+    <p>As duas provas perguntaram a mesma coisa sobre anatomia, com palavras diferentes: é preciso <strong>noções de anatomia</strong>, e quanto mais domínio, melhor o desenho (<a href="#r15-32">2015, questão 32</a>). A <strong>proporção dos membros, músculos e ossos</strong> é o que ajuda a representar a figura (<a href="#r19-34">2019, questão 34</a>). As alternativas erradas exigiam "exatidão", "domínio detalhado sem o qual não se desenha" ou falavam em "órgãos internos".</p>
+    <figure class="fig">
+<svg viewBox="0 0 860 400" role="img" aria-label="Cânone de oito cabeças e proporções da cabeça por idade">
+<line x1="60" y1="30" x2="300" y2="30" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="55.0" text-anchor="end" font-size="11" class="t3">1</text>
+<line x1="60" y1="72" x2="300" y2="72" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="97.0" text-anchor="end" font-size="11" class="t3">2</text>
+<line x1="60" y1="114" x2="300" y2="114" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="139.0" text-anchor="end" font-size="11" class="t3">3</text>
+<line x1="60" y1="156" x2="300" y2="156" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="181.0" text-anchor="end" font-size="11" class="t3">4</text>
+<line x1="60" y1="198" x2="300" y2="198" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="223.0" text-anchor="end" font-size="11" class="t3">5</text>
+<line x1="60" y1="240" x2="300" y2="240" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="265.0" text-anchor="end" font-size="11" class="t3">6</text>
+<line x1="60" y1="282" x2="300" y2="282" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="307.0" text-anchor="end" font-size="11" class="t3">7</text>
+<line x1="60" y1="324" x2="300" y2="324" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="48" y="349.0" text-anchor="end" font-size="11" class="t3">8</text>
+<line x1="60" y1="366" x2="300" y2="366" class="ln2" stroke-dasharray="3 3" stroke-width="1"/>
+<ellipse cx="150" cy="51.0" rx="15.12" ry="21.0" class="cell"/>
+<path d="M110.1 90.9 L189.9 90.9 L175.2 160.20000000000002 L124.8 160.20000000000002 Z" class="cell"/>
+<path d="M124.8 160.20000000000002 L175.2 160.20000000000002 L180.24 200.1 L119.76 200.1 Z" class="cell"/>
+<line x1="150" y1="72" x2="150" y2="90.9" class="ln" stroke-width="5"/>
+<path d="M110.1 93.0 L102.96 151.8 L101.7 200.1" class="ln" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M134.04 200.1 L132.36 282.0 L133.2 359.7" class="ln" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M189.9 93.0 L197.04000000000002 151.8 L198.3 200.1" class="ln" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M165.96 200.1 L167.64 282.0 L166.8 359.7" class="ln" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="300" cy="72" r="3" class="fm"/><text x="310" y="76" font-size="11.5">queixo</text>
+<circle cx="300" cy="114" r="3" class="fm"/><text x="310" y="118" font-size="11.5">mamilos / axilas</text>
+<circle cx="300" cy="156" r="3" class="fm"/><text x="310" y="160" font-size="11.5">umbigo · cotovelos</text>
+<circle cx="300" cy="198" r="3" class="fm"/><text x="310" y="202" font-size="11.5" class="tb">púbis = METADE do corpo · pulsos</text>
+<circle cx="300" cy="240" r="3" class="fm"/><text x="310" y="244" font-size="11.5">meio da coxa · ponta dos dedos</text>
+<circle cx="300" cy="282" r="3" class="fm"/><text x="310" y="286" font-size="11.5">logo abaixo do joelho</text>
+<circle cx="300" cy="324" r="3" class="fm"/><text x="310" y="328" font-size="11.5">meio da canela</text>
+<circle cx="300" cy="366" r="3" class="fm"/><text x="310" y="370" font-size="11.5">planta dos pés</text>
+<text x="690" y="22" font-size="12.5" class="tb" text-anchor="middle">cabeças por altura</text>
+<rect x="571" y="40" width="28" height="320" class="soft" stroke="var(--ink3)" stroke-width="1"/>
+<circle cx="585" cy="80.0" r="21.0" class="fcs" stroke="var(--cyan)"/>
+<text x="585" y="376" text-anchor="middle" font-size="11">bebê</text>
+<text x="585" y="390" text-anchor="middle" font-size="11" class="tb">4</text>
+<rect x="643" y="40" width="28" height="320" class="soft" stroke="var(--ink3)" stroke-width="1"/>
+<circle cx="657" cy="66.7" r="21.0" class="fcs" stroke="var(--cyan)"/>
+<text x="657" y="376" text-anchor="middle" font-size="11">~6 anos</text>
+<text x="657" y="390" text-anchor="middle" font-size="11" class="tb">6</text>
+<rect x="715" y="40" width="28" height="320" class="soft" stroke="var(--ink3)" stroke-width="1"/>
+<circle cx="729" cy="61.3" r="21.0" class="fcs" stroke="var(--cyan)"/>
+<text x="729" y="376" text-anchor="middle" font-size="11">adulto real</text>
+<text x="729" y="390" text-anchor="middle" font-size="11" class="tb">7,5</text>
+<rect x="787" y="40" width="28" height="320" class="soft" stroke="var(--ink3)" stroke-width="1"/>
+<circle cx="801" cy="60.0" r="20.0" class="fcs" stroke="var(--cyan)"/>
+<text x="801" y="376" text-anchor="middle" font-size="11">ideal / herói</text>
+<text x="801" y="390" text-anchor="middle" font-size="11" class="tb">8</text>
+</svg>
+      <figcaption>O cânone de 8 cabeças é o ideal usado em ilustração (figura heroica, de moda). A média real de um adulto fica entre 7 e 7,5 cabeças. A cabeça ocupa uma fração maior do corpo quanto mais jovem a pessoa.</figcaption>
+    </figure>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">Marcos que caem</h4>
+        <ul class="small" style="margin:0">
+          <li>A <strong>metade da altura</strong> fica na região do <strong>púbis</strong> (4ª cabeça).</li>
+          <li><strong>Cotovelo</strong> na altura da cintura/umbigo, <strong>pulso</strong> na altura do púbis, ponta dos dedos no meio da coxa.</li>
+          <li>Ombros com cerca de <strong>2 cabeças</strong> de largura no homem. Na mulher os ombros são mais estreitos e o quadril, proporcionalmente mais largo.</li>
+          <li>O recém-nascido tem cerca de <strong>4 cabeças</strong>, e a metade do corpo fica perto do umbigo.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Proporções do rosto</h4>
+        <ul class="small" style="margin:0">
+          <li><strong>Olhos na metade da altura da cabeça</strong> (erro de iniciante é pô-los alto demais).</li>
+          <li>A largura da cabeça, de frente, cabe cerca de <strong>5 olhos</strong>; entre os olhos cabe um olho.</li>
+          <li>Linha do cabelo → sobrancelha → base do nariz → queixo: três terços iguais.</li>
+          <li><strong>Orelhas</strong> entre a linha da sobrancelha e a base do nariz.</li>
+        </ul>
+      </div>
+    </div>
+    <h3>Movimento</h3>
+    <ul>
+      <li><strong>Linha de ação</strong>: uma curva única que atravessa a figura e dá a intenção do movimento. Em C e em S é mais dinâmica; reta fica rígida.</li>
+      <li><strong>Contrapposto</strong>: o peso do corpo numa perna só. O quadril inclina para um lado e os ombros para o outro, como no Davi de Michelangelo.</li>
+      <li><strong>Escorço</strong>: o encurtamento aparente de uma parte do corpo que aponta para o observador, como um braço esticado para a frente. É perspectiva aplicada à figura. As partes próximas ficam maiores e se sobrepõem às de trás.</li>
+      <li><strong>Manequim</strong> (boneco articulado de madeira) e <strong>figura de palito</strong> ou de volumes simples (cilindros e esferas) servem para estudar poses antes da anatomia.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>A prova de 2015 considerou <strong>correto</strong> que o excesso de detalhes na figura principal "sobrecarrega a atenção do olhar do observador" (<a href="#r15-31">questão 31</a>). A lógica da banca: o detalhe deve servir à leitura da cena, não competir com ela.</p></div>
+  </section>
+
+  <!-- 5 PERSONAGEM -->
+  <section class="sec" id="personagem">
+    <span class="lbl">Seção 5 · Qui</span>
+    <h2>Criação de personagens</h2>
+    <p>Um <strong>personagem é um conceito</strong>, que não se confunde com a sua representação gráfica (<a href="#r19-39">2019, questão 39</a>). Antes de desenhar, define-se quem ele é. A prova de 2019 pediu os <strong>aspectos gerais</strong> iniciais: <strong>história, aparência geral e motivação</strong> (<a href="#r19-38">questão 38</a>).</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Dimensão</th><th>O que se define</th><th>Onde apareceu</th></tr></thead>
+      <tbody>
+        <tr><td>Física</td><td>Aparência, idade, corpo, roupa, postura</td><td>2015 Q38 · 2019 Q37</td></tr>
+        <tr><td>Sociológica</td><td>Onde mora, família, profissão, classe, época, lugar no tempo e no espaço</td><td>2015 Q38 · 2019 Q37</td></tr>
+        <tr><td>Psicológica</td><td>Temperamento, desejos, medos, atitudes e opiniões</td><td>2015 Q38 · 2019 Q37</td></tr>
+        <tr><td>Relacional</td><td>Amigos, jeito de falar, hobbies, como se relaciona com os outros</td><td>2019 Q37</td></tr>
+        <tr><td>Papel na história</td><td>Protagonista, antagonista, coadjuvante, figurante. A <strong>hierarquia</strong> dos papéis orienta o destaque de cada um</td><td>2015 Q39 · 2019 Q39</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">A divisão em físico, social e psicológico é a "personagem tridimensional" dos manuais de roteiro (Lajos Egri, <em>A arte da escrita dramática</em>). A banca usa a ideia sem citar o autor.</p>
+    <figure class="fig">
+<svg viewBox="0 0 760 230" role="img" aria-label="Formas básicas e a personalidade que sugerem no design de personagens">
+<circle cx="130" cy="80" r="48" class="fcs" stroke="var(--cyan)" stroke-width="2"/><circle cx="116" cy="74" r="5" style="fill:var(--ink)"/><circle cx="144" cy="74" r="5" style="fill:var(--ink)"/><path d="M114 96 q16 14 32 0" class="ln" stroke-width="2"/>
+<text x="130" y="162" text-anchor="middle" font-size="13" class="tb">círculo</text>
+<text x="130" y="180" text-anchor="middle" font-size="11.5" class="t2">amigável, fofo, acessível</text>
+<text x="130" y="196" text-anchor="middle" font-size="11" class="t3">heróis simpáticos, mascotes</text>
+<rect x="332" y="32" width="96" height="96" rx="6" class="fgs" stroke="var(--green)" stroke-width="2"/><rect x="358" y="68" width="10" height="6" style="fill:var(--ink)"/><rect x="392" y="68" width="10" height="6" style="fill:var(--ink)"/><line x1="364" y1="100" x2="396" y2="100" class="ln" stroke-width="2.5"/>
+<text x="380" y="162" text-anchor="middle" font-size="13" class="tb">quadrado</text>
+<text x="380" y="180" text-anchor="middle" font-size="11.5" class="t2">estável, forte, confiável</text>
+<text x="380" y="196" text-anchor="middle" font-size="11" class="t3">o grandalhão leal, o protetor</text>
+<polygon points="630,132 576,36 684,36" class="fms" stroke="var(--mag)" stroke-width="2"/><path d="M604 58 l14 6" class="ln" stroke-width="2.5"/><path d="M656 58 l-14 6" class="ln" stroke-width="2.5"/><circle cx="616" cy="70" r="4" style="fill:var(--ink)"/><circle cx="644" cy="70" r="4" style="fill:var(--ink)"/><path d="M618 94 q12 -8 24 0" class="ln" stroke-width="2"/>
+<text x="630" y="162" text-anchor="middle" font-size="13" class="tb">triângulo</text>
+<text x="630" y="180" text-anchor="middle" font-size="11.5" class="t2">dinâmico, instável, ameaçador</text>
+<text x="630" y="196" text-anchor="middle" font-size="11" class="t3">vilões, personagens ágeis</text>
+<text x="10" y="222" font-size="11.5" class="t2">Teste da silhueta: preenchido de preto, o personagem precisa continuar reconhecível.</text>
+</svg>
+      <figcaption>Formas básicas comunicam personalidade antes de qualquer detalhe. É um princípio de design de personagem da animação.</figcaption>
+    </figure>
+    <h3>Os documentos do personagem</h3>
+    <ul>
+      <li><strong>Model sheet</strong> (folha de modelo): o personagem padronizado, com proporções e medidas, para que várias pessoas desenhem igual.</li>
+      <li><strong>Turnaround</strong>: o personagem girando: frente, 3/4, perfil, 3/4 de costas e costas, alinhados pelas mesmas linhas de altura.</li>
+      <li><strong>Folha de expressões</strong> (alegria, raiva, medo, surpresa…) e <strong>folha de poses</strong> (gestos característicos).</li>
+      <li><strong>Lineup</strong> ou comparação de tamanho: todo o elenco lado a lado, na mesma escala.</li>
+      <li><strong>Silhueta</strong>: se o personagem preenchido de preto não é reconhecível, o design ainda está fraco.</li>
+      <li><strong>Estilização</strong>: simplificar e exagerar, como a cabeça grande do estilo "chibi" ou o exagero de traços na caricatura.</li>
+    </ul>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>Em 2015, o item "estudar características culturais para representar com <strong>exatidão</strong> seus traços físicos" foi considerado errado (<a href="#r15-38">questão 38</a>). "Exatidão" é palavra-alarme nesta banca. A representação gráfica do personagem <strong>não independe</strong> do cenário, do contexto social nem da cultura (<a href="#r19-39">2019, questão 39</a>).</p></div>
+  </section>
+
+  <!-- 6 CENÁRIO -->
+  <section class="sec" id="cenario">
+    <span class="lbl">Seção 6 · Qui</span>
+    <h2>Cenário e composição</h2>
+    <p>O cenário <strong>situa a história no tempo e no espaço</strong> (<a href="#r19-40">2019, questão 40</a>). A sequência de trabalho que a banca considerou correta: <strong>definir os planos, estabelecer os volumes em cada plano, aplicar texturas e compor</strong> (<a href="#r19-31">2019, questão 31</a>). Na composição de um cenário, o desenhista estabelece relações de proximidade e distância entre os objetos <strong>por meio da perspectiva</strong> (<a href="#r15-33">2015, questão 33</a>).</p>
+    <h3>Elementos da composição</h3>
+    <p>A alternativa certa de <a href="#r19-32">2019, questão 32</a> lista os elementos que o desenho de cenários exige: <strong>forma, textura, escala, contornos, ângulos, contrastes, luz e sombra</strong>. A estes se somam:</p>
+    <ul>
+      <li><strong>Regra dos terços</strong>: dividir o quadro em 3 × 3 e pôr o centro de interesse num dos 4 cruzamentos, e não no meio.</li>
+      <li><strong>Ponto focal</strong>: onde o olho chega primeiro. Ele é criado por contraste, detalhe, cor ou pelas linhas que apontam para ele (<strong>linhas-guia</strong>).</li>
+      <li><strong>Equilíbrio</strong> simétrico (estável, formal) ou assimétrico (dinâmico), e o peso visual das massas.</li>
+      <li><strong>Planos</strong>: primeiro plano, plano intermediário e fundo. A figura humana posicionada no cenário ajuda a dar escala e profundidade (<a href="#r15-31">2015, questão 31</a>).</li>
+      <li><strong>Espaço negativo</strong>: o vazio em volta também é forma e dá respiro à leitura.</li>
+    </ul>
+    <div class="cx lig"><span class="k">Ligação</span><p>Em animação, o cenário (<em>background</em>) é desenhado a partir do <strong>layout</strong>, que fixa o enquadramento e a posição dos personagens em cada plano. Em games e cinema, o <strong>concept art</strong> define o visual dos ambientes antes da produção.</p></div>
+    <div class="cx peg"><span class="k">Pegadinha</span><p>"As habilidades manuais são substituídas por ferramentas digitais" está errado (2019, Q32 A), e "o cenário deve permanecer fixo e inalterado" também (Q40 C). O digital não elimina o desenho, e roteiro e cenário se ajustam um ao outro.</p></div>
+  </section>
+
+  <!-- 7 STORYBOARD -->
+  <section class="sec" id="storyboard">
+    <span class="lbl">Seção 7 · Qui</span>
+    <h2>Roteiro e storyboard</h2>
+    <p>O desenhista <strong>interpreta</strong> o roteiro. Ele identifica a ação a partir do <strong>personagem e da sua motivação</strong> (<a href="#r15-40">2015, questão 40</a>), elabora personagens e cenários para as cenas e <strong>trabalha de forma colaborativa</strong> com a equipe (<a href="#r15-41">questão 41</a>). Não corrige o roteirista, não coordena a reescrita e não é o responsável pelo produto acabado.</p>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-top:0">O que o storyboard é</h4>
+        <ul class="small" style="margin:0">
+          <li>A sequência de quadros que <strong>antecipa as cenas</strong>, com o enquadramento e o movimento de câmera.</li>
+          <li>É <strong>esquemático</strong>: não precisa de detalhe nem de acabamento.</li>
+          <li>Usa <strong>setas, símbolos e anotações</strong> para indicar movimento de câmera e de personagem, diálogo e som (<a href="#r19-41">2019, questão 41</a>).</li>
+          <li>É um <strong>documento para a equipe</strong>: transmite a criação de forma organizada e em continuidade (<a href="#r15-42">2015, questão 42</a>).</li>
+          <li>Pode usar <strong>imagens preexistentes</strong>, como fotos e ilustrações (<a href="#r19-42">2019, questão 42</a>).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">O que ele não é</h4>
+        <ul class="small" style="margin:0">
+          <li>Não é arte final detalhada e bem-acabada.</li>
+          <li>Não tem "um fim em si mesmo" nem é feito sem interagir com a equipe.</li>
+          <li>Não é para o desenhista "modificar as ideias do criador".</li>
+          <li>Não se faz com "tantos quadros quanto desejar": seleciona e sintetiza.</li>
+          <li>Não é "rápido e definitivo": serve justamente para ajustar antes de filmar.</li>
+        </ul>
+      </div>
+    </div>
+    <h3>Da ideia ao filme</h3>
+    <p><strong>Argumento</strong> → <strong>roteiro</strong> → <strong>decupagem</strong> (o roteiro dividido em planos, com a indicação de câmera) → <strong>storyboard</strong> → <strong>animatic</strong> (o storyboard montado em vídeo, com tempo e som provisórios) → produção. Os <strong>thumbnails</strong> são mini-storyboards rápidos, para testar composição.</p>
+    <h3>Planos e ângulos</h3>
+    <figure class="fig">
+<svg viewBox="0 0 760 250" role="img" aria-label="Seis planos de enquadramento aplicados à mesma figura">
+<defs><g id="fg"><g>
+<rect x="-300" y="302" width="700" height="60" style="fill:var(--svg-soft)"/>
+<circle cx="-120" cy="250" r="34" style="fill:var(--green-soft);stroke:var(--green)"/><rect x="-124" y="270" width="8" height="34" style="fill:var(--green)"/>
+<circle cx="50" cy="26" r="20" style="fill:var(--svg-fill);stroke:var(--ink);stroke-width:1.6"/>
+<circle cx="43" cy="22" r="2.2" style="fill:var(--ink)"/><circle cx="57" cy="22" r="2.2" style="fill:var(--ink)"/>
+<path d="M44 33 q6 4 12 0" style="fill:none;stroke:var(--ink);stroke-width:1.5"/>
+<rect x="44" y="45" width="12" height="8" style="fill:var(--svg-fill);stroke:var(--ink);stroke-width:1"/>
+<path d="M22 58 L78 58 L72 150 L28 150 Z" style="fill:var(--mag-soft);stroke:var(--mag);stroke-width:1.6"/>
+<path d="M28 150 L72 150 L70 302 L56 302 L50 190 L44 302 L30 302 Z" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/>
+<path d="M22 60 L10 150" style="fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round"/><path d="M78 60 L90 150" style="fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round"/>
+</g></g></defs>
+<rect x="10" y="40" width="112" height="84" fill="var(--svg-fill)" stroke="var(--ink)" stroke-width="1.6"/>
+<svg x="10" y="40" width="112" height="84" viewBox="-190 -20 467 350" preserveAspectRatio="xMidYMid meet"><use href="#fg"/></svg>
+<rect x="10" y="40" width="112" height="84" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
+<text x="66.0" y="144" text-anchor="middle" font-size="12" class="tb">plano geral</text>
+<text x="66.0" y="160" text-anchor="middle" font-size="10.5" class="t2">corpo inteiro + ambiente</text>
+<rect x="135" y="40" width="112" height="84" fill="var(--svg-fill)" stroke="var(--ink)" stroke-width="1.6"/>
+<svg x="135" y="40" width="112" height="84" viewBox="-105 -8 311 233" preserveAspectRatio="xMidYMid meet"><use href="#fg"/></svg>
+<rect x="135" y="40" width="112" height="84" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
+<text x="191.0" y="144" text-anchor="middle" font-size="12" class="tb">plano americano</text>
+<text x="191.0" y="160" text-anchor="middle" font-size="10.5" class="t2">dos joelhos para cima</text>
+<rect x="260" y="40" width="112" height="84" fill="var(--svg-fill)" stroke="var(--ink)" stroke-width="1.6"/>
+<svg x="260" y="40" width="112" height="84" viewBox="-57 -6 215 161" preserveAspectRatio="xMidYMid meet"><use href="#fg"/></svg>
+<rect x="260" y="40" width="112" height="84" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
+<text x="316.0" y="144" text-anchor="middle" font-size="12" class="tb">plano médio</text>
+<text x="316.0" y="160" text-anchor="middle" font-size="10.5" class="t2">da cintura para cima</text>
+<rect x="385" y="40" width="112" height="84" fill="var(--svg-fill)" stroke="var(--ink)" stroke-width="1.6"/>
+<svg x="385" y="40" width="112" height="84" viewBox="-16 -4 132 99" preserveAspectRatio="xMidYMid meet"><use href="#fg"/></svg>
+<rect x="385" y="40" width="112" height="84" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
+<text x="441.0" y="144" text-anchor="middle" font-size="12" class="tb">primeiro plano</text>
+<text x="441.0" y="160" text-anchor="middle" font-size="10.5" class="t2">do peito para cima</text>
+<rect x="510" y="40" width="112" height="84" fill="var(--svg-fill)" stroke="var(--ink)" stroke-width="1.6"/>
+<svg x="510" y="40" width="112" height="84" viewBox="16 0 67 50" preserveAspectRatio="xMidYMid meet"><use href="#fg"/></svg>
+<rect x="510" y="40" width="112" height="84" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
+<text x="566.0" y="144" text-anchor="middle" font-size="12" class="tb">close</text>
+<text x="566.0" y="160" text-anchor="middle" font-size="10.5" class="t2">rosto</text>
+<rect x="635" y="40" width="112" height="84" fill="var(--svg-fill)" stroke="var(--ink)" stroke-width="1.6"/>
+<svg x="635" y="40" width="112" height="84" viewBox="36.3 17 13.4 10" preserveAspectRatio="xMidYMid meet"><use href="#fg"/></svg>
+<rect x="635" y="40" width="112" height="84" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
+<text x="691.0" y="144" text-anchor="middle" font-size="12" class="tb">plano detalhe</text>
+<text x="691.0" y="160" text-anchor="middle" font-size="10.5" class="t2">um detalhe (olho)</text>
+<text x="10" y="24" font-size="12" class="t2">Do mais aberto ao mais fechado. Quanto mais fechado, mais emoção e menos contexto.</text>
+<text x="10" y="200" font-size="11.5" class="t2">Variações: grande plano geral (a figura quase some na paisagem) · plano conjunto (grupo de personagens) ·</text>
+<text x="10" y="216" font-size="11.5" class="t2">primeiríssimo plano (ombros para cima, bem fechado). Os nomes variam um pouco entre autores; a ordem não.</text>
+</svg>
+      <figcaption>Os planos se definem pelo recorte do corpo humano.</figcaption>
+    </figure>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Ângulo ou movimento</th><th>O que é</th><th>Efeito</th></tr></thead>
+      <tbody>
+        <tr><td>Plongée</td><td>Câmera acima do personagem, olhando para baixo</td><td>Diminui, fragiliza, oprime</td></tr>
+        <tr><td>Contra-plongée</td><td>Câmera abaixo, olhando para cima</td><td>Engrandece, dá poder ou ameaça</td></tr>
+        <tr><td>Zenital / nadir</td><td>Vertical de cima / vertical de baixo</td><td>Vista de mapa / vista extrema e estranha</td></tr>
+        <tr><td>Plano holandês</td><td>Câmera inclinada, horizonte torto</td><td>Tensão, desequilíbrio</td></tr>
+        <tr><td>Panorâmica · tilt · travelling · zoom</td><td>Câmera gira na horizontal · gira na vertical · se desloca · a lente aproxima sem a câmera se mover</td><td>Indicados no storyboard por setas</td></tr>
+        <tr><td>Regra dos 180°</td><td>A câmera não cruza o eixo imaginário entre dois personagens</td><td>Mantém a direção de olhar coerente entre os planos</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- 8 MATERIAIS -->
+  <section class="sec" id="materiais">
+    <span class="lbl">Seção 8 · Sáb</span>
+    <h2>Materiais e técnicas tradicionais</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Material</th><th>Características</th><th>O que costuma cair</th></tr></thead>
+      <tbody>
+        <tr><td>Grafite</td><td>Escala de dureza: <strong>H</strong> (<em>hard</em>, duro e claro) … 2H · H · <strong>F</strong> · <strong>HB</strong> · B · 2B … 8B (<strong>B</strong> de <em>black</em>, macio e escuro)</td><td>HB e F são intermediários. H para construção e desenho técnico; B para sombra e expressão</td></tr>
+        <tr><td>Carvão</td><td>Vegetal (galho queimado, apaga fácil) ou comprimido (mais escuro). Usa esfuminho e borracha limpa-tipo e exige <strong>fixador</strong></td><td>É ótimo para massas tonais e desenho de gesto</td></tr>
+        <tr><td>Nanquim</td><td>Tinta preta densa e permanente, aplicada com bico de pena, caneta técnica ou pincel. Diluída, vira <strong>aguada</strong></td><td>É o material da ilustração científica, da HQ e da arte-final a traço</td></tr>
+        <tr><td>Aquarela</td><td><strong>Transparente</strong>. Pigmento com goma arábica, diluído em água. O branco é o <strong>branco do papel</strong>, preservado. Trabalha do claro para o escuro, em camadas (veladuras), úmido sobre úmido ou sobre seco</td><td>Papel próprio, de <strong>300 g/m²</strong>, de algodão ou celulose, com textura de grão fino, médio ou grosso</td></tr>
+        <tr><td>Guache</td><td><strong>Opaco</strong>: cobre o que está embaixo e aceita claro sobre escuro. Seca fosco e reativa com água</td><td>É o contraponto clássico da aquarela nas questões</td></tr>
+        <tr><td>Acrílica</td><td>Solúvel em água enquanto úmida e <strong>insolúvel depois de seca</strong>. Seca rápido, pode ser transparente ou opaca</td><td>Substitui o óleo quando se precisa de secagem rápida</td></tr>
+        <tr><td>Óleo</td><td>Pigmento com óleo de linhaça, diluído em aguarrás. Secagem lenta, permite fusões</td><td>Raro em prova de ilustração gráfica</td></tr>
+        <tr><td>Lápis de cor</td><td>Comum (cera) ou <strong>aquarelável</strong>, que se dilui com pincel úmido</td><td>Trabalha por sobreposição de camadas</td></tr>
+        <tr><td>Pastel</td><td><strong>Seco</strong> (giz, pulverulento, pede fixador) × <strong>oleoso</strong> (com cera e óleo, cremoso)</td><td>Os dois são materiais de cor opacos</td></tr>
+        <tr><td>Marcadores</td><td>À base de álcool (se misturam e dão cor chapada; muito usados em rafe e design de produto) ou à base de água</td><td>São a técnica de apresentação rápida em design</td></tr>
+        <tr><td>Aerógrafo</td><td>Pistola de ar comprimido que pulveriza tinta em degradês suaves, com máscaras</td><td>Na mesa digitalizadora, a caneta pode simular um aerógrafo (2015, Q43)</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>Papel:</strong> a <strong>gramatura</strong> é o peso em g/m². Sulfite tem 75 a 90 g/m². Desenho a lápis, 120 a 200 g/m². Aquarela, cerca de 300 g/m². O papel <strong>prensado a quente</strong> é liso, e o <strong>prensado a frio</strong> tem textura. Papel vegetal ou manteiga serve para decalcar e passar o desenho.</li>
+      <li><strong>Mesa de luz:</strong> caixa com tampo translúcido iluminado, usada para passar o rafe a limpo e na animação tradicional.</li>
+      <li><strong>Arte-final:</strong> a versão definitiva, pronta para reprodução, com traço limpo em nanquim ou em vetor.</li>
+    </ul>
+  </section>
+
+  <!-- 9 DIGITAL -->
+  <section class="sec" id="digital">
+    <span class="lbl">Seção 9 · Sáb</span>
+    <h2>Ilustração digital</h2>
+    <p>A distinção de base é a mesma que a banca cobra na parte de softwares: <strong>bitmap (raster)</strong>, uma matriz de pixels, é a lógica da pintura digital. <strong>Vetor</strong>, curvas descritas matematicamente que não perdem qualidade ao ampliar, é a lógica da ilustração chapada, de logo e de ícone. Os formatos, os programas e o scanner são aprofundados na semana 3.</p>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Recurso</th><th>Para que serve</th></tr></thead>
+      <tbody>
+        <tr><td>Camadas (<em>layers</em>)</td><td>Separam traço, cor base, sombra e luz. Dão liberdade para editar sem refazer. Não "limitam a aparência final" (2015, Q43, item 3, falso)</td></tr>
+        <tr><td>Modos de mesclagem</td><td><strong>Multiplicar</strong> escurece (sombras e traço sobre a cor), <strong>Tela</strong> clareia (brilhos) e <strong>Sobrepor</strong> aumenta o contraste</td></tr>
+        <tr><td>Máscara de camada e máscara de recorte</td><td>Escondem sem apagar (máscara) ou pintam só dentro da forma de baixo (<em>clipping mask</em>)</td></tr>
+        <tr><td>Pincéis com dinâmica</td><td>No Photoshop, <strong>Shape Dynamics</strong> varia o tamanho do pincel com a pressão da caneta, e <strong>Transfer</strong> varia a opacidade e o fluxo com a pressão. Os dois caíram em 2015 e 2019</td></tr>
+        <tr><td>Resolução</td><td>Para impressão, <strong>300 ppi</strong> no tamanho final; para tela, conta a dimensão em pixels. <strong>ppi</strong> é pixels por polegada (imagem) e <strong>dpi</strong> é pontos por polegada (impressora)</td></tr>
+        <tr><td>Programas de pintura</td><td>Photoshop, <strong>Corel Painter</strong> (simula pincéis e mídias tradicionais, como aquarela, óleo e acrílica), Krita (livre), Procreate (iPad) e Clip Studio (HQ)</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Mesa digitalizadora</h3>
+    <ul>
+      <li><strong>Mesa sem tela</strong> (tablet): você desenha na mesa e olha para o monitor. A área da mesa é <strong>mapeada</strong> na tela, e a posição da caneta movimenta o cursor (<a href="#r19-43">2019, questão 43</a>). Substitui o mouse, e o formato lembra um mousepad.</li>
+      <li><strong>Mesa com tela</strong> (<em>pen display</em>): desenha-se direto sobre a imagem.</li>
+      <li><strong>Níveis de pressão</strong>: a mesa diferencia a pressão e produz traços de espessura ou opacidade proporcionais. Algumas canetas também leem a <strong>inclinação</strong>.</li>
+      <li>A caneta é detectada <strong>antes de tocar</strong> a superfície (<em>hover</em>), o que permite mover o cursor sem desenhar (<a href="#r15-44">2015, questão 44</a>).</li>
+      <li>As configurações são <strong>personalizáveis</strong>, não "padrão e fixas". Botões, curva de pressão e mapeamento se ajustam no driver. Muitas canetas têm borracha na ponta oposta, mas isso não significa que a mesa reconheça uma borracha comum (<a href="#r19-44">2019, questão 44</a>).</li>
+    </ul>
+    <div class="cx dec"><span class="k">Decoreba · digitalizar um desenho</span><p>O processo: escolher a <strong>resolução</strong> e selecionar a <strong>área</strong> a digitalizar (2015, questão 45, que fica para a semana 3). Para desenho a traço, use de 300 a 600 ppi, e depois limpe com Níveis ou Curvas. Resolução <strong>óptica</strong> é a real do sensor; a <strong>interpolada</strong> é inventada por software e não acrescenta detalhe. A digitalização também pode ser feita por <strong>fotografia digital</strong> (2019, Q45).</p></div>
+  </section>
+
+  <!-- 10 GÊNEROS -->
+  <section class="sec" id="generos">
+    <span class="lbl">Seção 10 · Sáb</span>
+    <h2>Gêneros e ilustração científica</h2>
+    <div class="scroll"><table class="tbl wide">
+      <thead><tr><th>Gênero</th><th>Características</th></tr></thead>
+      <tbody>
+        <tr><td>Editorial</td><td>Ilustra matéria de jornal ou revista. É conceitual e interpreta o texto, sem repeti-lo</td></tr>
+        <tr><td>Infantil</td><td>No <strong>livro ilustrado</strong>, imagem e texto contam a história juntos. No <strong>livro com ilustrações</strong>, a imagem acompanha o texto</td></tr>
+        <tr><td>Quadrinhos</td><td>Linguagem própria: <strong>quadro</strong> e <strong>requadro</strong> (a borda), <strong>calha</strong> ou <strong>sarjeta</strong> (espaço entre quadros, onde o leitor completa a ação), balão, recordatório, onomatopeia</td></tr>
+        <tr><td>Técnica</td><td>Explica como algo é ou funciona: vistas explodidas, cortes, manuais</td></tr>
+        <tr><td>Infográfico</td><td>Combina ilustração, texto e dado para explicar um processo ou uma informação</td></tr>
+        <tr><td>Concept art</td><td>Explora o visual de personagens, ambientes e objetos antes da produção de filme ou jogo</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Ilustração científica: a mais provável num cargo da UFPE</h3>
+    <p>Numa universidade, boa parte da demanda por ilustração vem da pesquisa: pranchas de espécies para artigos, material didático e divulgação científica. As convenções:</p>
+    <ul>
+      <li><strong>Fidelidade ao espécime</strong> acima da expressão. O desenho explica caracteres que a foto não isola (vários planos de foco num só desenho, estruturas separadas).</li>
+      <li><strong>Luz convencional vinda do alto, à esquerda</strong>, em todas as figuras da prancha, para a leitura do relevo ser padronizada.</li>
+      <li><strong>Pontilhismo e traço a nanquim</strong>, que reproduzem bem em preto e branco. Aquarela e digital entram nas pranchas coloridas.</li>
+      <li><strong>Escala gráfica</strong> (barra com a medida) em vez de "aumento de 10×", porque a barra continua valendo quando a figura é reduzida ou ampliada.</li>
+      <li><strong>Prancha</strong> organizada com figuras numeradas, vistas padronizadas (dorsal, ventral, lateral) e legenda.</li>
+      <li>Instrumentos: estereomicroscópio com <strong>câmara clara</strong> (tubo de desenho), que projeta o espécime sobre o papel para decalcar as proporções.</li>
+    </ul>
+    <div class="cx lig"><span class="k">Ligação</span><p>A ilustração científica junta três blocos do edital: ilustração, <strong>desenho técnico</strong> (vistas e escala) e <strong>design editorial</strong> (a prancha montada para publicação).</p></div>
+  </section>
+
+  <!-- QUESTÕES REAIS -->
+  <section class="sec" id="reais">
+    <span class="lbl">Questões reais</span>
+    <h2>As 28 questões de ilustração das provas do cargo</h2>
+    <p class="muted">Transcritas das provas oficiais de Desenhista de Artes Gráficas da UFPE, com a formatação ajustada e o conteúdo preservado. Gabaritos: <strong>2015 oficial</strong>; <strong>2019 preliminar</strong>, pois o arquivo disponível é o gabarito preliminar (Edital 53/2019). Tente responder antes de abrir.</p>
+
+    <h3 id="r-perspectiva">Bloco 1 · perspectiva, cenário, volume e mão livre (segunda-feira)</h3>
+<div class="q" id="r15-31">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 31</span></div>
+<p>Quanto ao desenho de figuras humanas e de cenários, analise as proposições abaixo.</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) As características da personagem são irrelevantes para auxiliar na definição de figuras e de cenários.</li><li>2) A figura humana independe do cenário onde a mesma está inserida.</li><li>3) Conhecimentos técnicos em perspectiva facilitam a inserção da figura humana em cenários.</li><li>4) O detalhamento das características físicas da figura humana principal, em um cenário, sobrecarrega a atenção do olhar de seu observador.</li><li>5) A noção de profundidade no cenário pode ser auxiliada pelo posicionamento da figura humana nele.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">1, 2 e 4.</li><li data-l="B">1, 3 e 5.</li><li data-l="C">2 e 4.</li><li data-l="D">3 e 5.</li><li data-l="E">3, 4 e 5.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: E.</span> Os itens 1 e 2 são absolutos falsos: as características da personagem ajudam a definir figura e cenário, e a figura <strong>depende</strong> do cenário. O 3 (perspectiva facilita inserir a figura) e o 5 (a figura ajuda a dar profundidade) são corretos. O 4 é o menos óbvio: a banca considera que detalhar demais a figura principal sobrecarrega o olhar. Eliminando 1 e 2, sobram D e E, e a banca incluiu o 4.</p></details></div>
+<div class="q" id="r15-33">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 33</span></div>
+<p>Ao escolher elementos para compor um cenário, o desenhista de artes gráficas necessita:</p>
+<ol class="alt"><li data-l="A">estabelecer relações de proximidade e distanciamento entre os objetos inseridos no cenário, por meio da representação dos mesmos em perspectiva.</li><li data-l="B">distar os elementos de composição cenográfica sequencialmente, de modo a estabelecer relação de profundidade entre o campo de visão e a amplitude cênica.</li><li data-l="C">localizar os elementos de forma equidistante em relação aos pontos de fuga da perspectiva.</li><li data-l="D">estabelecer relação de semelhança entre os elementos, considerando uma razão de proporcionalidade com o fundo compositivo e a abertura cênica.</li><li data-l="E">determinar a posição dos elementos no cenário, sem a qual não será possível quantificar a intensidade de luz e a sombra desses elementos.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: A.</span> A é a única com sentido técnico claro: a perspectiva organiza perto e longe. B e D são frases com vocabulário vago ("amplitude cênica", "abertura cênica"). C não tem regra que exija equidistância dos pontos de fuga. E "quantificar a intensidade de luz" não é tarefa do desenho de cenário.</p></details></div>
+<div class="q" id="r15-34">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 34</span></div>
+<p>Pode-se determinar a profundidade de um cenário por meio da:</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) relação entre as alturas dos objetos e as distâncias destes até seus pontos de fuga.</li><li>2) relação de proporção entre as distâncias dos objetos e as distâncias dos pontos de fuga.</li><li>3) projeção, no plano horizontal, da sombra de um dos objetos inseridos no cenário, conhecendo-se a posição da fonte luminosa e o ponto de fuga do objeto perspectivado.</li><li>4) distância entre os objetos e a intensidade da luz no cenário.</li><li>5) razão entre a posição do observador e a altura da linha do horizonte.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">1, 2 e 4.</li><li data-l="B">2, 3 e 5.</li><li data-l="C">2 e 4.</li><li data-l="D">1 e 3.</li><li data-l="E">1, 2, 4 e 5.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: D.</span> Item 1: a relação entre a altura dos objetos e a distância até os pontos de fuga mede a profundidade, que é a lógica da perspectiva. Item 3: a sombra projetada, com a fonte de luz e o ponto de fuga conhecidos, situa o objeto no espaço. O item 2 é jargão sem regra definida, o 4 confunde intensidade de luz com distância e o 5 mistura observador e linha do horizonte, que estão sempre na mesma altura.</p></details></div>
+<div class="q" id="r15-35">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 35</span></div>
+<p>O uso da borracha no desenho a mão livre pode ser bastante útil, pois traz efeitos diversos quanto ao seu uso em hachuras. Quanto a esse item, é correto afirmar que:</p>
+<ol class="alt"><li data-l="A">as sombras são mais intensas quando o lápis-borracha apaga texturas cruzadas em superfícies facetadas.</li><li data-l="B">desenhar apagando pode conferir aspectos pictóricos aos desenhos, ao fundir contornos ou ao trabalhar valores tonais.</li><li data-l="C">as borrachas duras são bastante utilizadas para mesclar matizes nos desenhos com carvão, pois as mesmas são mais adequadas para apagar as manchas e manter a qualidade do papel.</li><li data-l="D">a variação de pressão no uso da borracha para apagar desenhando não varia o traço na área apagada, nem o sombreamento do mesmo.</li><li data-l="E">os sombreados e texturas resultantes nos desenhos apagados não são definidos pela posição com que a borracha incide sobre o desenho, mas pela intensidade da pressão usada na borracha sobre o papel.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: B.</span> Apagar é também desenhar: abre luzes, funde contornos e trabalha tons. A está errada porque apagar <em>clareia</em>. C troca o material: no carvão se usa a borracha <strong>limpa-tipo (maleável)</strong>, e a dura agride o papel. D e E negam o óbvio: pressão e posição mudam o resultado.</p></details></div>
+<div class="q" id="r15-36">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 36</span></div>
+<p>Sobre a representação dos volumes a mão livre, pode-se dizer que:</p>
+<ol class="alt"><li data-l="A">diferentes planos podem ser criados pela combinação de diferentes tipos de traçado, transmitindo sensação de volume.</li><li data-l="B">os traços dispersos expressam menor concentração de luz.</li><li data-l="C">em superfícies curvas, deve-se evitar traços curvos para indicar seus volumes, uma vez que os mesmos confundem a percepção dessas superfícies.</li><li data-l="D">em superfícies planas, deve-se utilizar traços curvos, intensificando a percepção de suas superfícies.</li><li data-l="E">os traços dispersos indicam maior concentração de sombra.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: A.</span> B e E invertem a densidade: traço disperso é área <em>clara</em> (mais luz). C e D invertem a regra de acompanhar a forma: superfície curva pede traço curvo, e plana pede traço reto.</p></details></div>
+<div class="q" id="r15-37">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 37</span></div>
+<p>No desenho a mão livre, utilizam-se planos sucessivos sobrepostos para:</p>
+<ol class="alt"><li data-l="A">intensificar os efeitos conferidos pelo equilíbrio da composição.</li><li data-l="B">selecionar os elementos compositivos do motivo.</li><li data-l="C">acentuar efeitos de profundidade no desenho ou tornar a composição mais interessante.</li><li data-l="D">treinar o domínio do traço e facilitar a realização de esboços de figuras realistas.</li><li data-l="E">fundir traços e graduar tons na representação de volumes.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: C.</span> Planos sobrepostos (primeiro plano, plano médio e fundo) são um dos recursos clássicos de profundidade: o que está na frente tampa o que está atrás. As outras descrevem outros objetivos (equilíbrio, seleção, treino, gradação tonal).</p></details></div>
+<div class="q" id="r19-31">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 31</span></div>
+<p>No desenho de cenários, é correto afirmar que:</p>
+<ol class="alt"><li data-l="A">a relação de proporção na representação dos elementos que compõem o cenário é irrelevante na atividade do desenhista gráfico.</li><li data-l="B">o grafismo, na representação de luz e sombra de cenários, não possui relevância para o desenhista gráfico.</li><li data-l="C">para a criação de cenários, o desenhista deve definir planos, estabelecer os volumes dos elementos em cada plano, aplicar texturas e compor o cenário.</li><li data-l="D">o conhecimento de perspectiva (cônica e paralela) não é relevante para o desenhista gráfico.</li><li data-l="E">para a criação de cenários, o desenhista faz adaptações no roteiro e define a sequência de imagens que compõem o story board, aplicando, então, técnicas de desenho gráfico como sublimação e renderização.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: C.</span> A, B e D são negativas absolutas ("irrelevante", "não possui relevância", "não é relevante"). E mistura etapas e usa "sublimação" (que é técnica de impressão têxtil, não de desenho). C descreve o processo de trabalho: planos, volumes, texturas, composição.</p></details></div>
+<div class="q" id="r19-32">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 32</span></div>
+<p>O desenho de cenários traduz as formas como são pensadas as imagens das cenas, quer no plano perceptivo quer no plano conceitual. Nesse sentido, é correto afirmar que:</p>
+<ol class="alt"><li data-l="A">as habilidades manuais para a representação gráfica do desenhista de cenários são substituídas pelo uso de ferramentas digitais que produzem cenários virtuais realistas.</li><li data-l="B">por meio do uso de projeções cônicas, o cenário representado se assemelha às projeções cinematográficas, pois acentua-se o contraste entre a luz e a sombra.</li><li data-l="C">o domínio e o uso de perspectivas no desenho de cenários facilita a representação manual desses, pois o movimento implícito dos elementos representados será mais bem apreendido pelo observador, em razão da relação de proporção entre os objetos.</li><li data-l="D">o desenho manual de cenários demanda do desenhista conhecimento de elementos de composição da imagem e pode incluir forma, textura, escala, contornos, ângulos, contrastes, luz e sombra.</li><li data-l="E">o cone visual dá forma ao cenário e estabelece a relação de profundidade dos elementos representados por meio da distância entre o objeto e a fonte de luz.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: D.</span> D lista os elementos de composição. A é falsa (o digital não substitui a habilidade). B atribui à perspectiva cônica um efeito de contraste de luz que ela não tem. C começa bem, mas justifica com "movimento implícito", que não é o que a perspectiva resolve. E inventa uma função para o cone visual (que é o campo de visão, sem relação com a fonte de luz).</p></details></div>
+<div class="q" id="r19-33">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 33</span></div>
+<p>O desenho em perspectiva cônica apresenta alguns elementos fundamentais, tais como, linha do horizonte e pontos de fuga. Ao inserir desenhos de figuras humanas num cenário:</p>
+<ol class="alt"><li data-l="A">o observador fica posicionado acima da linha do horizonte e no ponto de fuga mais distante.</li><li data-l="B">as figuras humanas que apresentam maior dimensão estão posicionadas entre a linha de terra e a linha do horizonte e ficam mais distantes do observador.</li><li data-l="C">cada figura humana determina um ponto de fuga e duas linhas de terra.</li><li data-l="D">uma figura humana que apresente o olhar abaixo da linha do horizonte determina a altura dos seus olhos em relação aos outros observadores e a todos os pontos de fuga.</li><li data-l="E">as figuras humanas que estão localizadas em diferentes distâncias entre si e possuem a mesma altura dos olhos do observador apresentam em comum a altura dos olhos em relação à linha de terra.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: E.</span> É a regra da figura ao lado: figuras com os olhos na altura do observador têm os olhos sobre a LH, a qualquer distância, e portanto a mesma altura de olhos em relação à linha de terra. A erra porque o observador está <em>na</em> LH. B inverte: a figura maior está mais perto. C e D não correspondem a regra nenhuma.</p></details></div>
+<div class="q" id="r19-35">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 35</span></div>
+<p>No desenho a mão livre, o volume de objetos pode ser ressaltado por meio de:</p>
+<ol class="alt"><li data-l="A">identificação de uma fonte de luz e determinação de suas sombras.</li><li data-l="B">distinção entre os cheios e vazios e representação dos contrastes nas superfícies invisíveis ao observador.</li><li data-l="C">técnica de representação gráfica que estabelece horizontalidade aos objetos desenhados.</li><li data-l="D">técnica de representação gráfica que estabelece brilho e clareamento por meio de pigmentação isomórfica.</li><li data-l="E">distanciamento do observador e aproximação do fundo de composição.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: A.</span> Volume vem de luz e sombra. B erra em "superfícies invisíveis" (não se representam contrastes no que não se vê). D usa jargão inventado ("pigmentação isomórfica").</p></details></div>
+<div class="q" id="r19-36">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 36</span></div>
+<p>Em relação ao desenho de observação a mão livre, pode-se afirmar que suas bases são:</p>
+<ol class="alt"><li data-l="A">traço, expressividade, precisão da realidade e qualidade da superfície representada.</li><li data-l="B">enquadramento, harmonia de paletas, hierarquia de cores e precisão planimétrica.</li><li data-l="C">proporção, referência, contexto e cor de fundo do plano de projeção.</li><li data-l="D">harmonia, equilíbrio de matizes, textura e ritmo compositivo das texturas.</li><li data-l="E">composição, enquadramento, proporção e perspectiva.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: E.</span> Composição, enquadramento, proporção e perspectiva. Repare que as erradas puxam para cor (paletas, matizes, cor de fundo), que não é base do desenho de observação, e para "precisão da realidade".</p></details></div>
+    <h3 id="r-personagem">Bloco 2 · figura humana, personagem, roteiro e storyboard (quinta-feira)</h3>
+<div class="q" id="r15-32">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 32</span></div>
+<p>Para a representação da figura humana, é imprescindível:</p>
+<ol class="alt"><li data-l="A">ter domínio da anatomia humana, já que o mesmo promove uma harmonia entre as partes do corpo da personagem.</li><li data-l="B">ter noções básicas de anatomia humana. Entretanto, um melhor domínio sobre a anatomia humana proporciona ao desenhista melhores condições para representar uma figura humana.</li><li data-l="C">conhecer de forma detalhada a anatomia humana, sem o que não se representa a figura humana de forma satisfatória.</li><li data-l="D">realizar estudos de anatomia humana, pois deve-se representar com exatidão a figura humana.</li><li data-l="E">mostrar com detalhes a estrutura da figura humana. Para tanto, necessitamos de noções de anatomia e de estudos sobre as relações entre as partes de um corpo.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: B.</span> A palavra-chave é "imprescindível". O imprescindível são <strong>noções básicas</strong>, e mais domínio melhora o resultado. As outras exigem "domínio", "conhecimento detalhado", "exatidão" ou "detalhes", que são exageros. É o padrão da banca: a alternativa moderada vence as absolutas.</p></details></div>
+<div class="q" id="r15-38">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 38</span></div>
+<p>A fim de promover a criação de personagens, estudam-se suas:</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) características físicas para determinar aparência.</li><li>2) características sociológicas para localizá-los no tempo e no espaço.</li><li>3) características psicológicas, para construir relações de atitude e opiniões.</li><li>4) características antropomórficas, que podem determinar estereótipos.</li><li>5) características culturais para representar com exatidão seus traços físicos.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">1, 2 e 4.</li><li data-l="B">1, 2 e 5.</li><li data-l="C">2, 3, 4 e 5.</li><li data-l="D">2, 3 e 5.</li><li data-l="E">1, 2, 3 e 4.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: E.</span> Físico, sociológico e psicológico são a "personagem tridimensional". O item 4 (características antropomórficas que podem gerar estereótipos) foi aceito. O 5 cai por "representar com <strong>exatidão</strong>": personagem se representa com intenção, não com exatidão. Sem o 5, sobram A e E; como o 3 (psicológico) também é correto, fica a E.</p></details></div>
+<div class="q" id="r15-39">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 39</span></div>
+<p>A criação de personagens é uma atividade importante para o desenho de artes gráficas. Quanto a esse ponto, analise as proposições abaixo.</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) Determinam-se os papéis das personagens para hierarquizar suas importâncias.</li><li>2) Determinam-se as expressões faciais e os gestos de cada personagem.</li><li>3) Utilizam-se estratégias de hiperrealismo para destacar elementos de suas características.</li><li>4) Contextualiza-se a personagem no cenário.</li><li>5) Utiliza-se rebatimento de luz difusa para tornar a imagem mais realista.</li></ol>
+<p>Estão corretas:</p>
+<ol class="alt"><li data-l="A">1, 2 e 5, apenas.</li><li data-l="B">1, 2, 3 e 4, apenas.</li><li data-l="C">1, 3, 4 e 5, apenas.</li><li data-l="D">2, 3 e 5, apenas.</li><li data-l="E">1, 2, 3, 4 e 5.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: E.</span> A banca aceitou todas, inclusive as duas discutíveis: o 3 (hiper-realismo para destacar características) e o 5 (luz difusa rebatida para dar realismo) são possibilidades de estilo, não regras. Lição: quando o comando é "analise" e os itens descrevem <em>possibilidades</em> ("utilizam-se…"), a banca tende a aceitar. Quando descrevem <em>obrigações absolutas</em>, tende a recusar.</p></details></div>
+<div class="q" id="r15-40">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 40</span></div>
+<p>Visando a interpretação de roteiros, o desenhista gráfico identifica a ação do roteiro:</p>
+<ol class="alt"><li data-l="A">a partir da compreensão dos materiais e cores a serem usados na produção gráfica.</li><li data-l="B">a partir da seleção de cenas conectadas a diferentes situações dramáticas.</li><li data-l="C">a partir da utilização de efeitos e técnicas gráficas.</li><li data-l="D">a partir da personagem e sua motivação para agir no período da narrativa.</li><li data-l="E">a partir de seu próprio ponto de vista, determinando a ação da personagem e os cenários onde as cenas acontecem.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: D.</span> Toda ação dramática nasce da <strong>motivação da personagem</strong>. A e C falam de meios gráficos, não de ação. E dá ao desenhista um poder que é do roteirista.</p></details></div>
+<div class="q" id="r15-41">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 41</span></div>
+<p>Considerando o roteirista como responsável pela idealização das imagens que traduzirão visualmente o produto, o desenhista gráfico interpreta o roteiro e</p>
+<ol class="alt"><li data-l="A">elabora imagens das características das personagens e dos cenários para representá-los nas ações em cena e trabalha de forma colaborativa com os diferentes profissionais.</li><li data-l="B">trabalha corrigindo o roteirista, alterando sua interpretação do produto.</li><li data-l="C">traduz de forma gráfica a interpretação do roteirista, sendo responsável pela transformação do roteiro em produto acabado.</li><li data-l="D">coordena o trabalho do roteirista na reescrita do roteiro.</li><li data-l="E">representa graficamente todos os passos da produção da obra, incluindo a execução do cronograma de atividades.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: A.</span> O desenhista não corrige nem coordena o roteirista e não responde pelo produto acabado nem pelo cronograma. A palavra que resolve é <strong>colaborativa</strong>.</p></details></div>
+<div class="q" id="r15-42">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 42</span></div>
+<p>Na criação de storyboard, o artista gráfico traduz um roteiro em imagens. No storyboard, o artista gráfico eficiente:</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) localiza os ambientes e coloca em cena as personagens.</li><li>2) usa o storyboard como um documento de realização destinado a transmitir a criação a toda a equipe de produção, de forma organizada e em continuidade.</li><li>3) dá forma às ideias do criador da obra, modificando essas ideias por meio de imagens sequenciadas.</li><li>4) seleciona e sintetiza a tradução gráfica da obra de forma sequenciada.</li><li>5) utiliza tantos quadros quanto desejar, visando ilustrar as ideias do criador da obra, contanto que sejam sequenciados e tenham continuidade.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">3 e 5.</li><li data-l="B">1, 2 e 4.</li><li data-l="C">1, 4 e 5.</li><li data-l="D">1 e 2.</li><li data-l="E">2 e 5</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: B.</span> Corretos: 1 (situa ambientes e põe as personagens em cena), 2 (o storyboard é documento de comunicação para a equipe) e 4 (seleciona e sintetiza, em sequência). O 3 é falso porque o desenhista dá forma às ideias do criador, sem modificá-las. O 5 é falso porque "tantos quadros quanto desejar" contraria a síntese.</p></details></div>
+<div class="q" id="r19-34">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 34</span></div>
+<p>O conhecimento da anatomia humana é uma ferramenta importante para a representação gráfica de figuras humanas, uma vez que:</p>
+<ol class="alt"><li data-l="A">a estrutura muscular, na figura humana, determina os elementos que são obscuros na representação gráfica e servem para suavizar o movimento da cena.</li><li data-l="B">a proporção dos membros da figura humana, dos músculos e dos ossos auxilia na representação da figura humana.</li><li data-l="C">o conhecimento detalhado da anatomia humana é fundamental para as fases iniciais do desenho de figuras humanas, porém pouco ajuda para o aperfeiçoamento do desenho.</li><li data-l="D">as superfícies e os formatos da figura humana determinam o grau de conhecimento do artista sobre a anatomia humana, pois a falta de conhecimento técnico sobre a anatomia humana facilita a representação mimética desses elementos nas cenas.</li><li data-l="E">durante a execução do desenho da figura humana, na fase inicial, considera-se a proporção entre os órgãos internos e os órgãos externos para o auxílio na determinação da intensidade motora da figura.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: B.</span> A resposta simples e verdadeira é a B. C inverte (anatomia ajuda mais no aperfeiçoamento). D diz que a falta de conhecimento facilita, o que é absurdo. E fala em órgãos internos, que não entram no desenho de figura.</p></details></div>
+<div class="q" id="r19-37">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 37</span></div>
+<p>Acerca da criação de personagens, analise os tópicos abaixo.</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) Características físicas.</li><li>2) O lugar onde mora, a família e seu relacionamento com ela.</li><li>3) A profissão, o local de trabalho e o relacionamento com as pessoas.</li><li>4) Melhores amigos, o jeito de falar, hobbies preferidos.</li><li>5) Características emocionais e psicológicas.</li></ol>
+<p>Estão corretos:</p>
+<ol class="alt"><li data-l="A">1 e 3, apenas.</li><li data-l="B">2, 3 e 4, apenas.</li><li data-l="C">2, 3, 4 e 5, apenas.</li><li data-l="D">1, 2 e 4, apenas.</li><li data-l="E">1, 2, 3, 4 e 5.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: E.</span> Todos fazem parte da ficha do personagem: físico, lugar e família, profissão e relações, amigos e hábitos, e o emocional e psicológico. Quando todos os itens são "possibilidades legítimas de caracterização", a resposta é todos.</p></details></div>
+<div class="q" id="r19-38">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 38</span></div>
+<p>É fundamental definir aspectos gerais dos personagens para a criação de sua representação gráfica inicial. Assinale a alternativa que identifica esses aspectos gerais.</p>
+<ol class="alt"><li data-l="A">A história do personagem, o perfil do público-alvo e a mídia utilizada.</li><li data-l="B">A história do personagem, sua aparência geral e sua motivação.</li><li data-l="C">O perfil do público-alvo, a motivação de sua criação e a técnica de representação.</li><li data-l="D">Seleção de expressões faciais que representem a personalidade do personagem, a sua aparência física e as cores usadas na ilustração.</li><li data-l="E">Estrato social do personagem, seleção de roupas e acessórios e as técnicas gráficas empregadas.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: B.</span> Os aspectos <em>gerais</em> do <em>personagem</em> são dele: história, aparência e motivação. Público-alvo, mídia e técnica são do projeto, não do personagem. Expressões, cores, roupas e acessórios já são detalhes de execução.</p></details></div>
+<div class="q" id="r19-39">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 39</span></div>
+<p>A criação dos personagens, hierarquização de seus papéis e determinação de suas importâncias na história interferem na criação gráfica de cada personagem. Quanto a esse aspecto, identifique a alternativa correta.</p>
+<ol class="alt"><li data-l="A">Um personagem é um conceito que não deve ser confundido com a sua representação gráfica.</li><li data-l="B">Um personagem representa um caminho perseguido por meio de um roteiro e de etapas de elaboração gráfica predefinidos e fixos.</li><li data-l="C">As características determinadas pelos papéis de cada personagem, de forma hierárquica, moldam os diferentes tipos físicos que são representados de forma assimétrica a seus papéis.</li><li data-l="D">As formas de criação utilizadas para a representação gráfica dos personagens não obedecem a características sociais, culturais nem tipológicas dos personagens.</li><li data-l="E">A representação gráfica dos personagens independe do contexto dos cenários.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: A.</span> O personagem existe antes do desenho: o mesmo personagem pode ter muitas representações. B ("predefinidos e fixos"), D ("não obedecem") e E ("independe") são absolutos. C diz que o físico é "assimétrico" ao papel, quando deveria ser coerente com ele.</p></details></div>
+<div class="q" id="r19-40">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 40</span></div>
+<p>Para a interpretação de roteiros, o cenário é uma forma de expressar e contar histórias, tendo aplicação em diversas mídias. Nesse sentido, assinale a alternativa correta.</p>
+<ol class="alt"><li data-l="A">A criação de cenários realistas aplica-se na formulação de narrativas sobre histórias reais.</li><li data-l="B">Na mídia digital, o cenário tem sido substituído por ambientes virtuais que não se assemelham mais aos cenários tradicionais, por inexistir, nos cenários digitais, narrativas e congruência.</li><li data-l="C">O uso de cenários nas mídias tradicionais complementa a interpretação dos roteiros, de forma a dar seguimento ao roteiro que deve permanecer fixo e inalterado para não perder as características iniciais do autor.</li><li data-l="D">Por meio de cenários, pode-se entender a localização da história no tempo e no espaço onde será desenvolvida a narrativa.</li><li data-l="E">Os roteiros adaptados seguem as mudanças de interpretação do criador de cenários, porém muito pouco deve ser alterado nos cenários para não interferir na criação e representação das ideias.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: D.</span> A função do cenário é situar tempo e espaço. A restringe o realismo a histórias reais, o que é falso (ficção também usa cenário realista). B diz que no digital "inexiste narrativa". C traz o "fixo e inalterado". E inverte quem segue quem.</p></details></div>
+<div class="q" id="r19-41">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 41</span></div>
+<p>A criação de Story Boards serve ao propósito de antecipar (em muitos aspectos) as cenas de filmes, por exemplo, e geralmente é feita em papel com uso de mídia tradicional (lápis e papel). Acerca desse tipo de criação, é correto afirmar que:</p>
+<ol class="alt"><li data-l="A">o uso excessivo de Story Board dificulta adaptações nos roteiros e demanda do desenhista capacidade de representar os desenhos de forma detalhada.</li><li data-l="B">no Story Board, o desenhista também faz uso de símbolos gráficos (setas, asteriscos, marcas de atenção, entre outros), além de anotações diversas.</li><li data-l="C">o desenho de Story Board é simples e não demanda capacidade de síntese por parte do desenhista gráfico, pois sua principal característica é esboçar as ideias de forma rápida e definitiva.</li><li data-l="D">Story Board de filmes é desenhado para representar cenas em sequência (quadro a quadro) de forma a detalhar cada cena, antecipar os ângulos das câmeras e expressar com fidelidade a expressão das personagens e os atributos materiais dos cenários de cada cena.</li><li data-l="E">o uso de Story Boards reduz os custos de filmagem e a necessidade de refilmagem; portanto, o desenhista de artes gráficas necessita representar com precisão os detalhes das cenas.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: B.</span> Setas e anotações fazem parte da linguagem do storyboard. Todas as erradas cobram <strong>detalhe e precisão</strong> (A, D, E) ou dizem que ele "não demanda síntese" e é "definitivo" (C). O storyboard é esquemático, sintético e provisório.</p></details></div>
+<div class="q" id="r19-42">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 42</span></div>
+<p>Ainda sobre a criação de Story Boards, analise as afirmações abaixo.</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) No desenho de Story Boards, o desenhista representa as cenas de um filme de forma esquemática e sequenciada, sem necessariamente precisar, com muitos detalhes, os objetos e personagens representados.</li><li>2) As habilidades gráficas do desenhista são muito exploradas a fim de representar com fidelidade as cenas, e os desenhos são apresentados bem detalhados e bem-acabados.</li><li>3) O desenho de Story Board serve para o ilustrador conceber sua visão da sequência de cenas e explorar detalhes a serem usados por outros profissionais na produção de um filme.</li><li>4) O ilustrador desenha o Story Board sem interagir com outros profissionais que trabalhem na produção de um filme, pois o Story Board tem um fim em si mesmo.</li><li>5) O Story Board pode ser feito com uso de imagens preexistentes, retiradas de fotografias e ilustrações.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">1, 2 e 4.</li><li data-l="B">2, 4 e 5.</li><li data-l="C">1, 3 e 5.</li><li data-l="D">2, 3 e 4.</li><li data-l="E">1, 4 e 5.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: C.</span> Corretos: 1 (esquemático e sequenciado, sem muito detalhe), 3 (o ilustrador concebe a sequência e explora detalhes para a equipe) e 5 (pode usar imagens preexistentes). O 2 é falso porque o storyboard não é bem-acabado. O 4 é falso porque não tem fim em si mesmo e é feito com a equipe.</p></details></div>
+    <h3 id="r-mesa">Bloco 3 · mesa digitalizadora (sábado)</h3>
+<div class="q" id="r15-43">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 43</span></div>
+<p>Quanto ao uso de mesa digitalizadora, analise as proposições abaixo.</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) A mesa digitalizadora substitui o uso do mouse e se assemelha a um mousepad.</li><li>2) Pode-se regular o fluxo de tinta da caneta tornando-a semelhante a um aerógrafo.</li><li>3) O uso de diferentes camadas para colorir um desenho limita a aparência final da arte.</li><li>4) A mesa digitalizadora pode diferenciar a pressão aplicada pela caneta sobre ela e produz traços de espessuras proporcionais.</li><li>5) Apesar de ser uma ferramenta inovadora o uso da mesa não permite produzir efeitos profissionais ao desenho gráfico.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">1, 2 e 5.</li><li data-l="B">2, 3, 4 e 5.</li><li data-l="C">1, 3 e 5.</li><li data-l="D">1, 2 e 4.</li><li data-l="E">2, 3 e 4.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: D.</span> Corretos: 1 (substitui o mouse e lembra um mousepad), 2 (o fluxo regulável faz a caneta simular um aerógrafo) e 4 (a mesa lê a pressão e varia a espessura). O 3 é falso porque camadas <em>ampliam</em> as possibilidades. O 5 é falso porque a mesa é justamente uma ferramenta profissional.</p></details></div>
+<div class="q" id="r15-44">
+<div class="src"><span class="tag">UFPE 2015</span><span>Desenhista de Artes Gráficas · UFPE 2015 · gabarito oficial · questão 44</span></div>
+<p>Quanto ao uso da mesa digitalizadora, analise as proposições abaixo.</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) É importante reconhecer o mapeamento da mesa em relação ao uso da tela.</li><li>2) A mesa captura a presença da caneta antes de ser tocada por ela.</li><li>3) A opção brush size determina o tamanho do traço na tela.</li><li>4) Trata-se de uma ferramenta de tratamento digital de imagens, que dá acabamento profissional a elas.</li><li>5) Auxilia o desenhista gráfico na escolha de texturas, cores e pontos de iluminação.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">1, 2 e 4.</li><li data-l="B">1, 2, 4 e 5.</li><li data-l="C">2, 3, 4 e 5.</li><li data-l="D">2, 3 e 5.</li><li data-l="E">1, 4 e 5.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito oficial: B.</span> <strong>Atenção: gabarito discutível.</strong> Os itens 1 (mapeamento mesa-tela) e 2 (a caneta é detectada antes do toque) são sólidos. A banca incluiu também o 4 e o 5, que tratam a mesa como se fosse o software, e <em>excluiu</em> o 3 ("brush size determina o tamanho do traço"), que é verdadeiro no programa. A leitura da banca parece ter sido que o <em>brush size</em> é do software, não da mesa. Guarde a lição: nesta banca, a mesa é apresentada como ferramenta "que dá acabamento profissional", e itens elogiosos à ferramenta tendem a ser aceitos.</p></details></div>
+<div class="q" id="r19-43">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 43</span></div>
+<p>Em relação à utilização de mesa digitalizadora, é correto afirmar que:</p>
+<ol class="alt"><li data-l="A">a qualidade da resolução da imagem é determinada pela quantidade de pixels na altura e na largura da tela e é estabelecida de forma padrão.</li><li data-l="B">a adição de camadas (layers) possibilita a sobreposição de elementos compositivos e é feita diretamente na mesa digitalizadora com o aumento da pressão da caneta.</li><li data-l="C">o desenho digital é feito de memória e aparece de forma instantânea na tela, podendo ser alterado ou arquivado, momentaneamente, ao pausar o uso da caneta na vertical.</li><li data-l="D">o desenho digital pode ser feito diretamente sobre a superfície da mesa digitalizadora com o uso do mouse na função Scroll Lock.</li><li data-l="E">o posicionamento e a movimentação da caneta da mesa digitalizadora movimentam o cursor na tela.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: E.</span> A caneta faz o papel do mouse. A confunde resolução da imagem com a da tela. B põe no hardware (pressão) uma função do software (criar camada). C e D são funções inventadas.</p></details></div>
+<div class="q" id="r19-44">
+<div class="src"><span class="tag b">UFPE 2019</span><span>Desenhista de Artes Gráficas · UFPE 2019 · Edital 53/2019 · gabarito preliminar · questão 44</span></div>
+<p>Também sobre o uso da mesa digitalizadora, analise as afirmações abaixo.</p>
+<ol class="items" style="list-style:none;padding:0"><li>1) A mesa digitalizadora permite a interação do usuário com as mídias digitais gráficas, tornando mais amigável o ato de desenhar ou pintar por meio digital.</li><li>2) A mesa digitalizadora agiliza e dá mais naturalidade às edições de máscaras, retoques e pintura.</li><li>3) A sensibilidade dos níveis de pressão da caneta é um recurso vantajoso para a edição de imagens.</li><li>4) A mesa digitalizadora possui configurações padrões e fixas.</li><li>5) As mesas digitalizadoras apresentam recursos de edição gráfica semelhantes à borracha que são ativadas ao toque de borrachas comuns, na área de trabalho da mesa.</li></ol>
+<p>Estão corretas, apenas:</p>
+<ol class="alt"><li data-l="A">1, 3 e 5.</li><li data-l="B">2, 4 e 5.</li><li data-l="C">1, 2, 4 e 5.</li><li data-l="D">1, 2 e 3.</li><li data-l="E">2, 3 e 4.</li></ol>
+<details><summary>Gabarito e comentário</summary><p><span class="gab">Gabarito preliminar: D.</span> Corretos: 1, 2 e 3 (interação mais amigável, naturalidade em máscaras e retoques, pressão como vantagem). O 4 é falso porque as configurações são personalizáveis. O 5 é falso porque a borracha é a ponta oposta da caneta, e a mesa não reconhece uma borracha comum.</p></details></div>
+  </section>
+
+  <!-- SIMULADO -->
+  <section class="sec" id="simulado">
+    <span class="lbl">Simulado · Sáb · 45 min</span>
+    <h2>16 questões no estilo da banca</h2>
+    <p class="muted">Questões autorais, nos formatos que a UFPE usa ("analise as proposições", "relacione", alternativas longas). Marque tudo e só depois corrija. A última nota fica salva neste navegador.</p>
+    <div id="sim"></div>
+    <div class="bar2"><button class="btn" id="corrigir" type="button">Corrigir</button><button class="btn ghost" id="refazer" type="button">Refazer</button><span class="score" id="nota" aria-live="polite"></span></div>
+    <p class="small muted" id="ultima"></p>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section class="sec" id="cartoes">
+    <span class="lbl">Flashcards · Dom</span>
+    <h2>36 cartões de revisão ativa</h2>
+    <p class="muted">Toque para virar. Depois de ver a resposta, marque <strong>sei</strong> ou <strong>revisar</strong>. O botão de exportar gera um CSV (frente;verso) para importar no Anki: <em>Arquivo → Importar</em>, separador ponto e vírgula.</p>
+    <div class="bar2">
+      <button class="btn" id="exportRev" type="button">Exportar "revisar" para o Anki</button>
+      <button class="btn ghost" id="exportAll" type="button">Exportar todos</button>
+      <button class="btn ghost" id="shuffle" type="button">Embaralhar</button>
+      <span class="small muted" id="fcstat"></span>
+    </div>
+    <div class="fcs-grid" id="fcgrid"></div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="sec" id="dominio">
+    <span class="lbl">Checklist de domínio</span>
+    <h2>Sei fazer sem consultar</h2>
+    <ul class="chk" id="chk"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Fontes.</strong> Provas oficiais de Desenhista de Artes Gráficas da UFPE: 2015 (gabarito oficial) e 2019, Edital 53/2019 (gabarito preliminar), questões 31 a 44 · Andrew Loomis, <em>Figure Drawing for All It's Worth</em> · Betty Edwards, <em>Desenhando com o lado direito do cérebro</em> · Francis D. K. Ching, <em>Representação gráfica em arquitetura</em> (perspectiva) · Scott McCloud, <em>Desvendando os quadrinhos</em> · Lajos Egri, <em>A arte da escrita dramática</em> · Elaine R. S. Hodges (org.), <em>The Guild Handbook of Scientific Illustration</em>.</p>
+    <p>O mapa das provas do cargo está em <a href="desenho-tecnico-1.html#comocai">Desenho Técnico I</a>. Pesos por tema são estimativa. O simulado e os cartões são autorais.</p>
+    <p><a href="../index.html#gabi">← Voltar ao plano</a> · Próxima página: softwares, formatos e imagem digital (semana 3).</p>
+  </footer>
+</main>
+</div>
+<script>
+(function(){
+  var KEY='ufpe2027:gabi:ilus';
+  var st={sim:{},last:null,fc:{},chk:{}};
+  try{var r=localStorage.getItem(KEY); if(r){var o=JSON.parse(r); if(o&&typeof o==='object'){for(var k in st){ if(o[k]!=null) st[k]=o[k]; }}}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  var Q=[
+    {t:'Na perspectiva cônica com dois pontos de fuga, é correto afirmar que:',
+     o:['as arestas verticais do objeto convergem para um terceiro ponto situado acima da linha do horizonte.','os dois pontos de fuga situam-se sobre a linha do horizonte, e as arestas verticais permanecem verticais.','a linha do horizonte corresponde ao nível do chão sobre o qual o objeto se apoia.','o objeto é representado com uma face paralela ao plano do quadro, em verdadeira grandeza.','as linhas paralelas continuam paralelas no desenho, como na perspectiva isométrica.'],a:1,
+     w:'A descreve a perspectiva com três pontos de fuga, e D, a de um ponto (face de frente). C confunde a linha do horizonte com a linha de terra. E descreve a perspectiva paralela.'},
+    {t:'Na perspectiva cônica, a linha do horizonte corresponde:',
+     o:['à linha de terra, onde o plano do chão encontra o plano do quadro.','ao limite superior do cenário representado.','à linha em que se apoiam os objetos mais distantes.','ao nível dos olhos do observador.','a uma linha arbitrária, definida apenas por critério de composição.'],a:3,
+     w:'A LH é a altura dos olhos. Escolher onde ela fica na folha é escolher o ponto de vista: baixa é vista de baixo, alta é vista de cima. Não é arbitrária.'},
+    {t:'Em um cenário em perspectiva cônica, com o observador em pé, várias pessoas adultas de mesma altura estão de pé sobre o mesmo chão, a distâncias diferentes. Nessa situação:',
+     o:['os olhos de todas as pessoas ficam sobre a linha do horizonte, e o que diminui com a distância é a porção do corpo abaixo dela.','as pessoas mais distantes ficam com a cabeça acima da linha do horizonte.','cada pessoa determina uma linha do horizonte própria.','as pessoas mais próximas ficam inteiramente abaixo da linha do horizonte.','a altura dos olhos das pessoas em relação à linha de terra varia com a distância.'],a:0,
+     w:'É a regra cobrada na UFPE 2019, questão 33. Com o observador e as figuras com a mesma altura de olhos, todos os olhos caem sobre a LH.'},
+    {t:'Relacione as zonas de luz e sombra às suas definições.<br>1. Sombra própria &nbsp; 2. Sombra projetada &nbsp; 3. Luz refletida &nbsp; 4. Terminador<br>( ) Região do objeto que não recebe luz direta.<br>( ) Sombra que o objeto lança sobre outra superfície.<br>( ) Claridade suave na borda da sombra própria, causada pela luz rebatida pelo entorno.<br>( ) Faixa de transição onde termina a luz direta.<br>A sequência correta é:',
+     o:['2, 1, 3, 4.','1, 2, 4, 3.','1, 2, 3, 4.','4, 2, 3, 1.','3, 2, 1, 4.'],a:2,
+     w:'A luz refletida fica sempre mais escura que o meio-tom. O terminador é o tom mais escuro dentro do objeto.'},
+    {t:'Sobre a escala de dureza dos lápis de grafite, é correto afirmar que:',
+     o:['os lápis da série H são mais macios e produzem traço mais escuro que os da série B.','um lápis 6B é mais duro que um lápis 2H.','o lápis F é o mais macio da escala.','a numeração não tem relação com a dureza, apenas com o diâmetro da mina.','HB e F são graus intermediários; os da série B são mais macios e escuros, e os da série H, mais duros e claros.'],a:4,
+     w:'H vem de <em>hard</em> (duro) e B de <em>black</em> (preto). Quanto maior o número, mais extremo: 8B é muito macio e 8H, muito duro.'},
+    {t:'Sobre aquarela e guache, assinale a alternativa correta.',
+     o:['A aquarela é opaca e permite aplicar tons claros sobre escuros sem dificuldade.','Na aquarela, as áreas brancas costumam ser obtidas preservando o branco do papel; o guache é opaco e cobre as camadas anteriores.','O guache é uma tinta transparente, trabalhada em veladuras sucessivas.','As duas técnicas utilizam solvente à base de aguarrás.','A aquarela deve ser aplicada em papel de baixa gramatura, como o sulfite de 75 g/m², que absorve menos água.'],a:1,
+     w:'A aquarela é transparente e trabalha do claro para o escuro, com o papel fazendo o branco. As duas se diluem em água. O papel de aquarela tem cerca de 300 g/m².'},
+    {t:'No cânone clássico de oito cabeças, a metade da altura do corpo humano situa-se, aproximadamente:',
+     o:['no umbigo.','na linha dos mamilos.','na região do púbis.','nos joelhos.','na cintura.'],a:2,
+     w:'Quarta cabeça: púbis. O umbigo fica perto da terceira, e o joelho, logo acima da sexta.'},
+    {t:'Em relação às proporções da figura humana ao longo da vida, é correto afirmar que:',
+     o:['a cabeça do recém-nascido corresponde a cerca de um quarto da altura total do corpo.','a proporção da cabeça em relação ao corpo aumenta com a idade.','crianças de seis anos têm as mesmas proporções de um adulto, em escala reduzida.','o adulto real tem, em média, dez cabeças de altura.','o cânone heroico usa menos cabeças de altura que o adulto médio.'],a:0,
+     w:'O bebê tem cerca de 4 cabeças, e a criança de 6 anos, cerca de 6. O adulto real tem de 7 a 7,5, e o cânone idealizado, 8. A cabeça fica proporcionalmente menor com a idade.'},
+    {t:'Denomina-se escorço:',
+     o:['o esboço rápido feito para registrar uma ideia de composição.','a técnica de sombreamento por pontos de nanquim.','o contorno do personagem preenchido de preto, usado para testar sua legibilidade.','o encurtamento aparente de uma parte do corpo ou de um objeto que se projeta em direção ao observador.','a transição suave entre luz e sombra, sem contornos definidos.'],a:3,
+     w:'As outras são croqui (A), pontilhismo (B), silhueta (C) e sfumato ou esfumado (E).'},
+    {t:'Na produção de uma animação, a folha de modelo (<em>model sheet</em>) de um personagem tem como principal finalidade:',
+     o:['substituir o roteiro na definição das ações do personagem.','registrar o orçamento de produção de cada cena.','apresentar ao cliente a versão final colorida do personagem.','definir os planos de câmera de cada cena.','padronizar as proporções e a aparência do personagem em diferentes vistas e expressões, para que vários desenhistas o representem da mesma forma.'],a:4,
+     w:'O model sheet, com o turnaround e as folhas de expressão, é o documento de consistência. Os planos de câmera ficam no storyboard.'},
+    {t:'Sobre o storyboard, analise as proposições.<br>1) É esquemático e sequenciado, sem exigir acabamento.<br>2) Deve ser apresentado com arte-final detalhada, pois substitui a filmagem.<br>3) Utiliza setas e anotações para indicar movimentos de câmera e de personagens.<br>4) O animatic é o storyboard montado em vídeo, com tempo e som provisórios.<br>5) Dispensa o roteiro, pois o desenhista define a narrativa.<br>Estão corretas, apenas:',
+     o:['1 e 2.','2, 3 e 5.','1, 3 e 4.','3, 4 e 5.','1, 2, 3 e 4.'],a:2,
+     w:'O 2 contraria o caráter esquemático. O 5 inverte a relação: o storyboard interpreta o roteiro.'},
+    {t:'O enquadramento que mostra a figura humana aproximadamente dos joelhos para cima é o:',
+     o:['plano americano.','plano geral.','plano médio.','primeiro plano.','plano detalhe.'],a:0,
+     w:'O nome vem do faroeste americano, que enquadrava o revólver na cintura. O plano médio é da cintura para cima, e o primeiro plano, do peito para cima.'},
+    {t:'Em um storyboard, para fazer um personagem parecer poderoso ou ameaçador, é comum posicionar a câmera abaixo dele, olhando para cima. Esse ângulo denomina-se:',
+     o:['plongée.','plano zenital.','plano holandês.','panorâmica.','contra-plongée.'],a:4,
+     w:'Na plongée a câmera fica acima e olha para baixo, o que diminui o personagem. O plano holandês é a câmera inclinada. A panorâmica é um movimento, não um ângulo.'},
+    {t:'Segundo a regra dos terços, o centro de interesse de uma ilustração deve ser posicionado, preferencialmente:',
+     o:['no centro geométrico do quadro.','em um dos quatro pontos de cruzamento das linhas que dividem o quadro em terços.','na borda inferior, junto à linha de terra.','sempre no terço superior esquerdo.','fora do quadro, apenas sugerido pelo olhar do personagem.'],a:1,
+     w:'O quadro é dividido em 3 × 3, e os cruzamentos são os pontos fortes. O centro geométrico tende a deixar a composição estática.'},
+    {t:'Sobre mesas digitalizadoras, é correto afirmar que:',
+     o:['suas configurações são padronizadas pelo fabricante e não podem ser alteradas.','a criação de camadas é feita pela própria mesa, ao se aumentar a pressão da caneta.','a mesa sem tela exige que se desenhe com o mouse sobre sua superfície.','a mesa com tela (<em>pen display</em>) permite desenhar diretamente sobre a imagem, enquanto, na mesa sem tela, o desenhista olha para o monitor e a área da mesa é mapeada na tela.','a sensibilidade à pressão altera apenas a cor do traço.'],a:3,
+     w:'A, B e C repetem os erros das provas de 2019 (Q43 e Q44). A pressão altera espessura, opacidade ou fluxo, conforme a configuração do pincel.'},
+    {t:'Sobre a ilustração científica, analise as proposições.<br>1) A fidelidade ao espécime prevalece sobre a expressão pessoal do ilustrador.<br>2) Convenciona-se a luz vinda do alto, à esquerda, em todas as figuras da prancha.<br>3) A escala gráfica (barra) é preferível à indicação de aumento, pois continua válida se a figura for reduzida.<br>4) O pontilhismo a nanquim é inadequado, por não reproduzir bem em preto e branco.<br>5) A câmara clara auxilia a transferir para o papel as proporções do espécime observado ao microscópio.<br>Estão corretas, apenas:',
+     o:['1, 2 e 4.','2, 3 e 4.','1, 2, 3 e 5.','1, 4 e 5.','3, 4 e 5.'],a:2,
+     w:'O 4 é o contrário: o pontilhismo a nanquim é a técnica clássica porque reproduz muito bem em preto e branco.'}
+  ];
+  var L='ABCDE', sim=document.getElementById('sim');
+  Q.forEach(function(q,i){
+    var d=document.createElement('div'); d.className='sq'; d.id='s'+i;
+    var h='<div class="n">QUESTÃO '+(i+1)+'</div><p>'+q.t+'</p>';
+    q.o.forEach(function(op,j){ h+='<label><input type="radio" name="s'+i+'" value="'+j+'"'+(st.sim[i]===j?' checked':'')+'><span><strong>'+L[j]+')</strong> '+op+'</span></label>'; });
+    h+='<div class="why"><strong>Gabarito: '+L[q.a]+'.</strong> '+q.w+'</div>';
+    d.innerHTML=h; sim.appendChild(d);
+  });
+  sim.addEventListener('change',function(e){ if(e.target.type==='radio'){ st.sim[e.target.name.slice(1)]=+e.target.value; save(); }});
+  function corrigir(){
+    var ok=0;
+    Q.forEach(function(q,i){
+      var box=document.getElementById('s'+i); box.classList.add('show');
+      Array.prototype.forEach.call(box.querySelectorAll('label'),function(lb,j){ lb.classList.remove('ok','bad'); if(j===q.a) lb.classList.add('ok'); else if(st.sim[i]===j) lb.classList.add('bad'); });
+      if(st.sim[i]===q.a) ok++;
+    });
+    document.getElementById('nota').textContent=ok+' / '+Q.length+'  ·  '+Math.round(ok/Q.length*100)+'%';
+    st.last={ok:ok,n:Q.length,when:new Date().toLocaleDateString('pt-BR')}; save(); showLast();
+  }
+  function showLast(){ var el=document.getElementById('ultima'); el.textContent = st.last ? 'Última correção: '+st.last.ok+'/'+st.last.n+' em '+st.last.when+'.' : ''; }
+  document.getElementById('corrigir').addEventListener('click',corrigir);
+  document.getElementById('refazer').addEventListener('click',function(){ st.sim={}; save(); Array.prototype.forEach.call(sim.querySelectorAll('input'),function(x){x.checked=false;}); Array.prototype.forEach.call(sim.querySelectorAll('.sq'),function(x){x.classList.remove('show');}); document.getElementById('nota').textContent=''; sim.scrollIntoView({behavior:'smooth'}); });
+  showLast();
+
+  var F=[
+    ['Quatro bases do desenho de observação (UFPE 2019)','Composição, enquadramento, proporção e perspectiva.'],
+    ['Como medir proporção no desenho de observação','Visada: braço esticado, lápis na vertical, o polegar marca a medida para comparar partes.'],
+    ['Linha do horizonte (LH)','Linha na altura dos olhos do observador. Não é o chão (esse é a linha de terra).'],
+    ['Onde ficam os pontos de fuga de retas horizontais','Sobre a linha do horizonte.'],
+    ['1, 2 e 3 pontos de fuga: quando usar','1: objeto de frente (corredor, rua). 2: objeto de quina. 3: vista muito de cima ou de baixo, com as verticais convergindo também.'],
+    ['Perspectiva cônica × paralela','Cônica: as paralelas convergem e os objetos diminuem com a distância. Paralela (isométrica, cavaleira): as paralelas se mantêm, sem diminuição.'],
+    ['Figuras de mesma altura no mesmo chão, observador em pé','Os olhos de todas ficam sobre a LH, a qualquer distância.'],
+    ['Cinco recursos de profundidade além da perspectiva linear','Sobreposição, diminuição de tamanho, perspectiva atmosférica, gradiente de textura e planos sucessivos.'],
+    ['Perspectiva atmosférica (aérea)','Ao longe: menos contraste, menos detalhe, cores mais frias e azuladas.'],
+    ['Zonas de luz numa esfera, em ordem','Brilho, luz, meio-tom, terminador, sombra própria, luz refletida; fora do objeto, sombra projetada e sombra de contato.'],
+    ['Terminador','Linha onde termina a luz direta. É o tom mais escuro dentro do objeto.'],
+    ['Luz refletida','Claridade na borda da sombra própria, rebatida pelo entorno. É sempre mais escura que o meio-tom.'],
+    ['Primeiro passo para ressaltar volume à mão livre (UFPE 2019)','Identificar a fonte de luz e determinar as sombras.'],
+    ['Traço disperso × traço concentrado','Disperso = área clara (mais luz). Concentrado = área escura.'],
+    ['Superfície curva: que traço usar?','Traço curvo acompanhando a forma. Superfície plana pede traço reto.'],
+    ['"Desenhar apagando"','Usar a borracha para abrir luzes, fundir contornos e trabalhar valores tonais (aspecto pictórico).'],
+    ['Borracha ideal para carvão e grafite macio','Limpa-tipo (maleável): levanta o pigmento sem esfregar e sem estragar o papel.'],
+    ['Cânone de 8 cabeças: onde fica a metade do corpo','No púbis (4ª cabeça).'],
+    ['Cabeças de altura: bebê, 6 anos, adulto real, ideal','Cerca de 4; cerca de 6; de 7 a 7,5; 8.'],
+    ['Posição dos olhos na cabeça','Na metade da altura da cabeça.'],
+    ['Escorço','Encurtamento aparente de uma parte que aponta para o observador. É perspectiva aplicada à figura.'],
+    ['Contrapposto','Peso numa perna só: quadril e ombros inclinam em sentidos opostos.'],
+    ['Linha de ação','Curva única que atravessa a figura e dá a intenção do movimento (C ou S).'],
+    ['Três dimensões da personagem','Física, sociológica e psicológica (a "personagem tridimensional").'],
+    ['Aspectos gerais iniciais do personagem (UFPE 2019)','História, aparência geral e motivação.'],
+    ['Model sheet × turnaround','Model sheet: padroniza proporção e aparência. Turnaround: o personagem de frente, 3/4, perfil e costas, nas mesmas linhas de altura.'],
+    ['Formas básicas e personalidade','Círculo: amigável. Quadrado: estável e forte. Triângulo: dinâmico e ameaçador.'],
+    ['Função do cenário (UFPE 2019)','Situar a história no tempo e no espaço.'],
+    ['Etapas da criação de cenários (UFPE 2019)','Definir planos, estabelecer volumes em cada plano, aplicar texturas e compor.'],
+    ['Regra dos terços','Quadro dividido em 3 × 3; o centro de interesse vai num dos 4 cruzamentos.'],
+    ['Storyboard: três características','Esquemático, sequenciado, com setas e anotações. É documento para a equipe e pode usar imagens preexistentes.'],
+    ['Animatic','Storyboard montado em vídeo, com tempo e som provisórios.'],
+    ['Plano americano × plano médio × primeiro plano','Joelhos para cima × cintura para cima × peito para cima.'],
+    ['Plongée × contra-plongée','Plongée: câmera acima (diminui). Contra-plongée: câmera abaixo (engrandece).'],
+    ['Aquarela × guache','Aquarela: transparente, o branco é o papel. Guache: opaco, cobre as camadas.'],
+    ['Convenções da ilustração científica','Fidelidade, luz do alto à esquerda, escala gráfica em barra, pontilhismo a nanquim, prancha com figuras numeradas.']
+  ];
+  var grid=document.getElementById('fcgrid'), order=F.map(function(_,i){return i;});
+  function drawFC(){
+    grid.innerHTML='';
+    order.forEach(function(i){
+      var c=F[i], b=document.createElement('div');
+      b.style.display='flex'; b.style.flexDirection='column'; b.style.gap='6px';
+      var s=st.fc[i];
+      b.innerHTML='<button type="button" class="flip'+(s==='k'?' known':'')+'" data-i="'+i+'" aria-label="Virar cartão"><span class="f">'+esc(c[0])+'</span><span class="b">'+esc(c[1])+'</span><span class="hint">'+(s==='k'?'✓ sei':s==='r'?'↻ revisar':'toque')+'</span></button>'+
+        '<div style="display:flex;gap:6px"><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-k="'+i+'">sei</button><button type="button" class="btn ghost" style="padding:5px 12px;font-size:11.5px" data-r="'+i+'">revisar</button></div>';
+      grid.appendChild(b);
+    });
+    var k=0,r=0; for(var x in st.fc){ if(st.fc[x]==='k')k++; else if(st.fc[x]==='r')r++; }
+    document.getElementById('fcstat').textContent=k+' sei · '+r+' revisar · '+(F.length-k-r)+' não vistos';
+  }
+  grid.addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    if(t.classList.contains('flip')){ t.classList.toggle('open'); return; }
+    if(t.dataset.k!=null){ st.fc[t.dataset.k]='k'; save(); drawFC(); }
+    if(t.dataset.r!=null){ st.fc[t.dataset.r]='r'; save(); drawFC(); }
+  });
+  document.getElementById('shuffle').addEventListener('click',function(){ for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=order[i]; order[i]=order[j]; order[j]=t;} drawFC(); });
+  function dl(rows,name){
+    var csv='﻿'+rows.map(function(c){return c.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');}).join('\r\n');
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
+  }
+  document.getElementById('exportAll').addEventListener('click',function(){ dl(F.map(function(c){return [c[0],c[1],'ufpe2027 ilustracao'];}),'ufpe2027-ilustracao.csv'); });
+  document.getElementById('exportRev').addEventListener('click',function(){
+    var rows=F.filter(function(_,i){return st.fc[i]!=='k';}).map(function(c){return [c[0],c[1],'ufpe2027 ilustracao'];});
+    dl(rows,'ufpe2027-ilustracao-revisar.csv');
+  });
+  drawFC();
+
+  var C=[
+    'Citar as quatro bases do desenho de observação e explicar a visada.',
+    'Desenhar um cubo em perspectiva com 1 e com 2 pontos de fuga, com a LH marcada.',
+    'Posicionar três figuras humanas a distâncias diferentes com os olhos na LH.',
+    'Listar cinco recursos de profundidade além da perspectiva linear.',
+    'Desenhar uma esfera com as sete zonas de luz nomeadas.',
+    'Mostrar hachura, hachura cruzada, pontilhismo e esfumado numa escala de valores.',
+    'Desenhar o cânone de 8 cabeças com os marcos (púbis na metade).',
+    'Explicar escorço, contrapposto e linha de ação.',
+    'Montar a ficha de um personagem (física, social, psicológica, papel) e seu turnaround.',
+    'Explicar o que o storyboard é e o que ele não é, e citar o animatic.',
+    'Nomear seis planos de enquadramento e dois ângulos de câmera com seus efeitos.',
+    'Comparar grafite (H × B), aquarela × guache, pastel seco × oleoso, e mesa com tela × sem tela.',
+    'Listar as convenções da ilustração científica.'
+  ];
+  var ul=document.getElementById('chk');
+  C.forEach(function(t,i){ var li=document.createElement('li'); if(st.chk[i]) li.className='done'; li.innerHTML='<input type="checkbox" id="c'+i+'"'+(st.chk[i]?' checked':'')+'><label for="c'+i+'">'+esc(t)+'</label>'; ul.appendChild(li); });
+  ul.addEventListener('change',function(e){ var i=e.target.id.slice(1); if(e.target.checked) st.chk[i]=1; else delete st.chk[i]; e.target.parentNode.classList.toggle('done',e.target.checked); save(); });
+
+  var links=document.querySelectorAll('aside.toc a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ Array.prototype.forEach.call(links,function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+en.target.id); }); } }); },{rootMargin:'-20% 0px -70% 0px'});
+    Array.prototype.forEach.call(document.querySelectorAll('section.sec'),function(s){ io.observe(s); });
+  }
+  window.addEventListener('beforeprint',function(){ Array.prototype.forEach.call(document.querySelectorAll('details'),function(x){x.open=true;}); Array.prototype.forEach.call(document.querySelectorAll('.sq'),function(x){x.classList.add('show');}); });
+})();
+</script>
+</body>
+</html>
